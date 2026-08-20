@@ -1,0 +1,37 @@
+{
+  "uid": "nory_cadence_agent_app",
+  "type": "app",
+  "config": {
+    "name": "Nory Cadence Agent",
+    "description": "Per-account cadence briefs for US AEs: score, why-now signals, the bespoke first touch, and the Gong US Flow to run. Data lives on the Cadence Brief custom object; the agent writes, reps read.",
+    "distribution": "private",
+    "auth": {
+      "type": "static",
+      "requiredScopes": [
+        "oauth",
+        "crm.schemas.custom.read",
+        "crm.schemas.custom.write",
+        "crm.objects.custom.read",
+        "crm.objects.custom.write",
+        "crm.objects.companies.read",
+        "crm.objects.contacts.read",
+        "crm.objects.owners.read",
+        "crm.objects.deals.read",
+        "sales-email-read"
+      ],
+      "optionalScopes": [],
+      "conditionallyRequiredScopes": []
+    },
+    "permittedUrls": {
+      "fetch": ["https://api.hubapi.com"],
+      "iframe": [],
+      "img": []
+    },
+    "support": {
+      "supportEmail": "pablo@nory.ai",
+      "documentationUrl": "https://github.com/pablonory/gtm-cadence-agent",
+      "supportUrl": "https://github.com/pablonory/gtm-cadence-agent",
+      "supportPhone": "+18005555555"
+    }
+  }
+}

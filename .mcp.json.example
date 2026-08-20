@@ -1,0 +1,26 @@
+{
+  "//": "TEMPLATE — committable. Copy into a gitignored .mcp.json. No literal secrets: values use ${ENV_VAR} expansion.",
+  "//connectors": "HubSpot, Google Drive/Sheets, Supermetrics (Gong call analytics), and Slack are claude.ai connectors — authenticate them in claude.ai connector settings, NOT in this file. They surface as mcp__claude_ai_* tools.",
+  "//gong": "PRIMARY Stage-2b source (2026-07-17): the Supermetrics Gong connector is gated behind early access, so we go DIRECT to the Gong REST API (Basic auth: Access Key + Secret). Driven by scripts/gong_pull.py — it reads GONG_ACCESS_KEY + GONG_SECRET from your gitignored env (never here) and writes raw calls/transcripts to output/gong/ (gitignored). The mcpServers.gong entry below is an OPTIONAL local MCP wrapper if we later want agents to query Gong live instead of batch-pulling.",
+  "//apify": "Apify is NOT an MCP — it's REST-based, driven by APIFY_TOKEN env (read by a Stage-1 L2 helper, e.g. scripts/apify_jobs.py). Used as the OPTIONAL structured augment for the open_jobs signal (and possibly store-locator scraping for new_location) — see directives/signals/_signal_stack.md. Export APIFY_TOKEN in your gitignored env (.env / shell), NEVER commit the literal token here. Agent WebSearch/WebFetch stays the default; Apify augments recall where agents fall short.",
+  "//firecrawl": "PREMIUM plan, added 2026-08-14. Hosted MCP (remote, no local process) for Stage-1 signal research and any account-website crawl — handles JS-rendered sites, sites that block WebFetch/WebSearch outright (LinkedIn, Indeed), and structured/bulk scraping that plain WebFetch can't. Set FIRECRAWL_API_KEY in your gitignored env (`npx firecrawl-cli env` writes it for you). Also usable directly as a CLI (`firecrawl scrape/search/crawl/map ...`) outside the MCP tools — see `firecrawl --help`.",
+  "mcpServers": {
+    "gong": {
+      "//": "PHASE 2. Gong REST API uses Basic auth (Access Key + Secret). Likely driven by scripts/gong_pull.py rather than a hosted MCP; this is a placeholder for a local MCP wrapper if we build one. Set GONG_ACCESS_KEY + GONG_SECRET in your gitignored env file.",
+      "type": "stdio",
+      "command": "python",
+      "args": ["scripts/gong_mcp.py"],
+      "env": {
+        "GONG_ACCESS_KEY": "${GONG_ACCESS_KEY}",
+        "GONG_SECRET": "${GONG_SECRET}"
+      }
+    },
+    "firecrawl": {
+      "type": "http",
+      "url": "https://mcp.firecrawl.dev/v2/mcp",
+      "headers": {
+        "Authorization": "Bearer ${FIRECRAWL_API_KEY}"
+      }
+    }
+  }
+}

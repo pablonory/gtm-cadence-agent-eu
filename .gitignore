@@ -1,0 +1,50 @@
+# === macOS junk ===
+.DS_Store
+.AppleDouble
+__MACOSX/
+
+# === SECRETS — never commit (keys live per-user, not in git) ===
+.mcp.json
+.env
+.env.*
+*.key
+*.pem
+**/credentials*.json
+**/*secret*.json
+# keep the templates:
+!.mcp.json.example
+!.mcp.*.example.json
+!.env.example
+
+# === Local machine settings ===
+.claude/settings.local.json
+
+# === Caches / scratch ===
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+# Firecrawl CLI local scrape cache — can hold real scraped prospect-site content
+.firecrawl/
+
+# === Real prospect data — never commit ===
+# The accounts sheet lives in Google Drive; any local export stays out of git.
+input/accounts_local.*
+input/*.csv
+
+# === Generated per-run outputs (real deliverables go to Google Drive) ===
+output/accounts/*/
+output/weekly/*
+# Stage-1 delta/state snapshots — hold real prospect data (see directives/signals/_delta_state.md)
+output/state/*
+# Stage-2b raw Gong pulls — real call data / PII (see scripts/gong_pull.py)
+output/gong/*
+# Reactivation-deal bundles — deal history, transcripts, logged emails; real PII (see
+# scripts/reactivation_bundle.py). Never commit; the agent reads these, writes only the synthesis
+# to HubSpot properties.
+output/reactivation/*
+# Generated local copies of shareable reports (the canonical version is the published artifact)
+output/reports/*
+# keep the folder skeleton
+!output/**/.gitkeep
+!output/**/README.md

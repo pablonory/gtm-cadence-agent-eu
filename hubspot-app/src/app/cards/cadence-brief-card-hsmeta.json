@@ -1,0 +1,11 @@
+{
+  "uid": "cadence_brief_card",
+  "type": "card",
+  "config": {
+    "name": "Cadence Agent",
+    "description": "The account's cadence brief: score, why-now signals, the bespoke first touch, and the Gong US Flow to run.",
+    "entrypoint": "/app/cards/CadenceBriefCard.tsx",
+    "location": "crm.record.tab",
+    "objectTypes": ["p_cadence_brief"]
+  }
+}

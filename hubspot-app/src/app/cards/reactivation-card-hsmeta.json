@@ -1,0 +1,11 @@
+{
+  "uid": "reactivation_card",
+  "type": "card",
+  "config": {
+    "name": "Reactivation Analysis",
+    "description": "Why the prior deal on this account died, what the Gong calls and logged emails actually show, and the one specific angle to open the next first touch with.",
+    "entrypoint": "/app/cards/ReactivationCard.tsx",
+    "location": "crm.record.tab",
+    "objectTypes": ["p_cadence_brief"]
+  }
+}

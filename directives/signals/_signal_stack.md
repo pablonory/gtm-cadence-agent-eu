@@ -1,0 +1,138 @@
+# Signal stack — how Stage 1 detects signals (architecture + v1 decision)
+
+> **UKI fork note (2026-08-20):** all measured-recall numbers in this file (the 80-account table,
+> the ATS/403 failure counts) are **US-fork data**, kept as the engineering evidence behind the
+> mechanics (delta layer, recency-as-discount, jobs probe, permits-first). The mechanics carry over;
+> the UKI source lists live in the per-signal playbooks. Re-measure recall on the first UKI batches
+> before tuning anything.
+
+> Design note for the Stage 1 signal system; companion to the per-signal playbooks and
+> `knowledge/gong_evidence/_signal_correlation.md` (which signals actually correlate with wins).
+> Decisions set with Pablo, 2026-07-17.
+
+## Principles
+1. **Signals are deltas, not lookups.** Detect *change* against stored account state — "new site" =
+   today's locations − last run's; "new hire" = an exec not present last run. **This is the backbone —
+   more important than any scraper — and it's now built: see `directives/signals/_delta_state.md`**
+   (schema, run cycle, per-signal delta rules, first-run + freshness). State lives in a gitignored
+   per-account snapshot (`output/state/<domain>.json`); HubSpot holds the human-facing outputs.
+2. **Match the access method to each signal** — not one tool for all four.
+3. **Agent-first, then augment.** At low volume (Lewis's US AE team), Claude agents + WebSearch/WebFetch
+   are the default detector. Buy tooling only where *measured* recall is weak.
+4. **Freshness + confidence on every signal** (`recency_days`, `confidence`) — signals decay.
+
+## Layers
+- **L0 — HubSpot state + delta:** system of record; prior locations/execs/contract dates; dedup + the
+  baseline every delta is measured against.
+- **L1 — Claude signal agents + WebSearch/WebFetch, now + Firecrawl:** the v1 detector for all four
+  signals (already built in `agents/stage1_signals/`). **Added 2026-08-14** (premium plan): reach for
+  `firecrawl scrape`/`crawl`/`map`/`search` (CLI, or the `firecrawl` MCP tools once available) when
+  WebFetch/WebSearch hit the access failures below — JS-rendered pages with no crawlable HTML, and sites
+  that flat-out block WebFetch (403/Cloudflare). It is still a fetch tool, not a structured-data source —
+  doesn't change what counts as a verified signal, just what agents can actually reach. See
+  `CLAUDE.md`'s integrations table.
+- **L2 — structured augments (per measured recall gap):**
+  - Jobs → ✅ **BUILT 2026-08-12: `scripts/jobs_probe.py`.** T1 = the company's own **ATS public JSON API**
+    (free, dated, company-scoped — Greenhouse/Lever/Ashby/Workable/Recruitee/SmartRecruiters/Personio/
+    Teamtailor); T2 = **Apify** scoped to a board URL (`APIFY_TOKEN` in gitignored env, REST not MCP) for
+    boards with no public API (Workday/iCIMS/Paycor/Paylocity/ADP/Poached). See the measured-recall
+    section below for why the careers page and aggregator search both failed as primary sources.
+  - Locations → store-locator diff (agent, no scraper); Apify can scrape awkward locators if needed.
+  - Leadership hire → **a compliant people / job-change data API** (LinkedIn is login-walled; agents
+    can't reach it — this is the weakest signal). **No raw LinkedIn scraping (ToS/legal).**
+  - Locations → store-locator fetch + **snapshot diff** (no scraper needed).
+- **L3 — verify / recency / confidence agent** (already in the playbooks).
+
+## Access method per signal (v1)
+| Signal | Agent reachability | v1 method | Later augment (only if recall is weak) |
+|---|---|---|---|
+| **new_location** | good | **permits/licences first** (dated, months early), then WebFetch store-locator + **diff vs stored state**; trade press | — |
+| **open_jobs** | **poor** (measured) | WebFetch careers page (authoritative) + WebSearch boards | **Apify jobs actor — now the priority augment** |
+| **funding** | good | WebSearch/WebFetch press | — (LOW deal-correlation — don't invest) |
+| **leadership_hire** | **poor** (LinkedIn walled) | WebSearch trade press + company announcements | **people / job-change API** (the one worth paying for) |
+| **contract_expiry** (CE) | n/a — not researched | read from HubSpot; probe on call 1 | — |
+
+## MEASURED RECALL — first 80 real accounts (2026-08-11/12)
+The trigger below said "instrument recall, then add L2 surgically". Here is the instrumentation, from
+batch 2 (46 Tier-1 prospects) + reactivation batch 1/6 (34 accounts):
+
+| Signal | Fired | Hit rate | Share of all detections |
+|---|---|---|---|
+| `new_location` | 45/80 | 56% | **88%** |
+| `open_jobs` | 5/80 | 6% | 10% |
+| `leadership_hire` | 1/80 | 1% | 2% |
+| `funding` | **0/80** | 0% | 0% |
+
+44% of accounts produced **zero** signals; 50% produced exactly one — and in every one of those 40 cases
+it was `new_location`. So v1 was effectively a **one-signal system**, and the score was "quality of the
+location signal × segment size" regardless of the four-signal formula.
+
+**Diagnosis — the events happen; detection and windowing lost them.** Recurring causes, counted across the
+80 runs: a real signal **outside its window** (16 mentions), **no publishable date** (8), **source blocked**
+by 403/429/Cloudflare/expired TLS (8), **ATS portal unreadable** — Paycor/Lever/iCIMS/Workday/ADP/Paylocity
+(4). Plus a structural mismatch: a 2–5-site owner-operator has **no corporate ops/finance/IT function to
+hire into**, so `open_jobs` as defined cannot fire for much of the ICP.
+
+Worth recording that the 0/80 on funding was partly a **quality** result: agents rejected a hallucinated
+"$50M Series H", an unsourced "acquired by C3 Capital", an undated $10M raise and a Tracxn snippet whose
+page 404'd. Widening windows must not become licence to count unverifiable events.
+
+### Fixes applied 2026-08-12
+1. **Recency is a discount, not a gate** — per-signal windows (`new_location`/`funding` 365d,
+   `leadership_hire` 180d) with age decay (≤90d ×1.0 · ≤180d ×0.8 · ≤270d ×0.6 · ≤365d ×0.4) in
+   `hubspot-app/scripts/score_accounts.py`. Undated-but-corroborated events now count at ×0.85 instead of
+   being discarded.
+2. **Permits/licences promoted to the first check for `new_location`**, with the strength rubric inverted
+   so pre-opening stages outscore already-open ones, and a required `stage` field
+   (`permit_filed`/`announced`/`fit_out`/`opened`). See `new_location.md`.
+
+3. **`open_jobs` L2 BUILT — `scripts/jobs_probe.py`** (2026-08-12). The measured trigger fired, so the
+   augment was built. It turned out **not** to be "wire up an Apify jobs actor": the fix is to read the
+   company's **own ATS board through its public JSON API**, which is free, company-scoped by construction
+   and carries post dates. Apify is now only the fallback for boards with no public API
+   (Workday/iCIMS/Paycor/Paylocity/ADP/Poached). Two findings from building it:
+   - **The careers page cannot be the primary source.** `insomniacookies.com` and `portillos.com` return
+     403 (Cloudflare); `sweetgreen.com` renders its board in JS with no ATS string in the HTML. The probe
+     therefore identifies the board by trying candidate tokens against the ATS APIs directly, never
+     touching the company's site.
+   - **Aggregator company-name search is unusable for scoring.** An Indeed search for `"Giordano's"`
+     returned a State Farm agent named Charles Giordano, Giordano's Recycling, Giordano's Heating & Air,
+     and a *different franchisee*. The probe refuses to run a name-based aggregator search.
+
+   Result on the account that originally blocked us: Insomnia Cookies went from *"unverifiable — ADP/Lever
+   portal not agent-reachable"* to **1,033 postings read, 2 above-store roles, dated, high confidence.**
+
+### Still open
+- **`leadership_hire` recall is still poor** even at 180 days; a compliant people/job-change API remains
+  the deferred fix. **Not LinkedIn scraping** — see the standing rule below. (Firecrawl doesn't change
+  this — LinkedIn is login-walled regardless of fetch tool, the ToS rule stands.)
+- **Contraction is not yet scored.** Closures showed up repeatedly (a 3→2 footprint, a chain closing 68
+  stores, a site lost to fire, several concept swaps) and currently register only as *absence* of a
+  positive signal. They should actively deprioritise an account. Not built.
+- **8 of the 80 measured accounts failed on 403/429/Cloudflare/expired-TLS, and several more on
+  JS-rendered pages with no crawlable HTML** (see reactivation batch 2/6 run notes, 2026-08-14, for fresh
+  examples). Firecrawl was added specifically for this failure mode — worth a recall re-measurement on
+  the next batch to see how much of that 8+ actually clears now, before concluding it's fixed.
+
+## Decisions (2026-07-17)
+- **Agent-first is still the default detector.** Instrument recall, add L2 surgically.
+- **Apify token added** (`APIFY_TOKEN`, gitignored env) — the **jobs** augment is ready to wire when
+  agent recall on `open_jobs` proves weak. Leadership-hire's people/job-change API stays **deferred**
+  (buy only if that signal's recall is poor).
+- **Sales-intel Slack app is internal-only** (HubSpot/Gong) — it **cannot** reach external signals, so it
+  is *not* an L2 source.
+- **UKI-first sources (this fork, 2026-08-20).** All four playbooks lead with UK/IE sources:
+  premises-licence + planning applications and Companies House (new_location), **Companies House
+  officer appointments** (leadership_hire — a dated primary source the US never had), Caterer.com +
+  the global ATS probe with a flagged **Harri/Fourth gap** (open_jobs), Companies House SH01/PSC +
+  Propel/MCA deal coverage (funding). US sources retained, tagged *(US accounts only)*.
+- **No raw LinkedIn scraping** — ToS/legal; use a compliant provider if/when leadership-hire recall matters.
+  **Tested against Firecrawl 2026-08-14** (in case the new premium access layer changed this): it doesn't
+  — Firecrawl refuses LinkedIn URLs outright ("we do not support this site"), so `leadership_hire`'s core
+  bottleneck is unchanged and this rule stands as-is, not just as an internal policy but as an external
+  constraint too. Confirms the deferred people/job-change API is still the only real fix for this signal.
+
+## When to add L2 (the trigger)
+Track per signal via the feedback loop: **recall** (found vs later-confirmed-true) and **false-positive
+rate**. When a signal's agent recall is consistently low — most likely `leadership_hire` — that's the
+signal-specific trigger to buy its augment. Not before.

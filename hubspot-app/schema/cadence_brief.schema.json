@@ -1,0 +1,447 @@
+{
+  "name": "cadence_brief",
+  "labels": {
+    "singular": "Cadence Brief",
+    "plural": "Cadence Briefs"
+  },
+  "primaryDisplayProperty": "company_name",
+  "secondaryDisplayProperties": [
+    "score",
+    "status"
+  ],
+  "searchableProperties": [
+    "company_name",
+    "domain"
+  ],
+  "requiredProperties": [
+    "company_name",
+    "domain"
+  ],
+  "associatedObjects": [
+    "COMPANY",
+    "CONTACT"
+  ],
+  "properties": [
+    {
+      "name": "company_name",
+      "label": "Company",
+      "type": "string",
+      "fieldType": "text"
+    },
+    {
+      "name": "domain",
+      "label": "Domain",
+      "type": "string",
+      "fieldType": "text",
+      "hasUniqueValue": true
+    },
+    {
+      "name": "batch",
+      "label": "Account batch",
+      "type": "string",
+      "fieldType": "text",
+      "description": "Which import/run this account came in with, e.g. 'Reactivation US batch 1/6'. Set by the pipeline from the input sheet; used to filter and group briefs by batch."
+    },
+    {
+      "name": "score",
+      "label": "Score",
+      "type": "number",
+      "fieldType": "number"
+    },
+    {
+      "name": "score_band",
+      "label": "Priority band",
+      "type": "enumeration",
+      "fieldType": "select",
+      "options": [
+        {
+          "label": "High",
+          "value": "high",
+          "displayOrder": 0
+        },
+        {
+          "label": "Medium",
+          "value": "medium",
+          "displayOrder": 1
+        },
+        {
+          "label": "Low",
+          "value": "low",
+          "displayOrder": 2
+        },
+        {
+          "label": "Thin",
+          "value": "thin",
+          "displayOrder": 3
+        }
+      ]
+    },
+    {
+      "name": "status",
+      "label": "Status",
+      "type": "enumeration",
+      "fieldType": "select",
+      "options": [
+        {
+          "label": "Queued",
+          "value": "queued",
+          "displayOrder": 0
+        },
+        {
+          "label": "Scored",
+          "value": "scored",
+          "displayOrder": 1
+        },
+        {
+          "label": "Ready to launch",
+          "value": "ready",
+          "displayOrder": 2
+        },
+        {
+          "label": "In cadence",
+          "value": "in_cadence",
+          "displayOrder": 3
+        }
+      ]
+    },
+    {
+      "name": "vertical",
+      "label": "Vertical",
+      "type": "enumeration",
+      "fieldType": "select",
+      "options": [
+        {
+          "label": "Coffee & Cafe",
+          "value": "coffee_cafe",
+          "displayOrder": 0
+        },
+        {
+          "label": "Fast Casual",
+          "value": "fast_casual",
+          "displayOrder": 1
+        },
+        {
+          "label": "FSR",
+          "value": "fsr",
+          "displayOrder": 2
+        },
+        {
+          "label": "QSR",
+          "value": "qsr",
+          "displayOrder": 3
+        }
+      ]
+    },
+    {
+      "name": "persona",
+      "label": "Persona",
+      "type": "enumeration",
+      "fieldType": "select",
+      "options": [
+        {
+          "label": "C-Suite",
+          "value": "csuite",
+          "displayOrder": 0
+        },
+        {
+          "label": "Finance",
+          "value": "finance",
+          "displayOrder": 1
+        },
+        {
+          "label": "Founder",
+          "value": "founder",
+          "displayOrder": 2
+        },
+        {
+          "label": "Operations",
+          "value": "operations",
+          "displayOrder": 3
+        }
+      ]
+    },
+    {
+      "name": "locations",
+      "label": "Locations",
+      "type": "number",
+      "fieldType": "number"
+    },
+    {
+      "name": "brief_json",
+      "label": "Brief guidance (JSON)",
+      "type": "string",
+      "fieldType": "textarea",
+      "description": "Structured guidance the Cadence Agent card renders instead of prose paragraphs. Shape: {why_now{headline,points[]}, coordinate{owner,last_contacted,days_ago,deals,note}, corrections[], copy_rationale{hook,proof,persona,vertical}}. Optional and per-section \u2014 the card falls back to the why_now / first_touch_rationale prose properties for briefs written before this existed."
+    },
+    {
+      "name": "why_now",
+      "label": "Why now",
+      "type": "string",
+      "fieldType": "textarea"
+    },
+    {
+      "name": "signals_json",
+      "label": "Signals (JSON)",
+      "type": "string",
+      "fieldType": "textarea",
+      "description": "JSON array, one entry per Tier-1 signal checked: {signal,present,strength,recency_days,confidence,hook_detail,note|evidence} \u2014 the shape score_accounts.py consumes. present:false entries record what was checked and why nothing counted (honesty trail). Rendered by the app card; the card also accepts the legacy {type,title,detail,date,source_url} shape."
+    },
+    {
+      "name": "contacts_json",
+      "label": "Contact \u2192 flow map (JSON)",
+      "type": "string",
+      "fieldType": "textarea",
+      "description": "All CRM contacts on the company, segmented by title \u2192 persona and grouped under the exact Gong US Flow to run each group in. {generated,total_contacts,mapped,groups:[{flow,persona,suite,contacts:[{id,name,title,email}]}],unmapped:[...]} \u2014 written by scripts/map_contacts.py, rendered by the app card."
+    },
+    {
+      "name": "first_touch_subject",
+      "label": "First touch \u2014 subject",
+      "type": "string",
+      "fieldType": "text"
+    },
+    {
+      "name": "first_touch_body",
+      "label": "First touch \u2014 body",
+      "type": "string",
+      "fieldType": "textarea"
+    },
+    {
+      "name": "first_touch_alt_subject",
+      "label": "First touch (softer) \u2014 subject",
+      "type": "string",
+      "fieldType": "text"
+    },
+    {
+      "name": "first_touch_alt_body",
+      "label": "First touch (softer) \u2014 body",
+      "type": "string",
+      "fieldType": "textarea"
+    },
+    {
+      "name": "first_touch_rationale",
+      "label": "Why this copy",
+      "type": "string",
+      "fieldType": "textarea",
+      "description": "Which signal (hook_detail) / benefit / proof the draft used."
+    },
+    {
+      "name": "first_touch_basis",
+      "label": "First touch basis",
+      "type": "enumeration",
+      "fieldType": "select",
+      "description": "What the opener was built on. Set by the pipeline from score_accounts.py's needs_conjunctural flag + scripts/conjunctural_match.py \u2014 see knowledge/conjunctural/README.md.",
+      "options": [
+        {
+          "label": "Account signal",
+          "value": "account_signal",
+          "displayOrder": 0
+        },
+        {
+          "label": "Conjunctural (industry)",
+          "value": "conjunctural",
+          "displayOrder": 1
+        },
+        {
+          "label": "Vertical pain (fallback)",
+          "value": "vertical_pain",
+          "displayOrder": 2
+        }
+      ]
+    },
+    {
+      "name": "conjunctural_signal",
+      "label": "Conjunctural signal used",
+      "type": "string",
+      "fieldType": "text",
+      "description": "Register id + label of the macro signal the copy used, e.g. 'mw-ca-2027-01: CA fast-food wage step'. Empty unless first_touch_basis = conjunctural."
+    },
+    {
+      "name": "evidence_backed",
+      "label": "Evidence-backed",
+      "type": "bool",
+      "fieldType": "booleancheckbox",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "true"
+        },
+        {
+          "label": "No",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "name": "anti_ai_passed",
+      "label": "Anti-AI gate passed",
+      "type": "bool",
+      "fieldType": "booleancheckbox",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "true"
+        },
+        {
+          "label": "No",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "name": "cadence_template",
+      "label": "Gong US Flow",
+      "type": "string",
+      "fieldType": "text",
+      "description": "Exact flow name, e.g. 'FSR \u00d7 Finance (IM \u00b7 Tier 1)' \u2014 see cadences/UKI_FLOWS.md"
+    },
+    {
+      "name": "gong_template_url",
+      "label": "Gong US Flow URL",
+      "type": "string",
+      "fieldType": "text"
+    },
+    {
+      "name": "rep_feedback",
+      "label": "Rep feedback",
+      "type": "enumeration",
+      "fieldType": "select",
+      "options": [
+        {
+          "label": "None",
+          "value": "none",
+          "displayOrder": 0
+        },
+        {
+          "label": "Good draft",
+          "value": "up",
+          "displayOrder": 1
+        },
+        {
+          "label": "Needs work",
+          "value": "down",
+          "displayOrder": 2
+        }
+      ]
+    },
+    {
+      "name": "rep_feedback_detail",
+      "label": "Rep feedback \u2014 detail",
+      "type": "string",
+      "fieldType": "textarea",
+      "description": "Free-text reason a rep marked a draft 'Needs work'. Written by the card's detail box on \ud83d\udc4e (via the record_feedback app function) \u2014 the highest-value input to the learning loop, since it says WHY, not just that it was wrong."
+    },
+    {
+      "name": "variant_copied",
+      "label": "Variant copied",
+      "type": "enumeration",
+      "fieldType": "select",
+      "description": "Which first-touch variant the rep copied \u2014 preference data for the learning loop.",
+      "options": [
+        {
+          "label": "None",
+          "value": "none",
+          "displayOrder": 0
+        },
+        {
+          "label": "Primary",
+          "value": "primary",
+          "displayOrder": 1
+        },
+        {
+          "label": "Softer",
+          "value": "softer",
+          "displayOrder": 2
+        }
+      ]
+    },
+    {
+      "name": "last_run",
+      "label": "Last agent run",
+      "type": "date",
+      "fieldType": "date"
+    },
+    {
+      "name": "reactivation_json",
+      "label": "Reactivation analysis (JSON)",
+      "type": "string",
+      "fieldType": "textarea",
+      "description": "Structured reactivation analysis \u2014 the SOURCE OF TRUTH the Reactivation card renders. Shape: {verdict, verdict_reason, lead_with{name,title,why}, hook, ask, do_not_repeat[], why_it_died{headline,detail}, cycles[{label,dates,amount,picklist,reason}], evidence{calls,substantive_calls,emails,last_contact,current_tools[]}, flags[]}. Kept structured (not prose) so the card renders scannable components instead of walls of text \u2014 same pattern as signals_json/contacts_json. Length discipline is enforced by directives/reactivation_deal_analysis.md."
+    },
+    {
+      "name": "reactivation_evidence_basis",
+      "label": "Reactivation evidence basis",
+      "type": "enumeration",
+      "fieldType": "select",
+      "description": "What evidence this analysis actually rests on \u2014 set honestly so a rep can calibrate confidence, never inflated. See scripts/reactivation_bundle.py + the reactivation-analysis runbook.",
+      "options": [
+        {
+          "label": "No prior deal found",
+          "value": "none",
+          "displayOrder": 0
+        },
+        {
+          "label": "Deal record only",
+          "value": "deal_only",
+          "displayOrder": 1
+        },
+        {
+          "label": "Deal + Gong calls",
+          "value": "deal_calls",
+          "displayOrder": 2
+        },
+        {
+          "label": "Deal + Gong calls + logged emails",
+          "value": "deal_calls_emails",
+          "displayOrder": 3
+        },
+        {
+          "label": "Gong calls only (no deal record)",
+          "value": "calls_only",
+          "displayOrder": 4
+        }
+      ]
+    },
+    {
+      "name": "reactivation_deal_history",
+      "label": "Reactivation \u2014 deal history",
+      "type": "string",
+      "fieldType": "textarea",
+      "description": "Every closed/lost (or otherwise dead) deal found on this company: name, stage, amount, close date, and the closed-lost reason if the pipeline captured one. Written by the reactivation-analysis agent from scripts/reactivation_bundle.py's output \u2014 never fabricated; says 'no reason on file' when the deal has none."
+    },
+    {
+      "name": "reactivation_call_analysis",
+      "label": "Reactivation \u2014 call analysis",
+      "type": "string",
+      "fieldType": "textarea",
+      "description": "What the real Gong call transcripts for this account actually show: objections raised, who the champion/blocker was, pricing/budget reactions, why momentum stalled \u2014 each point traceable to a specific call. Empty or 'no calls found' when confirm_and_enrich() found nothing; never invented."
+    },
+    {
+      "name": "reactivation_email_analysis",
+      "label": "Reactivation \u2014 email analysis",
+      "type": "string",
+      "fieldType": "textarea",
+      "description": "Summary of logged HubSpot email engagement (opens/replies/bounces) associated with this account's past outreach, when available. Frequently empty \u2014 many teams send via a sequence tool that never logs to HubSpot; that is reported as a gap, not treated as 'no engagement'."
+    },
+    {
+      "name": "reactivation_recommendation",
+      "label": "Reactivation \u2014 recommended first touch",
+      "type": "string",
+      "fieldType": "textarea",
+      "description": "THE working field. One specific, evidence-grounded recommendation for the re-engagement FIRST TOUCH only \u2014 what changed since the deal died, what NOT to repeat, the precise angle to open with. Not general sales advice. Grounded strictly in reactivation_deal_history/call_analysis/email_analysis; must say plainly when there isn't enough evidence to recommend anything specific."
+    },
+    {
+      "name": "reactivation_last_deal_url",
+      "label": "Reactivation \u2014 deal link",
+      "type": "string",
+      "fieldType": "text",
+      "description": "Direct HubSpot URL to the most recent closed/lost deal on this company, for the rep to open in one click."
+    },
+    {
+      "name": "reactivation_analysis_date",
+      "label": "Reactivation \u2014 analysis date",
+      "type": "date",
+      "fieldType": "date",
+      "description": "When scripts/reactivation_bundle.py + the analysis agent last ran for this account."
+    }
+  ]
+}

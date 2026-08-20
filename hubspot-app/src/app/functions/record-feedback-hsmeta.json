@@ -1,0 +1,8 @@
+{
+  "uid": "record_feedback",
+  "type": "app-function",
+  "config": {
+    "entrypoint": "/app/functions/recordFeedback.js",
+    "secretKeys": []
+  }
+}

@@ -1,0 +1,828 @@
+<title>Nory Cadence Cockpit — AE prototype</title>
+<style>
+  :root{
+    /* Nory brand tokens (cream world — deliberate single theme) */
+    --cream:#F3F0E8;
+    --surface:#FAF8F2;
+    --surface-2:#FDFCF8;
+    --ink:#140018;
+    --muted:#69616B;
+    --faint:#8A8391;
+    --hairline:#E7E1D4;
+    --hairline-strong:#D8D1C1;
+    --lilac:#B0B0FE;
+    --lilac-deep:#6E6ED8;
+    --lilac-wash:#ECECFE;
+    --lime:#D3FD74;
+    --lime-deep:#6E8A1F;
+    /* score / semantic scale — kept separate from the lilac accent */
+    --hot:#2F7A4F;      /* high-priority score */
+    --hot-wash:#E4F1E9;
+    --warm:#B8791F;     /* mid score */
+    --warm-wash:#F6ECDA;
+    --cool:#8A8391;     /* low score */
+    --cool-wash:#EEEAE1;
+
+    --shadow:0 1px 2px rgba(20,0,24,.05), 0 8px 24px -12px rgba(20,0,24,.14);
+    --shadow-lift:0 2px 6px rgba(20,0,24,.07), 0 18px 40px -18px rgba(20,0,24,.22);
+    --radius:14px;
+    --radius-sm:9px;
+
+    --font-display:"Sharp Grotesk 20","Sharp Grotesk","Helvetica Neue",Arial,sans-serif;
+    --font-body:"Graphik",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --font-mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:14px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;margin:0;letter-spacing:-.01em;text-wrap:balance}
+  button{font-family:inherit}
+  a{color:var(--lilac-deep);text-decoration:none}
+  a:hover{text-decoration:underline}
+  ::selection{background:var(--lime);color:var(--ink)}
+  :focus-visible{outline:2px solid var(--lilac-deep);outline-offset:2px;border-radius:4px}
+
+  .eyebrow{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  .tnum{font-variant-numeric:tabular-nums}
+
+  /* ---------- App shell ---------- */
+  .app{height:100vh;overflow:hidden;display:flex;flex-direction:column}
+
+  header.topbar{
+    display:flex;align-items:center;gap:20px;
+    padding:14px 22px;
+    background:var(--surface);
+    border-bottom:1px solid var(--hairline);
+    flex:none;z-index:30;
+  }
+  .brand{display:flex;align-items:center;gap:11px;padding-right:20px;border-right:1px solid var(--hairline)}
+  .brand .mark{
+    width:30px;height:30px;border-radius:8px;background:var(--ink);
+    display:grid;place-items:center;color:var(--lime);font-family:var(--font-display);font-weight:700;font-size:17px;
+  }
+  .brand .name{font-family:var(--font-display);font-weight:600;font-size:15px;letter-spacing:-.01em}
+  .brand .sub{display:block;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-top:1px}
+
+  .stats{display:flex;gap:26px;margin-left:6px}
+  .stat .k{font-family:var(--font-display);font-weight:600;font-size:19px;line-height:1}
+  .stat .l{font-size:11px;color:var(--muted);margin-top:3px}
+  .stat.accent .k{color:var(--hot)}
+
+  .rep{margin-left:auto;display:flex;align-items:center;gap:12px}
+  .week{font-size:12px;color:var(--muted);padding-right:14px;border-right:1px solid var(--hairline)}
+  .rep-id{
+    display:flex;align-items:center;gap:9px;background:var(--surface-2);border:1px solid var(--hairline-strong);
+    border-radius:999px;padding:5px 12px 5px 6px;cursor:default;
+  }
+  .rep-id .avatar{width:26px;height:26px;border-radius:50%;background:var(--lilac);color:var(--ink);display:grid;place-items:center;font-weight:700;font-size:12px}
+  .rep-id .who{font-size:12.5px;font-weight:600;line-height:1.15}
+  .rep-id .who small{display:block;font-weight:400;color:var(--muted);font-size:10.5px}
+  .rep-id .lock{color:var(--hot);display:grid;place-items:center}
+  .scope{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:600;color:var(--hot);background:var(--hot-wash);padding:3px 9px;border-radius:999px;margin-left:auto}
+  .scope svg{width:12px;height:12px}
+
+  /* ---------- Layout ---------- */
+  .layout{
+    flex:1;display:grid;
+    grid-template-columns:320px minmax(0,1fr) 360px;
+    gap:0;align-items:stretch;min-height:0;overflow:hidden;
+  }
+  .col{min-width:0;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+  .queue{border-right:1px solid var(--hairline);background:var(--surface)}
+  .brief{background:var(--cream)}
+  .chat{border-left:1px solid var(--hairline);background:var(--surface)}
+
+  .col-head{
+    padding:15px 18px 12px;display:flex;align-items:center;gap:10px;
+    position:sticky;top:0;background:inherit;z-index:5;
+  }
+  .col-head h2{font-size:13px;letter-spacing:.02em}
+  .col-head .count{margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--faint)}
+
+  /* ---------- Queue ---------- */
+  .filters{display:flex;gap:6px;padding:0 18px 12px;flex-wrap:wrap;border-bottom:1px solid var(--hairline)}
+  .filters button{
+    font-size:11.5px;padding:5px 11px;border-radius:999px;border:1px solid var(--hairline-strong);
+    background:transparent;color:var(--muted);cursor:pointer;transition:.12s;
+  }
+  .filters button:hover{color:var(--ink);border-color:var(--faint)}
+  .filters button[aria-pressed="true"]{background:var(--ink);color:var(--surface-2);border-color:var(--ink)}
+
+  .qlist{overflow-y:auto;padding:10px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .qcard{
+    text-align:left;width:100%;background:var(--surface-2);border:1px solid var(--hairline);
+    border-radius:var(--radius-sm);padding:12px 13px;cursor:pointer;transition:.13s;position:relative;
+    display:grid;grid-template-columns:1fr auto;gap:4px 10px;
+  }
+  .qcard:hover{border-color:var(--hairline-strong);box-shadow:var(--shadow);transform:translateY(-1px)}
+  .qcard[aria-selected="true"]{border-color:var(--lilac-deep);box-shadow:0 0 0 1px var(--lilac-deep), var(--shadow)}
+  .qcard[aria-selected="true"]::before{content:"";position:absolute;left:0;top:12px;bottom:12px;width:3px;border-radius:3px;background:var(--lilac-deep)}
+  .qcard .co{font-family:var(--font-display);font-weight:600;font-size:14.5px;letter-spacing:-.01em}
+  .qcard .why{grid-column:1/2;font-size:12px;color:var(--muted);line-height:1.35;margin-top:1px}
+  .qcard .meta{grid-column:1/2;display:flex;gap:6px;align-items:center;margin-top:8px;flex-wrap:wrap}
+
+  .pill{font-size:10.5px;padding:2.5px 8px;border-radius:999px;font-weight:600;letter-spacing:.01em;white-space:nowrap;border:1px solid transparent}
+  .pill.vert{background:var(--lilac-wash);color:var(--lilac-deep)}
+  .pill.pers{background:transparent;color:var(--muted);border-color:var(--hairline-strong)}
+
+  .score{
+    grid-row:1/3;grid-column:2;align-self:start;
+    width:46px;height:46px;border-radius:50%;display:grid;place-items:center;position:relative;flex:none;
+  }
+  .score span{font-family:var(--font-display);font-weight:600;font-size:16px;z-index:1}
+  .score::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(var(--ring) calc(var(--v)*1%), var(--ring-track) 0)}
+  .score::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--surface-2)}
+  .score.hot{--ring:var(--hot);--ring-track:var(--hot-wash)}
+  .score.warm{--ring:var(--warm);--ring-track:var(--warm-wash)}
+  .score.cool{--ring:var(--cool);--ring-track:var(--cool-wash)}
+
+  .status{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:600;padding:2.5px 8px;border-radius:999px}
+  .status .dot{width:6px;height:6px;border-radius:50%}
+  .status.ready{background:var(--hot-wash);color:var(--hot)} .status.ready .dot{background:var(--hot)}
+  .status.scored{background:var(--lilac-wash);color:var(--lilac-deep)} .status.scored .dot{background:var(--lilac-deep)}
+  .status.queued{background:var(--cool-wash);color:var(--muted)} .status.queued .dot{background:var(--faint)}
+  .status.cadence{background:var(--ink);color:var(--lime)} .status.cadence .dot{background:var(--lime)}
+
+  /* ---------- Brief ---------- */
+  .brief-scroll{overflow-y:auto;padding:22px 26px 60px;flex:1}
+  .brief-empty{height:100%;display:grid;place-items:center;color:var(--faint);text-align:center;padding:40px}
+
+  .snapshot{display:flex;align-items:flex-start;gap:20px;margin-bottom:6px}
+  .snapshot .big-score{width:78px;height:78px;flex:none}
+  .snapshot .big-score span{font-size:27px}
+  .snapshot h1{font-size:27px;line-height:1.05}
+  .snap-meta{display:flex;gap:8px;align-items:center;margin-top:9px;flex-wrap:wrap;color:var(--muted);font-size:12.5px}
+  .snap-meta .sep{width:3px;height:3px;border-radius:50%;background:var(--hairline-strong)}
+  .snap-actions{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;
+    padding:9px 15px;border-radius:9px;border:1px solid var(--hairline-strong);
+    background:var(--surface-2);color:var(--ink);cursor:pointer;transition:.13s;white-space:nowrap;
+  }
+  .btn:hover{border-color:var(--faint);box-shadow:var(--shadow)}
+  .btn.primary{background:var(--ink);color:var(--surface-2);border-color:var(--ink)}
+  .btn.primary:hover{background:#241028}
+  .btn.lime{background:var(--lime);border-color:var(--lime-deep);color:var(--ink)}
+  .btn.lime:hover{filter:brightness(1.03)}
+  .btn svg{width:15px;height:15px}
+  .btn.ghost{background:transparent}
+
+  section.block{margin-top:26px}
+  .block-h{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .block-h h3{font-size:15px}
+  .block-h .hint{font-size:11.5px;color:var(--faint);margin-left:auto}
+  .rule{height:1px;background:var(--hairline);margin:0}
+
+  /* why-now signals */
+  .angle{
+    background:var(--lilac-wash);border:1px solid #DADAFB;border-radius:var(--radius);
+    padding:14px 16px;display:flex;gap:12px;align-items:flex-start;
+  }
+  .angle .lbl{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--lilac-deep);margin-bottom:3px}
+  .angle p{margin:0;font-size:14.5px;line-height:1.45;font-weight:500}
+  .angle .ic{color:var(--lilac-deep);flex:none;margin-top:2px}
+
+  .signals{display:flex;flex-direction:column;gap:9px}
+  .sig{
+    display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;
+    background:var(--surface-2);border:1px solid var(--hairline);border-radius:var(--radius-sm);padding:12px 14px;
+  }
+  .sig .sicon{width:34px;height:34px;border-radius:9px;background:var(--cream);display:grid;place-items:center;color:var(--ink);flex:none}
+  .sig .stext strong{font-size:13.5px;font-weight:600;display:block}
+  .sig .stext span{font-size:12px;color:var(--muted)}
+  .sig .sright{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+  .sig .sright .date{font-family:var(--font-mono);font-size:11px;color:var(--faint)}
+  .strength{display:flex;gap:2.5px}
+  .strength i{width:14px;height:4px;border-radius:2px;background:var(--hairline-strong)}
+  .strength i.on{background:var(--hot)}
+  .strength.mid i.on{background:var(--warm)}
+
+  /* email card */
+  .email-card{background:var(--surface-2);border:1px solid var(--hairline);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .email-top{display:flex;align-items:center;gap:9px;padding:11px 15px;border-bottom:1px solid var(--hairline);background:linear-gradient(0deg,var(--surface),var(--surface-2))}
+  .custom-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink);background:var(--lime);padding:3px 9px;border-radius:6px}
+  .gate{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--hot);font-weight:600}
+  .email-top .ecount{margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--faint)}
+  .email-body{padding:16px 18px}
+  .subject{font-weight:600;font-size:15px;margin-bottom:10px;display:flex;gap:8px}
+  .subject .slbl{color:var(--faint);font-weight:400}
+  .body-text{white-space:pre-wrap;font-size:14px;line-height:1.6;color:#2A1B2F}
+  .email-foot{display:flex;align-items:center;gap:10px;padding:12px 15px;border-top:1px solid var(--hairline);flex-wrap:wrap}
+  .rationale{font-size:11.5px;color:var(--muted);flex:1;min-width:200px;line-height:1.4}
+  .rationale b{color:var(--ink);font-weight:600}
+  .thumbs{display:flex;gap:6px}
+  .thumb{width:30px;height:30px;border-radius:8px;border:1px solid var(--hairline-strong);background:transparent;display:grid;place-items:center;cursor:pointer;color:var(--muted)}
+  .thumb:hover{border-color:var(--faint);color:var(--ink)}
+  .thumb[aria-pressed="true"].up{background:var(--hot-wash);border-color:var(--hot);color:var(--hot)}
+  .thumb[aria-pressed="true"].down{background:var(--warm-wash);border-color:var(--warm);color:var(--warm)}
+
+  .posonly{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--warm);background:var(--warm-wash);padding:3px 9px;border-radius:6px;font-weight:600}
+
+  /* cadence timeline */
+  .cad-name{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+  .cad-name .tmpl{font-family:var(--font-mono);font-size:12px;background:var(--cream);border:1px solid var(--hairline-strong);padding:4px 10px;border-radius:7px;color:var(--ink)}
+  .cad-name .flow{font-size:12px;color:var(--muted)}
+  .timeline{overflow-x:auto;padding:6px 2px 4px}
+  .track{display:flex;gap:0;min-width:640px;position:relative;padding-top:26px}
+  .track::before{content:"";position:absolute;left:22px;right:22px;top:57px;height:2px;background:var(--hairline-strong)}
+  .touch{flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;position:relative;min-width:44px}
+  .touch .day{position:absolute;top:-2px;font-family:var(--font-mono);font-size:9.5px;color:var(--faint)}
+  .touch .node{width:34px;height:34px;border-radius:10px;background:var(--surface-2);border:1px solid var(--hairline-strong);display:grid;place-items:center;color:var(--muted);z-index:1;transition:.13s;cursor:default}
+  .touch.email .node{color:var(--lilac-deep)}
+  .touch.call .node{color:#3C0304}
+  .touch.linkedin .node{color:#0A66C2}
+  .touch.custom .node{background:var(--lime);border-color:var(--lime-deep);color:var(--ink);box-shadow:0 0 0 3px rgba(211,253,116,.4)}
+  .touch:hover .node{transform:translateY(-2px);border-color:var(--faint)}
+  .touch .tl{font-size:9.5px;color:var(--muted);text-align:center;line-height:1.1;max-width:52px}
+  .touch .tip{
+    position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);
+    background:var(--ink);color:var(--surface-2);font-size:11px;padding:6px 9px;border-radius:7px;white-space:nowrap;
+    opacity:0;pointer-events:none;transition:.12s;z-index:10;box-shadow:var(--shadow-lift);
+  }
+  .touch .tip b{color:var(--lime)}
+  .touch:hover .tip{opacity:1}
+  .cad-legend{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap;font-size:11.5px;color:var(--muted)}
+  .cad-legend span{display:inline-flex;align-items:center;gap:6px}
+  .cad-legend .lg{width:11px;height:11px;border-radius:4px}
+
+  .deviation{margin-top:12px;font-size:12px;color:var(--muted);background:var(--cream);border:1px dashed var(--hairline-strong);border-radius:9px;padding:10px 13px;display:flex;gap:9px;align-items:flex-start}
+  .deviation b{color:var(--ink)}
+
+  .provenance{margin-top:24px;font-size:11.5px;color:var(--faint);display:flex;gap:14px;flex-wrap:wrap;border-top:1px solid var(--hairline);padding-top:14px}
+
+  /* ---------- Chat ---------- */
+  .chat-stream{flex:1;overflow-y:auto;padding:16px 16px 8px;display:flex;flex-direction:column;gap:14px}
+  .msg{display:flex;gap:9px;max-width:100%}
+  .msg .ava{width:26px;height:26px;border-radius:7px;flex:none;display:grid;place-items:center;font-size:12px;font-weight:700}
+  .msg.agent .ava{background:var(--ink);color:var(--lime);font-family:var(--font-display)}
+  .msg.user{flex-direction:row-reverse}
+  .msg.user .ava{background:var(--lilac);color:var(--ink)}
+  .bubble{border-radius:12px;padding:10px 13px;font-size:13px;line-height:1.5}
+  .msg.agent .bubble{background:var(--surface-2);border:1px solid var(--hairline);border-top-left-radius:4px}
+  .msg.user .bubble{background:var(--lilac-wash);border:1px solid #DADAFB;border-top-right-radius:4px}
+  .bubble p{margin:0 0 7px} .bubble p:last-child{margin:0}
+  .bubble strong{font-weight:600}
+  .bubble ul{margin:6px 0;padding-left:18px} .bubble li{margin:2px 0}
+  .bubble code{font-family:var(--font-mono);font-size:11.5px;background:var(--cream);padding:1px 5px;border-radius:4px}
+  .bubble .kv{display:flex;justify-content:space-between;gap:10px;padding:3px 0;border-bottom:1px dashed var(--hairline);font-size:12.5px}
+  .bubble .kv:last-child{border:0}
+  .bubble .kv b{font-variant-numeric:tabular-nums}
+
+  .typing{display:flex;gap:4px;padding:4px 2px}
+  .typing i{width:6px;height:6px;border-radius:50%;background:var(--faint);animation:blink 1.2s infinite}
+  .typing i:nth-child(2){animation-delay:.2s} .typing i:nth-child(3){animation-delay:.4s}
+  @keyframes blink{0%,60%,100%{opacity:.25}30%{opacity:1}}
+
+  .suggest{display:flex;gap:7px;padding:8px 14px 4px;flex-wrap:wrap;border-top:1px solid var(--hairline)}
+  .chip{font-size:12px;padding:7px 12px;border-radius:999px;border:1px solid var(--hairline-strong);background:var(--surface-2);color:var(--ink);cursor:pointer;transition:.12s;text-align:left}
+  .chip:hover{border-color:var(--lilac-deep);background:var(--lilac-wash)}
+  .composer{display:flex;gap:8px;padding:10px 14px 16px;align-items:flex-end}
+  .composer textarea{
+    flex:1;resize:none;border:1px solid var(--hairline-strong);border-radius:11px;padding:10px 12px;
+    font-family:inherit;font-size:13px;background:var(--surface-2);color:var(--ink);max-height:110px;line-height:1.4;
+  }
+  .composer textarea:focus{outline:none;border-color:var(--lilac-deep)}
+  .send{width:40px;height:40px;flex:none;border-radius:11px;border:none;background:var(--ink);color:var(--lime);cursor:pointer;display:grid;place-items:center}
+  .send:hover{background:#241028}
+
+  /* toast */
+  #toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--surface-2);padding:11px 18px;border-radius:10px;font-size:13px;font-weight:500;box-shadow:var(--shadow-lift);opacity:0;pointer-events:none;transition:.25s;z-index:100;display:flex;align-items:center;gap:9px}
+  #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  #toast .tclr{color:var(--lime)}
+
+  @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+
+  @media (max-width:1180px){
+    .layout{grid-template-columns:280px minmax(0,1fr)}
+    .chat{display:none}
+    .stats{display:none}
+  }
+</style>
+
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark">n</div>
+      <div>
+        <span class="name">Cadence Cockpit</span>
+        <span class="sub">US Outbound · Nory</span>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="k tnum" id="s-accts">5</div><div class="l">Accounts this week</div></div>
+      <div class="stat"><div class="k tnum" id="s-avg">65</div><div class="l">Avg score</div></div>
+      <div class="stat accent"><div class="k tnum" id="s-ready">2</div><div class="l">Ready to launch</div></div>
+      <div class="stat"><div class="k tnum" id="s-cad">0</div><div class="l">In cadence</div></div>
+    </div>
+    <div class="rep">
+      <span class="week">Week of Aug 10, 2026</span>
+      <div class="rep-id" title="Signed in with Google Workspace SSO — you only ever see accounts you own. Scope is enforced on the server, not in this page.">
+        <span class="avatar">MH</span>
+        <span class="who">Marcus Hale<small>marcus.hale@nory.ai · signed in via SSO</small></span>
+        <span class="lock"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 2l7 3v6c0 4.4-3 8.3-7 9.5C8 19.3 5 15.4 5 11V5l7-3z"/><path d="M9.2 12l1.9 1.9 3.7-3.9"/></svg></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- QUEUE -->
+    <div class="col queue">
+      <div class="col-head"><h2>Your accounts</h2><span class="scope"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l7 3v6c0 4.4-3 8.3-7 9.5C8 19.3 5 15.4 5 11V5l7-3z"/></svg>Only yours</span><span class="count" id="q-count" style="margin-left:8px"></span></div>
+      <div class="filters" id="filters">
+        <button data-f="all" aria-pressed="true">All</button>
+        <button data-f="ready">Ready</button>
+        <button data-f="scored">Scored</button>
+        <button data-f="queued">Queued</button>
+      </div>
+      <div class="qlist" id="qlist" role="listbox" aria-label="Account queue"></div>
+    </div>
+
+    <!-- BRIEF -->
+    <div class="col brief">
+      <div class="brief-scroll" id="brief"></div>
+    </div>
+
+    <!-- CHAT -->
+    <div class="col chat">
+      <div class="col-head"><h2>Ask the agent</h2><span class="count" id="chat-ctx"></span></div>
+      <div class="chat-stream" id="stream"></div>
+      <div class="suggest" id="suggest"></div>
+      <div class="composer">
+        <textarea id="input" rows="1" placeholder="Ask about this account…"></textarea>
+        <button class="send" id="send" aria-label="Send"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+/* ---------- icons ---------- */
+const IC = {
+  hire:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg>',
+  funding:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v20M17 6.5C17 4.6 14.8 3.5 12 3.5S7 4.6 7 6.5 9 9.4 12 10s5 1.5 5 3.5-2.2 3-5 3-5-1.1-5-3"/></svg>',
+  jobs:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7"/></svg>',
+  location:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>',
+  email:'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>',
+  call:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>',
+  linkedin:'<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21H19.6v-5.4c0-1.3-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z"/></svg>',
+  vm:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="14" r="4"/><circle cx="18" cy="14" r="4"/><path d="M6 18h12"/></svg>',
+  copy:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>',
+  gong:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5v14"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>',
+  up:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 10v11M14 3l-2.5 6H21l-1.6 8.4a2 2 0 0 1-2 1.6H7V10l4-7a2 2 0 0 1 3 0z"/></svg>',
+  down:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 14V3M10 21l2.5-6H3l1.6-8.4a2 2 0 0 1 2-1.6H17v14l-4 7a2 2 0 0 1-3 0z"/></svg>',
+  spark:'<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.4L19 9l-5.2 1.6L12 16l-1.8-5.4L5 9l5.2-1.6z"/></svg>'
+};
+const tier = s => s>=75?'hot':s>=60?'warm':'cool';
+
+/* ---------- shared cadence flow ---------- */
+const FLOW = [
+  {day:1, ch:'email', label:'Email 1', purpose:'CUSTOM — bespoke first touch', custom:true},
+  {day:1, ch:'linkedin', label:'Connect', purpose:'Connection request, light note'},
+  {day:2, ch:'call', label:'Call 1', purpose:'Templated opener'},
+  {day:3, ch:'email', label:'Email 2', purpose:'Primary pain angle'},
+  {day:4, ch:'call', label:'Call 2', purpose:'Templated'},
+  {day:6, ch:'linkedin', label:'Msg 1', purpose:'Reference email + one proof'},
+  {day:8, ch:'call', label:'Call 3+VM', purpose:'Templated call + voicemail'},
+  {day:9, ch:'email', label:'Email 3', purpose:'Proof point'},
+  {day:11, ch:'call', label:'Call 4', purpose:'Templated'},
+  {day:13, ch:'email', label:'Email 4', purpose:'Case study'},
+  {day:15, ch:'linkedin', label:'Msg 2', purpose:'Nudge + proof link'},
+  {day:17, ch:'call', label:'Call 5', purpose:'Templated'},
+  {day:19, ch:'email', label:'Email 5', purpose:'Breakup'}
+];
+
+/* ---------- account data (fictional prospects) ---------- */
+const ACCOUNTS = [
+  {
+    id:'rowan', company:'Rowan & Oak', domain:'rowanoakgroup.com',
+    vertical:'FSR', persona:'Finance', locations:'11 sites', score:84, status:'ready',
+    why:'Two new sites + a new Finance Director in the last 60 days.',
+    angle:'Labour % and COGS only land at month-end — and the two numbers rarely agree. Finance defends margin half-blind.',
+    signals:[
+      {t:'location', title:'2 new locations opened', detail:'Charlotte + Raleigh, per company site & permits', date:'12 days ago', str:3},
+      {t:'hire', title:'New Finance Director', detail:'Dana Osei, ex-multi-site hospitality — LinkedIn', date:'43 days ago', str:3},
+      {t:'jobs', title:'Open: FP&A Analyst', detail:'Posted on careers page + Indeed', date:'9 days ago', str:2}
+    ],
+    email:{subject:'2 new sites + the month-end scramble', body:`Hi Dana — saw Rowan & Oak opened two rooms this quarter. That's usually when labour % and COGS start drifting across the estate, and finance only catches it at month-end once it's already banked.
+
+We give full-service groups one live P&L per site, so the drift shows up the week it happens — not in arrears.
+
+Worth 20 minutes to see it on your own numbers?
+
+— Marcus`},
+    alt:{subject:'a quick one on per-site margin', body:`Hi Dana — congrats on stepping into the FD seat at Rowan & Oak, and on the two new rooms.
+
+No pitch here — just a question. With the estate growing, are labour % and COGS by site something you can see live, or is it still a month-end picture?
+
+If the second, might be worth a short chat. Either way, good luck with the ramp.
+
+— Marcus`},
+    rationale:{sig:'2 new sites + new FD (43 days)', ben:'one live P&L per site', proof:'held back — FSR proof leads with % (Passyunk −26% COL); not needed in touch 1'},
+    evidence:true, cadence:'FSR × Finance — Territory Flow', compress:false
+  },
+  {
+    id:'halcyon', company:'Halcyon Coffee', domain:'halcyoncoffee.co',
+    vertical:'Coffee/Café', persona:'Ops', locations:'9 cafés', score:71, status:'scored',
+    why:'Just closed a Series A and is hiring across operations.',
+    angle:'Past ~8 cafés, daily labour decisions stop fitting in one person\'s head — rotas get built on last week\'s guess.',
+    signals:[
+      {t:'funding', title:'Series A — $12M', detail:'Announced via press release + Crunchbase', date:'8 days ago', str:3},
+      {t:'jobs', title:'3 open operations roles', detail:'Area Manager ×2, Ops Coordinator', date:'5 days ago', str:2},
+      {t:'hire', title:'New VP Operations', detail:'Started recently — LinkedIn', date:'66 days ago', str:1}
+    ],
+    email:{subject:'the 7am labour call across 9 cafés', body:`Hi Priya — congrats on the raise. Nine cafés is right about where daily labour decisions stop being something one person can hold in their head.
+
+Most coffee ops leads I talk to are still building rotas off last week's guess instead of today's demand. Nory forecasts covers per café and builds the schedule against it.
+
+Worth 20 minutes?
+
+— Marcus`},
+    alt:{subject:'scaling the rota past 9 cafés', body:`Hi Priya — congrats on the Series A.
+
+Quick one: as you add cafés, is scheduling still done café-by-café off last week's numbers, or have you moved to something that forecasts demand first?
+
+Happy to show what that looks like if it's useful — no pressure either way.
+
+— Marcus`},
+    rationale:{sig:'Series A ($12M, 8 days) + 3 ops roles', ben:'demand forecast → auto-schedule', proof:'coffee proof gap — positioning-only, flagged in provenance'},
+    evidence:false, cadence:'Coffee/Café × Ops — Territory Flow', compress:false
+  },
+  {
+    id:'firegrill', company:'Firegrill', domain:'firegrill.com',
+    vertical:'QSR', persona:'C-suite', locations:'40 drive-thrus', score:63, status:'ready',
+    why:'New CEO in seat 31 days; hiring for tech/IT.',
+    angle:'A new CEO\'s fastest margin lever across 40 QSR sites is labour deployment against real demand — not headcount cuts.',
+    signals:[
+      {t:'hire', title:'New CEO appointed', detail:'Sam Ortega, ex-QSR franchise — press + LinkedIn', date:'31 days ago', str:3},
+      {t:'jobs', title:'2 open IT / systems roles', detail:'Careers page', date:'14 days ago', str:2}
+    ],
+    email:{subject:'your first 90 days across 40 drive-thrus', body:`Hi Sam — congrats on the CEO seat. Walking into 40 QSR sites, the fastest lever on margin is almost always labour deployment against real demand, not headcount.
+
+Nory runs one live prime-cost view per site, so you can see where the points are before the board asks.
+
+Worth 20 minutes early on?
+
+— Marcus`},
+    alt:{subject:'prime cost, site by site', body:`Hi Sam — congrats on the new role.
+
+When you get a moment in the first 90 days: is prime cost something you can see live per site today, or does it come together after the fact?
+
+If it's the latter, worth a short conversation. Good luck with the start.
+
+— Marcus`},
+    rationale:{sig:'New CEO (31 days) + 2 IT roles', ben:'one live prime-cost view per site', proof:'QSR proof — matched at send'},
+    evidence:true, cadence:'QSR × C-suite — Territory Flow (compressed)', compress:true
+  },
+  {
+    id:'verde', company:'Verde Cantina', domain:'verdecantina.com',
+    vertical:'FSR', persona:'Ops', locations:'6 sites', score:58, status:'scored',
+    why:'One new location — signals thin, low confidence.',
+    angle:'FSR × Ops default: labour and COGS visibility only at month-end, once the quarter has already moved.',
+    signals:[
+      {t:'location', title:'1 new location', detail:'Single permit filing — unconfirmed opening date', date:'22 days ago', str:1}
+    ],
+    email:{subject:'one live P&L per site', body:`Hi Alex — reaching out to multi-site full-service ops leads about one specific gap: labour % and COGS only landing at month-end, once the quarter's already moved.
+
+Nory gives one live P&L per site — GP, stock, labour — so you catch drift the week it happens.
+
+Worth 20 minutes?
+
+— Marcus`},
+    alt:{subject:'catching cost drift earlier', body:`Hi Alex — quick question for a multi-site ops lead: can you see labour and COGS by site live today, or is it a month-end picture?
+
+If it's month-end, there might be something here worth 20 minutes. No pressure.
+
+— Marcus`},
+    rationale:{sig:'thin (1 unconfirmed location, low confidence)', ben:'one live P&L per site', proof:'none — positioning-only fallback, no manufactured personalisation'},
+    evidence:false, cadence:'FSR × Ops — Territory Flow', compress:false
+  },
+  {
+    id:'nomad', company:'Nomad Café Group', domain:'nomadcafe.com',
+    vertical:'Coffee/Café', persona:'Finance', locations:'14 cafés', score:47, status:'queued',
+    why:'In the queue — no Tier-1 signals confirmed yet.',
+    angle:null, signals:[], email:null, alt:null, rationale:null,
+    evidence:false, cadence:'Coffee/Café × Finance — Territory Flow', compress:false
+  }
+];
+
+/* ---------- state ---------- */
+let current = null;
+const state = {}; // per-account UI state (feedback, activated, softened)
+ACCOUNTS.forEach(a=>state[a.id]={fb:null, activated:false, soft:false});
+const $ = s => document.querySelector(s);
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+/* ---------- queue ---------- */
+let filter='all';
+function renderQueue(){
+  const list=$('#qlist'); list.innerHTML='';
+  const items=ACCOUNTS.filter(a=>{
+    const st=state[a.id].activated?'cadence':a.status;
+    return filter==='all'||st===filter;
+  });
+  $('#q-count').textContent=items.length+' of '+ACCOUNTS.length;
+  items.forEach(a=>{
+    const st=state[a.id].activated?'cadence':a.status;
+    const stLabel={ready:'Ready',scored:'Scored',queued:'Queued',cadence:'In cadence'}[st];
+    const b=document.createElement('button');
+    b.className='qcard'; b.setAttribute('role','option');
+    b.setAttribute('aria-selected', current===a.id);
+    b.onclick=()=>select(a.id);
+    b.innerHTML=`
+      <div class="co">${a.company}</div>
+      <div class="score ${tier(a.score)}" style="--v:${a.score}"><span class="tnum">${a.score}</span></div>
+      <div class="why">${a.why}</div>
+      <div class="meta">
+        <span class="pill vert">${a.vertical}</span>
+        <span class="pill pers">${a.persona}</span>
+        <span class="status ${st}"><i class="dot"></i>${stLabel}</span>
+      </div>`;
+    list.appendChild(b);
+  });
+}
+$('#filters').addEventListener('click',e=>{
+  const btn=e.target.closest('button'); if(!btn)return;
+  filter=btn.dataset.f;
+  [...$('#filters').children].forEach(x=>x.setAttribute('aria-pressed', x===btn));
+  renderQueue();
+});
+
+/* ---------- brief ---------- */
+function briefEmpty(){
+  return `<div class="brief-empty"><div><div style="font-size:34px;margin-bottom:8px">▤</div>Pick an account from your queue<br><span style="font-size:12.5px">Its signals, first-touch email and cadence appear here.</span></div></div>`;
+}
+function timelineHTML(a){
+  const legend=`<div class="cad-legend">
+    <span><i class="lg" style="background:var(--lime);border:1px solid var(--lime-deep)"></i>Custom (you)</span>
+    <span><i class="lg" style="background:var(--lilac-wash);border:1px solid var(--lilac-deep)"></i>Email</span>
+    <span><i class="lg" style="background:#fff;border:1px solid #3C0304"></i>Call</span>
+    <span><i class="lg" style="background:#fff;border:1px solid #0A66C2"></i>LinkedIn</span>
+  </div>`;
+  const touches=FLOW.map(t=>`
+    <div class="touch ${t.ch} ${t.custom?'custom':''}">
+      <span class="day">D${t.day}</span>
+      <div class="tip">${t.custom?'<b>CUSTOM</b> · ':''}${t.label} · Day ${t.day}<br>${t.purpose}</div>
+      <div class="node">${t.ch==='email'?IC.email:t.ch==='call'?IC.call:IC.linkedin}</div>
+      <div class="tl">${t.label}</div>
+    </div>`).join('');
+  const dev = a.compress
+    ? `<div class="deviation">${IC.spark}<div><b>Compressed for C-suite.</b> This cell runs ~10 touches, higher-altitude — C-suite won't read five emails. Structure inherits the shared flow, trimmed. <span style="color:var(--faint)">Deviation logged per <code>_flow_structure.md</code>.</span></div></div>`
+    : `<div class="deviation">${IC.spark}<div><b>Standard 14-touch flow.</b> Mid-market multi-site fits the full multi-threaded cadence (~19 business days). Rhythm updates automatically when Gong evidence shows a better-converting sequence.</div></div>`;
+  return `<div class="cad-name">
+      <span class="tmpl">${a.cadence}</span>
+      <span class="flow">5 email · 5 call · 3 LinkedIn · 1 VM · ~19 days</span>
+    </div>
+    <div class="timeline"><div class="track">${touches}</div></div>
+    ${legend}${dev}`;
+}
+function briefHTML(a){
+  const s=state[a.id];
+  const em=s.soft&&a.alt?a.alt:a.email;
+  const activated=s.activated;
+  if(a.status==='queued'){
+    return `
+    <div class="snapshot">
+      <div class="score ${tier(a.score)} big-score" style="--v:${a.score}"><span class="tnum">${a.score}</span></div>
+      <div>
+        <h1>${a.company}</h1>
+        <div class="snap-meta">
+          <span class="pill vert">${a.vertical}</span><span class="pill pers">${a.persona}</span>
+          <span class="sep"></span><span>${a.locations}</span><span class="sep"></span><span>${a.domain}</span>
+        </div>
+      </div>
+    </div>
+    <section class="block">
+      <div class="angle"><span class="ic">${IC.spark}</span><div>
+        <div class="lbl">In the queue</div>
+        <p>No Tier-1 signals confirmed yet. The signal hunters run on the next pass — once anything lands (new hire, funding, jobs, a new site), ${a.company} gets scored and a bespoke first touch is drafted here.</p>
+      </div></div>
+    </section>
+    <div class="provenance"><span>Status: <b style="color:var(--muted)">Queued</b></span><span>Next signal run: tonight</span><span>Source of record: HubSpot</span></div>`;
+  }
+  const strClass=v=>v>=3?'':v>=2?'mid':'mid';
+  const sigs=a.signals.map(x=>`
+    <div class="sig">
+      <div class="sicon">${IC[x.t]}</div>
+      <div class="stext"><strong>${x.title}</strong><span>${x.detail}</span></div>
+      <div class="sright">
+        <span class="date">${x.date}</span>
+        <span class="strength ${x.str>=3?'':'mid'}">${[1,2,3].map(i=>`<i class="${i<=x.str?'on':''}"></i>`).join('')}</span>
+        <a href="#" onclick="toast('Prototype — source links open the evidence in HubSpot');return false" style="font-size:11px">view source ↗</a>
+      </div>
+    </div>`).join('');
+
+  return `
+  <div class="snapshot">
+    <div class="score ${tier(a.score)} big-score" style="--v:${a.score}"><span class="tnum">${a.score}</span></div>
+    <div>
+      <h1>${a.company}</h1>
+      <div class="snap-meta">
+        <span class="pill vert">${a.vertical}</span><span class="pill pers">${a.persona}</span>
+        <span class="sep"></span><span>${a.locations}</span><span class="sep"></span><span>${a.domain}</span>
+      </div>
+    </div>
+    <div class="snap-actions">
+      <button class="btn ghost" onclick="askAgent('Why is ${a.company} scored ${a.score}?')">Explain score</button>
+      ${activated
+        ? `<button class="btn lime" disabled>${IC.check}<span>Activated in Gong</span></button>`
+        : `<button class="btn primary" onclick="activate('${a.id}')">${IC.check}<span>Mark activated in Gong</span></button>`}
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="angle"><span class="ic">${IC.spark}</span><div>
+      <div class="lbl">The angle · why now</div>
+      <p>${a.angle}</p>
+    </div></div>
+  </section>
+
+  <section class="block">
+    <div class="block-h"><h3>Why now — the signals</h3><span class="hint">every signal carries its source</span></div>
+    <div class="signals">${sigs}</div>
+  </section>
+
+  <section class="block">
+    <div class="block-h"><h3>Your first touch</h3><span class="hint">the one bespoke slot — Email 1</span></div>
+    <div class="email-card">
+      <div class="email-top">
+        <span class="custom-tag">${IC.spark} Custom</span>
+        <span class="gate">${IC.check} Anti-AI gate passed</span>
+        ${a.evidence?'':'<span class="posonly">Positioning-only</span>'}
+        <span class="ecount tnum" id="wc"></span>
+      </div>
+      <div class="email-body">
+        <div class="subject"><span class="slbl">Subject</span><span id="subj">${esc(em.subject)}</span></div>
+        <div class="body-text" id="body">${esc(em.body)}</div>
+      </div>
+      <div class="email-foot">
+        <div class="rationale"><b>Why this copy:</b> signal — ${a.rationale.sig}; benefit — ${a.rationale.ben}; proof — ${a.rationale.proof}.</div>
+        <button class="btn" onclick="askAgent('Redraft with a softer ask')">Redraft</button>
+        <button class="btn primary" onclick="copyEmail('${a.id}')">${IC.copy}<span>Copy email</span></button>
+        <div class="thumbs">
+          <button class="thumb up ${s.fb==='up'?'':''}" aria-pressed="${s.fb==='up'}" onclick="fb('${a.id}','up')" title="Good draft">${IC.up}</button>
+          <button class="thumb down" aria-pressed="${s.fb==='down'}" onclick="fb('${a.id}','down')" title="Needs work">${IC.down}</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="block-h"><h3>The cadence to run</h3><span class="hint">built by Lewis in Gong · you assemble + activate</span></div>
+    ${timelineHTML(a)}
+    <div class="snap-actions" style="margin-top:14px;justify-content:flex-start">
+      <button class="btn" onclick="toast('Prototype — opens the Gong territory-flow template')">${IC.gong}<span>Open Gong template</span></button>
+    </div>
+  </section>
+
+  <div class="provenance">
+    <span>${a.evidence?'<b style="color:var(--hot)">● Evidence-backed</b> (Gong VOC + proof)':'<b style="color:var(--warm)">● Positioning-only</b> — thin signals / coffee proof gap'}</span>
+    <span>Generated ${'Aug 10, 2026'}</span>
+    <span>System of record: HubSpot</span>
+    <span>Nothing sends automatically</span>
+  </div>`;
+}
+function select(id){
+  current=id;
+  const a=ACCOUNTS.find(x=>x.id===id);
+  $('#brief').innerHTML=briefHTML(a);
+  $('#brief').scrollTop=0;
+  renderQueue();
+  updateWordcount();
+  seedChat(a);
+  renderSuggest(a);
+}
+function updateWordcount(){
+  const body=$('#body'); if(!body)return;
+  const wc=body.textContent.trim().split(/\s+/).length;
+  const el=$('#wc'); if(el) el.textContent=wc+' words';
+}
+
+/* ---------- actions ---------- */
+function copyEmail(id){
+  const a=ACCOUNTS.find(x=>x.id===id); const s=state[id];
+  const em=s.soft&&a.alt?a.alt:a.email;
+  const txt='Subject: '+em.subject+'\n\n'+em.body;
+  navigator.clipboard?.writeText(txt).catch(()=>{});
+  toast('First-touch email copied — paste into the Gong Email 1 slot');
+}
+function activate(id){
+  state[id].activated=true;
+  refreshStats();
+  select(id);
+  toast('Marked activated — moved to “In cadence”. Status synced to the sheet.');
+}
+function fb(id,dir){
+  const s=state[id]; s.fb = s.fb===dir?null:dir;
+  select(id);
+  if(s.fb==='up') toast('Thanks — logged to the learning loop as a good draft');
+  else if(s.fb==='down') toast('Noted — the agent will ask what to change on the next pass');
+}
+function softenCurrent(){
+  const a=ACCOUNTS.find(x=>x.id===current);
+  if(!a||!a.alt) return false;
+  state[a.id].soft=true;
+  const b=$('#brief');
+  const em=a.alt;
+  if($('#subj')) $('#subj').textContent=em.subject;
+  if($('#body')) $('#body').textContent=em.body;
+  updateWordcount();
+  return true;
+}
+
+/* ---------- chat ---------- */
+const stream=$('#stream');
+function seedChat(a){
+  $('#chat-ctx').textContent=a?('on '+a.company):'';
+  stream.innerHTML='';
+  addMsg('agent', `<p>Here's <strong>${a.company}</strong> — ${a.vertical} × ${a.persona}, scored <strong>${a.score}</strong>.</p><p>${a.status==='queued'?'Not scored yet — no confirmed signals.':'Ask me to explain the score, rework the first touch, or draft the LinkedIn version.'}</p>`);
+}
+function addMsg(role, html){
+  const m=document.createElement('div'); m.className='msg '+role;
+  m.innerHTML=`<div class="ava">${role==='agent'?'n':'MH'}</div><div class="bubble">${html}</div>`;
+  stream.appendChild(m); stream.scrollTop=stream.scrollHeight;
+  return m;
+}
+function typing(){
+  const m=document.createElement('div'); m.className='msg agent';
+  m.innerHTML=`<div class="ava">n</div><div class="bubble"><div class="typing"><i></i><i></i><i></i></div></div>`;
+  stream.appendChild(m); stream.scrollTop=stream.scrollHeight; return m;
+}
+function renderSuggest(a){
+  const box=$('#suggest'); box.innerHTML='';
+  if(!a) return;
+  const chips = a.status==='queued'
+    ? ['When will this get scored?','What signals are you watching?']
+    : ['Why is this scored '+a.score+'?','Redraft with a softer ask','Give me the LinkedIn version','What proof can I use?'];
+  chips.forEach(c=>{
+    const b=document.createElement('button'); b.className='chip'; b.textContent=c;
+    b.onclick=()=>askAgent(c); box.appendChild(b);
+  });
+}
+function reply(text){
+  const a=ACCOUNTS.find(x=>x.id===current);
+  const q=text.toLowerCase();
+  if(/scored|score|why.*\d|explain/.test(q) && a){
+    const parts = a.signals.length
+      ? a.signals.map(s=>`<div class="kv"><span>${s.title}</span><b>+${s.str*11}</b></div>`).join('')
+      : `<div class="kv"><span>No confirmed signals</span><b>—</b></div>`;
+    return `<p><strong>${a.company} · ${a.score}/100</strong></p>${parts}<div class="kv"><span>Recency & fit weighting</span><b>${a.score>=75?'+':''}${a.score - a.signals.reduce((n,s)=>n+s.str*11,0)}</b></div><p>${a.score>=75?'Strong, recent, multi-signal — <b>launch this week</b>.':a.score>=60?'Solid — worth running now.':'Thin — I led on the vertical default rather than manufacture personalisation.'}</p>`;
+  }
+  if(/soft|gentl|less push|redraft|rework/.test(q) && a && a.alt){
+    softenCurrent();
+    return `<p>Done — softened the ask and dropped the pitch-y line. It now opens on a genuine question, no hard CTA. The email above updated.</p><p>Want it <strong>shorter</strong>, or a different signal leading?</p>`;
+  }
+  if(/linkedin|connect/.test(q) && a){
+    return `<p><strong>LinkedIn — connect + Msg 1</strong></p><p><code>Connect:</code> Hi ${a.persona==='C-suite'?'there':a.company.split(' ')[0]} — reaching out to ${a.vertical} ${a.persona.toLowerCase()} leads about live per-site margin. Thought it might be relevant given the ${a.signals[0]?a.signals[0].title.toLowerCase():'recent moves'}. Open to connecting?</p><p style="color:var(--muted);font-size:12px">These are templated in the cell — I only tailor the opening reference. Copy from the Gong template when you assemble.</p>`;
+  }
+  if(/proof|case|reference/.test(q) && a){
+    return a.vertical.includes('Coffee')
+      ? `<p><strong>Careful here.</strong> Coffee/Café is our known proof gap — no safe named win to quote yet. I kept this account's first touch <strong>positioning-only</strong> rather than borrow an FSR number.</p><p>If you have a live coffee reference, tell me and I'll wire it in.</p>`
+      : `<p>For ${a.vertical} I'd lead with the <strong>%</strong>, not the absolute: e.g. Passyunk <code>−26% cost of labour</code> or Grounded Kitchen <code>−4.8% COL</code>.</p><p style="color:var(--muted);font-size:12px">The £/€ absolutes are UK/EU actuals — never relabel as $. Proof resolves from <code>proof_library.md</code> at send.</p>`;
+  }
+  if(/queue|scored|when|watching|signal/.test(q) && a && a.status==='queued'){
+    return `<p>${a.company} runs on tonight's signal pass. I'm watching the Tier-1 set: <strong>new leadership hire</strong> (&lt;90 days), <strong>funding</strong>, <strong>open ops/finance/IT jobs</strong>, and <strong>new locations</strong>.</p><p>The moment one lands, it gets scored and I'll draft the first touch here.</p>`;
+  }
+  return `<p>I can, on <strong>${a?a.company:'this account'}</strong>: explain the score, redraft the first touch (softer / shorter / different signal), draft the LinkedIn or call opener, or pull the right proof. What would help?</p>`;
+}
+function askAgent(text){
+  if(!current) return;
+  addMsg('user', esc(text));
+  const t=typing();
+  setTimeout(()=>{ t.remove(); addMsg('agent', reply(text)); }, 620);
+}
+$('#send').onclick=()=>{ const v=$('#input').value.trim(); if(v){askAgent(v); $('#input').value=''; $('#input').style.height='auto';} };
+$('#input').addEventListener('keydown',e=>{ if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('#send').click();} });
+$('#input').addEventListener('input',function(){ this.style.height='auto'; this.style.height=Math.min(this.scrollHeight,110)+'px'; });
+
+/* ---------- stats + toast ---------- */
+function refreshStats(){
+  const cad=ACCOUNTS.filter(a=>state[a.id].activated).length;
+  const ready=ACCOUNTS.filter(a=>!state[a.id].activated && a.status==='ready').length;
+  const scored=ACCOUNTS.filter(a=>a.status!=='queued').length;
+  const avg=Math.round(ACCOUNTS.reduce((n,a)=>n+a.score,0)/ACCOUNTS.length);
+  $('#s-cad').textContent=cad; $('#s-ready').textContent=ready;
+  $('#s-avg').textContent=avg; $('#s-accts').textContent=ACCOUNTS.length;
+}
+let tt;
+function toast(msg){
+  const el=$('#toast'); el.innerHTML=`<span class="tclr">${IC.check}</span>${msg}`;
+  el.classList.add('show'); clearTimeout(tt); tt=setTimeout(()=>el.classList.remove('show'),2600);
+}
+window.toast=toast; window.askAgent=askAgent; window.copyEmail=copyEmail; window.activate=activate; window.fb=fb;
+
+/* ---------- init ---------- */
+refreshStats(); renderQueue(); select('rowan');
+</script>
