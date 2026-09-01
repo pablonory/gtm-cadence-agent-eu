@@ -4,7 +4,7 @@ Standing inputs the agents read. Brand/product-specific (this is the Nory instan
 
 ## product/
 Source material for Stage 2a product knowledge: what Nory does, modules, features, integrations,
-pricing where relevant. Feeds `ga_product_knowledge`.
+pricing where relevant. Distilled into `knowledge/product.md`.
 
 ## icp/
 - The vertical definitions (Coffee, Cafe, QSR, Full-service — and whether "Casual" is a 5th).

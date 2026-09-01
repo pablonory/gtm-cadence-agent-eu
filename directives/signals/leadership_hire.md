@@ -1,6 +1,6 @@
 # Signal playbook — New leadership hire (<180 days)
 
-> Versioned research method for the `ga_leadership_hire` sub-agent. Adapted from the BDR Clay signal
+> Versioned research method for the **leadership_hire** signal. Output shape: `directives/signals/_signal_stack.md`. Adapted from the BDR Clay signal
 > doc (Tier 1). The learning loop rewrites this file as detection sharpens.
 
 ## What it detects
@@ -29,10 +29,30 @@ whether the *seat* is new to that person; date from when they took the seat.
    `"<Company>" ("appoints" OR "names" OR "joins as" OR "new") (COO OR CFO OR MD OR "Managing Director" OR "Operations Director" OR "Finance Director")`.
 3. **UK trade press people-moves** — **The Caterer** (People), **Propel** (daily people moves),
    Big Hospitality, MCA Insight; The Grocer for bakery/café crossover; Irish trade press for IE.
-4. **LinkedIn via WebSearch snippets** — job-change posts are login-walled; snippets are a lead to
+4. **The company's own leadership page, diffed against the Wayback Machine** — ADDED 2026-08-24 on the
+   US fork's batch 3/6 evidence, ported 2026-09-01 (cbb37d1); it belongs near the top there and here. A
+   hunter on Backal Hospitality fetched the live team page and the same URL's Wayback capture dated
+   2024-11-19: an SVP of Operations & Development present today was **absent** from the older snapshot,
+   and the three execs the CRM already knew were shown to be long-tenured. It also caught that
+   "Helen Chan" and 2021's "Helen Tran Chan" are one person, not a new hire — a phantom the next run
+   would otherwise have reported.
+
+   Why this matters more than it looks: this signal's known weakness is that private-group exec moves
+   **never reach trade press and live only on the company site and LinkedIn**, and LinkedIn is walled. A
+   leadership page is a *static fact*; a leadership page plus a dated snapshot is a **delta**, which is
+   what this whole signal is supposed to be. For UKI it complements Companies House: the register dates
+   statutory directors, the page diff catches the senior hires who never file.
+
+   `http://archive.org/wayback/available?url=<url>&timestamp=<YYYYMMDD>` returns the nearest capture.
+   Two rules: **the snapshot's date bounds the change, it does not date it** — absent in Nov 2024 and
+   present now means "sometime in between", so report `recency_days: null` and set `newly_appointed: true`
+   on that exec (see the output contract) rather than inventing a date from the gap. And **do not treat
+   page metadata as a date**: a photo filenamed `Screenshot+2026-04-17...` is inference, not a date —
+   the hunter that noticed one correctly refused to use it. Keep that restraint.
+5. **LinkedIn via WebSearch snippets** — job-change posts are login-walled; snippets are a lead to
    verify, never the sole source (rule unchanged from the US fork).
-5. **HubSpot** — is the contact already in CRM with a recent title/company change? (enrichment)
-6. *(US accounts only)* NRN People on the Move, Restaurant Business/Dive, metro Business Journals.
+6. **HubSpot** — is the contact already in CRM with a recent title/company change? (enrichment)
+7. *(US accounts only)* NRN People on the Move, Restaurant Business/Dive, metro Business Journals.
 
 ## How to verify
 - Confirm **role seniority** (ops/finance/C-suite — not a junior or non-relevant function).

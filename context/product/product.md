@@ -1,6 +1,6 @@
 # Product source — Nory
 
-> Source material for Stage 2a. `ga_product_knowledge` distils this into `knowledge/product.md`
+> Source material for Stage 2a, distilled into `knowledge/product.md`
 > (outbound-ready). Facts here are grounded in the paid-media repo's `business_profile.md`
 > (pitch deck 27 May 2026 + nory.ai + brand guidelines). `[FILL]` = not in source, needs the user.
 

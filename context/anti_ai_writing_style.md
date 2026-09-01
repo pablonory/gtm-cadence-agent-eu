@@ -29,7 +29,15 @@ next-level, best-in-class, unleash, delve, navigate (metaphorical), tapestry, re
   occasional longer one.
 - **Mechanical rule-of-three:** not everything in threes. Break the pattern.
 - **Negative parallelism:** "not X, but Y" repeated → vary it.
-- **Em-dash overuse (—):** replace some with a comma, "and", or a full stop.
+- **Em dashes and en dashes (— –): ZERO in outbound copy. Not "fewer" — none.** Tightened from
+  "overuse" on 2026-08-24, on rep feedback: across batch 3/6 every one of the nine drafted first touches
+  opened `Name — ...` and the set carried **24 dashes in 18 pieces of copy**. Each one read fine alone;
+  together they were a signature. That is the metronome problem in punctuation form, and a rep reading
+  two briefs in a row spots it instantly. Use a comma, a full stop, a colon, or "and". A full stop is
+  almost always better — it shortens the line, which the voice file wants anyway.
+  **Applies to `first_touch_subject`, `first_touch_body`, `first_touch_alt_subject`,
+  `first_touch_alt_body` — every field a prospect can read.** Long-form internal fields
+  (`reactivation_*`, `*_rationale`) are exempt: nobody outside Nory reads them.
 - **Summary line that restates what was just said** → cut, it's redundant.
 - **Lists with a repeated leading gerund** → vary the structure. (And: no bullet lists in a cold email.)
 

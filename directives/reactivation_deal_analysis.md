@@ -36,6 +36,32 @@ This gates how confident the rest of your writing is allowed to sound:
   checked", which is worse than "checked, found nothing").
 - `deal_calls` / `deal_calls_emails` / `calls_only` — set accordingly.
 
+## 2a. FIRST, check the account is still a prospect at all — added 2026-08-24
+
+This motion picks accounts by their **dead** deals, which made it structurally blind to what happened
+next. `backalgroup.com` reached batch 3/6 looking like a lapsed prospect and was in fact a **customer**:
+closed-won 2026-06-26, an **open 2027 renewal**, and three *"Time to add your payment details to Nory"*
+emails eleven days before the run. Nothing here sends — the rep copies the draft and sends from Gong —
+but that is exactly what makes this dangerous rather than safe: a `reactivate` verdict and a ready-to-copy
+opener arrive next to a copy button, inside a brief the rep trusts because the analysis is supposedly
+already done. The guardrail has to sit here, not in the rep's review. And nothing in this runbook would
+have caught it, because the bundle only ever showed the losses that preceded the win.
+
+`reactivation_bundle.py` now checks every associated deal, not just the dead ones, and emits
+`STOP — THIS ACCOUNT HAS N CLOSED-WON DEAL(S)` / `CAUTION — N OPEN deal(s)` plus a
+`hubspot.deal_state_summary` block. **Read that summary before anything else.**
+
+- **`closed_won > 0`** → `verdict: "do_not_reactivate"`. Say in `verdict_reason` that the account is a
+  customer and name the won deal. Do not draft a first touch. Put it in `flags` for the account owner.
+  The only exception is a win that provably belongs to a **separate legal entity** — show your work.
+- **`open > 0`** → someone may be working it now. A reactivation email risks colliding with a live
+  thread. Check the deal owner first and flag it; this was already the most common free-text complaint
+  reps gave in the first ~114 accounts ("correct but they're mid-conversation with someone else").
+
+Audited across the 127 briefs written before this check existed: **1 sits on a won account**
+(`nbconcepts.com`) and **1 on an account with a live open deal** (`unionjoints.com`). Rare, ~1.5%, but
+the cost per occurrence is a customer being told their dead deal is worth revisiting.
+
 ## 2b. A "wrong contact" disqualification needs a verified check, not a title shortcut
 If a deal's closed-lost reason is some version of "contact isn't in the restaurant business" (real-estate
 agent, unrelated profession, etc.), don't launder that into your write-up as fact unless the reason *itself*

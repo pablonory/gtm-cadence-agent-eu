@@ -72,7 +72,7 @@ the **8%→39% booking-rate multithread stat** (`knowledge/gong_evidence/_sequen
 
 ## How the persona is used
 - Sheet `Persona` dropdown → **C-Suite / Finance / Founder / Operations**. **Optional** — if blank, the
-  agent defaults from the contact's title in HubSpot + company size (see `ga_score_aggregator`
+  agent defaults from the contact's title in HubSpot + company size (see `hubspot-app/scripts/score_accounts.py`
   classification), and notes the assumption. Persona also fixes the **suite** in the flow name
   (Finance/Operations → IM; C-Suite/Founder → Full Suite).
 - Selects the matrix column → the matching **UKI flow** (`cadences/UKI_FLOWS.md`, pending) and the JTBD brief

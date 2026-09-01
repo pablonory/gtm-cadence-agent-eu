@@ -7,22 +7,22 @@
 >   a "UKI cadence targets" saved view (filter on owner/batch).
 > - **To confirm:** the UKI flow set in Gong (`cadences/UKI_FLOWS.md`) · the UKI territory owner ·
 >   UKI rep emails as HubSpot owners.
-> - **To build:** the UK conjunctural register (`knowledge/conjunctural/README.md`).
+> - ~~To build: the UK conjunctural register~~ ✅ built 2026-08-20 (`knowledge/conjunctural/README.md`).
 
 
 **Reviewed 2026-07-17.** What must be true before/at deploy, and the honest spec-vs-runnable picture.
 
-## ⚠️ What this repo IS (read first)
-This is a **specification + prompt + knowledge layer**, not executable code. The "agents" are markdown
-role definitions; the knowledge/cadences are content. Nothing runs on its own yet. There are two ways
-to operate it:
-- **(A) Session-driven (v1 recommended):** run it inside a Claude session that has the connectors
-  authenticated — Claude follows `CLAUDE.md` + the agent specs, does the research/scoring/drafting live.
-  Good for low volume (Lewis's US AEs).
-- **(B) Orchestrated (later):** build a runner (Claude Agent SDK / scripts in `scripts/`) that executes
-  the pipeline headless. Not built yet.
+## ⚠️ What this repo IS (read first — rewritten 2026-09-01, following the US repo's cbb37d1)
+**No longer spec-only.** The shared infrastructure is in production: a deployed HubSpot app (`nory-prod`),
+a live `cadence_brief` custom object with 36 properties, two rep-facing cards, and the Python layer
+(delta snapshots, scoring, digesting, the single write path) — all deployed ONCE from the US repo and
+shared. The US side has 127+ brief records written; **UKI has written none yet** (blockers in
+`docs/open_questions.md`). The dispatchable workers live in `.claude/agents/`; the retired prose specs
+are documented in `.claude/reference/retired-agents.md`.
 
-So "deploy" for v1 = complete the setup below, then run mode (A) on a first real account.
+**Run mode (US decision 2026-08-24, inherited): supervised manual batches** in a Claude Code session with
+the connectors authenticated. No cron, no headless runner — checkpoints exist to resume after a failure,
+not to run unattended.
 
 ## Pre-deploy setup
 ### Connectors — verified 2026-07-17
@@ -36,12 +36,17 @@ So "deploy" for v1 = complete the setup below, then run mode (A) on a first real
 - [ ] ⚠️ **Gong via REST API (primary Stage 2b)** — Supermetrics Gong is **gated behind early access**, so
       go direct: set `GONG_ACCESS_KEY`/`GONG_SECRET` in gitignored env, run `scripts/gong_pull.py --transcripts`
       (built). Until pulled, Stage 2b stays template-only.
-- [ ] **HubSpot properties — ALIGN, don't duplicate.** HubSpot already carries Clay-era signal/enrichment
-      props: `vertical`, `triggers_score`, `icp_score`, `expansion_news_*`/`financial_news_*`/
-      `franchising_news_* [enrichment][signals]`, `website_intent_signal`, `nory_value_prompt`. **Decide:**
-      reuse these (map funding→financial_news, new_location→expansion_news, reuse `vertical`) vs write to a
-      clean `nory_agent_*` namespace — depends on whether the Clay enrichment pipeline still owns them.
-      Only create the genuinely-missing (why-now, persona, leadership_hire, open_jobs, per-account score).
+- [x] **HubSpot properties — DECIDED (US repo 2026-08-24, applies portal-wide).** Every agent-written
+      field lives on the `cadence_brief` custom object, which already carries `score`, `why_now`,
+      `persona`, `vertical`, `signals_json`. No new COMPANY property, no `nory_agent_*` namespace.
+      **Why:** the Clay pipeline is **live** — workspace "Nory Lab" is connected and 2,360 companies
+      carry `triggers_score` (same shared portal, so this collision risk is identical for UKI). It owns
+      `vertical`, `triggers_score`, `icp_score` and the `*_news_* [enrichment][signals]` family.
+      Also: COMPANY `vertical` is **not reusable** — its six values (`QSR/Fast Casual`, `Bakery`,
+      `Coffeeshop`, `Pub`, `Fine Dining`, `Other`) are disjoint from the agent's four. Read it as a
+      contradiction check against the sheet, never as the source. (Note for the pubs & bars question:
+      the portal enum has a `Pub` value — evidence the segment exists in CRM even though the agent
+      matrix has no cell.)
 - [ ] **Accounts Google Sheet** — does NOT exist yet; create to `input/README.md` schema.
 - [x] **Google Drive folder** `US Cadence Agent/` — **CREATED 2026-07-17** (id `1f0d-62p2kSSXPis8Bb8owAV1Dg-zkUvt`).
       Per-rep `<rep-email>/` subfolders + `_weekly/` created later (need real rep emails from the sheet).

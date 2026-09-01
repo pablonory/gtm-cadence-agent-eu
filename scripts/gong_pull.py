@@ -18,9 +18,12 @@ Output (gitignored — holds real call data / PII): output/gong/
     calls_<from>_<to>.json          call metadata (parties, timing, deal links)
     transcripts_<from>_<to>.json    verbatim transcripts (with --transcripts)
 
-Stdlib only — no pip install required. The Stage-2b agents (ga_gong_call_analyst,
-ga_gong_sequence_analyst, ga_win_loss_synthesizer) read output/gong/ to build the
-evidence packs in knowledge/gong_evidence/.
+Stdlib only — no pip install required. The Stage-2b call analyst (ga_gong_call_analyst)
+reads output/gong/ to build the evidence packs in knowledge/gong_evidence/.
+
+This pulls call metadata and transcripts only. It does NOT retrieve sequence/flow
+analytics (reply, open, meeting-booked rates) — Gong Engage is not enabled, so that
+data does not exist. See knowledge/gong_evidence/_sequence_performance.md.
 """
 import argparse
 import base64

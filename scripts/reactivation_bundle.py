@@ -397,12 +397,30 @@ def pull_transcripts(call_ids):
     return out
 
 
-def flatten_transcript(transcript_segments, speaker_map=None, max_chars=12000):
+HEAD_KEEP = 4000   # opening context: who is on the call, the situation, the incumbent stack
+
+
+def flatten_transcript(transcript_segments, speaker_map=None, max_chars=24000):
     """Gong transcripts are lists of {speakerId, topic, sentences:[{text, start}]}. Flatten to
     speaker-labelled plain text (REP: ... / PROSPECT (Name): ...) using speaker_map from
     confirm_and_enrich, so the analysis agent can tell who said what rather than one run-on paragraph.
     Falls back to unlabelled if no map is given. Truncated, not summarized — the agent reads the real
-    words, capped so one long call can't crowd out the rest of the bundle."""
+    words, capped so one long call can't crowd out the rest of the bundle.
+
+    KEEPS BOTH ENDS, AND THE TAIL IS THE POINT. Until 2026-08-24 this did `out[:max_chars]` at a 12,000
+    cap, which threw away the END of every long call. That is precisely backwards for closed-lost
+    analysis: the opening is rapport and discovery, while the objection, the real reason and the promised
+    next step all land in the last third. We were diagnosing why deals died by reading the small talk.
+
+    Measured on batch 3/6: **10 of 12 substantive transcripts hit the old cap exactly** — 83%, not the
+    24% measured across all 226 calls, because the long calls ARE the substantive ones. A 17-minute
+    discovery call already reaches 12,000 chars at a normal speech rate, so the cap was biting on
+    essentially every real conversation. A 76.9-minute demo survived as roughly its first 17 minutes.
+
+    So: cap raised to 24,000 and the budget split — `HEAD_KEEP` chars of opening for context, the rest
+    taken from the END. The cut is marked in-band so a reader can never mistake a spliced transcript for
+    a complete one. `scripts/bundle_digest.py` applies the same rule again downstream on its own budget.
+    """
     speaker_map = speaker_map or {}
     lines = []
     last_speaker = None
@@ -418,7 +436,15 @@ def flatten_transcript(transcript_segments, speaker_map=None, max_chars=12000):
         else:
             lines[-1] += " " + text
     out = "".join(lines).strip()
-    return out[:max_chars] + (" […truncated…]" if len(out) > max_chars else "")
+    if len(out) <= max_chars:
+        return out
+    head_keep = min(HEAD_KEEP, max_chars // 3)
+    tail_keep = max_chars - head_keep
+    dropped = len(out) - max_chars
+    return (out[:head_keep]
+            + "\n\n[…%d chars cut from the MIDDLE — the tail below is the end of the call, where the "
+              "objection and the agreed next step are…]\n\n" % dropped
+            + out[-tail_keep:])
 
 
 # --------------------------------------------------------------------------- main
@@ -469,6 +495,42 @@ def main():
             bundle["warnings"].append(
                 f"{len(all_deals)} deal(s) found but none read as closed/lost by pipeline stage metadata "
                 "— check bundle['hubspot']['deals'] manually, stage names vary by pipeline.")
+
+        # ---- STOP-THE-SEND CHECK, added 2026-08-24 after backalgroup.com -------------------------
+        # This motion selects accounts by their DEAD deals, which made it structurally blind to what
+        # happened next. backalgroup.com reached batch 3/6 looking like a lapsed prospect while being a
+        # paying customer: closed-won 2026-06-26, an open 2027 renewal, and three "add your payment
+        # details to Nory" emails eleven days before the run. A "your deal died, let's reconnect" email
+        # into that is a serious, rep-visible error.
+        #
+        # Audited across the 127 briefs already written: 1 sits on a won account (nbconcepts.com) and 1
+        # on an account with a live open deal (unionjoints.com). Rare — ~1.5% — but the cost per
+        # occurrence is high and the data was already in memory, unexamined. So surface it loudly here
+        # rather than hope the analyst notices. It is a warning, not a hard exit: the bundle is still
+        # worth having, and the *verdict* is the analyst's call.
+        won = [d for d in all_deals
+               if str(d["properties"].get("hs_is_closed_won")).lower() == "true"]
+        live = [d for d in all_deals
+                if str(d["properties"].get("hs_is_closed_won")).lower() != "true"
+                and str(d["properties"].get("hs_is_closed_lost")).lower() != "true"
+                and d["properties"].get("dealstage") not in dead_stages]
+        if won:
+            names = ", ".join(sorted({(d["properties"].get("dealname") or "?") for d in won}))[:200]
+            bundle["warnings"].append(
+                f"STOP — THIS ACCOUNT HAS {len(won)} CLOSED-WON DEAL(S): {names}. It is a CUSTOMER, not a "
+                "lapsed prospect, and a reactivation touch would land inside a live paying relationship. "
+                "Set reactivation_json.verdict = 'do_not_reactivate' unless you can show the win belongs "
+                "to a genuinely separate entity, and flag it for the account owner.")
+        if live:
+            names = ", ".join(sorted({(d["properties"].get("dealname") or "?") for d in live}))[:200]
+            bundle["warnings"].append(
+                f"CAUTION — {len(live)} OPEN (not closed) deal(s) on this account: {names}. Someone may be "
+                "working it right now; a reactivation email risks colliding with a live thread. Check the "
+                "deal owner before anything is sent.")
+        bundle["hubspot"]["deal_state_summary"] = {
+            "total_associated": len(all_deals), "dead": len(dead_deals),
+            "closed_won": len(won), "open": len(live),
+        }
 
         contact_ids = associated_ids("companies", company["id"], "contacts")
         contact_records = read_contacts(contact_ids)

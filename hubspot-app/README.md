@@ -17,7 +17,7 @@
 > reporting and the rep experience unified, which matches the EU-adoption intent.
 
 
-The rep-facing surface from `prototypes/BUILD_SPEC.md`, as a real HubSpot developer project
+The rep-facing surface from `BUILD_SPEC.md`, as a real HubSpot developer project
 (platform `2026.03`): a **static-auth private app** + the **Cadence Agent card** on the
 `cadence_brief` custom object, plus the schema and the agent's write path.
 
@@ -39,7 +39,7 @@ hubspot-app/
 
 > Why not an MCP Auth App: the remote MCP server has no custom-object support. Why not an
 > app-object component: app objects need HubSpot approval (a request form) — the schema API works
-> today on Enterprise. See `prototypes/BUILD_SPEC.md`.
+> today on Enterprise. See `BUILD_SPEC.md`.
 
 ## Deploy runbook (order matters — the app must exist before the schema script has a token)
 

@@ -1,7 +1,7 @@
 # CRM/Gong evidence — signal ↔ closed-won correlation (shared)
 
-> What actually correlates with winning. Owner on refresh: `ga_win_loss_synthesizer`. Feeds the signal
-> weights in `agents/stage1_signals/ga_score_aggregator.md`. Source: sales-intelligence app
+> What actually correlates with winning. Feeds the signal weights in
+> `hubspot-app/scripts/score_accounts.py`. Join method in this file, below. Source: sales-intelligence app
 > (2026-07-17) — HubSpot deals + Gong closed-won/lost corpus + the Nory playbook.
 
 ## ⚠️ Confidence: LOW — no clean correlation yet
@@ -41,6 +41,22 @@ Strongest closing trigger, but not researchable outbound. So we use it, we just 
 - **Stage 3:** every cadence (esp. Finance / Ops) should **probe for the incumbent + contract end date on
   the first call** — a discovery goal, ties to `_objections.md` #2 ("get the contract end date on the
   first call"). Not a first-touch email hook (we don't know it yet).
+
+## The outcome join — method (moved here 2026-08-24)
+How a signal↔outcome correlation gets *established*, folded in from the deleted `ga_win_loss_synthesizer.md`
+so the method survives the file. The deterministic half already exists in code:
+`scripts/reactivation_bundle.py` matches Gong calls to an account by title pre-filter, then **confirms by
+participant email domain** — the check that stops a call about pies matching a different pie company.
+Extract it to `scripts/gong_match.py` when a second caller needs it; don't re-specify it as an agent.
+
+1. Match Gong calls to HubSpot deals on `opportunity_id`, or on account + timeframe.
+2. Segment by vertical × persona.
+3. Correlate behaviours / proof points / steps against advance vs stall vs loss.
+4. Rank what wins per cell.
+
+**Hard rules.** Needs *both* Gong behaviour and HubSpot outcome — if either is missing, say which and
+stop, because a one-sided join is not evidence. State correlation **as correlation, with `n`**; never
+present a small sample as a rule. Unmatched calls are reported unmatched, never guessed.
 
 ## The gap to fix (RevOps)
 Real correlation needs (1) a **required CE field on every closed-won**, populated at close, and (2) a

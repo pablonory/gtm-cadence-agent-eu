@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Score accounts from Stage-1 signal verdicts — the ga_score_aggregator formula as code.
+"""Score accounts from Stage-1 signal verdicts. THIS FILE IS THE FORMULA — there is no prose twin.
+
+Scoring lived in two places until 2026-08-24: here, and a prose spec
+that had drifted out of sync. The spec was deleted; its tuning history is
+preserved below. Per directives/self_improvement.md, any weight change lands HERE, dated, with the
+metric that justified it. The formula stays stable; only weights move.
 
 Input:  a JSON file: [{"company","domain","rep_email","vertical","persona","locations",
                        "signals":{new_location:{...},leadership_hire:{...},open_jobs:{...},funding:{...}},
@@ -10,12 +15,19 @@ Output: the same list + score, score_band, status, hot_account, cadence_template
 cell (see cadences/UKI_FLOWS.md — reactivation sits outside the 4×4 matrix). vertical/persona are still
 required and still classified: they aim the first-touch angle, they just don't pick the flow.
 
-Formula (agents/stage1_signals/ga_score_aggregator.md, defined 2026-08-10):
+Formula (defined 2026-08-10, recency term added 2026-08-12):
     contribution = (strength/5) × weight × confidence_mult × recency_mult   (0 if present:false)
-    raw   = Σ contributions
+    raw   = Σ contributions                                                 (max 7.5)
     base  = min(100, raw / 3.5 × 100)
-    score = min(100, round(base × segment_mult))                (+ce_boost when CRM has contract expiry)
+    score = min(100, round(base × segment_mult))
     all-low-confidence guard: cap at 59.
+Bands: High >=75 · Medium >=60 · Low >=40 · Thin <40. Emitted lowercase.
+
+NOT IMPLEMENTED, despite being documented elsewhere as the #1 compelling event: `ce_boost` (+15 when
+HubSpot holds a contract-expiry/renewal date inside 12 months). score_account() never reads that date.
+No score ever computed includes it. Either build it or stop calling it the top signal — but note that
+adding it now makes new scores incomparable with the 127 briefs already written, and output/state/ is
+empty so those cannot be recomputed. See the calibration note at the bottom of this docstring.
 
 RECENCY MODEL (recalibrated 2026-08-12 after the first 80 real accounts):
 Recency now *discounts* a signal instead of gating it. Measured across batch 2 + reactivation batch 1/6,
@@ -27,6 +39,28 @@ date, which made agents score them `present:false` and throw real intel away.
 So: each signal has an outer WINDOW beyond which it genuinely doesn't count, and inside that window the
 contribution decays by age. An undated-but-corroborated event is counted with a small haircut rather than
 discarded — recording "we found it, we couldn't date it" beats pretending we found nothing.
+
+APPLIED FEEDBACK (moved here 2026-08-24 from the deleted spec — this is the log self_improvement.md means)
+- [2026-08-11] correction — **normalization divisor 6 -> 3.5**, from the first real batch: a verified,
+  fresh, high-confidence strength-4 `new_location` (Tom's Drive-Ins' 10th site, 29d, 3 sources) scored
+  38 = "Thin" under /6, contradicting the band definitions (Medium = "solid, worth running now"). Under
+  /3.5 it lands 65 = Medium, and a max-strength single signal can reach High.
+- [2026-08-11] observation, no rule change — Buddy's Pizza: acquisition (137d, high conf) + new CEO
+  (137d, then outside the 90d hire window) + a low-confidence demand-planner posting scored ~29 "Thin",
+  yet was intuitively the batch's hottest buying window. Two candidate tunes: (a) widen the C-suite hire
+  window — *partly superseded, it went 90 -> 180 on 2026-08-12*; (b) treat **ownership change / PE exit**
+  as its own signal type, distinct from `funding`, since the zero-correlation evidence was about raises,
+  not control changes. (b) is still unbuilt.
+
+OPEN CALIBRATION QUESTION — deliberately NOT changed (2026-08-24)
+UNDATED_MULT = 0.85 sits ABOVE the 90-180d tier's 0.8, so an undated 2019 event outscores a dated one at
+200 days: removing a date from a source *raises* its score. Wrong in principle. Left alone because
+output/state/ has never been written, so the Stage-1 verdicts behind the 127 live scores no longer exist
+and cannot be recomputed — changing the constant would make old and new scores incomparable with no
+backfill path. Revisit when Stage 1 runs for real and keeps state. Tests pin CURRENT behaviour, on purpose.
+
+Also unbuilt: contraction is not scored at all. Closures/downsizing should actively deprioritise
+an account, and today they are invisible.
 """
 import json
 import sys
@@ -116,7 +150,7 @@ def score_account(acct):
         confidences.append(conf)
         if rd is not None and rd <= 30:
             recent += 1
-    base = min(100.0, raw / 3.5 * 100.0)  # recalibrated 2026-08-11 on first real batch (was /6) — see ga_score_aggregator.md
+    base = min(100.0, raw / 3.5 * 100.0)  # recalibrated 2026-08-11 on first real batch (was /6) — see APPLIED FEEDBACK above
     score = min(100, round(base * segment_mult(acct.get("locations"))))
     if confidences and all(c == "low" for c in confidences):
         score = min(score, 59)  # a rumour never makes an account "ready to launch"

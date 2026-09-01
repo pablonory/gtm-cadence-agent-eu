@@ -1,8 +1,15 @@
 # Benefits — features → benefits → proof
 
-> Stage 2a output, produced by `ga_benefits_pmm`. Maps each Nory capability to the benefit that lands
-> in outbound and the proof point that backs it. Stage 3 pulls from here. Seeded v1 — refreshed on
-> each Stage 2 run. Proof figures trace to `knowledge/product.md`; never invent one.
+> Stage 2a knowledge. Maps each Nory capability to the benefit that lands in outbound and the proof
+> that backs it. The first touch pulls one row from here, matched to the flow's suite (IM vs Full Suite).
+>
+> **Maintenance rules** (folded in 2026-08-24 from the deleted `ga_benefits_pmm.md`):
+> - One benefit → one proof point → one persona tag. **Don't stack claims.**
+> - Proof figures trace to `knowledge/product.md`; never invent one.
+> - When Gong evidence exists, reorder by what actually moved deals — not by what we assume.
+>
+> ⚠️ The `Lands with` column covers **Ops / Finance / C-suite only**. `Founder` became a fourth persona
+> on 2026-08-10 and has no row here. Don't silently map it to C-suite — the two are distinct.
 
 | Feature | Benefit (what the buyer gets) | Proof point | Lands with |
 |---|---|---|---|

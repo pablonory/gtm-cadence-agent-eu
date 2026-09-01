@@ -1,6 +1,6 @@
 # Signal playbook — New location openings
 
-> Versioned research method for the `ga_new_location` sub-agent. Adapted from the BDR Clay signal doc
+> Versioned research method for the **new_location** signal. Output shape: `directives/signals/_signal_stack.md`. Adapted from the BDR Clay signal doc
 > (Tier 1). The learning loop rewrites this file as detection sharpens.
 
 ## What it detects

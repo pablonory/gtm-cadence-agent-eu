@@ -1,7 +1,15 @@
 # Product knowledge (outbound-ready)
 
-> Stage 2a output, produced by `ga_product_knowledge` from `context/product/product.md`. This is the
-> distilled version Stage 3 reads when writing cadences. Seeded v1 — refreshed on each Stage 2 run.
+> Stage 2a knowledge, distilled from `context/product/product.md`. This is what the first touch reads.
+>
+> **Maintenance rules** (folded in 2026-08-24 from the deleted `ga_product_knowledge.md`):
+> - **Never state a number the source marks `[FILL]`** — pricing, ACV, CAC/LTV, the full integration
+>   list, the disputed scale figure. List them as open questions instead.
+> - Every proof point traces to `context/product/product.md`. No invented outcomes.
+> - Keep it outbound-usable: the economic argument (prime-cost leakage), the assistants, the wedge, the
+>   proof table, the objection-killers (2–3 week onboarding).
+> - Refreshing from nory.ai or the pitch deck is fine, but **flag any new claim for human confirmation**
+>   before it enters this file.
 
 ## The one-liner (for outbound)
 Nory is an **AI-native restaurant operating system** that controls prime cost — **COGS + labour** —

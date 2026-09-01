@@ -23,29 +23,28 @@ personalised first-touch email to drop into a pre-built Gong cadence.
 
 ## Open questions (blockers before the first real batch)
 
-| # | Question | Where it lands |
-|---|---|---|
-| 1 | **Who owns UKI territory + flows?** (the Lewis-equivalent) | `CLAUDE.md`, `input/README.md` |
-| 2 | **Which Gong flows do UKI reps actually use?** Folder, exact names, matrix shape, reactivation motion — Pablo investigating | `cadences/UKI_FLOWS.md` (capture checklist inside) |
-| 3 | **Pubs & bars** — a major UK segment with no US-matrix cell; own vertical or fold into FSR? | `cadences/UKI_FLOWS.md`, `context/icp/verticals.md` |
-| 4 | ~~**UK conjunctural register**~~ ✅ **Built 2026-08-20** — 16 UK+IE entries from primary sources (wages, NICs/PRSI, tips law, rates, ERA 2025, VAT window, commodities, IE auto-enrolment); matcher adapted to UKI geography (`--nation`, incl. GB-only `nations` scope). First expiries early Sept 2026 — see refresh cadence | `knowledge/conjunctural/README.md` |
-| 5 | **UKI accounts sheet** — create to the `input/README.md` schema; validate rep emails as HubSpot owners | `input/README.md` |
-| 6 | Ireland specifics — € proof (Masa is €-native ✓); IE wage/law register entries ✅ built 2026-08-20 (NMW, PRSI, tips act, auto-enrolment) | `knowledge/` |
+Moved to **`docs/open_questions.md`** — every unknown with an owner and the file its answer unblocks.
+The three that gate the first batch: **the UKI owner** (the Lewis-equivalent), **the Gong flow set**
+(`cadences/UKI_FLOWS.md`), and **the accounts sheet** (`input/README.md`). The conjunctural register is
+✅ built (2026-08-20, 16 UK+IE entries from primary sources).
 
 ## Repo layout
 
 | Path | What |
 |---|---|
-| `agents/` | Sub-agent definitions, grouped by stage |
-| `context/` | Product, ICP (verticals + personas), tone of voice |
-| `directives/` | Orchestration, signal research playbooks (UKI-first), the learning loop |
-| `knowledge/` | Stage 2 knowledge base incl. Gong evidence + the (to-build) UK conjunctural register |
-| `cadences/` | Output A — mapping to the Gong **UKI flows** (`UKI_FLOWS.md`, placeholder) + per-cell angle/proof briefs |
+| `.claude/agents/` | The real, dispatchable workers: 4 `s1_*` signal hunters + `ca1_first_touch` |
+| `.claude/skills/` | `first-touch` — the one bespoke output |
+| `.claude/reference/` | Architecture detail, integration status, the retired-agents ledger |
+| `context/` | Product, ICP (verticals + personas), anti-AI writing style |
+| `directives/` | Runbooks + signal playbooks (UKI-first), the learning loop |
+| `knowledge/` | Stage 2 knowledge base: pains/JTBD/proof (£/€-native), Gong evidence, the **UKI conjunctural register** |
+| `cadences/` | `UKI_FLOWS.md` — flow-name placeholder + capture checklist. One file, on purpose. |
 | `input/` | The accounts Google Sheet schema (UKI sheet to create) |
-| `scripts/` | `gong_pull.py` · `jobs_probe.py` · `conjunctural_match.py` · `reactivation_bundle.py` |
+| `scripts/` | bundle · digest · Gong pull · jobs probe · conjunctural matcher · state snapshot · firecrawl fetch |
+| `lib/` · `tests/` | `gtm_common.py` · stdlib unittest suite (`python3 -m unittest discover tests`) |
+| `docs/` | `open_questions.md` (owners) · `reuse_map.md` (fork ledger) |
 | `hubspot-app/` | ⚠️ **Reference + scripts only — the app/object are deployed ONCE, from the US repo** (shared `cadence_brief` object; see its README) |
-| `prototypes/` | Inherited US-era UI prototypes + BUILD_SPEC (historical reference) |
-| `output/` | Local staging (gitignored); real deliverables go to HubSpot/Drive |
+| `output/` | Local staging (gitignored); real deliverables go to HubSpot |
 
 ## Setup
 
@@ -54,4 +53,5 @@ personalised first-touch email to drop into a pre-built Gong cadence.
   the US repo, so the same `HUBSPOT_PRIVATE_APP_TOKEN`, `GONG_ACCESS_KEY`/`GONG_SECRET`,
   `APIFY_TOKEN`, `FIRECRAWL_API_KEY` work.
 
-Status: **forked, adaptation pass done, NOT yet operational** — see Open questions above.
+Status: **forked, hardened (fork-sync of the US `harden-m1` at `cbb37d1`, 2026-09-01), NOT yet
+operational** — what gates the first batch is not code: see `docs/open_questions.md`.

@@ -5,7 +5,7 @@ Orchestration logic, research playbooks, and the learning loop.
 ## signals/ — signal research playbooks
 One file per Tier-1 signal. Each is the **versioned research method** for that signal: where to
 look, which queries work, how to verify, recency/confidence rules. The matching sub-agent in
-`agents/stage1_signals/` reads its playbook. These files are what the learning loop rewrites over
+each `.claude/agents/s1_*` subagent reads its playbook. These files are what the learning loop rewrites over
 time, so each signal-hunter gets sharper.
 
 - `leadership_hire.md`

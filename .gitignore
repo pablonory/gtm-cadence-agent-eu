@@ -41,8 +41,13 @@ output/state/*
 output/gong/*
 # Reactivation-deal bundles — deal history, transcripts, logged emails; real PII (see
 # scripts/reactivation_bundle.py). Never commit; the agent reads these, writes only the synthesis
-# to HubSpot properties.
+# to HubSpot properties. Covers the .digest.json pre-slices from scripts/bundle_digest.py too.
 output/reactivation/*
+# Per-account brief payloads — the DENSEST PII in the repo: verbatim prospect quotes lifted from Gong
+# transcripts, deal amounts, closed-lost reasons, contact names and email addresses. (Added in the US
+# repo 2026-08-24 when the directory turned up untracked; ported at fork-sync.) The payload is a
+# staging file on the way to HubSpot; HubSpot is where it belongs.
+output/briefs/*
 # Generated local copies of shareable reports (the canonical version is the published artifact)
 output/reports/*
 # keep the folder skeleton

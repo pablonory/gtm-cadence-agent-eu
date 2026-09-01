@@ -60,5 +60,6 @@ bakeries: Fortuna, Somedays, Boudin, West Coast Sourdough) and they behave alike
   signals sharpen it.
 
 > **All verticals are equal-priority targets** — Coffee & Cafe, Fast Casual, FSR and QSR alike. Cadences
-> are the Gong **UKI flows** (`cadences/UKI_FLOWS.md` — placeholder until confirmed); the per-cell
-> `cadences/*.md` files are angle/proof briefs feeding the first touch.
+> are the Gong **UKI flows** (`cadences/UKI_FLOWS.md` — placeholder until confirmed). The per-cell
+> brief files were removed 2026-09-01 (following the US repo's 2026-08-24 removal at cbb37d1); the
+> first touch is built straight from `knowledge/` — see UKI_FLOWS.md.

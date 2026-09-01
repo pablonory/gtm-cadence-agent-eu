@@ -6,11 +6,12 @@
 >   gitignored env) to pull calls + verbatim transcripts into `output/gong/`, then the Stage-2b agents read them.
 > - Supermetrics Gong connector is **gated behind early access** — not available.
 >
-> Produced by `ga_gong_call_analyst` + `ga_gong_sequence_analyst` + `ga_win_loss_synthesizer`.
-> One pack per matrix cell. Every line in a live pack must cite the call/deal it came from.
+> Produced by `ga_gong_call_analyst`. One pack per matrix cell. Every line in a live pack must cite the
+> call/deal it came from. Section 5 (sequence rates) stays empty until Gong Engage is enabled — see
+> `_sequence_performance.md`.
 
 ## Cell
-Vertical **Coffee** × Persona **Finance**. Matches cadence `cadences/coffee_cafe_finance.md`.
+Vertical **Coffee & Cafe** × Persona **Finance**. Matches the Gong flow *Coffee & Cafe × Finance (IM · Tier 1)*.
 
 ## 1. Top objections + handling that overcomes them
 > Start from the shared library `_objections.md` (the 5 cross-cutting objections + handling). Add here
@@ -47,5 +48,5 @@ Vertical **Coffee** × Persona **Finance**. Matches cadence `cadences/coffee_caf
 - [ ] Outcome join done (Gong call behaviour × HubSpot deal stage on account/opportunity_id)
 - [ ] Sequence/flow stats (needs a `gong_pull.py` extension for cadence analytics)
 
-> Until this pack has real data, `cadences/coffee_cafe_finance.md` copy is grounded only in positioning
+> Until this pack has real data, first-touch copy for this cell is grounded only in positioning
 > (`knowledge/*`), NOT field evidence. Flag that limitation on any deliverable that leans on it.

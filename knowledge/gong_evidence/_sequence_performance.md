@@ -1,8 +1,12 @@
 # Gong evidence — sequence & channel performance (shared)
 
-> The honest state of "what converts" at the **sequence** level — answers Q4/Q5. Owner on refresh:
-> `ga_gong_sequence_analyst`. Sources: sales-intelligence app (2026-07-17) + **SMB Outbound Bi-Weekly
-> Sync, 3 Jun 2026** (Phil Green, SMB Team Lead + team).
+> The honest state of "what converts" at the **sequence** level — answers Q4/Q5. Sources:
+> sales-intelligence app (2026-07-17) + **SMB Outbound Bi-Weekly Sync, 3 Jun 2026** (Phil Green,
+> SMB Team Lead + team).
+>
+> **No owner on refresh, deliberately (2026-08-24).** There is no sequence-analytics agent and there
+> should not be one until the data exists — see the data gap below. `scripts/gong_pull.py` retrieves
+> calls and transcripts, not sequence analytics.
 
 ## ⚠️ The data gap (read this first)
 **No reply / open / meeting-booked rates are tracked centrally.** Gong Engage is **not enabled** (no
@@ -36,8 +40,10 @@ alternative **angle** (esp. for C-suite / hard-to-reach), not the default flow.
 - **Log the source email** on every booked meeting (the data-building habit above).
 
 ## Implications for our cadences
-- `cadences/_flow_structure.md` (multi-channel, multi-touch, "1–2 touches won't cut it") is **validated**
-  by the multithread stat and the team's stated principles.
+- **Multi-channel, multi-touch is validated** — no channel runs alone (email × call × LinkedIn +
+  voicemail), and "1–2 touches won't cut it" holds up against the multithread stat and the team's own
+  stated principles. Our pre-Gong prior was **14–16 touches, up from an old 8** — useful now only as a
+  sanity check that a Gong flow isn't under-touched. The Gong flows themselves are the structure (UKI set unconfirmed — `cadences/UKI_FLOWS.md`).
 - Until real rate data exists, cadence **length/rhythm is a best-practice hypothesis, not evidence-tuned**
   — flag this on every Output A deliverable.
 - **Decision (Pablo):** cadence channels stay **email · call · LinkedIn** (+ voicemail) for v1. WhatsApp

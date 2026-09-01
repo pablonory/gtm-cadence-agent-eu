@@ -1,6 +1,6 @@
 # Gong evidence pack — Full-service (FSR) × Finance
 
-> Field-evidence pack for the FSR × Finance cadence (`cadences/fsr_finance.md`). Draws on the shared files
+> Field-evidence pack for the **FSR × Finance** flow. Draws on the shared files
 > plus FSR-specific proof. Cell-specific call data still to come from Gong (see status).
 
 ## Cell

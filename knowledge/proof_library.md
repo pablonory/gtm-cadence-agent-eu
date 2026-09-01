@@ -71,6 +71,10 @@ Deal-moving proof is always one of these three shapes:
   Thai, TSC Hospitality.
 - **Pattern that moves FSR deals:** name a similar brand → lead with the **COL% reduction** as the hook →
   tie to an annual **£/€ saving on their cost base.**
+> **Ops framing (the inversion):** the pattern above is the *Finance* framing. With an **Ops** buyer, lead
+> the Grounded Kitchen story on what their ops team noticed *first* — the hours back from rota-building,
+> and every site finally running the same way — then land the −4.8% COL and −24% waste. Finance gets the
+> number first; Ops gets the hours first. *(ported 2026-09-01 from the US repo at cbb37d1)*
 
 ---
 
@@ -104,6 +108,11 @@ Deal-moving proof is always one of these three shapes:
   tool (ties to `_objections.md` #2, incumbent).
 - For a **quantified** claim, pull a UKI outcome and **label it UKI** — don't dress a US deal value up as
   a result.
+- **Pair them in one message** *(adapted from the US repo's rule at cbb37d1 — there, the US logo carries
+  the local credibility)*: for UKI accounts the local logo IS the UKI one (Grounded Kitchen, Jamie Oliver
+  Group, Passyunk Avenue…), so the quantified UKI % usually carries both claim and credibility on its own.
+  Add a US logo only where it genuinely helps — an international or US-owned group. Still one number per
+  message.
 
 **Priority to convert into real US case studies (flag to marketing):** (1) **Ark Restaurants** — NYC,
 verifiable, multi-concept; (2) **Grand Traverse Pie Co.** — clean XtraChef displacement narrative.

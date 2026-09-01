@@ -40,8 +40,8 @@ count changes and stop re-flagging.
 1. READ    output/state/<domain>.json  (prior baseline; empty on first run)
 2. OBSERVE current reality per signal (agent WebFetch/WebSearch)
 3. DIFF    current − stored → the delta (timestamped) = the signal
-4. SCORE   ga_score_aggregator scores the deltas → HubSpot outputs
-5. WRITE   ga_score_aggregator writes today's observation back as the new baseline (+ last_run)
+4. SCORE   score_accounts.py scores the deltas → upsert_brief.py writes to cadence_brief
+5. WRITE   today's observation is written back as the new baseline (+ last_run)
 ```
 
 ## Per-signal delta rule
@@ -61,17 +61,41 @@ count changes and stop re-flagging.
 
 ## Freshness / expiry
 - Every stored item carries a date; recency is **recomputed each run** from that date.
-- Signals **expire**: a leadership_hire >90d, funding >180d, opening >180d drops out of "present" even
-  though it stays in the baseline (so it's remembered, not re-flagged).
+- Signals **expire**: past its window a signal drops out of "present" even though it stays in the
+  baseline (so it's remembered, not re-flagged). Windows are **leadership_hire 180d · funding 365d ·
+  new_location 365d**, set 2026-08-12 and enforced in `scripts/state_snapshot.py` (`EXPIRY_DAYS`), which
+  must keep matching `WINDOWS` in `hubspot-app/scripts/score_accounts.py`. *(This file carried the
+  pre-2026-08-12 values 90/180/180 until 2026-08-24.)*
+- **First-run windows are deliberately tighter** — 90/180/180 (`FIRST_RUN_DAYS`) — because with no
+  baseline a wider window would flag a year of existing history as new.
 - `flagged_run` records when a delta was first surfaced → never re-surface the same item.
 
-## Relationship to the 14-day suppression
-The playbooks' 14-day per-signal suppression is a **crude fallback**. True delta detection supersedes it:
-once an item is in the baseline with a `flagged_run`, it isn't re-flagged regardless of the window. Keep
-the 14-day rule only as a backstop for signals where a baseline isn't available.
+## The "14-day suppression" — do not cite it
+Four deleted agent files cited a **14-day per-signal suppression** as a fallback. That rule **is not
+defined anywhere in this repo** — no file states what it suppresses or where it came from. It was
+folklore. **Delta detection is the mechanism**: once an item is in the baseline with a `flagged_run` it is
+never re-flagged, regardless of any window. If a real suppression rule is ever wanted, define it here
+first.
 
-## What reads/writes this
-- **Signal agents** (`agents/stage1_signals/ga_*`) — READ the snapshot at start, compute their delta.
-- **`ga_score_aggregator`** — WRITES the updated snapshot back (current → next baseline) alongside its
-  HubSpot outputs.
-- No detection code yet — this is the spec the Stage-1 build follows.
+## What reads/writes this — BUILT 2026-08-24
+`scripts/state_snapshot.py` implements this spec. Stdlib only, 26 tests in `tests/test_state_snapshot.py`.
+
+| Command | Does |
+|---|---|
+| `state_snapshot.py read <domain>` | prints the baseline (`{}` on first run) |
+| `state_snapshot.py diff <domain> --observation obs.json` | observation → signals, persists nothing |
+| `state_snapshot.py commit <domain> --observation obs.json` | same diff, then writes the new baseline |
+
+**The division of labour is deliberate: a signal subagent OBSERVES, this script DIFFS.** Set differences,
+date arithmetic and expiry are code, because that is where an LLM quietly gets things wrong. The subagent
+supplies only what code cannot infer — `strength`, `stage`, `confidence`, `source_url`, `hook_detail` —
+under a `judgement` key, which the script merges into the signal it belongs to. **When the observer and
+the diff disagree about `present`, the diff wins** and the disagreement is reported rather than hidden: a
+fact already in the baseline is not a new signal.
+
+Two safety properties worth keeping: the write is **atomic** (temp file + `os.replace`), so a crash
+cannot corrupt the detection memory; and a **corrupt baseline is fatal, never treated as a first run** —
+silently starting over would re-flag the account's whole history as new.
+
+Omitting a key from an observation means "I did not look" and leaves that part of the baseline untouched.
+An explicit empty value means "I looked and found nothing". The two are not the same.

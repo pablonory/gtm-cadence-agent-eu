@@ -147,7 +147,7 @@ def classify(title):
 
 def build_map(vertical, contacts, reactivation=False):
     """Group contacts by persona. Normally each group names its vertical × persona flow; on a
-    reactivation brief every group names USA Reactivation instead (one motion, outside the matrix)
+    reactivation brief every group names UKI Reactivation instead (one motion, outside the matrix)
     while KEEPING the persona split — the rep still needs to know who is finance vs ops."""
     vlabel = VERTICAL_LABELS.get(vertical)
     if not vlabel and not reactivation:

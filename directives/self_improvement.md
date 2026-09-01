@@ -41,7 +41,8 @@ accumulated per signal type in `output/state/_metrics.json` (gitignored, same st
 | **Outcome join** | reply/meeting rate of first touches, split by which signal types were present + which signal the hook used (Gong sequence data × HubSpot) | each Stage 2 refresh |
 
 **Scorecard duties:**
-- `ga_score_aggregator` appends per-run counts (signals found per type, confidence mix) to `_metrics.json`.
+- The scoring step appends per-run counts (signals found per type, confidence mix) to `_metrics.json`.
+  **Not built:** `output/state/_metrics.json` does not exist and has never been written.
 - The **weekly digest** includes one scorecard line per signal type: found / confirmed / false / missed.
 - **Every Stage 2 refresh reviews the scorecard** and proposes (never silently applies) weight or
   playbook changes.
@@ -54,8 +55,10 @@ accumulated per signal type in `output/state/_metrics.json` (gitignored, same st
   compliant people/job-change API (L2). `open_jobs` recall weak → wire the Apify actor.
 - **Outcome join shows a signal type doesn't correlate with replies/meetings** → down-weight it no
   matter how good its precision is (funding is already the cautionary example).
-- Any weight change lands in `ga_score_aggregator.md` → "## Applied feedback", dated, with the metric
-  that justified it. The formula stays stable; only weights move.
+- Any weight change lands in **`hubspot-app/scripts/score_accounts.py`** → the `APPLIED FEEDBACK` block
+  in its module docstring, dated, with the metric that justified it. The formula stays stable; only
+  weights move. *(Was `ga_score_aggregator.md` until 2026-08-24 — that spec had drifted from the code it
+  described, so it was deleted and the log moved next to the constants it governs.)*
 
 ---
 
@@ -66,10 +69,14 @@ How the pipeline flows: stage order, gates, hand-offs, when to trigger what, ded
 - Trigger: "always skip X", "don't push a PDF without a score", "re-run signals every 14 days not 7".
 - Applies in: `CLAUDE.md` pipeline flow.
 
-### 2. AGENTIC (a sub-agent in `agents/`)
-A specific agent's behaviour: what it emphasises, avoids, how it researches, its output shape.
-- Trigger: "the funding agent keeps flagging old rounds", "first-touch emails are too long".
-- Applies in: that `agents/**/ga_*.md` file → **"## Applied feedback"** section at the end.
+### 2. AGENTIC (a real subagent in `.claude/agents/`, or the skill it invokes)
+A worker's behaviour: what it emphasises, avoids, how it researches, its output shape.
+- Trigger: "first-touch emails are too long", "the analyst keeps over-reading voicemails".
+- Applies in: that `.claude/agents/<name>.md` file, or `.claude/skills/first-touch/SKILL.md` for copy
+  rules → **"## Applied feedback"** section at the end.
+- The old top-level `agents/` folder was **removed** 2026-08-24 — it held prose nothing dispatched, and
+  its name collided confusingly with `.claude/agents/`. What was retired and why:
+  `.claude/reference/retired-agents.md`.
 
 ### 3. SIGNAL-PLAYBOOK (`directives/signals/`)
 A specific signal's research method: where to look, which queries work, recency/confidence rules.

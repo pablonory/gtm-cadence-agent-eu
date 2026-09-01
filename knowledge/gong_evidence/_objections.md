@@ -1,9 +1,9 @@
 # Gong evidence — objection library (shared across cells)
 
 > Cross-cutting objection intel from the **real Nory call corpus**. Shared by all matrix cells — a cell
-> pack (`<vertical>_<persona>.md`) adds only its cell-specific extras. Used by `ga_call_script`
-> (objection handling), `ga_first_touch_email` / `ga_cadence_designer` (pre-empt the objection in the
-> copy), and `ga_gong_call_analyst` (owner of this file on refresh).
+> pack (`<vertical>_<persona>.md`) adds only its cell-specific extras. Used by the **first-touch**
+> skill to pre-empt the likely objection in the copy, and by `ga_gong_call_analyst` (owner of this file
+> on refresh).
 >
 > **Source & confidence:** Nory sales calls, **predominantly UK & Ireland** — US call volume is lower.
 > Objection *patterns* hold across geographies for multi-site F&B; the *vendor names* shift in the US

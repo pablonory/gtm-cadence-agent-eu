@@ -2,8 +2,7 @@
 
 > Verbatim pain language from the **real Nory call corpus**, organized by our persona (Ops / Finance /
 > C-suite). This is how buyers describe the pain **in their own words** — use it so first-touch emails
-> and call openers sound like the buyer, not like us. Used by `ga_first_touch_email`, `ga_call_script`,
-> `ga_jtbd_persona` (owner on refresh). Shared across all matrix cells.
+> sound like the buyer, not like us. Used by the **first-touch** skill. Shared across all matrix cells.
 >
 > **Source & confidence:** Nory calls, **predominantly UK & Ireland**. Role titles, pain language, and
 > the labour-% numbers are highly consistent with multi-site F&B broadly. **Gap:** US-specific

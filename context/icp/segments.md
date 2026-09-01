@@ -16,7 +16,7 @@
 
 ## Rules
 - **In focus = 2+ locations.** Single-site independents are out of scope (per Nory's acquisition target).
-- **Segment weight × signal weight = score contribution** (see `ga_score_aggregator`). A funding
+- **Segment weight × signal weight = score contribution** (see `hubspot-app/scripts/score_accounts.py`). A funding
   signal at a 20-site group outweighs the same signal at a 3-site group.
 - **Core today = mid-market;** strategic goal = enterprise expansion. When two accounts tie on score,
   prefer the higher band.

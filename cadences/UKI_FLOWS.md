@@ -59,9 +59,11 @@ Carried over from the US fork so classification keeps working; every part below 
 Contact→flow mapping (`hubspot-app/scripts/map_contacts.py`) keeps the same persona priority:
 Founder > C-Suite > Finance > Operations; unmatched titles are listed as **unmapped**, never guessed.
 
-## Relationship to the `cadences/*.md` cells
+## Where the per-cell `cadences/*.md` files went
 
-The per-cell files (inherited from the US fork) are **angle / proof / persona briefs** feeding the
-first-touch email — their day-by-day flow tables were superseded in the US repo and are historical
-here too. Their proof points are largely **UKI-native already** (£/€ results — see
-`knowledge/proof_library.md`), which makes them *more* directly usable here than they were in the US.
+Removed 2026-09-01, following the US repo's removal (2026-08-24, cbb37d1): their day-by-day flow tables
+were superseded by the real Gong flows, and their angle/proof content duplicated `knowledge/` — the
+first touch is built straight from `knowledge/proof_library.md`, `knowledge/pains_by_vertical.md`,
+`knowledge/jtbd_by_persona.md` and the conjunctural register, via `.claude/skills/first-touch/`.
+The proof points were always UKI-native (£/€ results), so nothing UKI-specific was lost; the files
+remain in git history (`952abff:cadences/`).
