@@ -26,7 +26,7 @@ directive's section 6b, don't skip it). Set `reactivation_analysis_date` = 2026-
 - If `needs_conjunctural` is **true** (score <30 or no Tier-1 signal present in `signals_json`):
   run
   ```bash
-  python3 scripts/conjunctural_match.py --state <state> --vertical <vertical> --persona <persona> --locations <locations> [--city <city>] --json
+  python3 scripts/conjunctural_match.py --nation <england|scotland|wales|ni|ireland> --vertical <vertical> --persona <persona> --locations <locations> [--council <council>] --json
   ```
   (Omit `--state` if none was given — the script will return no state-scoped matches, which is a
   valid outcome, not an error.)

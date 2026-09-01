@@ -28,9 +28,9 @@ personalised first-touch email to drop into a pre-built Gong cadence.
 | 1 | **Who owns UKI territory + flows?** (the Lewis-equivalent) | `CLAUDE.md`, `input/README.md` |
 | 2 | **Which Gong flows do UKI reps actually use?** Folder, exact names, matrix shape, reactivation motion — Pablo investigating | `cadences/UKI_FLOWS.md` (capture checklist inside) |
 | 3 | **Pubs & bars** — a major UK segment with no US-matrix cell; own vertical or fold into FSR? | `cadences/UKI_FLOWS.md`, `context/icp/verticals.md` |
-| 4 | **UK conjunctural register** — US entries removed at fork; build UK entries (NLW steps, employer NICs, Tips Act, business rates, commodities) from primary sources | `knowledge/conjunctural/README.md` |
+| 4 | ~~**UK conjunctural register**~~ ✅ **Built 2026-08-20** — 16 UK+IE entries from primary sources (wages, NICs/PRSI, tips law, rates, ERA 2025, VAT window, commodities, IE auto-enrolment); matcher adapted to UKI geography (`--nation`, incl. GB-only `nations` scope). First expiries early Sept 2026 — see refresh cadence | `knowledge/conjunctural/README.md` |
 | 5 | **UKI accounts sheet** — create to the `input/README.md` schema; validate rep emails as HubSpot owners | `input/README.md` |
-| 6 | Ireland specifics — € proof (Masa is €-native ✓); IE wage/law entries for the register | `knowledge/` |
+| 6 | Ireland specifics — € proof (Masa is €-native ✓); IE wage/law register entries ✅ built 2026-08-20 (NMW, PRSI, tips act, auto-enrolment) | `knowledge/` |
 
 ## Repo layout
 

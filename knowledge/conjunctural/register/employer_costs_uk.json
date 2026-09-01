@@ -1,0 +1,34 @@
+{
+  "_researched": "2026-08-20",
+  "_method": "primary sources fetched live (gov.uk employer rates-and-thresholds pages for 2025-26 and 2026-27); verbatim quote in source.quote",
+  "entries": [
+    {
+      "id": "uk_employer_nics_15pct",
+      "type": "employer_costs",
+      "title": "Employer NICs 15% above £5,000 Secondary Threshold (2025-26 and 2026-27)",
+      "scope": {"level": "uk"},
+      "verticals": ["coffee_cafe", "fast_casual", "fsr", "qsr"],
+      "personas": ["csuite", "finance", "founder", "operations"],
+      "status": "in_effect",
+      "effective_date": "2025-04-06",
+      "review_by": "2026-11-30",
+      "direction": "cost_up",
+      "fact": "Employer (secondary) Class 1 National Insurance is charged at 15% on earnings above a Secondary Threshold of £5,000 per year (£96 per week), in effect for the 2025-26 tax year and unchanged for 2026-27.",
+      "quantification": {
+        "basis": "per_hourly_employee_per_year",
+        "value": 2967.68,
+        "currency": "GBP",
+        "how": "employer NICs bill for one full-time NLW employee: gross pay £12.71 × 37.5h × 52wk = £24,784.50; (£24,784.50 − £5,000 threshold) × 15% = £2,967.68 per year"
+      },
+      "source": {
+        "url": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027",
+        "primary": true,
+        "accessed": "2026-08-20",
+        "quote": "Secondary threshold: £96 per week, £417 per month, £5,000 per year ... [employer Class 1 contribution rate, category A] 15% ... Employment Allowance for 2026 to 2027 is £10,500."
+      },
+      "angle": "At the 15% rate over a £5,000 threshold, a single full-time NLW employee now carries roughly £2,968 a year in employer National Insurance on top of wages — and because the threshold is low, every additional rostered part-timer above £96/week adds NICs, so overstaffed shifts across a multi-site estate compound at 15%.",
+      "proof_pairing": "Customer proof quantifying total labour cost (wages + on-costs) as a % of revenue, or hours saved through demand-matched scheduling.",
+      "caveats": "Rate and threshold verified as identical on the gov.uk 2025-26 and 2026-27 employer rates pages; the pre-April-2025 comparison figures were not fetched this session, so do not claim a specific 'up from' delta. Eligible employers can offset up to the £10,500 Employment Allowance (2026-27) against their total NICs bill, which materially reduces the net cost for smaller groups. Per-employee figure assumes a full-time 37.5h NLW wage; higher-paid staff carry proportionally more NICs. Category A standard rate; some categories (e.g. under-21s, apprentices under 25) attract different employer rates. UK-wide only; does not apply in Ireland (employer PRSI is a separate regime). This is a standing rate, not a fresh change — prefer it as supporting context or when the account signal is thin and no fresher entry matches."
+    }
+  ]
+}

@@ -104,8 +104,9 @@ Blockers before the first UKI batch (tracked in `README.md` → Open questions):
 1. **UKI flow owner named** (the Lewis-equivalent) and **UKI Gong flows confirmed** (folder, names,
    reactivation motion) → `cadences/UKI_FLOWS.md`.
 2. **UKI accounts sheet created** (`input/README.md` schema) + UKI rep emails validated as HubSpot owners.
-3. **UK conjunctural register built** from primary sources (`knowledge/conjunctural/README.md`) —
-   the US register was removed at fork; the matcher has nothing to match until UK entries exist.
+3. ~~UK conjunctural register~~ ✅ built 2026-08-20 — 16 UK+IE entries from primary sources;
+   matcher adapted to UKI geography (`knowledge/conjunctural/README.md`). Watch the refresh
+   cadence: first expiries early September 2026.
 4. Pubs & bars vertical decision.
 Everything else (signal playbooks, scoring, first-touch generator, HubSpot write path, jobs probe)
 is inherited working and market-adapted.

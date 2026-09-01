@@ -3,11 +3,27 @@
 > **Stage 2 knowledge, not Stage 1 detection.** Researched **once centrally and refreshed**, then
 > matched to accounts by attributes. One research pass serves every account.
 
-> ⚠️ **Register emptied at fork (2026-08-20).** The US entries (CA wage steps, tip credit, US
-> scheduling laws, US commodity series) belong to the US repo and were removed — several concepts
-> (tip credit especially) don't even exist in UK employment law. `register/` is empty until UK/IE
-> entries are researched **from primary sources**. `scripts/conjunctural_match.py` works unchanged;
-> it simply has nothing to match until then, so `first_touch_basis` falls back to `vertical_pain`.
+> ✅ **UK/IE register built 2026-08-20** (same day the US entries were removed at fork) — 16 entries
+> in `register/`, all researched from live-fetched primary sources with a verbatim supporting quote
+> per entry: UK wages (NLW/NMW April 2026 steps, LPC April 2027 projection), employer NICs, GB tips
+> law, England business rates 2026, Employment Rights Act 2025 timeline, the temporary children's-
+> meals VAT window, commodities (butter, coffee — beef/energy/eggs checked and excluded as
+> immaterial), and Ireland (NMW, PRSI + Oct 2026 step, tips act, pension auto-enrolment). Nearest
+> expiries: `vat_childrens_meals_2026` (2026-09-01), commodities (2026-09-20), `ie_employer_prsi_
+> 2026_rates` (2026-09-30) — and re-verify wage/rates entries after the Autumn Budget / Budget 2027.
+>
+> **Matcher adapted 2026-08-20** — the fork note originally claimed `conjunctural_match.py` "works
+> unchanged", which was wrong: its scope logic only understood `federal|state|city`, so UK-level
+> entries would never have matched. It now speaks UKI geography (`--nation`/`--council`, scope
+> levels below) and renders £/€ from a required `quantification.currency` (`GBP`|`EUR`) — a money
+> basis without a currency is not usable as an opener, same fail-safe as the basis whitelist.
+> `"uk"` never matches an Ireland account; an account with no known nation matches nothing.
+> Three further matcher changes made while building the register, each worth porting to the US repo:
+> an unrenderable quantification no longer collects the +5 usable-opener credit (it could shadow a
+> genuinely usable entry into the vertical-pain fallback), ties break toward the fresher
+> `effective_date` (a just-landed step beats a year-old standing rate), and a `nations` scope level
+> (`scope.nations: ["england","wales","scotland"]`) exists for GB-only extents — the Tips Act 2023
+> and ERA 2025 do NOT extend to NI, which plain `"uk"` would have got wrong.
 
 ## Why this exists
 Measured on the US fork's first 80 real accounts, **44% produced zero Tier-1 signals** and fell back
@@ -33,7 +49,7 @@ The unit is **macro event × account attributes** (nation · vertical · site co
 never macro news on its own. If it can't be quantified on their footprint, fall back to the vertical
 pain.
 
-## UK/IE candidate entry types (to research — primary sources only, NEVER model memory)
+## UK/IE entry types (researched 2026-08-20 — refresh from primary sources only, NEVER model memory)
 
 | Type | What to capture | Primary source |
 |---|---|---|
@@ -46,8 +62,11 @@ pain.
 | `vat` | Any hospitality VAT rate change (a perennial UK lobby topic — only if actually scheduled) | HMRC |
 
 Every entry: same JSON schema as before (below), same `review_by` expiry discipline. **Scope field:**
-`scope.level` = `uk | england | scotland | wales | ni | ireland | council`, since UK employment/rates
-law is devolved — a Scotland-only fact must never open an email to a Manchester group.
+`scope.level` = `uk | england | scotland | wales | ni | ireland | council | nations`, since UK
+employment/rates law is devolved — a Scotland-only fact must never open an email to a Manchester
+group. `nations` carries an explicit `scope.nations` list for extents that are neither one nation
+nor the whole UK (e.g. `["england","wales","scotland"]` for GB-only employment law like the Tips
+Act 2023 and ERA 2025, which do not extend to NI).
 
 ## Hard rules (unchanged — market-neutral)
 1. **Primary, dated sources only.** gov.uk, gov.ie, HMRC, ONS, AHDB, council pages. Never populate
@@ -58,9 +77,12 @@ law is devolved — a Scotland-only fact must never open an email to a Mancheste
 4. **Politically charged topics are excluded** from cold first touches.
 5. **Every entry expires** (`effective_date` + `review_by`); the matcher skips stale entries.
 
-## Entry schema (`register/*.json`) — unchanged
+## Entry schema (`register/*.json`)
 Same shape as the US fork (id, type, title, scope, verticals, personas, status, effective_date,
-review_by, direction, fact, quantification{basis,value,how}, source, angle, proof_pairing, caveats).
+review_by, direction, fact, quantification{basis,value,**currency**,how}, source, angle,
+proof_pairing, caveats) — with one UKI addition: `quantification.currency` (`GBP`|`EUR`) is
+**required** on any money basis (`per_hourly_employee_per_year`, `per_site_per_year`); without it
+the matcher refuses to use the entry as an opener.
 `quantification.basis` must be a recognized cost/price unit before an entry can be an opener —
 a new basis name is a deliberate matcher addition, reviewed, never silent. Commodity entries: vertical
 is a coarse proxy — prefer hand-selecting the commodity that matches the account's actual menu.

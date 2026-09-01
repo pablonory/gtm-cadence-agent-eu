@@ -1,0 +1,90 @@
+{
+  "_researched": "2026-08-20",
+  "_method": "primary sources fetched live (gov.uk NMW rates page, Low Pay Commission remit/report pages); every figure carries a verbatim quote in source.quote",
+  "entries": [
+    {
+      "id": "uk_nlw_2026_step",
+      "type": "minimum_wage",
+      "title": "National Living Wage £12.71 from 1 April 2026",
+      "scope": {"level": "uk"},
+      "verticals": ["coffee_cafe", "fast_casual", "fsr", "qsr"],
+      "personas": ["csuite", "finance", "founder", "operations"],
+      "status": "in_effect",
+      "effective_date": "2026-04-01",
+      "review_by": "2026-11-20",
+      "direction": "cost_up",
+      "fact": "The National Living Wage for workers aged 21 and over rose from £12.21 to £12.71 per hour on 1 April 2026.",
+      "quantification": {
+        "basis": "per_hourly_employee_per_year",
+        "value": 975.0,
+        "currency": "GBP",
+        "how": "(£12.71 − £12.21) = £0.50/hour increase × 37.5h × 52wk = £975 per full-time 21+ hourly employee per year"
+      },
+      "source": {
+        "url": "https://www.gov.uk/national-minimum-wage-rates",
+        "primary": true,
+        "accessed": "2026-08-20",
+        "quote": "The rates change on 1 April every year. Current rates [table]: 21 and over — £12.71; 18 to 20 — £10.85; Under 18 — £8; Apprentice — £8. Rates between 1 April 2024 and 31 March 2026 [table]: April 2025 to March 2026 — £12.21 (21 and over)"
+      },
+      "angle": "Since 1 April 2026 every 21+ hourly employee on the National Living Wage costs roughly £975 more per year in base pay than under the April 2025 rate — multiplied across a multi-site rota, a 10-site group with 15 full-time-equivalent NLW staff per site is absorbing around £146k of new annual wage cost from this step alone.",
+      "proof_pairing": "Customer proof showing labour cost as a % of revenue held or reduced (e.g. labour-cost-percentage improvement across sites) despite statutory wage increases.",
+      "caveats": "The £975 figure assumes a 37.5-hour week, 52 weeks, and an employee previously paid exactly the old NLW; staff already paid above £12.71 are unaffected directly (though pay-differential compression is common, that effect is not in the arithmetic). Applies UK-wide only — Ireland has a separate National Minimum Wage not covered by this entry."
+    },
+    {
+      "id": "uk_nmw_18_20_2026_step",
+      "type": "minimum_wage",
+      "title": "18-20 rate £10.85 from 1 April 2026 (age-band convergence)",
+      "scope": {"level": "uk"},
+      "verticals": ["coffee_cafe", "fast_casual", "fsr", "qsr"],
+      "personas": ["csuite", "finance", "founder", "operations"],
+      "status": "in_effect",
+      "effective_date": "2026-04-01",
+      "review_by": "2026-11-20",
+      "direction": "cost_up",
+      "fact": "The National Minimum Wage for 18 to 20 year olds rose from £10.00 to £10.85 per hour on 1 April 2026, and the government has committed to lowering the National Living Wage's age of eligibility from 21 to 18 over time.",
+      "quantification": {
+        "basis": "per_hourly_employee_per_year",
+        "value": 1657.5,
+        "currency": "GBP",
+        "how": "(£10.85 − £10.00) = £0.85/hour increase × 37.5h × 52wk = £1,657.50 per full-time 18-20 employee per year"
+      },
+      "source": {
+        "url": "https://www.gov.uk/national-minimum-wage-rates",
+        "primary": true,
+        "accessed": "2026-08-20",
+        "quote": "Current rates [table]: 18 to 20 — £10.85 ... April 2025 to March 2026 — £10 (18 to 20). [Corroborating, Low Pay Commission, gov.uk/government/publications/the-national-minimum-wage-in-2026: the remit] repeats the Government's commitment to lowering the NLW's age of eligibility from 21 to 18"
+      },
+      "angle": "Hospitality groups that staff heavily with 18-20 year olds took a larger proportional hit than the headline NLW step: the youth rate rose £0.85/hour on 1 April 2026 (about £1,657 per full-time 18-20 employee per year), and the government's stated commitment to align the 18-20 rate with the adult rate means this band will keep rising faster than the NLW.",
+      "proof_pairing": "Customer proof on scheduling/forecasting accuracy reducing over-rostered hours, expressed as labour hours or labour-cost % saved.",
+      "caveats": "Assumes 37.5h × 52wk full-time equivalent; many 18-20 hospitality staff are part-time, so scale to actual hours. The pace of 18-20/NLW alignment is not fixed — the Low Pay Commission has flexibility on timing, so do not state a date for full alignment."
+    },
+    {
+      "id": "uk_nlw_2027_projection",
+      "type": "minimum_wage",
+      "title": "LPC projected NLW range £13.02–£13.34 for April 2027",
+      "scope": {"level": "uk"},
+      "verticals": ["coffee_cafe", "fast_casual", "fsr", "qsr"],
+      "personas": ["csuite", "finance", "founder", "operations"],
+      "status": "proposed",
+      "effective_date": "2027-04-01",
+      "review_by": "2026-11-01",
+      "direction": "cost_up",
+      "fact": "The Low Pay Commission projects the April 2027 National Living Wage will fall in the range £13.02 to £13.34, with a central estimate of £13.18; it has been asked to recommend the April 2027 rates and its 2026 consultation closed on 26 June 2026, with no rate yet confirmed by government.",
+      "quantification": {
+        "basis": "per_hourly_employee_per_year",
+        "value": 916.5,
+        "currency": "GBP",
+        "how": "central estimate only: (£13.18 − £12.71) = £0.47/hour × 37.5h × 52wk = £916.50 per full-time NLW employee per year; the projected range implies £604.50 (at £13.02) to £1,228.50 (at £13.34)"
+      },
+      "source": {
+        "url": "https://www.gov.uk/government/publications/the-national-minimum-wage-in-2026/the-national-minimum-wage-in-2026",
+        "primary": true,
+        "accessed": "2026-08-20",
+        "quote": "Based on current wage forecasts, we expect the rate needed to stay at two-thirds of median hourly earnings will be in the range of £13.02 and £13.34, with a central estimate of £13.18."
+      },
+      "angle": "For budgeting conversations from autumn 2026: the Low Pay Commission's own published projection puts the April 2027 NLW at £13.02–£13.34 (central £13.18), i.e. roughly another £900 per full-time minimum-wage employee per year on the central estimate — a dated, sourced forward number a finance lead can plug into next year's labour budget.",
+      "proof_pairing": "Customer proof on forecasting-led labour budgeting (labour cost % vs budget) — pairing a projected cost with a planning capability.",
+      "caveats": "PROJECTION ONLY — this is the LPC's forecast of the two-thirds-of-median-earnings path, not a recommendation or a government decision; the final rate is normally announced at the Autumn Budget (November 2026). Never present £13.18 as a confirmed rate. Re-verify after the LPC recommendation and Budget announcement."
+    }
+  ]
+}

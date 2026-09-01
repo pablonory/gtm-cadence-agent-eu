@@ -15,10 +15,18 @@ WHAT IT RETURNS
     is the rule this script exists to enforce, not just a fallback path.
 
 USAGE
-    python3 scripts/conjunctural_match.py --state CA --vertical fsr --persona operations --locations 6
-    python3 scripts/conjunctural_match.py --state IL --vertical fast_casual --locations 3 --city Chicago --json
+    python3 scripts/conjunctural_match.py --nation england --vertical fsr --persona operations --locations 6
+    python3 scripts/conjunctural_match.py --nation ireland --vertical fast_casual --locations 3 --json
+    python3 scripts/conjunctural_match.py --nation scotland --council "City of Edinburgh" --vertical qsr --locations 12
 
 Requires only stdlib.
+
+UKI GEOGRAPHY (diverges from the US fork's federal/state/city — adapted 2026-08-20)
+    Scope levels: uk | england | scotland | wales | ni | ireland | council.
+    "uk" matches the four UK nations and NEVER an Ireland account; "ireland" only Ireland — UK and IE
+    are separate jurisdictions, there is no both-markets level (no law spans both; if one ever does,
+    write two entries). An account with no known nation matches NOTHING (safe fallback to vertical
+    pain) — better no conjunctural opener than a Scotland-only fact opening a Dublin email.
 """
 import argparse
 import glob
@@ -59,26 +67,39 @@ def not_expired(entry, today):
         return True
 
 
-def scope_matches(entry, state, city):
+UK_NATIONS = {"england", "scotland", "wales", "ni"}
+NATIONS = UK_NATIONS | {"ireland"}
+
+
+def scope_matches(entry, nation, council):
     scope = entry.get("scope") or {}
     level = scope.get("level")
-    if level == "federal":
-        return True
-    if level == "state":
-        return bool(state) and scope.get("state", "").upper() == state.upper()
-    if level == "city":
-        if not city:
+    nation = (nation or "").lower()
+    if nation not in NATIONS:
+        return False  # unknown nation matches nothing — see module docstring
+    if level == "uk":
+        return nation in UK_NATIONS
+    if level == "nations":
+        # An explicit nation list, for facts whose territorial extent is not the whole UK — e.g. the
+        # Tips Act 2023 and Employment Rights Act 2025 extend to England+Wales+Scotland but NOT NI
+        # (devolved employment law). Added 2026-08-20 when the compliance research surfaced GB-only
+        # extents that "uk" would have wrongly served to NI accounts.
+        return nation in [n.lower() for n in (scope.get("nations") or [])]
+    if level in NATIONS:
+        return nation == level
+    if level == "council":
+        if not council:
             return False
-        cities = [c.lower() for c in (scope.get("cities") or [])]
-        return city.lower() in cities
+        councils = [c.lower() for c in (scope.get("councils") or [])]
+        return council.lower() in councils
     return False
 
 
-def score_entry(entry, state, city, vertical, persona, locations, today):
+def score_entry(entry, nation, council, vertical, persona, locations, today):
     """Higher is better. Returns None if the entry doesn't apply at all."""
     if not not_expired(entry, today):
         return None
-    if not scope_matches(entry, state, city):
+    if not scope_matches(entry, nation, council):
         return None
     # An explicit EMPTY list is a "never selectable" guard (e.g. LA's fair-workweek entries in
     # scheduling_law.json are retail-only and deliberately carry verticals:[] / personas:[] so they can
@@ -95,11 +116,17 @@ def score_entry(entry, state, city, vertical, persona, locations, today):
 
     score = 0.0
     scope = entry.get("scope") or {}
-    # More specific geography wins: city > state > federal.
-    score += {"city": 3, "state": 2, "federal": 1}.get(scope.get("level"), 0)
+    # More specific geography wins: council > single nation > nation-list > uk-wide (mirrors the US
+    # city > state > federal).
+    level = scope.get("level")
+    score += 3 if level == "council" else (2 if level in NATIONS else (1.5 if level == "nations" else 1))
     # A quantified entry is the whole point (see README's "quantify or fall back" rule) — heavily
-    # preferred over an entry that can only ever be supporting context.
-    if entry.get("quantification"):
+    # preferred over an entry that can only ever be supporting context. Judged by whether the
+    # quantification actually RENDERS for this account, not by the dict's mere presence — a
+    # quantification the renderer refuses (unknown basis, missing currency, sentiment stat) used to
+    # still collect the +5 and could shadow a genuinely usable entry into the vertical-pain fallback
+    # (caught building the UKI register, 2026-08-20; worth porting to the US repo).
+    if quantify_for_account(entry, locations) is not None:
         score += 5
     # status: an in-effect fact beats a scheduled one, which beats a merely proposed one.
     score += {"in_effect": 2, "scheduled": 1, "proposed": 0}.get(entry.get("status"), 0)
@@ -122,6 +149,19 @@ def score_entry(entry, state, city, vertical, persona, locations, today):
     # Prefer a primary source over secondary when everything else ties — see README rule 1.
     if (entry.get("source") or {}).get("primary"):
         score += 0.5
+    # Recency tie-break (UKI addition, 2026-08-20): the register's promise is "true NOW, with a date
+    # attached" — on an otherwise-equal score a change that just took effect makes a better opener
+    # than a standing rate that's been true for a year+ (caught when the 2025 employer-NICs level
+    # beat the fresh April 2026 NLW step purely on register filename sort order). Small on purpose:
+    # a tie-break, never enough to outweigh quantification/status/specificity.
+    eff = entry.get("effective_date")
+    if eff:
+        try:
+            age_days = (today - date.fromisoformat(eff)).days
+            if 0 <= age_days <= 365:
+                score += 0.4 * (1 - age_days / 365)
+        except ValueError:
+            pass
     return score
 
 
@@ -145,15 +185,23 @@ def quantify_for_account(entry, locations):
         return None
     basis, value = q.get("basis") or "", q.get("value")
     n = locations or 1
+    # UKI entries carry an explicit quantification.currency (GBP | EUR). No default guess: a missing
+    # currency on a money basis makes the entry unusable as an opener rather than rendering the wrong
+    # symbol — same fail-safe philosophy as the basis whitelist below.
+    cur = {"GBP": "£", "EUR": "€"}.get(q.get("currency"))
 
     if any(marker in basis for marker in _SENTIMENT_BASIS_MARKERS):
         return None  # a survey/sentiment stat, not a cost fact about this account — never the opener
 
     if basis == "per_hourly_employee_per_year":
-        return f"~${value:,.0f}/hourly employee/year — no per-site employee count assumed, ask on the call"
+        if not cur:
+            return None
+        return f"~{cur}{value:,.0f}/hourly employee/year — no per-site employee count assumed, ask on the call"
     if basis == "per_site_per_year":
+        if not cur:
+            return None
         total = value * n
-        return f"~${value:,.0f}/site/year → **~${total:,.0f}/year across {n} site(s)**"
+        return f"~{cur}{value:,.0f}/site/year → **~{cur}{total:,.0f}/year across {n} site(s)**"
     if basis == "pct_of_cogs":
         return f"a {value}% move on an input that is typically a meaningful share of COGS for this vertical"
     if basis == "pct_of_labour":
@@ -174,11 +222,11 @@ def quantify_for_account(entry, locations):
     return None
 
 
-def best_match(state, vertical, persona, locations, city=None, today=None):
+def best_match(nation, vertical, persona, locations, council=None, today=None):
     today = today or date.today()
     candidates = []
     for e in load_register():
-        s = score_entry(e, state, city, vertical, persona, locations, today)
+        s = score_entry(e, nation, council, vertical, persona, locations, today)
         if s is not None:
             candidates.append((s, e))
     if not candidates:
@@ -207,8 +255,9 @@ def best_match(state, vertical, persona, locations, city=None, today=None):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    ap.add_argument("--state", help="two-letter state code, e.g. CA")
-    ap.add_argument("--city", help="city name, for city-level ordinances")
+    ap.add_argument("--nation", choices=sorted(NATIONS),
+                    help="where the account's estate (mostly) operates — england/scotland/wales/ni/ireland")
+    ap.add_argument("--council", help="council area name, for council-level entries (e.g. licensing/rates schemes)")
     ap.add_argument("--vertical", choices=["coffee_cafe", "fast_casual", "fsr", "qsr"])
     ap.add_argument("--persona", choices=["csuite", "finance", "founder", "operations"])
     ap.add_argument("--locations", type=int, default=None)
@@ -218,7 +267,7 @@ def main():
     if not os.path.isdir(REGISTER_DIR) or not glob.glob(os.path.join(REGISTER_DIR, "*.json")):
         sys.exit(f"FATAL: no register files in {REGISTER_DIR} — nothing to match against yet.")
 
-    result = best_match(args.state, args.vertical, args.persona, args.locations, args.city)
+    result = best_match(args.nation, args.vertical, args.persona, args.locations, args.council)
 
     if args.json:
         print(json.dumps(result, indent=2))
