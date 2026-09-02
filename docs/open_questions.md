@@ -5,9 +5,9 @@
 
 | # | Status | Question | Owner | Answer lands in |
 |---|---|---|---|---|
-| 1 | 🔴 | **Who owns UKI territory + flows?** (the Lewis-equivalent) — everything below cascades from this | **Pablo** (to ask sales leadership) | `CLAUDE.md` header, `input/README.md` |
-| 2 | 🔴 | **Which Gong flows do UKI reps actually use?** Folder, exact names, matrix shape, reactivation motion name (capture checklist inside the file) | UKI owner, once named (Pablo chasing) | `cadences/UKI_FLOWS.md` |
-| 3 | 🔴 | **UKI accounts sheet** — create to schema, WITH data-validation dropdowns (US template's lack of them is a recorded defect); validate rep emails as HubSpot owners | UKI owner + Pablo | `input/README.md`, the sheet itself |
+| 1 | ✅ | ~~Who owns UKI territory + flows?~~ — **Pablo is interim owner** (decided 2026-09-02) until a sales-side owner is named; flows knowledge comes from Phil (#2) | — | `CLAUDE.md` header, `input/README.md` |
+| 2 | 🔴 | **Which Gong flows do UKI reps actually use?** Folder, exact names, matrix shape, reactivation motion name (capture checklist inside the file) | **Phil (SMB & MM lead)** — awaiting his reply, Pablo chasing (2026-09-02) | `cadences/UKI_FLOWS.md` |
+| 3 | 🔴 | **UKI accounts sheet** — create to schema, WITH data-validation dropdowns (US template's lack of them is a recorded defect); validate rep emails as HubSpot owners | **Pablo** (as interim owner) | `input/README.md`, the sheet itself |
 | 4 | 🟡 | **Pubs & bars** — own vertical or fold into FSR? The CRM vertical enum has a `Pub` value, so the segment exists in the data; the matrix has no cell. Decide with flow evidence from #2, not in the abstract. Interim: gastropubs → FSR | UKI owner + Pablo | `cadences/UKI_FLOWS.md`, `context/icp/verticals.md` |
 | 5 | 🟡 | **Stage 2b for UKI** — pull UKI calls from the shared Gong instance (filter by UKI reps/deals) and build the evidence packs; blocked on #1 for the rep list | Pablo | `directives/stage2b_gong_evidence.md`, `knowledge/gong_evidence/` |
 | 6 | 🟡 | **UKI recall re-measurement** — every precision/recall number in the playbooks is US-measured; the first UKI batch must produce its own scorecard before any weight/threshold is touched | first UKI batch (agent + Pablo) | `directives/signals/_signal_stack.md` |

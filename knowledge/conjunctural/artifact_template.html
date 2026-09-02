@@ -1,0 +1,422 @@
+<title>UKI Market Signals</title>
+<style>
+@font-face{font-family:'Sharp Grotesk';src:url(data:font/otf;base64,__SHARP__) format('opentype');font-weight:700;font-display:swap}
+@font-face{font-family:'Graphik';src:url(data:font/woff2;base64,__GRAPHIK__) format('woff2');font-weight:400 600;font-display:swap}
+
+:root{
+  --ground:#f8f6f2; --card:#fbfaf9; --card-edge:#e7e2d6;
+  --ink:#140018; --muted:#565059; --faint:#8a8390;
+  --moss:#053017; --moss-deep:#042512; --on-moss:#f3f0e8; --on-moss-muted:#9db8a7;
+  --lime:#d3fd74; --lilac:#b0b0fe;
+  --up-bg:#fbe9ea; --up-ink:#501c1d;
+  --down-bg:#baf7ec; --down-ink:#255249;
+  --comp-bg:#e4e4ff; --comp-ink:#2d2d66;
+  --expired:#cec9cf;
+  --hairline:#dcd6c8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#042010; --card:#053017; --card-edge:#12492c;
+    --ink:#f3f0e8; --muted:#a9b8ae; --faint:#7d937f;
+    --moss:#053017; --moss-deep:#042512; --on-moss:#f3f0e8; --on-moss-muted:#9db8a7;
+    --up-bg:#3d1516; --up-ink:#f4c9cb;
+    --down-bg:#123f37; --down-ink:#a7ecdd;
+    --comp-bg:#28285a; --comp-ink:#cccafe;
+    --expired:#3a5a46;
+    --hairline:#12492c;
+    --lilac:#8e8ee0;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#042010; --card:#053017; --card-edge:#12492c;
+  --ink:#f3f0e8; --muted:#a9b8ae; --faint:#7d937f;
+  --moss:#053017; --moss-deep:#042512; --on-moss:#f3f0e8; --on-moss-muted:#9db8a7;
+  --up-bg:#3d1516; --up-ink:#f4c9cb;
+  --down-bg:#123f37; --down-ink:#a7ecdd;
+  --comp-bg:#28285a; --comp-ink:#cccafe;
+  --expired:#3a5a46;
+  --hairline:#12492c;
+  --lilac:#8e8ee0;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:'Graphik','Helvetica Neue',Arial,sans-serif;font-size:15.5px;line-height:1.55;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:40px 24px 80px}
+h1,h2,h3,.figure{font-family:'Sharp Grotesk','Helvetica Neue',Arial,sans-serif;font-weight:700;text-wrap:balance}
+h1{font-size:clamp(30px,5vw,44px);line-height:1.05;margin:0}
+h2{font-size:22px;margin:0 0 6px}
+h3{font-size:16px;margin:0}
+a{color:inherit}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.sub{color:var(--muted);max-width:64ch}
+.num{font-variant-numeric:tabular-nums}
+
+/* header */
+header.page{display:flex;flex-direction:column;gap:10px;margin-bottom:34px}
+.headline-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.reg-meta{font-size:12.5px;color:var(--muted);text-align:right;line-height:1.5}
+.reg-meta b{color:var(--ink)}
+
+/* matcher console */
+.console{background:var(--moss);color:var(--on-moss);border-radius:14px;padding:26px 26px 22px;margin-bottom:14px}
+.console .eyebrow{color:var(--on-moss-muted)}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:14px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-moss-muted);font-weight:600}
+.field select,.field input{appearance:none;background:var(--moss-deep);color:var(--on-moss);
+  border:1px solid #1f5a38;border-radius:8px;padding:9px 12px;font:inherit;font-size:14.5px;width:100%}
+.field select:focus,.field input:focus{outline:2px solid var(--lime);outline-offset:1px}
+.console-note{font-size:12.5px;color:var(--on-moss-muted);margin-top:14px;max-width:78ch}
+
+/* results */
+.cat-row{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.cat-chip{font:inherit;font-size:13px;font-weight:600;border:1.5px solid var(--hairline);
+  background:var(--card);color:var(--ink);border-radius:99px;padding:6px 14px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:7px}
+.cat-chip .dot{width:8px;height:8px;border-radius:99px;background:var(--dotc,var(--muted))}
+.cat-chip[aria-pressed="true"]{background:var(--moss);border-color:var(--moss);color:var(--on-moss)}
+.cat-chip:focus-visible{outline:2px solid var(--lime)}
+.cat-chip .num{opacity:.65;font-weight:400}
+.badge.cat{background:transparent;border:1px solid var(--hairline);color:inherit;opacity:.9;
+  display:inline-flex;align-items:center;gap:5px}
+.badge.cat .dot{width:7px;height:7px;border-radius:99px;background:var(--dotc)}
+.results{display:flex;flex-direction:column;gap:12px;margin-bottom:44px}
+.match{border:1px solid var(--card-edge);background:var(--card);border-radius:14px;padding:20px 22px}
+.match.top{background:var(--moss);border-color:var(--moss);color:var(--on-moss)}
+.match.top .m-muted, .match.top .quote{color:var(--on-moss-muted)}
+.match.top .hairline{border-color:#1f5a38}
+.m-head{display:flex;justify-content:space-between;gap:14px;align-items:baseline;flex-wrap:wrap}
+.m-title{font-size:17px;font-weight:600}
+.badges{display:flex;gap:6px;flex-wrap:wrap}
+.badge{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;
+  padding:3px 9px;border-radius:99px;white-space:nowrap}
+.badge.up{background:var(--up-bg);color:var(--up-ink)}
+.badge.down{background:var(--down-bg);color:var(--down-ink)}
+.badge.comp{background:var(--comp-bg);color:var(--comp-ink)}
+.badge.geo{background:var(--lilac);color:#140018}
+.badge.status{background:transparent;border:1px solid currentColor;opacity:.75}
+.figure{font-size:clamp(20px,3.2vw,28px);line-height:1.2;margin:10px 0 2px;letter-spacing:-0.01em}
+.match.top .figure{color:var(--lime)}
+.figure-how{font-size:12.5px;color:var(--muted)}
+.figure-est{font-size:14px;font-weight:600;margin:2px 0 4px;color:var(--ink)}
+.match.top .figure-est{color:var(--on-moss)}
+.match.top .figure-how{color:var(--on-moss-muted)}
+.not-opener{font-size:13px;font-weight:600;margin:10px 0 2px}
+.m-fact{margin:10px 0 0;max-width:78ch}
+.m-angle{margin:12px 0 0;max-width:78ch}
+.m-angle b{font-weight:600}
+.m-muted{color:var(--muted);font-size:13px}
+.hairline{border:0;border-top:1px solid var(--hairline);margin:14px 0}
+details{margin-top:10px}
+summary{cursor:pointer;font-size:13px;font-weight:600;color:inherit}
+summary:focus-visible{outline:2px solid var(--lime)}
+.quote{font-size:13px;color:var(--muted);border-left:3px solid var(--lilac);padding-left:12px;margin:10px 0 0;max-width:74ch}
+.src{font-size:13px;margin-top:10px}
+.empty-state{border:1.5px dashed var(--hairline);border-radius:14px;padding:26px;color:var(--muted);max-width:none}
+.empty-state b{color:var(--ink)}
+
+/* calendar */
+.section{margin-bottom:44px}
+.timeline{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:0}
+.timeline li{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:13px 0;border-top:1px solid var(--hairline)}
+.timeline li:last-child{border-bottom:1px solid var(--hairline)}
+.t-date{font-family:'Sharp Grotesk','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:15px}
+.t-date .yr{color:var(--muted);font-weight:400;font-family:'Graphik','Helvetica Neue',Arial,sans-serif;font-size:12.5px;display:block}
+.t-what b{font-weight:600}
+.t-what .m-muted{display:block;margin-top:2px}
+.t-past{opacity:.55}
+.t-chip{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;background:var(--lilac);color:#140018;border-radius:99px;padding:2px 8px;margin-left:8px;vertical-align:1px;white-space:nowrap}
+
+/* market context */
+.ctx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:18px}
+.ctx-card{border:1px solid var(--card-edge);background:var(--card);border-radius:14px;padding:18px 20px}
+.ctx-card .figure{font-size:24px;margin:6px 0 4px}
+.ctx-card p{margin:6px 0 0;font-size:14px;max-width:60ch}
+.ctx-src{font-size:12px;color:var(--muted);margin-top:10px;display:block}
+.ctx-banner{background:var(--comp-bg);color:var(--comp-ink);border-radius:10px;padding:12px 16px;font-size:13.5px;margin-top:16px;max-width:none}
+
+/* rules */
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.rule{border-top:3px solid var(--lilac);padding-top:10px;font-size:14px}
+.rule b{display:block;margin-bottom:4px}
+footer{margin-top:56px;border-top:1px solid var(--hairline);padding-top:16px;font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (prefers-reduced-motion:no-preference){
+  .match{transition:transform .15s ease}
+}
+@media (max-width:560px){ .timeline li{grid-template-columns:1fr;gap:4px} }
+</style>
+
+<div class="wrap">
+<header class="page">
+  <span class="eyebrow">Nory · GTM Cadence Agent · UK &amp; Ireland</span>
+  <div class="headline-row">
+    <h1>UKI Market Signals</h1>
+    <div class="reg-meta num">
+      <b id="live-count">–</b> live entries · <span id="expired-count">–</span> expired (auto-retired)<br>
+      register researched <b>20 Aug 2026</b> from primary sources · every figure carries its verbatim quote
+    </div>
+  </div>
+  <p class="sub">When an account is <b>cold</b> — score under 30, no Tier-1 signal — this is where the
+  first touch comes from: a macro fact that is true <i>now</i>, in <i>their</i> jurisdiction, quantified
+  on <i>their</i> footprint, with a date attached. Set the account below; the ranking uses the same
+  arithmetic as <code>conjunctural_match.py</code>.</p>
+</header>
+
+<section class="console" aria-label="Account fit">
+  <span class="eyebrow">Account fit</span>
+  <div class="controls">
+    <div class="field"><label for="nation">Nation</label>
+      <select id="nation">
+        <option value="england">England</option><option value="scotland">Scotland</option>
+        <option value="wales">Wales</option><option value="ni">Northern Ireland</option>
+        <option value="ireland">Ireland</option>
+      </select></div>
+    <div class="field"><label for="vertical">Vertical</label>
+      <select id="vertical">
+        <option value="fsr">FSR</option><option value="qsr">QSR</option>
+        <option value="fast_casual">Fast Casual</option><option value="coffee_cafe">Coffee &amp; Cafe</option>
+      </select></div>
+    <div class="field"><label for="persona">Persona</label>
+      <select id="persona">
+        <option value="finance">Finance</option><option value="csuite">C-Suite</option>
+        <option value="founder">Founder</option><option value="operations">Operations</option>
+      </select></div>
+    <div class="field"><label for="locations">Sites</label>
+      <input id="locations" type="number" min="1" max="500" value="6" inputmode="numeric"></div>
+    <div class="field"><label for="staff">Hourly staff / site <span style="text-transform:none;letter-spacing:0">(your estimate)</span></label>
+      <input id="staff" type="number" min="1" max="200" placeholder="optional" inputmode="numeric"></div>
+  </div>
+  <p class="console-note"><b id="fit-count" style="color:var(--lime)"></b> — devolution is enforced: a GB-only law never shows for a Northern Ireland
+  account, an Ireland account only ever sees Irish entries, and an expired entry retires itself. An
+  entry without a renderable quantification can support the email but must not open it.</p>
+</section>
+
+<div class="cat-row" id="cat-row" role="group" aria-label="Filter by area"></div>
+<section class="results" id="results" aria-live="polite"></section>
+
+<section class="section">
+  <span class="eyebrow">The calendar</span>
+  <h2>Dated events to plan outreach around</h2>
+  <p class="sub">Each is a statutory or published date from the register's primary sources — the peg for a
+  "before April" or "ahead of October" line in copy.</p>
+  <ul class="timeline" id="timeline"></ul>
+</section>
+
+<section class="section" id="market-context">
+  <span class="eyebrow">Market context</span>
+  <h2>The trading backdrop — context, never the opener</h2>
+  <p class="sub">Sector-wide numbers for call prep and framing. None of these is quantified on a single
+  account's footprint, so none may open an email — that is what the register above is for.</p>
+  <div class="ctx-grid" id="ctx-grid"></div>
+  <p class="ctx-banner"><b>Rule:</b> a sector statistic in a cold email reads as filler ("in this
+  economy…"). Use these to sound informed on the call, not to open the thread.</p>
+</section>
+
+<section class="section">
+  <span class="eyebrow">Rules of use</span>
+  <h2>Before any of this reaches a prospect</h2>
+  <div class="rules">
+    <div class="rule"><b>Quantify or fall back.</b> If the page cannot render a figure on their footprint,
+      the entry is context only — the email opens on the vertical pain instead.</div>
+    <div class="rule"><b>Facts, never advice.</b> Stating a rate change is fine; suggesting how to
+      restructure staffing, tips or contracts around it is legal/tax advice and not ours to give.</div>
+    <div class="rule"><b>No fear-mongering.</b> State the change and the date. The prospect already
+      knows their costs are rising; the value is precision, not alarm.</div>
+    <div class="rule"><b>An account signal always wins.</b> This page is the fallback layer. If Stage&nbsp;1
+      found a real signal on the account, open on that, not on macro.</div>
+  </div>
+</section>
+
+<footer>
+  <span>Source of truth: <code>knowledge/conjunctural/register/</code> — 16 entries, primary sources
+  (gov.uk · HMRC · HM Treasury · gov.ie · Revenue/WRC · AHDB · ONS/DESNZ), verbatim quotes embedded.</span>
+  <span>Refresh: commodities monthly · wages quarterly &amp; before April (UK) / January (IE) steps.
+  Nearest review: <b class="num">20 Sept 2026</b>.</span>
+</footer>
+</div>
+
+<script>
+const REGISTER = __REGISTER__;
+const CTX = __CTX__;
+
+const UK_NATIONS = new Set(["england","scotland","wales","ni"]);
+const NATIONS = new Set([...UK_NATIONS,"ireland"]);
+const SENTIMENT = ["_citing_","_operators_","_reporting_"];
+const CUR = {GBP:"£", EUR:"€"};
+const TODAY = new Date(); TODAY.setHours(0,0,0,0);
+
+function d(iso){ const [y,m,dd]=iso.split("-").map(Number); return new Date(y,m-1,dd); }
+function expired(e){ return e.review_by ? d(e.review_by) < TODAY : false; }
+function scopeMatch(e, nation){
+  const s=e.scope||{}, lv=s.level;
+  if(!NATIONS.has(nation)) return false;
+  if(lv==="uk") return UK_NATIONS.has(nation);
+  if(lv==="nations") return (s.nations||[]).map(n=>n.toLowerCase()).includes(nation);
+  if(NATIONS.has(lv)) return nation===lv;
+  return false; // council-level needs a council the page doesn't collect
+}
+function fmt(cur,v){ return cur + Math.round(v).toLocaleString("en-GB"); }
+function quantify(e, n){
+  const q=e.quantification; if(!q || q.value==null) return null;
+  const basis=q.basis||"", cur=CUR[q.currency];
+  if(SENTIMENT.some(m=>basis.includes(m))) return null;
+  n = n||1;
+  if(basis==="per_hourly_employee_per_year"){
+    if(!cur) return null;
+    const staff=quantify._staff;
+    if(staff>0){
+      return {big:`~${fmt(cur,q.value)} / hourly employee / year`,
+              est:`× ${staff} staff/site × ${n} site${n>1?"s":""} ≈ ${fmt(cur,q.value*staff*n)}/yr estate-wide — YOUR estimate, own it as one and verify on the call`,
+              note:""};
+    }
+    return {big:`~${fmt(cur,q.value)} / hourly employee / year`,
+            note:"no per-site employee count assumed — ask on the call, or set an estimate above"};
+  }
+  if(basis==="per_site_per_year"){
+    if(!cur) return null;
+    return {big:`~${fmt(cur,q.value)}/site/yr → ~${fmt(cur,q.value*n)}/yr across ${n} site${n>1?"s":""}`, note:""};
+  }
+  if(basis==="pct_of_cogs"){
+    const dir=q.value>=0?"rise":"fall";
+    return {big:`${Math.abs(q.value)}% ${dir} on a core menu input`,
+            note:"an input that is typically a meaningful share of COGS for this vertical"};
+  }
+  if(basis==="pct_of_labour") return {big:`a ${q.value}% shift in labour cost structure`, note:""};
+  return null; // unknown basis: never an opener
+}
+function score(e, nation, vertical, persona, n){
+  if(expired(e)) return null;
+  if(!scopeMatch(e, nation)) return null;
+  if(Array.isArray(e.verticals)&&e.verticals.length===0) return null;
+  if(Array.isArray(e.personas)&&e.personas.length===0) return null;
+  if(vertical && e.verticals && !e.verticals.includes(vertical)) return null;
+  if(persona && e.personas && !e.personas.includes(persona)) return null;
+  let s=0; const lv=(e.scope||{}).level;
+  s += lv==="council"?3 : NATIONS.has(lv)?2 : lv==="nations"?1.5 : 1;
+  if(quantify(e,n)!==null) s+=5;
+  s += {in_effect:2, scheduled:1, proposed:0}[e.status] ?? 0;
+  if(vertical && e.verticals) s += 1.5/e.verticals.length;
+  if(persona && e.personas) s += 1.5/e.personas.length;
+  s += {cost_up:.3, compliance_burden:.3, demand_down:.2}[e.direction] ?? 0;
+  if((e.source||{}).primary) s += .5;
+  if(e.effective_date){
+    const age=(TODAY-d(e.effective_date))/864e5;
+    if(age>=0 && age<=365) s += .4*(1-age/365);
+  }
+  return s;
+}
+const CATS={
+  workforce:{label:"Workforce", dot:"#89ac39", types:["minimum_wage","employer_costs","scheduling_law","tips_law"]},
+  inventory:{label:"Inventory & COGS", dot:"#36635b", types:["commodity"]},
+  site_tax:{label:"Tax & site economics", dot:"#8e8ee0", types:["business_rates","vat"]}
+};
+function catOf(e){ for(const k in CATS) if(CATS[k].types.includes(e.type)) return k; return "workforce"; }
+let catFilter=null;
+const DIR_BADGE={cost_up:["up","cost up"],cost_down:["down","cost down"],compliance_burden:["comp","compliance"],demand_down:["up","demand down"]};
+const NATION_LABEL={uk:"UK-wide",england:"England",scotland:"Scotland",wales:"Wales",ni:"Northern Ireland",ireland:"Ireland",nations:"GB only (not NI)"};
+const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function nice(iso){ const x=d(iso); return `${x.getDate()} ${MONTHS[x.getMonth()]} ${x.getFullYear()}`; }
+function esc(t){ return (t||"").replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+
+function render(){
+  const nation=document.getElementById("nation").value;
+  const vertical=document.getElementById("vertical").value;
+  const persona=document.getElementById("persona").value;
+  const n=Math.max(1, parseInt(document.getElementById("locations").value||"1",10));
+  quantify._staff = parseInt(document.getElementById("staff").value||"0",10);
+  const ranked = REGISTER.map(e=>({e, s:score(e,nation,vertical,persona,n)}))
+    .filter(x=>x.s!==null).sort((a,b)=>b.s-a.s);
+  const live=REGISTER.filter(e=>!expired(e)).length;
+  document.getElementById("fit-count").textContent =
+    `${ranked.length} of ${live} live entries fit this account`;
+  const counts={}; ranked.forEach(x=>{const k=catOf(x.e); counts[k]=(counts[k]||0)+1;});
+  document.getElementById("cat-row").innerHTML =
+    `<button class="cat-chip" aria-pressed="${catFilter===null}" data-cat="">All <span class="num">${ranked.length}</span></button>`+
+    Object.entries(CATS).map(([k,c])=>
+      `<button class="cat-chip" aria-pressed="${catFilter===k}" data-cat="${k}" style="--dotc:${c.dot}">
+        <span class="dot"></span>${c.label} <span class="num">${counts[k]||0}</span></button>`).join("");
+  document.querySelectorAll(".cat-chip").forEach(b=>b.addEventListener("click",()=>{
+    catFilter = b.dataset.cat || null; render();
+  }));
+  const shown = catFilter ? ranked.filter(x=>catOf(x.e)===catFilter) : ranked;
+  const box=document.getElementById("results");
+  if(!shown.length){
+    box.innerHTML=`<div class="empty-state"><b>No conjunctural match${catFilter?" in this area":""}.</b> Correct result, not a failure:
+      the first touch falls back to the vertical-pain angle rather than an unquantified macro cliché.</div>`;
+    return;
+  }
+  box.innerHTML = shown.map((x,i)=>{
+    const e=x.e, q=quantify(e,n), [bc,bl]=DIR_BADGE[e.direction]||["comp",e.direction];
+    const lv=(e.scope||{}).level;
+    return `<article class="match${i===0?" top":""}">
+      <div class="m-head"><span class="m-title">${esc(e.title)}</span>
+        <span class="badges">
+          <span class="badge cat" style="--dotc:${CATS[catOf(e)].dot}"><span class="dot"></span>${CATS[catOf(e)].label}</span>
+          <span class="badge geo">${NATION_LABEL[lv]||lv}</span>
+          <span class="badge ${bc}">${bl}</span>
+          <span class="badge status">${e.status.replace("_"," ")}</span>
+        </span></div>
+      ${q?`<div class="figure num">${esc(q.big)}</div>
+           ${q.est?`<div class="figure-est num">${esc(q.est)}</div>`:""}
+           <div class="figure-how">${esc(q.note||e.quantification.how)}</div>`
+         :`<div class="not-opener">No account-level figure — supporting context only, never the opener.</div>`}
+      <p class="m-fact">${esc(e.fact)}</p>
+      <p class="m-angle"><b>Angle</b> — ${esc(e.angle)}</p>
+      <hr class="hairline">
+      <details><summary>Caveats, source &amp; verbatim quote</summary>
+        <p class="m-muted" style="margin-top:10px">${esc(e.caveats)}</p>
+        <blockquote class="quote">“${esc((e.source||{}).quote)}”</blockquote>
+        <p class="src"><a href="${esc((e.source||{}).url)}" target="_blank" rel="noopener">
+          ${(e.source||{}).primary?"Primary source":"Secondary source"} · accessed ${esc((e.source||{}).accessed||"")}</a>
+          · <span class="m-muted num">effective ${nice(e.effective_date)} · review by ${nice(e.review_by)}</span></p>
+      </details>
+    </article>`;
+  }).join("");
+}
+
+function renderMeta(){
+  const live=REGISTER.filter(e=>!expired(e)).length;
+  document.getElementById("live-count").textContent=live;
+  document.getElementById("expired-count").textContent=REGISTER.length-live;
+}
+
+const EVENTS=[
+  {date:"2026-07-01", what:"Ireland cut VAT on restaurant/catering/hot takeaway food to 9%", note:"Finance Act 2025 §71 (Revenue.ie); down from 13.5%, no legislated end date — excludes alcohol, soft drinks, accommodation", scope:"Ireland"},
+  {date:"2026-09-01", what:"Temporary 5% VAT window on eat-in children's meals ended", note:"SI 2026/576 — entry auto-retired; family-dining finance teams just switched rates back", scope:"UK"},
+  {date:"2026-09-20", what:"Commodities register review due", note:"butter −46% y/y and arabica −13% y/y re-verified monthly", scope:"register"},
+  {date:"2026-10-01", what:"Employer PRSI rises 0.15pp — 9.15% / 11.4%", note:"citizensinformation.ie + gov.ie rate tables; stacks on January's 65c NMW rise", scope:"Ireland"},
+  {date:"2026-10-15", what:"Budget 2027 (Ireland) — expected window", note:"sets the January 2027 NMW; re-verify the IE wage entry after Budget day", scope:"Ireland", soft:true},
+  {date:"2026-11-15", what:"UK Autumn Budget — expected window", note:"confirms the April 2027 NLW; LPC projection £13.02–£13.34 (central £13.18)", scope:"UK", soft:true},
+  {date:"2027-01-01", what:"Unfair dismissal qualifying period cut to 6 months", note:"Employment Rights Act 2025 timeline (gov.uk, updated 7 Aug 2026); GB only, uncapped awards", scope:"GB"},
+  {date:"2027-04-01", what:"Next NLW step (rate TBC at the Budget)", note:"every April: re-model the rota cost before Q1 ends", scope:"UK"},
+  {date:"2027-12-31", what:"Guaranteed-hours &amp; shift-notice rights — “during 2027”, timings TBC", note:"ERA 2025; say “2027, to be confirmed”, never a specific date", scope:"GB", soft:true}
+];
+function renderTimeline(){
+  document.getElementById("timeline").innerHTML = EVENTS.map(ev=>{
+    const past = d(ev.date) < TODAY;
+    const x=d(ev.date);
+    const dateLabel = ev.soft ? `${MONTHS[x.getMonth()]} <span class="yr">${x.getFullYear()} · expected</span>`
+                              : `${x.getDate()} ${MONTHS[x.getMonth()]} <span class="yr">${x.getFullYear()}</span>`;
+    return `<li class="${past?"t-past":""}">
+      <span class="t-date num">${dateLabel}</span>
+      <span class="t-what"><b>${ev.what}</b><span class="t-chip">${ev.scope}</span>
+        <span class="m-muted">${ev.note}</span></span></li>`;
+  }).join("");
+}
+function renderCtx(){
+  const g=document.getElementById("ctx-grid");
+  if(!CTX.length){ document.getElementById("market-context").style.display="none"; return; }
+  g.innerHTML = CTX.map(c=>`<div class="ctx-card">
+    <span class="eyebrow">${esc(c.label)}</span>
+    <div class="figure num">${esc(c.figure)}</div>
+    <p>${esc(c.text)}</p>
+    <span class="ctx-src">${c.url?`<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.source)}</a>`:esc(c.source)} · ${esc(c.period)}</span>
+  </div>`).join("");
+}
+
+["nation","vertical","persona","locations"].forEach(id=>
+  document.getElementById(id).addEventListener("input", render));
+renderMeta(); render(); renderTimeline(); renderCtx();
+</script>

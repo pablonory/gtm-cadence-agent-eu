@@ -1,0 +1,54 @@
+{
+  "_researched": "2026-09-02",
+  "_method": "extracted from the UKI Market Signals NotebookLM notebook (ad7a916a-ef84-4e79-a55c-d74c5880136a, pablo@nory.ai) — 31 curated market sources imported from a deep research run; every card below was verified against the verbatim cited text before inclusion. Sector-level CONTEXT ONLY: none of these is quantified on an account's footprint, so none may open an email (that is the register's job). Refresh alongside the register, or when the notebook corpus is refreshed.",
+  "cards": [
+    {
+      "label": "UK insolvencies",
+      "figure": "3,353",
+      "text": "Accommodation & food service insolvencies in the 12 months to December 2025 — 14% of all UK cases and the third-highest sector, behind construction and retail/wholesale (UK Government figures).",
+      "source": "UK Gov figures via The Drinks Business",
+      "url": "https://www.thedrinksbusiness.com/2026/02/hospitality-insolvencies-hit-3353-in-2025/",
+      "period": "12m to Dec 2025"
+    },
+    {
+      "label": "Ireland stabilising",
+      "figure": "60 · −26%",
+      "text": "Irish hospitality insolvencies in H1 2026 — down 26% on H1 2025 and below the sector's quarterly average since 2023. The Irish backdrop is easing while the UK's tightens; frame accordingly.",
+      "source": "PwC Insolvency Barometer",
+      "url": "https://www.pwc.ie/media-centre/press-releases/2026/restructuring-update-q2-2026.html",
+      "period": "H1 2026"
+    },
+    {
+      "label": "Pub closures",
+      "figure": "161 · ~2/day",
+      "text": "British pubs closed in Q1 2026, up 26% on the same quarter last year, with more than 2,400 job losses (BBPA figures).",
+      "source": "BBPA via SME Web",
+      "url": "https://www.smeweb.com/two-pubs-closing-a-day-in-2026-due-to-sheer-weight-of-taxes-and-regulatory-costs/",
+      "period": "Q1 2026"
+    },
+    {
+      "label": "Budget cost load",
+      "figure": "£322m",
+      "text": "The BBPA's estimate of the annual business costs the November 2025 Budget measures added for pubs and brewers — the sector's own number for what April's bills look like.",
+      "source": "BBPA via SME Web",
+      "url": "https://www.smeweb.com/two-pubs-closing-a-day-in-2026-due-to-sheer-weight-of-taxes-and-regulatory-costs/",
+      "period": "from Nov 2025 Budget"
+    },
+    {
+      "label": "Staffing gap",
+      "figure": "77,000 vacancies",
+      "text": "Open roles in UK accommodation & food services — 3 vacancies per 100 workers against 2.3 economy-wide. The ops burden of covering shifts is a live pain in most conversations.",
+      "source": "House of Lords Library",
+      "url": "https://lordslibrary.parliament.uk/hospitality-and-retail-sectors-impact-of-government-policy/",
+      "period": "Sep–Nov 2025"
+    },
+    {
+      "label": "Summer footfall",
+      "figure": "+4.5%",
+      "text": "Weekly UK hospitality footfall year-on-year, lifted by warm weather and the World Cup — demand shows up when the occasion is right; the fight is margin, not appetite.",
+      "source": "Oxford Market Watch (Vianet) via BII",
+      "url": "https://bii.org/world-cup-and-warmer-weather-boost-uk-hospitality-as-footfall-rises-4-5/",
+      "period": "w/e 19 Jul 2026"
+    }
+  ]
+}

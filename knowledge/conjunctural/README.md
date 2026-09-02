@@ -87,6 +87,27 @@ the matcher refuses to use the entry as an opener.
 a new basis name is a deliberate matcher addition, reviewed, never silent. Commodity entries: vertical
 is a coarse proxy — prefer hand-selecting the commodity that matches the account's actual menu.
 
+## The rep-facing surface — the UKI Market Signals page
+
+The register's working UI for reps (built 2026-09-02): an interactive page that mirrors
+`conjunctural_match.py` client-side — account fit (nation × vertical × persona × sites, plus an
+optional rep-owned staff/site estimate for the estate-level line), area filters (Workforce ·
+Inventory & COGS · Tax & site economics, derived from `type`), the dated-events timeline, and six
+sector-context cards from `market_context.json` (context only, never openers). Expired entries retire
+themselves client-side via `review_by`.
+
+- **Regenerate** after any register/context change: `python3 scripts/render_market_artifact.py`
+  → `output/reports/uki_market_signals.html` (gitignored). Template:
+  `knowledge/conjunctural/artifact_template.html`.
+- **Deploy for reps:** copy the rendered file to the `pablonory/uki-market-signals` deploy repo as
+  `index.html`, commit, push — Netlify redeploys on push (connect/manage in the Netlify WEB UI only;
+  the CLI is logged into the wrong account, area rule).
+- **Market library:** NotebookLM notebook "UKI Market Signals"
+  (`ad7a916a-ef84-4e79-a55c-d74c5880136a`, pablo@nory.ai — check `nlm login --check` before every
+  upload). Holds the curated market sources + this register rendered to markdown + the signal
+  playbooks (repo is source of truth). `market_context.json` cards are extracted from it, each
+  verified against the cited verbatim text.
+
 ## Refresh cadence
 Commodities monthly · wage schedules quarterly and always before April (UK) / January (IE) steps ·
 laws quarterly or on legislative change.

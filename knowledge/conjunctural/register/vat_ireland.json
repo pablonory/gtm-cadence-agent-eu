@@ -1,0 +1,29 @@
+{
+  "_researched": "2026-09-02",
+  "_method": "surfaced by the UKI Market Signals notebook deep research (secondaries: KPMG/Crowe/BDO/RAI); verified live on three primary Revenue.ie pages before entry (Finance Act 2025 VAT Notes for Guidance §71, the second-reduced-rate page, the current-rates table). Secondaries were accurate on rate/scope/date; nuances they blur are in the caveats.",
+  "entries": [
+    {
+      "id": "ie_vat_hospitality_9pct_2026",
+      "type": "vat",
+      "title": "Ireland: VAT on restaurant, catering and hot takeaway food cut from 13.5% to 9%",
+      "scope": {"level": "ireland"},
+      "verticals": ["coffee_cafe", "fast_casual", "fsr", "qsr"],
+      "personas": ["csuite", "finance", "founder", "operations"],
+      "status": "in_effect",
+      "effective_date": "2026-07-01",
+      "review_by": "2026-12-01",
+      "direction": "cost_down",
+      "fact": "From 1 July 2026, Ireland applies the 9% second reduced VAT rate (down from 13.5%) to food and drink supplied as part of a restaurant, catering or hot takeaway service, under section 71 of Finance Act 2025, with no legislated end date.",
+      "quantification": null,
+      "source": {
+        "url": "https://www.revenue.ie/en/tax-professionals/documents/notes-for-guidance/vat/vat-guidance-notes-fa2025.pdf",
+        "primary": true,
+        "accessed": "2026-09-02",
+        "quote": "It provides for the application, from 1 July 2026, of the 9% rate of VAT (the second reduced rate) on hairdressing services, and on food and drink for human consumption when supplied as part of a restaurant, catering, or hot takeaway service. It includes hot teas and coffees and fruit juices, but excludes alcoholic beverages, bottled waters, sports drinks, soft drinks and vegetable juices."
+      },
+      "angle": "Since 1 July, food sales across Irish sites carry 9% VAT instead of 13.5% — roughly 4.5 points of gross that either shows up as margin or disappears into pricing and cost drift. A dated, specific opener is the question of whether the cut is actually visible in the P&L per site two months in.",
+      "proof_pairing": "GP%/margin visibility customer proof",
+      "caveats": "Republic of Ireland only (not Northern Ireland). Covers food and drink supplied as part of restaurant, catering or hot takeaway service, including hot teas, coffees and fruit juices; EXCLUDES alcoholic beverages, bottled waters, sports drinks, soft drinks and vegetable juices — so wet-led revenue sees no benefit and mixed wet/dry sites benefit only on the food line. Accommodation is NOT included (hotel lettings left the 9% list in Sept 2023 and stay at 13.5%). No legislated sunset — unlike gas/electricity and apartment construction (limited to 31 Dec 2030) — but any Budget could reverse it: quote as current law, never as permanent. Whether the relief lands as margin depends on each operator's pricing decisions; state the rate facts only. Review quarterly and at each Irish Budget."
+    }
+  ]
+}

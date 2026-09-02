@@ -6,8 +6,9 @@ HubSpot, where the rep reads it and assembles the cadence in Gong. **Nothing sen
 
 **Goal:** same motion as the US agent — standardized multi-channel cadences where **only the first touch
 is bespoke**. The agent informs and drafts; the rep activates.
-**Owner (UKI):** ⚠️ TO CONFIRM — the UKI equivalent of Lewis (US Head of Sales) for territory + flows.
-**Do not run real batches until this is named.**
+**Owner (UKI):** **Pablo, interim** (2026-09-02) until a sales-side owner is named. Flow knowledge:
+**Phil (SMB & MM lead)** — the flow set stays unconfirmed until he answers (`cadences/UKI_FLOWS.md`).
+Real batches may now run under Pablo's supervision; every brief still passes the 🚦 human gate.
 
 > **Fork provenance:** forked 2026-08-20 from `pablonory/gtm-cadence-agent` (US) at `05ae6be`;
 > market-adaptation pass at `952abff`; **fork-sync 2026-09-01** ported the US `harden-m1` pass
