@@ -82,16 +82,16 @@
       "scope": {"level": "uk"},
       "verticals": ["fsr", "fast_casual"],
       "personas": ["finance", "founder"],
-      "status": "in_effect",
+      "status": "expired",
       "effective_date": "2026-06-25",
       "review_by": "2026-09-01",
       "direction": "cost_down",
       "fact": "A legislated temporary 5% reduced VAT rate (SI 2026/576) applies from 25 June to 1 September 2026 inclusive to children's meals sold for consumption on the premises of restaurants, cafés and similar establishments, and to qualifying child/family admissions to attractions.",
       "quantification": null,
-      "source": {"url": "https://www.gov.uk/government/publications/revenue-and-customs-brief-5-2026-temporary-reduced-rate-of-vat-for-childrens-meals-tickets-and-family-attractions/temporary-reduced-rate-of-vat-for-childrens-meals-tickets-and-family-attractions", "primary": true, "accessed": "2026-08-20", "quote": "The reduced rate applies from 25 June 2026 to 1 September 2026 (inclusive). ... The reduced rate applies to the supply of children's meals where both of the following conditions are met: the meal is held out for sale only as a meal for children [and] the meal is supplied as part of catering services by a restaurant, café or similar establishment for consumption on the premises."},
+      "source": {"url": "https://www.gov.uk/government/publications/revenue-and-customs-brief-5-2026-temporary-reduced-rate-of-vat-for-childrens-meals-tickets-and-family-attractions/temporary-reduced-rate-of-vat-for-childrens-meals-tickets-and-family-attractions", "primary": true, "accessed": "2026-09-02", "quote": "The reduced rate applies from 25 June 2026 to 1 September 2026 (inclusive). ... The reduced rate applies to the supply of children's meals where both of the following conditions are met: the meal is held out for sale only as a meal for children [and] the meal is supplied as part of catering services by a restaurant, café or similar establishment for consumption on the premises."},
       "angle": "The 5% VAT window on eat-in children's meals ends 1 September 2026, so finance teams at family-dining groups are mid-way through a rate switch on part of the menu — a dated, specific hook about handling split VAT treatment across sites and tills.",
       "proof_pairing": "Customer proof on menu/EPOS data accuracy and finance close speed across sites.",
-      "caveats": "Narrow scope: eat-in children's meals and qualifying family/child admissions only — takeaway meals excluded; the general 20% rate on other hospitality supplies is unchanged. EXPIRES 1 September 2026 (review_by enforces this) — do not use after that date without re-verification. Not evidence of any broader hospitality VAT cut."
+      "caveats": "WINDOW CLOSED 1 September 2026. Re-verified live 2026-09-02 against Revenue & Customs Brief 5 (2026) (gov.uk page last updated 27 July 2026): the dates are unchanged and no extension was announced, so the 5% rate ended as legislated. Entry retired from matching (review_by 2026-09-01) and kept only as a dated record of the window. Narrow scope: eat-in children's meals and qualifying family/child admissions only — takeaway meals excluded; the general 20% rate on other hospitality supplies is unchanged. EXPIRES 1 September 2026 (review_by enforces this) — do not use after that date without re-verification. Not evidence of any broader hospitality VAT cut."
     }
   ]
 }

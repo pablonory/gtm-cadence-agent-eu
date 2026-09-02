@@ -9,8 +9,11 @@
 > law, England business rates 2026, Employment Rights Act 2025 timeline, the temporary children's-
 > meals VAT window, commodities (butter, coffee — beef/energy/eggs checked and excluded as
 > immaterial), and Ireland (NMW, PRSI + Oct 2026 step, tips act, pension auto-enrolment). Nearest
-> expiries: `vat_childrens_meals_2026` (2026-09-01), commodities (2026-09-20), `ie_employer_prsi_
-> 2026_rates` (2026-09-30) — and re-verify wage/rates entries after the Autumn Budget / Budget 2027.
+> expiries after the 2026-09-02 sweep: `ie_employer_prsi_2026_rates` (2026-09-30),
+> `ie_employer_prsi_oct_2026_step` (2026-10-01), commodities (2026-10-20). `vat_childrens_meals_2026`
+> expired on schedule — the window closed 1 Sept 2026, re-verified, retired. Budget dates are now
+> confirmed from primary sources: **Ireland 6 Oct 2026**, **UK Autumn Budget 28 Oct 2026** — re-verify
+> the wage/rates entries after each (the LPC projection entry must be replaced by the confirmed rate).
 >
 > **Matcher adapted 2026-08-20** — the fork note originally claimed `conjunctural_match.py` "works
 > unchanged", which was wrong: its scope logic only understood `federal|state|city`, so UK-level

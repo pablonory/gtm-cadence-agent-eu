@@ -1,42 +1,42 @@
 {
   "_researched": "2026-08-20",
-  "_method": "primary sources fetched live (AHDB wholesale dairy, ONS PPI, DESNZ quarterly energy prices, Defra egg stats); beef/energy/eggs/food-PPI verified but excluded as immaterial (<~10% y/y). Coffee is from Trading Economics quoting ICE futures — an aggregator, recorded as primary:false.",
+  "_method": "primary sources fetched live (AHDB wholesale dairy, ONS PPI, DESNZ quarterly energy prices, Defra egg stats); beef/energy/eggs/food-PPI verified but excluded as immaterial (<~10% y/y). Coffee is from Trading Economics quoting ICE futures — an aggregator, recorded as primary:false. Re-verified 2026-09-02 (fortnightly sweep): butter rolled to the August 2026 AHDB report (−43% y/y, up 4% m/m), arabica to 2 September 2026 (−21.43% y/y).",
   "entries": [
     {
       "id": "uk_butter_2026",
       "type": "commodity",
-      "title": "UK wholesale butter down 46% year-on-year",
+      "title": "UK wholesale butter down 43% year-on-year",
       "scope": {"level": "uk"},
       "verticals": ["coffee_cafe", "fsr"],
       "personas": ["csuite", "finance", "founder", "operations"],
       "status": "in_effect",
-      "effective_date": "2026-07-26",
-      "review_by": "2026-09-20",
+      "effective_date": "2026-08-30",
+      "review_by": "2026-10-20",
       "direction": "cost_down",
-      "fact": "UK wholesale butter averaged £3,320/tonne in the July 2026 reporting period (weeks 27-30, 29 June-26 July 2026), down 46% from £6,150/tonne a year earlier, per AHDB UK wholesale prices; bulk cream was down 45% and mild cheddar down 22% year-on-year in the same report.",
-      "quantification": {"basis": "pct_of_cogs", "value": -46, "currency": "GBP", "how": "AHDB UK wholesale butter price down 46% y/y to £3,320/tonne (from £6,150/tonne) as of the July 2026 reporting period (29 June-26 July 2026)"},
-      "source": {"url": "https://ahdb.org.uk/dairy/uk-wholesale-prices", "primary": true, "accessed": "2026-08-20", "quote": "Reporting period: Weeks 27-30 (29 June-26 July 2026). ... Butter | 3,320 | 350 | 3,240 | 2% | 6,150 | −46%"},
-      "angle": "AHDB's July 2026 wholesale report puts butter at £3,320/tonne against £6,150 a year ago — a 46% fall on an input that dominates bakery, brunch and table-service menus. An opener can ask whether that drop is actually showing up in the group's dairy line, site by site.",
+      "fact": "UK wholesale butter averaged £3,450/tonne in the August 2026 reporting period (weeks 31-35, 27 July-30 August 2026), down 43% from £6,050/tonne a year earlier, per AHDB UK wholesale prices; bulk cream was down 41% and mild cheddar down 20% year-on-year in the same report.",
+      "quantification": {"basis": "pct_of_cogs", "value": -43, "currency": "GBP", "how": "AHDB UK wholesale butter price down 43% y/y to £3,450/tonne (from £6,050/tonne) as of the August 2026 reporting period (27 July-30 August 2026)"},
+      "source": {"url": "https://ahdb.org.uk/dairy/uk-wholesale-prices", "primary": true, "accessed": "2026-09-02", "quote": "Reporting period: Weeks 31-35 (27 July-30 August 2026). ... Butter | 3,450 | 350 | 3,320 | 4% | 6,050 | −43%"},
+      "angle": "AHDB's August 2026 wholesale report puts butter at £3,450/tonne against £6,050 a year ago — a 43% fall on an input that dominates bakery, brunch and table-service menus. An opener can ask whether that drop is actually showing up in the group's dairy line, site by site.",
       "proof_pairing": "COGS/GP% customer results — visibility of whether supplier pricing tracks the wholesale move",
-      "caveats": "Wholesale price, not contracted supplier price — groups on fixed dairy contracts may not see the fall yet. Butter also ticked up 2% month-on-month (+£80), so the short-term direction is up off the low. Vertical is a coarse proxy — prefer hand-matching to the account's actual menu. UK series (AHDB); do not apply to Ireland accounts. cost_down framing: this is margin relief the account may be leaving with suppliers — open as a visibility question, not a cost scare."
+      "caveats": "Wholesale price, not contracted supplier price — groups on fixed dairy contracts may not see the fall yet. Butter rose 4% month-on-month (+£130 from £3,320), a second consecutive monthly rise off the low which AHDB attributes to heat-related reductions in UK milk supply, so the short-term direction is up and the y/y gap is narrowing (it was −46% in the July report). Vertical is a coarse proxy — prefer hand-matching to the account's actual menu. UK series (AHDB); do not apply to Ireland accounts. cost_down framing: this is margin relief the account may be leaving with suppliers — open as a visibility question, not a cost scare."
     },
     {
       "id": "uk_coffee_2026",
       "type": "commodity",
-      "title": "Arabica coffee futures down 13% year-on-year",
+      "title": "Arabica coffee futures down 21% year-on-year",
       "scope": {"level": "uk"},
       "verticals": ["coffee_cafe", "fast_casual"],
       "personas": ["csuite", "finance", "founder", "operations"],
       "status": "in_effect",
-      "effective_date": "2026-08-20",
-      "review_by": "2026-09-20",
+      "effective_date": "2026-09-02",
+      "review_by": "2026-10-20",
       "direction": "cost_down",
-      "fact": "Arabica coffee futures (ICE) stood at 326.08 US cents/lb on 20 August 2026, 13.1% lower than a year earlier.",
-      "quantification": {"basis": "pct_of_cogs", "value": -13.1, "currency": "GBP", "how": "ICE arabica coffee futures at 326.08 USd/lb on 20 Aug 2026, 13.10% lower than a year ago (Trading Economics quoting ICE futures); GBP impact additionally depends on GBP/USD"},
-      "source": {"url": "https://tradingeconomics.com/commodity/coffee", "primary": false, "accessed": "2026-08-20", "quote": "Coffee fell to 326.08 USd/Lbs on August 20, 2026 ... it is still 13.10% lower than a year ago."},
-      "angle": "Arabica futures sit at 326 US cents/lb as of 20 August 2026 — 13% below a year ago. For a coffee-led group, an opener can reference the easing green-bean market and whether roaster contract prices are following it down.",
+      "fact": "Arabica coffee futures (ICE) stood at 302.69 US cents/lb on 2 September 2026, 21.43% lower than a year earlier.",
+      "quantification": {"basis": "pct_of_cogs", "value": -21.43, "currency": "GBP", "how": "ICE arabica coffee futures at 302.69 USd/lb on 2 Sept 2026, 21.43% lower than a year ago (Trading Economics quoting ICE futures); GBP impact additionally depends on GBP/USD"},
+      "source": {"url": "https://tradingeconomics.com/commodity/coffee", "primary": false, "accessed": "2026-09-02", "quote": "Coffee fell to 302.69 USd/Lbs on September 2, 2026, down 2.18% from the previous day. ... is down 21.43% compared to the same time last year, according to trading on a contract for difference (CFD)"},
+      "angle": "Arabica futures sit at 303 US cents/lb as of 2 September 2026 — 21% below a year ago, a steeper fall than the 13% gap recorded in August. For a coffee-led group, an opener can reference the easing green-bean market and whether roaster contract prices are following it down.",
       "proof_pairing": "COGS/GP% customer results — tracking whether contracted bean prices follow the futures move",
-      "caveats": "SECONDARY SOURCE (Trading Economics aggregating ICE futures) — the only non-primary entry in the register; replace with a primary series if one becomes fetchable. Exchange price in USD, not the roasted/contracted price UK operators pay — GBP/USD and roaster contract lags sit between the two. Futures remain historically elevated despite the y/y fall. Global series, equally relevant to Ireland accounts in principle, but scoped UK-only pending a decision on IE duplication. Vertical is a coarse proxy — prefer hand-matching to the account's actual menu."
+      "caveats": "SECONDARY SOURCE (Trading Economics aggregating ICE futures) — the only non-primary entry in the register; replace with a primary series if one becomes fetchable. Live intraday page: the quoted level moves during the trading day (a fetch earlier the same morning read 302.49), and the page's summary panel showed −21.48% against the −21.43% in the body text quoted here. Exchange price in USD, not the roasted/contracted price UK operators pay — GBP/USD and roaster contract lags sit between the two. Futures remain historically elevated despite the y/y fall. Global series, equally relevant to Ireland accounts in principle, but scoped UK-only pending a decision on IE duplication. Vertical is a coarse proxy — prefer hand-matching to the account's actual menu."
     }
   ]
 }

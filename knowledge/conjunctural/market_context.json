@@ -1,6 +1,6 @@
 {
   "_researched": "2026-09-02",
-  "_method": "extracted from the UKI Market Signals NotebookLM notebook (ad7a916a-ef84-4e79-a55c-d74c5880136a, pablo@nory.ai) — 31 curated market sources imported from a deep research run; every card below was verified against the verbatim cited text before inclusion. Sector-level CONTEXT ONLY: none of these is quantified on an account's footprint, so none may open an email (that is the register's job). Refresh alongside the register, or when the notebook corpus is refreshed.",
+  "_method": "extracted from the UKI Market Signals NotebookLM notebook (ad7a916a-ef84-4e79-a55c-d74c5880136a, pablo@nory.ai) — 31 curated market sources imported from a deep research run; every card below was verified against the verbatim cited text before inclusion. Sector-level CONTEXT ONLY: none of these is quantified on an account's footprint, so none may open an email (that is the register's job). Refresh alongside the register, or when the notebook corpus is refreshed. Fortnightly sweep 2026-09-02: all six cards re-verified against their own sources live (the Lords Library, drinks business and PwC pages 403 on plain fetch and were read via scripts/firecrawl_fetch.py). Insolvencies, Ireland, pub closures and the BBPA Budget figure re-confirmed verbatim and unchanged — each is still the latest release from its source, so the older periods are the current data, not stale extracts. Two cards were rebuilt: the staffing-gap card moved off a Sep–Nov 2025 parliamentary briefing onto the primary ONS series JP9O (Apr–Jun 2026), which also corrects a direction the old figure implied wrongly, and the weekly footfall card was replaced by the newest published monthly Oxford Market Watch (Jul 2026) so it does not age out before the next sweep.",
   "cards": [
     {
       "label": "UK insolvencies",
@@ -24,7 +24,7 @@
       "text": "British pubs closed in Q1 2026, up 26% on the same quarter last year, with more than 2,400 job losses (BBPA figures).",
       "source": "BBPA via SME Web",
       "url": "https://www.smeweb.com/two-pubs-closing-a-day-in-2026-due-to-sheer-weight-of-taxes-and-regulatory-costs/",
-      "period": "Q1 2026"
+      "period": "Q1 2026 · latest BBPA release"
     },
     {
       "label": "Budget cost load",
@@ -36,19 +36,19 @@
     },
     {
       "label": "Staffing gap",
-      "figure": "77,000 vacancies",
-      "text": "Open roles in UK accommodation & food services — 3 vacancies per 100 workers against 2.3 economy-wide. The ops burden of covering shifts is a live pain in most conversations.",
-      "source": "House of Lords Library",
-      "url": "https://lordslibrary.parliament.uk/hospitality-and-retail-sectors-impact-of-government-policy/",
-      "period": "Sep–Nov 2025"
+      "figure": "71,000 vacancies",
+      "text": "Open roles in UK accommodation & food services in Apr–Jun 2026, down from 79,000 a year earlier and falling every quarter since Q1 2025. Hiring pressure is easing off its peak, but 71,000 unfilled shifts is still the backdrop to most ops conversations.",
+      "source": "ONS series JP9O",
+      "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/jp9o/unem",
+      "period": "Apr–Jun 2026"
     },
     {
-      "label": "Summer footfall",
-      "figure": "+4.5%",
-      "text": "Weekly UK hospitality footfall year-on-year, lifted by warm weather and the World Cup — demand shows up when the occasion is right; the fight is margin, not appetite.",
-      "source": "Oxford Market Watch (Vianet) via BII",
-      "url": "https://bii.org/world-cup-and-warmer-weather-boost-uk-hospitality-as-footfall-rises-4-5/",
-      "period": "w/e 19 Jul 2026"
+      "label": "Summer trading",
+      "figure": "+3.9% · +5.2%",
+      "text": "UK on-trade draught volumes in July 2026 against July 2025, with average rate of sale up 5.2% — the World Cup finals and prolonged hot weather made it one of the strongest trading months of 2026. Demand shows up when the occasion is right; the fight is margin, not appetite.",
+      "source": "Oxford Market Watch (Vianet BevMetrics) via CLH News",
+      "url": "https://catererlicensee.com/world-cup-and-summer-heat-drive-strongest-month-of-2026-for-uk-pubs-and-bars/",
+      "period": "Jul 2026"
     }
   ]
 }
