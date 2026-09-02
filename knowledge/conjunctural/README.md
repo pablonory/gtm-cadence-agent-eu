@@ -109,5 +109,10 @@ themselves client-side via `review_by`.
   verified against the cited verbatim text.
 
 ## Refresh cadence
-Commodities monthly · wage schedules quarterly and always before April (UK) / January (IE) steps ·
-laws quarterly or on legislative change.
+**The whole surface refreshes fortnightly, automated** (decided 2026-09-02): a scheduled Claude Code
+task (`uki-market-signals-refresh`, 1st & 15th at 09:00, runs while the desktop app is open) sweeps
+entries whose `review_by` is due within 21 days, re-verifies them against their own primary sources
+(verbatim quote or expire — never guess), refreshes stale `market_context.json` cards, re-renders the
+page, pushes both repos and republishes the artifact. Pablo reads each run's report.
+Underlying data rhythms the sweep enforces: commodities monthly · wage schedules quarterly and always
+before April (UK) / January (IE) steps · laws quarterly or on legislative change.
