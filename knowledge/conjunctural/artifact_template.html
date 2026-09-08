@@ -1,253 +1,219 @@
 <title>UKI Market Signals</title>
 <style>
-@font-face{font-family:'Sharp Grotesk';src:url(data:font/otf;base64,__SHARP__) format('opentype');font-weight:700;font-display:swap}
-@font-face{font-family:'Graphik';src:url(data:font/woff2;base64,__GRAPHIK__) format('woff2');font-weight:400 600;font-display:swap}
-
 :root{
-  --ground:#f8f6f2; --card:#fbfaf9; --card-edge:#e7e2d6;
-  --ink:#140018; --muted:#565059; --faint:#8a8390;
-  --moss:#053017; --moss-deep:#042512; --on-moss:#f3f0e8; --on-moss-muted:#9db8a7;
-  --lime:#d3fd74; --lilac:#b0b0fe;
-  --up-bg:#fbe9ea; --up-ink:#501c1d;
-  --down-bg:#baf7ec; --down-ink:#255249;
-  --comp-bg:#e4e4ff; --comp-ink:#2d2d66;
-  --expired:#cec9cf;
-  --hairline:#dcd6c8;
+  --bg:#f6f7f8; --surface:#ffffff; --line:#d9dde3; --line-2:#eceff2;
+  --text:#1a1d21; --text-2:#5b6470; --text-3:#8a93a0;
+  --accent:#1f5fbf; --accent-bg:#e8f0fc;
+  --up:#a3271b; --up-bg:#fbe9e7; --down:#146c43; --down-bg:#e3f3ea;
+  --focus:#1f5fbf;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --ground:#042010; --card:#053017; --card-edge:#12492c;
-    --ink:#f3f0e8; --muted:#a9b8ae; --faint:#7d937f;
-    --moss:#053017; --moss-deep:#042512; --on-moss:#f3f0e8; --on-moss-muted:#9db8a7;
-    --up-bg:#3d1516; --up-ink:#f4c9cb;
-    --down-bg:#123f37; --down-ink:#a7ecdd;
-    --comp-bg:#28285a; --comp-ink:#cccafe;
-    --expired:#3a5a46;
-    --hairline:#12492c;
-    --lilac:#8e8ee0;
+    --bg:#15181c; --surface:#1d2126; --line:#333a43; --line-2:#272d34;
+    --text:#e8eaed; --text-2:#a3abb5; --text-3:#727b86;
+    --accent:#6ea0f0; --accent-bg:#1d2b45;
+    --up:#f0928a; --up-bg:#3a1f1c; --down:#7fd4a3; --down-bg:#1a3326;
+    --focus:#6ea0f0;
   }
 }
 :root[data-theme="dark"]{
-  --ground:#042010; --card:#053017; --card-edge:#12492c;
-  --ink:#f3f0e8; --muted:#a9b8ae; --faint:#7d937f;
-  --moss:#053017; --moss-deep:#042512; --on-moss:#f3f0e8; --on-moss-muted:#9db8a7;
-  --up-bg:#3d1516; --up-ink:#f4c9cb;
-  --down-bg:#123f37; --down-ink:#a7ecdd;
-  --comp-bg:#28285a; --comp-ink:#cccafe;
-  --expired:#3a5a46;
-  --hairline:#12492c;
-  --lilac:#8e8ee0;
+  --bg:#15181c; --surface:#1d2126; --line:#333a43; --line-2:#272d34;
+  --text:#e8eaed; --text-2:#a3abb5; --text-3:#727b86;
+  --accent:#6ea0f0; --accent-bg:#1d2b45;
+  --up:#f0928a; --up-bg:#3a1f1c; --down:#7fd4a3; --down-bg:#1a3326;
+  --focus:#6ea0f0;
 }
-
 *{box-sizing:border-box}
-body{margin:0;background:var(--ground);color:var(--ink);
-  font-family:'Graphik','Helvetica Neue',Arial,sans-serif;font-size:15.5px;line-height:1.55;
+body{margin:0;background:var(--bg);color:var(--text);
+  font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   -webkit-font-smoothing:antialiased}
-.wrap{max-width:1060px;margin:0 auto;padding:40px 24px 80px}
-h1,h2,h3,.figure{font-family:'Sharp Grotesk','Helvetica Neue',Arial,sans-serif;font-weight:700;text-wrap:balance}
-h1{font-size:clamp(30px,5vw,44px);line-height:1.05;margin:0}
-h2{font-size:22px;margin:0 0 6px}
-h3{font-size:16px;margin:0}
-a{color:inherit}
-.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.sub{color:var(--muted);max-width:64ch}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px 56px}
+h1{font-size:18px;font-weight:600;margin:0}
+h2{font-size:14px;font-weight:600;margin:0 0 8px;color:var(--text)}
+a{color:var(--accent)}
 .num{font-variant-numeric:tabular-nums}
+.muted{color:var(--text-2)}
+.small{font-size:12.5px}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
 
 /* header */
-header.page{display:flex;flex-direction:column;gap:10px;margin-bottom:34px}
-.headline-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
-.reg-meta{font-size:12.5px;color:var(--muted);text-align:right;line-height:1.5}
-.reg-meta b{color:var(--ink)}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0 12px;flex-wrap:wrap}
+.top .meta{font-size:12.5px;color:var(--text-2)}
+.top .meta b{color:var(--text);font-weight:600}
+.lede{margin:0 0 14px;color:var(--text-2);max-width:78ch}
 
-/* matcher console */
-.console{background:var(--moss);color:var(--on-moss);border-radius:14px;padding:26px 26px 22px;margin-bottom:14px}
-.console .eyebrow{color:var(--on-moss-muted)}
-.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:14px}
-.field{display:flex;flex-direction:column;gap:5px}
-.field label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-moss-muted);font-weight:600}
-.field select,.field input{appearance:none;background:var(--moss-deep);color:var(--on-moss);
-  border:1px solid #1f5a38;border-radius:8px;padding:9px 12px;font:inherit;font-size:14.5px;width:100%}
-.field select:focus,.field input:focus{outline:2px solid var(--lime);outline-offset:1px}
-.console-note{font-size:12.5px;color:var(--on-moss-muted);margin-top:14px;max-width:78ch}
+/* toolbar (sticky) */
+.toolbar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);
+  padding:10px 0 10px;margin-bottom:14px}
+.controls{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;align-items:end}
+.field{display:flex;flex-direction:column;gap:4px;min-width:0}
+.field label{font-size:11.5px;color:var(--text-2);font-weight:500}
+.field select,.field input{width:100%;height:34px;padding:0 10px;border:1px solid var(--line);
+  border-radius:6px;background:var(--surface);color:var(--text);font:inherit}
+.field input::placeholder{color:var(--text-3)}
+.toolbar-row2{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;border-right:1px solid var(--line);background:transparent;color:var(--text-2);
+  padding:6px 12px;cursor:pointer;font-size:13px;display:inline-flex;gap:6px;align-items:center}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent-bg);color:var(--accent);font-weight:600}
+.seg .n{color:var(--text-3);font-weight:400}
+.seg button[aria-pressed="true"] .n{color:var(--accent)}
+.fit{font-size:13px;color:var(--text-2)}
+.fit b{color:var(--text)}
 
-/* results */
-.cat-row{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
-.cat-chip{font:inherit;font-size:13px;font-weight:600;border:1.5px solid var(--hairline);
-  background:var(--card);color:var(--ink);border-radius:99px;padding:6px 14px;cursor:pointer;
-  display:inline-flex;align-items:center;gap:7px}
-.cat-chip .dot{width:8px;height:8px;border-radius:99px;background:var(--dotc,var(--muted))}
-.cat-chip[aria-pressed="true"]{background:var(--moss);border-color:var(--moss);color:var(--on-moss)}
-.cat-chip:focus-visible{outline:2px solid var(--lime)}
-.cat-chip .num{opacity:.65;font-weight:400}
-.badge.cat{background:transparent;border:1px solid var(--hairline);color:inherit;opacity:.9;
-  display:inline-flex;align-items:center;gap:5px}
-.badge.cat .dot{width:7px;height:7px;border-radius:99px;background:var(--dotc)}
-.results{display:flex;flex-direction:column;gap:12px;margin-bottom:44px}
-.match{border:1px solid var(--card-edge);background:var(--card);border-radius:14px;padding:20px 22px}
-.match.top{background:var(--moss);border-color:var(--moss);color:var(--on-moss)}
-.match.top .m-muted, .match.top .quote{color:var(--on-moss-muted)}
-.match.top .hairline{border-color:#1f5a38}
-.m-head{display:flex;justify-content:space-between;gap:14px;align-items:baseline;flex-wrap:wrap}
-.m-title{font-size:17px;font-weight:600}
-.badges{display:flex;gap:6px;flex-wrap:wrap}
-.badge{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;
-  padding:3px 9px;border-radius:99px;white-space:nowrap}
-.badge.up{background:var(--up-bg);color:var(--up-ink)}
-.badge.down{background:var(--down-bg);color:var(--down-ink)}
-.badge.comp{background:var(--comp-bg);color:var(--comp-ink)}
-.badge.geo{background:var(--lilac);color:#140018}
-.badge.status{background:transparent;border:1px solid currentColor;opacity:.75}
-.figure{font-size:clamp(20px,3.2vw,28px);line-height:1.2;margin:10px 0 2px;letter-spacing:-0.01em}
-.match.top .figure{color:var(--lime)}
-.figure-how{font-size:12.5px;color:var(--muted)}
-.figure-est{font-size:14px;font-weight:600;margin:2px 0 4px;color:var(--ink)}
-.match.top .figure-est{color:var(--on-moss)}
-.match.top .figure-how{color:var(--on-moss-muted)}
-.not-opener{font-size:13px;font-weight:600;margin:10px 0 2px}
-.m-fact{margin:10px 0 0;max-width:78ch}
-.m-angle{margin:12px 0 0;max-width:78ch}
-.m-angle b{font-weight:600}
-.m-muted{color:var(--muted);font-size:13px}
-.hairline{border:0;border-top:1px solid var(--hairline);margin:14px 0}
-details{margin-top:10px}
-summary{cursor:pointer;font-size:13px;font-weight:600;color:inherit}
-summary:focus-visible{outline:2px solid var(--lime)}
-.quote{font-size:13px;color:var(--muted);border-left:3px solid var(--lilac);padding-left:12px;margin:10px 0 0;max-width:74ch}
-.src{font-size:13px;margin-top:10px}
-.empty-state{border:1.5px dashed var(--hairline);border-radius:14px;padding:26px;color:var(--muted);max-width:none}
-.empty-state b{color:var(--ink)}
+/* results table */
+.rows{border:1px solid var(--line);border-radius:8px;background:var(--surface);overflow:hidden;margin-bottom:28px}
+.row{border-top:1px solid var(--line-2)}
+.row:first-child{border-top:0}
+.row-head{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:12px;padding:12px 14px;align-items:start}
+.rank{font-size:12px;color:var(--text-3);padding-top:3px;text-align:right}
+.row.best .rank{color:var(--accent);font-weight:700}
+.row.best{box-shadow:inset 3px 0 0 var(--accent)}
+.title{font-weight:600;margin:0}
+.figure{margin:3px 0 0;font-size:15px}
+.figure b{font-weight:600}
+.figure.ctx{color:var(--text-2);font-size:13.5px}
+.est{margin:2px 0 0;font-size:13px;color:var(--text-2)}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.tag{font-size:11.5px;border:1px solid var(--line);border-radius:4px;padding:1px 7px;color:var(--text-2);white-space:nowrap}
+.tag.up{color:var(--up);background:var(--up-bg);border-color:transparent}
+.tag.down{color:var(--down);background:var(--down-bg);border-color:transparent}
+.tag.ok{color:var(--accent);background:var(--accent-bg);border-color:transparent;font-weight:600}
+.actions{display:flex;gap:6px;flex-shrink:0}
+.btn{height:30px;padding:0 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);
+  color:var(--text);cursor:pointer;font-size:12.5px;white-space:nowrap}
+.btn:hover{border-color:var(--text-3)}
+.btn[aria-expanded="true"]{background:var(--accent-bg);border-color:transparent;color:var(--accent)}
+.detail{display:none;padding:0 14px 14px 54px;border-top:1px dashed var(--line-2);margin-top:0}
+.detail.open{display:block;padding-top:12px}
+.detail dl{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 14px;margin:0}
+.detail dt{color:var(--text-2);font-size:12.5px}
+.detail dd{margin:0;max-width:90ch}
+.quote{border-left:2px solid var(--line);padding-left:10px;color:var(--text-2);font-size:13px}
+.empty{padding:22px 16px;color:var(--text-2)}
+.empty b{color:var(--text)}
 
-/* calendar */
-.section{margin-bottom:44px}
-.timeline{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:0}
-.timeline li{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:13px 0;border-top:1px solid var(--hairline)}
-.timeline li:last-child{border-bottom:1px solid var(--hairline)}
-.t-date{font-family:'Sharp Grotesk','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:15px}
-.t-date .yr{color:var(--muted);font-weight:400;font-family:'Graphik','Helvetica Neue',Arial,sans-serif;font-size:12.5px;display:block}
-.t-what b{font-weight:600}
-.t-what .m-muted{display:block;margin-top:2px}
-.t-past{opacity:.55}
-.t-chip{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;background:var(--lilac);color:#140018;border-radius:99px;padding:2px 8px;margin-left:8px;vertical-align:1px;white-space:nowrap}
-
-/* market context */
-.ctx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:18px}
-.ctx-card{border:1px solid var(--card-edge);background:var(--card);border-radius:14px;padding:18px 20px}
-.ctx-card .figure{font-size:24px;margin:6px 0 4px}
-.ctx-card p{margin:6px 0 0;font-size:14px;max-width:60ch}
-.ctx-src{font-size:12px;color:var(--muted);margin-top:10px;display:block}
-.ctx-banner{background:var(--comp-bg);color:var(--comp-ink);border-radius:10px;padding:12px 16px;font-size:13.5px;margin-top:16px;max-width:none}
+/* lower grid: calendar + context */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px}
+@media (max-width:860px){.grid2{grid-template-columns:1fr}.controls{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.controls{grid-template-columns:repeat(2,minmax(0,1fr))}.row-head{grid-template-columns:22px minmax(0,1fr)}.actions{grid-column:2;justify-content:flex-start}.detail{padding-left:14px}}
+.panel{border:1px solid var(--line);border-radius:8px;background:var(--surface);overflow:hidden}
+.panel h2{padding:10px 14px;border-bottom:1px solid var(--line-2);margin:0}
+.panel .hint{padding:8px 14px 0;font-size:12.5px;color:var(--text-2)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+td,th{padding:8px 14px;border-top:1px solid var(--line-2);vertical-align:top;text-align:left}
+tr:first-child td{border-top:0}
+td.d{white-space:nowrap;color:var(--text-2);width:96px}
+td.past{color:var(--text-3)}
+td.past .ev{text-decoration:line-through;text-decoration-color:var(--line)}
+.ev{font-weight:600;display:block}
+.note{color:var(--text-2);font-size:12.5px;display:block;margin-top:1px}
+.scope{font-size:11px;border:1px solid var(--line);border-radius:4px;padding:0 6px;color:var(--text-2);margin-left:6px;vertical-align:1px}
+.stat{font-weight:600;white-space:nowrap}
+.src{font-size:12px;color:var(--text-2);display:block;margin-top:2px}
 
 /* rules */
-.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
-.rule{border-top:3px solid var(--lilac);padding-top:10px;font-size:14px}
-.rule b{display:block;margin-bottom:4px}
-footer{margin-top:56px;border-top:1px solid var(--hairline);padding-top:16px;font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-@media (prefers-reduced-motion:no-preference){
-  .match{transition:transform .15s ease}
-}
-@media (max-width:560px){ .timeline li{grid-template-columns:1fr;gap:4px} }
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px 20px;margin:0;padding:0;list-style:none}
+.rules li{font-size:13px;color:var(--text-2)}
+.rules b{color:var(--text)}
+footer{margin-top:28px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--text-2);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);
+  padding:8px 14px;border-radius:6px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .15s}
+.toast.show{opacity:1}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
 </style>
 
 <div class="wrap">
-<header class="page">
-  <span class="eyebrow">Nory · GTM Cadence Agent · UK &amp; Ireland</span>
-  <div class="headline-row">
-    <h1>UKI Market Signals</h1>
-    <div class="reg-meta num">
-      <b id="live-count">–</b> live entries · <span id="expired-count">–</span> expired (auto-retired)<br>
-      register researched <b>20 Aug 2026</b> from primary sources · every figure carries its verbatim quote
-    </div>
-  </div>
-  <p class="sub">When an account is <b>cold</b> — score under 30, no Tier-1 signal — this is where the
-  first touch comes from: a macro fact that is true <i>now</i>, in <i>their</i> jurisdiction, quantified
-  on <i>their</i> footprint, with a date attached. Set the account below; the ranking uses the same
-  arithmetic as <code>conjunctural_match.py</code>.</p>
-</header>
+<div class="top">
+  <h1>UKI Market Signals</h1>
+  <div class="meta num"><b id="live-count">–</b> live entries · <span id="expired-count">–</span> expired · register researched 20 Aug 2026, primary sources with verbatim quotes · <span id="today"></span></div>
+</div>
+<p class="lede">For accounts with no signal of their own (score under 30). Set the account; the ranking uses
+the same arithmetic as <code>conjunctural_match.py</code>. An entry marked <b>Opener</b> can open the
+first touch; <b>Context</b> entries support the email but must not open it.</p>
 
-<section class="console" aria-label="Account fit">
-  <span class="eyebrow">Account fit</span>
+<div class="toolbar">
   <div class="controls">
     <div class="field"><label for="nation">Nation</label>
-      <select id="nation">
-        <option value="england">England</option><option value="scotland">Scotland</option>
-        <option value="wales">Wales</option><option value="ni">Northern Ireland</option>
-        <option value="ireland">Ireland</option>
-      </select></div>
+      <select id="nation"><option value="england">England</option><option value="scotland">Scotland</option>
+      <option value="wales">Wales</option><option value="ni">Northern Ireland</option><option value="ireland">Ireland</option></select></div>
     <div class="field"><label for="vertical">Vertical</label>
-      <select id="vertical">
-        <option value="fsr">FSR</option><option value="qsr">QSR</option>
-        <option value="fast_casual">Fast Casual</option><option value="coffee_cafe">Coffee &amp; Cafe</option>
-      </select></div>
+      <select id="vertical"><option value="fsr">FSR</option><option value="qsr">QSR</option>
+      <option value="fast_casual">Fast Casual</option><option value="coffee_cafe">Coffee &amp; Cafe</option></select></div>
     <div class="field"><label for="persona">Persona</label>
-      <select id="persona">
-        <option value="finance">Finance</option><option value="csuite">C-Suite</option>
-        <option value="founder">Founder</option><option value="operations">Operations</option>
-      </select></div>
+      <select id="persona"><option value="finance">Finance</option><option value="csuite">C-Suite</option>
+      <option value="founder">Founder</option><option value="operations">Operations</option></select></div>
     <div class="field"><label for="locations">Sites</label>
       <input id="locations" type="number" min="1" max="500" value="6" inputmode="numeric"></div>
-    <div class="field"><label for="staff">Hourly staff / site <span style="text-transform:none;letter-spacing:0">(your estimate)</span></label>
+    <div class="field"><label for="staff">Hourly staff / site (your estimate)</label>
       <input id="staff" type="number" min="1" max="200" placeholder="optional" inputmode="numeric"></div>
+    <div class="field"><label>&nbsp;</label>
+      <button class="btn" id="share" type="button" title="Copy a link that reopens this exact account setup">Copy link to this setup</button></div>
   </div>
-  <p class="console-note"><b id="fit-count" style="color:var(--lime)"></b> — devolution is enforced: a GB-only law never shows for a Northern Ireland
-  account, an Ireland account only ever sees Irish entries, and an expired entry retires itself. An
-  entry without a renderable quantification can support the email but must not open it.</p>
-</section>
-
-<div class="cat-row" id="cat-row" role="group" aria-label="Filter by area"></div>
-<section class="results" id="results" aria-live="polite"></section>
-
-<section class="section">
-  <span class="eyebrow">The calendar</span>
-  <h2>Dated events to plan outreach around</h2>
-  <p class="sub">Each is a statutory or published date from the register's primary sources — the peg for a
-  "before April" or "ahead of October" line in copy.</p>
-  <ul class="timeline" id="timeline"></ul>
-</section>
-
-<section class="section" id="market-context">
-  <span class="eyebrow">Market context</span>
-  <h2>The trading backdrop — context, never the opener</h2>
-  <p class="sub">Sector-wide numbers for call prep and framing. None of these is quantified on a single
-  account's footprint, so none may open an email — that is what the register above is for.</p>
-  <div class="ctx-grid" id="ctx-grid"></div>
-  <p class="ctx-banner"><b>Rule:</b> a sector statistic in a cold email reads as filler ("in this
-  economy…"). Use these to sound informed on the call, not to open the thread.</p>
-</section>
-
-<section class="section">
-  <span class="eyebrow">Rules of use</span>
-  <h2>Before any of this reaches a prospect</h2>
-  <div class="rules">
-    <div class="rule"><b>Quantify or fall back.</b> If the page cannot render a figure on their footprint,
-      the entry is context only — the email opens on the vertical pain instead.</div>
-    <div class="rule"><b>Facts, never advice.</b> Stating a rate change is fine; suggesting how to
-      restructure staffing, tips or contracts around it is legal/tax advice and not ours to give.</div>
-    <div class="rule"><b>No fear-mongering.</b> State the change and the date. The prospect already
-      knows their costs are rising; the value is precision, not alarm.</div>
-    <div class="rule"><b>An account signal always wins.</b> This page is the fallback layer. If Stage&nbsp;1
-      found a real signal on the account, open on that, not on macro.</div>
+  <div class="toolbar-row2">
+    <div class="seg" id="cat-row" role="group" aria-label="Filter by area"></div>
+    <div class="fit" id="fit-count"></div>
   </div>
+</div>
+
+<div class="rows" id="results" aria-live="polite"></div>
+
+<div class="grid2">
+  <section class="panel">
+    <h2>Calendar — dated events to plan outreach around</h2>
+    <table><tbody id="timeline"></tbody></table>
+  </section>
+  <section class="panel" id="market-context">
+    <h2>Market context — for the call, never the opener</h2>
+    <p class="hint">Sector-level figures; none is quantified on one account's footprint.</p>
+    <table><tbody id="ctx-body"></tbody></table>
+  </section>
+</div>
+
+<section>
+  <h2>Rules of use</h2>
+  <ul class="rules">
+    <li><b>Quantify or fall back.</b> No figure on their footprint → the entry is context; the email opens on the vertical pain instead.</li>
+    <li><b>Facts, never advice.</b> Stating a rate change is fine; how to restructure staffing, tips or contracts is legal/tax advice.</li>
+    <li><b>No fear-mongering.</b> The change and the date. Precision is the value, not alarm.</li>
+    <li><b>An account signal always wins.</b> If Stage 1 found a real signal, open on that, not on macro.</li>
+  </ul>
 </section>
 
 <footer>
-  <span>Source of truth: <code>knowledge/conjunctural/register/</code> — 16 entries, primary sources
-  (gov.uk · HMRC · HM Treasury · gov.ie · Revenue/WRC · AHDB · ONS/DESNZ), verbatim quotes embedded.</span>
-  <span>Refresh: commodities monthly · wages quarterly &amp; before April (UK) / January (IE) steps.
-  Nearest review: <b class="num">20 Sept 2026</b>.</span>
+  <span>Source of truth: <code>knowledge/conjunctural/register/</code> (gov.uk · HMRC · HM Treasury · gov.ie · Revenue/WRC · AHDB · ONS/DESNZ). Refreshed fortnightly (1st &amp; 15th).</span>
+  <span>Expired entries retire automatically by <code>review_by</code>.</span>
 </footer>
 </div>
+<div class="toast" id="toast" role="status"></div>
 
 <script>
 const REGISTER = __REGISTER__;
 const CTX = __CTX__;
+const EVENTS=[
+  {date:"2026-07-01", what:"Ireland cut VAT on restaurant/catering/hot takeaway food to 9%", note:"Finance Act 2025 §71 (Revenue.ie); down from 13.5%, no legislated end date — excludes alcohol, soft drinks, accommodation", scope:"Ireland"},
+  {date:"2026-09-01", what:"Temporary 5% VAT window on eat-in children's meals ended", note:"SI 2026/576 — entry auto-retired; family-dining finance teams just switched rates back", scope:"UK"},
+  {date:"2026-10-01", what:"Employer PRSI rises 0.15pp — 9.15% / 11.4%", note:"citizensinformation.ie + gov.ie rate tables; stacks on January's 65c NMW rise", scope:"Ireland"},
+  {date:"2026-10-06", what:"Budget 2027 (Ireland) — confirmed", note:"gov.ie Summer Economic Statement, 22 Jul 2026: “presented to Dáil Éireann on 6th October 2026”; sets the January 2027 NMW — re-verify the IE wage entry after Budget day", scope:"Ireland"},
+  {date:"2026-10-20", what:"Commodities register review due", note:"butter −43% y/y (Aug AHDB report) and arabica −21% y/y re-verified monthly", scope:"register"},
+  {date:"2026-10-28", what:"UK Autumn Budget — confirmed", note:"gov.uk, 31 Jul 2026: “the date of my first Budget as Chancellor will be Wednesday 28th October”; confirms the April 2027 NLW — LPC projection £13.02–£13.34 (central £13.18) stands until then", scope:"UK"},
+  {date:"2027-01-01", what:"Unfair dismissal qualifying period cut to 6 months", note:"Employment Rights Act 2025 timeline (gov.uk, updated 7 Aug 2026); GB only, uncapped awards", scope:"GB"},
+  {date:"2027-04-01", what:"Next NLW step (rate TBC at the Budget)", note:"every April: re-model the rota cost before Q1 ends", scope:"UK"},
+  {date:"2027-12-31", what:"Guaranteed-hours &amp; shift-notice rights — “during 2027”, timings TBC", note:"ERA 2025; say “2027, to be confirmed”, never a specific date", scope:"GB", soft:true}
+];
 
 const UK_NATIONS = new Set(["england","scotland","wales","ni"]);
 const NATIONS = new Set([...UK_NATIONS,"ireland"]);
 const SENTIMENT = ["_citing_","_operators_","_reporting_"];
 const CUR = {GBP:"£", EUR:"€"};
 const TODAY = new Date(); TODAY.setHours(0,0,0,0);
+const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
 function d(iso){ const [y,m,dd]=iso.split("-").map(Number); return new Date(y,m-1,dd); }
+function nice(iso){ const x=d(iso); return `${x.getDate()} ${MONTHS[x.getMonth()]} ${x.getFullYear()}`; }
+function esc(t){ return String(t==null?"":t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;"); }
 function expired(e){ return e.review_by ? d(e.review_by) < TODAY : false; }
 function scopeMatch(e, nation){
   const s=e.scope||{}, lv=s.level;
@@ -255,7 +221,7 @@ function scopeMatch(e, nation){
   if(lv==="uk") return UK_NATIONS.has(nation);
   if(lv==="nations") return (s.nations||[]).map(n=>n.toLowerCase()).includes(nation);
   if(NATIONS.has(lv)) return nation===lv;
-  return false; // council-level needs a council the page doesn't collect
+  return false;
 }
 function fmt(cur,v){ return cur + Math.round(v).toLocaleString("en-GB"); }
 function quantify(e, n){
@@ -266,25 +232,19 @@ function quantify(e, n){
   if(basis==="per_hourly_employee_per_year"){
     if(!cur) return null;
     const staff=quantify._staff;
-    if(staff>0){
-      return {big:`~${fmt(cur,q.value)} / hourly employee / year`,
-              est:`× ${staff} staff/site × ${n} site${n>1?"s":""} ≈ ${fmt(cur,q.value*staff*n)}/yr estate-wide — YOUR estimate, own it as one and verify on the call`,
-              note:""};
-    }
-    return {big:`~${fmt(cur,q.value)} / hourly employee / year`,
-            note:"no per-site employee count assumed — ask on the call, or set an estimate above"};
+    const r={big:`${fmt(cur,q.value)} per hourly employee per year`, note:"per-employee figure — no per-site headcount assumed; ask on the call or set an estimate above"};
+    if(staff>0){ r.est=`× ${staff} staff/site × ${n} site${n>1?"s":""} ≈ ${fmt(cur,q.value*staff*n)}/yr estate-wide — your estimate, say it as one`; r.note=""; }
+    return r;
   }
   if(basis==="per_site_per_year"){
     if(!cur) return null;
-    return {big:`~${fmt(cur,q.value)}/site/yr → ~${fmt(cur,q.value*n)}/yr across ${n} site${n>1?"s":""}`, note:""};
+    return {big:`${fmt(cur,q.value)}/site/yr → ${fmt(cur,q.value*n)}/yr across ${n} site${n>1?"s":""}`, note:""};
   }
   if(basis==="pct_of_cogs"){
-    const dir=q.value>=0?"rise":"fall";
-    return {big:`${Math.abs(q.value)}% ${dir} on a core menu input`,
-            note:"an input that is typically a meaningful share of COGS for this vertical"};
+    return {big:`${Math.abs(q.value)}% ${q.value>=0?"rise":"fall"} on a core menu input`, note:"an input that is typically a meaningful share of COGS for this vertical"};
   }
   if(basis==="pct_of_labour") return {big:`a ${q.value}% shift in labour cost structure`, note:""};
-  return null; // unknown basis: never an opener
+  return null;
 }
 function score(e, nation, vertical, persona, n){
   if(expired(e)) return null;
@@ -301,122 +261,132 @@ function score(e, nation, vertical, persona, n){
   if(persona && e.personas) s += 1.5/e.personas.length;
   s += {cost_up:.3, compliance_burden:.3, demand_down:.2}[e.direction] ?? 0;
   if((e.source||{}).primary) s += .5;
-  if(e.effective_date){
-    const age=(TODAY-d(e.effective_date))/864e5;
-    if(age>=0 && age<=365) s += .4*(1-age/365);
-  }
+  if(e.effective_date){ const age=(TODAY-d(e.effective_date))/864e5; if(age>=0 && age<=365) s += .4*(1-age/365); }
   return s;
 }
 const CATS={
-  workforce:{label:"Workforce", dot:"#89ac39", types:["minimum_wage","employer_costs","scheduling_law","tips_law"]},
-  inventory:{label:"Inventory & COGS", dot:"#36635b", types:["commodity"]},
-  site_tax:{label:"Tax & site economics", dot:"#8e8ee0", types:["business_rates","vat"]}
+  workforce:{label:"Workforce", types:["minimum_wage","employer_costs","scheduling_law","tips_law"]},
+  inventory:{label:"Inventory & COGS", types:["commodity"]},
+  site_tax:{label:"Tax & site economics", types:["business_rates","vat"]}
 };
 function catOf(e){ for(const k in CATS) if(CATS[k].types.includes(e.type)) return k; return "workforce"; }
-let catFilter=null;
-const DIR_BADGE={cost_up:["up","cost up"],cost_down:["down","cost down"],compliance_burden:["comp","compliance"],demand_down:["up","demand down"]};
-const NATION_LABEL={uk:"UK-wide",england:"England",scotland:"Scotland",wales:"Wales",ni:"Northern Ireland",ireland:"Ireland",nations:"GB only (not NI)"};
-const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-function nice(iso){ const x=d(iso); return `${x.getDate()} ${MONTHS[x.getMonth()]} ${x.getFullYear()}`; }
-function esc(t){ return (t||"").replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+const DIR={cost_up:["up","Cost up"],cost_down:["down","Cost down"],compliance_burden:["","Compliance"],demand_down:["up","Demand down"]};
+const SCOPE_LABEL={uk:"UK-wide",england:"England",scotland:"Scotland",wales:"Wales",ni:"Northern Ireland",ireland:"Ireland",nations:"GB only (not NI)"};
+let catFilter=null; const openIds=new Set();
+
+// ---- URL state: reps can bookmark or share an exact setup ----
+const F = ["nation","vertical","persona","locations","staff"];
+function readURL(){
+  const p=new URLSearchParams(location.search);
+  F.forEach(id=>{ if(p.has(id)) document.getElementById(id).value=p.get(id); });
+  if(p.has("area") && CATS[p.get("area")]) catFilter=p.get("area");
+}
+function writeURL(){
+  const p=new URLSearchParams();
+  F.forEach(id=>{ const v=document.getElementById(id).value; if(v) p.set(id,v); });
+  if(catFilter) p.set("area",catFilter);
+  writeURL.query = p.toString();
+  // Sandboxed / file / data: documents have a null origin and throw here — the URL is a convenience,
+  // never a dependency, so failing to write it must not stop the page rendering.
+  try{ if(/^https?:$/.test(location.protocol)) history.replaceState(null,"",`${location.pathname}?${p}`); }catch(e){}
+}
+function toast(msg){ const t=document.getElementById("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(()=>t.classList.remove("show"),1600); }
+function copyText(txt, ok){
+  const done=()=>toast(ok);
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done, ()=>fallback()); } else fallback();
+  function fallback(){ const ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); try{document.execCommand("copy"); done();}catch(e){toast("Copy failed — select the text manually");} ta.remove(); }
+}
 
 function render(){
-  const nation=document.getElementById("nation").value;
-  const vertical=document.getElementById("vertical").value;
-  const persona=document.getElementById("persona").value;
-  const n=Math.max(1, parseInt(document.getElementById("locations").value||"1",10));
-  quantify._staff = parseInt(document.getElementById("staff").value||"0",10);
-  const ranked = REGISTER.map(e=>({e, s:score(e,nation,vertical,persona,n)}))
-    .filter(x=>x.s!==null).sort((a,b)=>b.s-a.s);
+  const nation=g("nation"), vertical=g("vertical"), persona=g("persona");
+  const n=Math.max(1, parseInt(g("locations")||"1",10));
+  quantify._staff = parseInt(g("staff")||"0",10);
+  writeURL();
+  const ranked = REGISTER.map(e=>({e, s:score(e,nation,vertical,persona,n)})).filter(x=>x.s!==null).sort((a,b)=>b.s-a.s);
   const live=REGISTER.filter(e=>!expired(e)).length;
-  document.getElementById("fit-count").textContent =
-    `${ranked.length} of ${live} live entries fit this account`;
   const counts={}; ranked.forEach(x=>{const k=catOf(x.e); counts[k]=(counts[k]||0)+1;});
   document.getElementById("cat-row").innerHTML =
-    `<button class="cat-chip" aria-pressed="${catFilter===null}" data-cat="">All <span class="num">${ranked.length}</span></button>`+
-    Object.entries(CATS).map(([k,c])=>
-      `<button class="cat-chip" aria-pressed="${catFilter===k}" data-cat="${k}" style="--dotc:${c.dot}">
-        <span class="dot"></span>${c.label} <span class="num">${counts[k]||0}</span></button>`).join("");
-  document.querySelectorAll(".cat-chip").forEach(b=>b.addEventListener("click",()=>{
-    catFilter = b.dataset.cat || null; render();
-  }));
+    `<button type="button" aria-pressed="${catFilter===null}" data-cat="">All <span class="n num">${ranked.length}</span></button>`+
+    Object.entries(CATS).map(([k,c])=>`<button type="button" aria-pressed="${catFilter===k}" data-cat="${k}">${c.label} <span class="n num">${counts[k]||0}</span></button>`).join("");
+  document.querySelectorAll("#cat-row button").forEach(b=>b.addEventListener("click",()=>{ catFilter=b.dataset.cat||null; render(); }));
   const shown = catFilter ? ranked.filter(x=>catOf(x.e)===catFilter) : ranked;
+  const openers = shown.filter(x=>quantify(x.e,n)!==null).length;
+  document.getElementById("fit-count").innerHTML = `<b class="num">${shown.length}</b> of ${live} live entries fit · <b class="num">${openers}</b> can open`;
+
   const box=document.getElementById("results");
   if(!shown.length){
-    box.innerHTML=`<div class="empty-state"><b>No conjunctural match${catFilter?" in this area":""}.</b> Correct result, not a failure:
-      the first touch falls back to the vertical-pain angle rather than an unquantified macro cliché.</div>`;
+    box.innerHTML=`<div class="empty"><b>No conjunctural match${catFilter?" in this area":""}.</b> Correct result, not a failure — the first touch falls back to the vertical-pain angle rather than an unquantified macro line.</div>`;
     return;
   }
   box.innerHTML = shown.map((x,i)=>{
-    const e=x.e, q=quantify(e,n), [bc,bl]=DIR_BADGE[e.direction]||["comp",e.direction];
-    const lv=(e.scope||{}).level;
-    return `<article class="match${i===0?" top":""}">
-      <div class="m-head"><span class="m-title">${esc(e.title)}</span>
-        <span class="badges">
-          <span class="badge cat" style="--dotc:${CATS[catOf(e)].dot}"><span class="dot"></span>${CATS[catOf(e)].label}</span>
-          <span class="badge geo">${NATION_LABEL[lv]||lv}</span>
-          <span class="badge ${bc}">${bl}</span>
-          <span class="badge status">${e.status.replace("_"," ")}</span>
-        </span></div>
-      ${q?`<div class="figure num">${esc(q.big)}</div>
-           ${q.est?`<div class="figure-est num">${esc(q.est)}</div>`:""}
-           <div class="figure-how">${esc(q.note||e.quantification.how)}</div>`
-         :`<div class="not-opener">No account-level figure — supporting context only, never the opener.</div>`}
-      <p class="m-fact">${esc(e.fact)}</p>
-      <p class="m-angle"><b>Angle</b> — ${esc(e.angle)}</p>
-      <hr class="hairline">
-      <details><summary>Caveats, source &amp; verbatim quote</summary>
-        <p class="m-muted" style="margin-top:10px">${esc(e.caveats)}</p>
-        <blockquote class="quote">“${esc((e.source||{}).quote)}”</blockquote>
-        <p class="src"><a href="${esc((e.source||{}).url)}" target="_blank" rel="noopener">
-          ${(e.source||{}).primary?"Primary source":"Secondary source"} · accessed ${esc((e.source||{}).accessed||"")}</a>
-          · <span class="m-muted num">effective ${nice(e.effective_date)} · review by ${nice(e.review_by)}</span></p>
-      </details>
-    </article>`;
+    const e=x.e, q=quantify(e,n), [dc,dl]=DIR[e.direction]||["",e.direction], s=e.source||{};
+    const lv=(e.scope||{}).level, isOpen=openIds.has(e.id);
+    return `<div class="row${i===0&&q?" best":""}" data-id="${esc(e.id)}">
+      <div class="row-head">
+        <div class="rank num">${i+1}</div>
+        <div>
+          <p class="title">${esc(e.title)}</p>
+          ${q?`<p class="figure num"><b>${esc(q.big)}</b>${q.note?` <span class="muted small">— ${esc(q.note)}</span>`:""}</p>${q.est?`<p class="est num">${esc(q.est)}</p>`:""}`
+              :`<p class="figure ctx">No account-level figure — context for the email, never the opener.</p>`}
+          <div class="tags">
+            <span class="tag ${q?"ok":""}">${q?"Opener":"Context"}</span>
+            <span class="tag">${CATS[catOf(e)].label}</span>
+            <span class="tag">${SCOPE_LABEL[lv]||lv}</span>
+            <span class="tag ${dc}">${dl}</span>
+            <span class="tag">${esc(e.status.replace("_"," "))}</span>
+            <span class="tag num">effective ${nice(e.effective_date)}</span>
+          </div>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn copy" title="Copy the angle, the figure and the source for your notes">Copy angle</button>
+          <button type="button" class="btn toggle" aria-expanded="${isOpen}">${isOpen?"Hide":"Details"}</button>
+        </div>
+      </div>
+      <div class="detail${isOpen?" open":""}">
+        <dl>
+          <dt>Fact</dt><dd>${esc(e.fact)}</dd>
+          <dt>Angle</dt><dd>${esc(e.angle)}</dd>
+          <dt>Pair with proof</dt><dd>${esc(e.proof_pairing)}</dd>
+          <dt>Caveats</dt><dd class="small muted">${esc(e.caveats)}</dd>
+          <dt>Quote</dt><dd class="quote">“${esc(s.quote)}”</dd>
+          <dt>Source</dt><dd class="small"><a href="${esc(s.url)}" target="_blank" rel="noopener">${s.primary?"Primary":"Secondary"} source</a> · accessed ${esc(s.accessed||"")} · review by <span class="num">${nice(e.review_by)}</span>${q?` · <span class="muted">arithmetic: ${esc(e.quantification.how)}</span>`:""}</dd>
+        </dl>
+      </div>
+    </div>`;
   }).join("");
+  box.querySelectorAll(".toggle").forEach(b=>b.addEventListener("click",()=>{
+    const id=b.closest(".row").dataset.id; openIds.has(id)?openIds.delete(id):openIds.add(id); render();
+  }));
+  box.querySelectorAll(".copy").forEach(b=>b.addEventListener("click",()=>{
+    const id=b.closest(".row").dataset.id, e=REGISTER.find(x=>x.id===id), q=quantify(e,n);
+    const txt=[e.title, q?q.big:"(context only — not an opener)", q&&q.est?q.est:"", "", e.angle, "", `Source: ${(e.source||{}).url}`, `Fact: ${e.fact}`].filter(l=>l!==null).join("\n").replace(/\n\n\n/g,"\n\n");
+    copyText(txt,"Copied — angle, figure and source");
+  }));
 }
+function g(id){ return document.getElementById(id).value; }
 
 function renderMeta(){
   const live=REGISTER.filter(e=>!expired(e)).length;
   document.getElementById("live-count").textContent=live;
   document.getElementById("expired-count").textContent=REGISTER.length-live;
+  document.getElementById("today").textContent=`viewed ${TODAY.getDate()} ${MONTHS[TODAY.getMonth()]} ${TODAY.getFullYear()}`;
 }
-
-const EVENTS=[
-  {date:"2026-07-01", what:"Ireland cut VAT on restaurant/catering/hot takeaway food to 9%", note:"Finance Act 2025 §71 (Revenue.ie); down from 13.5%, no legislated end date — excludes alcohol, soft drinks, accommodation", scope:"Ireland"},
-  {date:"2026-09-01", what:"Temporary 5% VAT window on eat-in children's meals ended", note:"SI 2026/576 — entry auto-retired; family-dining finance teams just switched rates back", scope:"UK"},
-  {date:"2026-10-01", what:"Employer PRSI rises 0.15pp — 9.15% / 11.4%", note:"citizensinformation.ie + gov.ie rate tables; stacks on January's 65c NMW rise", scope:"Ireland"},
-  {date:"2026-10-06", what:"Budget 2027 (Ireland) — confirmed", note:"gov.ie Summer Economic Statement, 22 Jul 2026: “presented to Dáil Éireann on 6th October 2026”; sets the January 2027 NMW — re-verify the IE wage entry after Budget day", scope:"Ireland"},
-  {date:"2026-10-20", what:"Commodities register review due", note:"butter −43% y/y (Aug AHDB report) and arabica −21% y/y re-verified monthly", scope:"register"},
-  {date:"2026-10-28", what:"UK Autumn Budget — confirmed", note:"gov.uk, 31 Jul 2026: “the date of my first Budget as Chancellor will be Wednesday 28th October”; confirms the April 2027 NLW — LPC projection £13.02–£13.34 (central £13.18) stands until then", scope:"UK"},
-  {date:"2027-01-01", what:"Unfair dismissal qualifying period cut to 6 months", note:"Employment Rights Act 2025 timeline (gov.uk, updated 7 Aug 2026); GB only, uncapped awards", scope:"GB"},
-  {date:"2027-04-01", what:"Next NLW step (rate TBC at the Budget)", note:"every April: re-model the rota cost before Q1 ends", scope:"UK"},
-  {date:"2027-12-31", what:"Guaranteed-hours &amp; shift-notice rights — “during 2027”, timings TBC", note:"ERA 2025; say “2027, to be confirmed”, never a specific date", scope:"GB", soft:true}
-];
 function renderTimeline(){
   document.getElementById("timeline").innerHTML = EVENTS.map(ev=>{
-    const past = d(ev.date) < TODAY;
-    const x=d(ev.date);
-    const dateLabel = ev.soft ? `${MONTHS[x.getMonth()]} <span class="yr">${x.getFullYear()} · expected</span>`
-                              : `${x.getDate()} ${MONTHS[x.getMonth()]} <span class="yr">${x.getFullYear()}</span>`;
-    return `<li class="${past?"t-past":""}">
-      <span class="t-date num">${dateLabel}</span>
-      <span class="t-what"><b>${ev.what}</b><span class="t-chip">${ev.scope}</span>
-        <span class="m-muted">${ev.note}</span></span></li>`;
+    const past=d(ev.date)<TODAY, x=d(ev.date);
+    const dl = ev.soft ? `${MONTHS[x.getMonth()]} ${x.getFullYear()} <span class="small">(expected)</span>` : `${x.getDate()} ${MONTHS[x.getMonth()]} ${x.getFullYear()}`;
+    return `<tr><td class="d num${past?" past":""}">${dl}</td><td class="${past?"past":""}"><span class="ev">${ev.what}<span class="scope">${ev.scope}</span></span><span class="note">${ev.note}</span></td></tr>`;
   }).join("");
 }
 function renderCtx(){
-  const g=document.getElementById("ctx-grid");
+  const b=document.getElementById("ctx-body");
   if(!CTX.length){ document.getElementById("market-context").style.display="none"; return; }
-  g.innerHTML = CTX.map(c=>`<div class="ctx-card">
-    <span class="eyebrow">${esc(c.label)}</span>
-    <div class="figure num">${esc(c.figure)}</div>
-    <p>${esc(c.text)}</p>
-    <span class="ctx-src">${c.url?`<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.source)}</a>`:esc(c.source)} · ${esc(c.period)}</span>
-  </div>`).join("");
+  b.innerHTML = CTX.map(c=>`<tr><td class="stat num">${esc(c.figure)}</td><td><span class="ev">${esc(c.label)}</span><span class="note">${esc(c.text)}</span><span class="src">${c.url?`<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.source)}</a>`:esc(c.source)} · ${esc(c.period)}</span></td></tr>`).join("");
 }
-
-["nation","vertical","persona","locations"].forEach(id=>
-  document.getElementById(id).addEventListener("input", render));
-renderMeta(); render(); renderTimeline(); renderCtx();
+document.getElementById("share").addEventListener("click",()=>{
+  if(/^https?:$/.test(location.protocol)) copyText(`${location.origin}${location.pathname}?${writeURL.query}`,"Link copied — opens this exact setup");
+  else copyText(`UKI Market Signals setup: ${writeURL.query.replace(/&/g," · ")}`,"Setup copied as text (no shareable URL in this view)");
+});
+F.forEach(id=>document.getElementById(id).addEventListener("input", render));
+readURL(); renderMeta(); render(); renderTimeline(); renderCtx();
 </script>
