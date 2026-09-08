@@ -102,9 +102,10 @@ themselves client-side via `review_by`.
 - **Regenerate** after any register/context change: `python3 scripts/render_market_artifact.py`
   → `output/reports/uki_market_signals.html` (gitignored). Template:
   `knowledge/conjunctural/artifact_template.html`.
-- **Deploy for reps:** copy the rendered file to the `pablonory/uki-market-signals` deploy repo as
-  `index.html`, commit, push — Netlify redeploys on push (connect/manage in the Netlify WEB UI only;
-  the CLI is logged into the wrong account, area rule).
+- **Live URL for reps: https://uki-market-signals.netlify.app/** (Netlify, connected 2026-09-08 to the
+  `pablonory/uki-market-signals` deploy repo). **Deploy:** copy the rendered file there as `index.html`,
+  commit, push — Netlify redeploys on push (manage in the Netlify WEB UI only; the CLI is logged into
+  the wrong account, area rule).
 - **Market library:** NotebookLM notebook "UKI Market Signals"
   (`ad7a916a-ef84-4e79-a55c-d74c5880136a`, pablo@nory.ai — check `nlm login --check` before every
   upload). Holds the curated market sources + this register rendered to markdown + the signal
