@@ -1,69 +1,92 @@
-# UKI Flows — cadence source of truth (⚠️ PLACEHOLDER — flows not yet confirmed)
+# UKI Flows — cadence source of truth (two layers, looked up per rep — never built)
 
-> **Status (2026-08-20, Pablo):** the Gong flows UKI reps actually use are **unknown** — Pablo is
-> still finding out what they run. This file is the placeholder that gets filled in when that
-> investigation lands. Until then, the iron rule from the US fork applies with extra force:
-> **NEVER invent a flow name.** The agent maps accounts to flows only when this file lists real,
-> confirmed names.
+> **Status 2026-09-11.** The Gong Engage flow set was captured from the Gong API
+> (`scripts/gong_flows.py`, `GET /v2/flows?flowOwnerEmail=<rep>`), not from screenshots. What is
+> KNOWN: every flow name, folder, visibility and creation date, per rep. What is NOT known and must
+> come from the reps: which of their flows are **live** (the API exposes no usage stats) and whether
+> the **tags proposed from names** are right. Until a rep's registry is confirmed, briefs for that
+> rep carry `cadence_template` **EMPTY** + "flow pending — registry unconfirmed". **Never invent a
+> flow name** — and in UKI, never *build* one either: a name is looked up, or it is empty.
 
-## What the agent does UNTIL flows are confirmed
+## How UKI differs from the US — and why the matcher changes shape
 
-- Run Stages 1–3 normally (signals, score, classification, first touch) — none of that depends on flows.
-- **Leave `cadence_template` and `gong_template_url` EMPTY** on every brief, and add one line to
-  `why_now` / `brief_json.coordinate.note`: *"flow pending — UKI flow set not yet confirmed"*.
-- Still classify vertical × persona (it aims the first-touch angle and the eventual mapping).
-- `scripts/map_contacts.py` still groups contacts by persona; groups carry the persona label, no flow name.
+The US runs **one shared 16-flow matrix** (`<Vertical> × <Persona> (<Suite> · Tier 1>`), so the US
+agent *derives* the flow name from vertical × persona. UKI runs **two layers**:
 
-## What to capture when investigating (the checklist for Pablo / the UKI owner)
+1. **Company layer** — 73 `Company`-visibility flows every rep sees (`registry/_company.json`). The
+   UKI-relevant core is the **"Outbound" folder (40)**: `<Segment> <Persona> - Agentic AI` with
+   segments **Bar/Pub · Coffee · Resto** and personas **CEO · Finance · IT · Ops · People**, an
+   **SMB** series (`SMB - <Segment|Persona> Agentic AI`), **four reactivation flows by reason** (No
+   show · Non-responsive · Product gaps · Timing), MQL/inbound handling and event flows. The folders
+   "US Flows"/"USA Flows" (37) are the US agent's matrix, visible here only because the Gong instance
+   is shared — **the UKI matcher must never select them for a UKI account.**
+2. **Personal layer** — each rep's own flows (`Personal` visibility; team leads create theirs as
+   `Shared`). Heterogeneous by design: some reps keep their own vertical × persona sets (Sean's
+   "🍻 Pubs - Finance Persona", Louis Grenier's "Finance / Ops / Founder Flow"), some cloned the US
+   matrix names into their folder (William, 2026-08-25), many are campaign-, event- or
+   account-specific ("Tech Expo 2026", "Boparan Outreach") and are **not templates**.
 
-The same facts we captured from Lewis's Gong for the US (screenshots of the flow folder worked well):
+**Consequence:** `cadence_template` is resolved by **lookup in the rep's registry**, in this order:
+the rep's own **live** flow tagged for the account's vertical × persona × motion → the company-layer
+flow for the matching segment × persona → **empty** with the note "no matching flow in <rep>'s
+registry". The code guard changes from "matches the US name pattern" to "**exists verbatim in this
+rep's registry with `live: true`**". (Matcher rewiring is the next build step — `docs/open_questions.md`.)
 
-1. **Does a UKI flow folder exist in Gong?** Its exact name (US analogue: folder "US Flows").
-2. **The exact flow names**, verbatim — the naming pattern may or may not match the US
-   `<Vertical> × <Persona> (<Suite> · Tier 1)` convention.
-3. **The matrix shape** — which verticals × personas have flows? Watch for UKI-specific cells the US
-   matrix lacks (⚠️ **pubs & bars** is a major UK segment with no US cell).
-4. **A reactivation motion?** (US analogue: "USA Reactivation".) Name assumed here as
-   **"UKI Reactivation"** until confirmed — `hubspot-app/scripts/*` carry that assumption, flagged.
-5. **Who owns the flows** (the UKI Lewis-equivalent) — they own territory + the input sheet too.
-6. Per-flow: total people / active state (tells us what's actually in use vs built-and-abandoned).
+## Files
 
-## Inherited working assumption (candidate structure, NOT confirmed)
+| File | What | Committed? |
+|---|---|---|
+| `uki_reps.json` | The UKI outbound roster (10 AEs + 3 BDRs, confirmed by Pablo 2026-09-11) | yes |
+| `registry/_company.json` | The company layer, tagged from names | yes |
+| `registry/drafts/<rep>.json` | Per-rep draft registry — personal + shared-with-them flows, proposed tags, `live: null` | yes (Pablo 2026-09-11: flow names may live in the repo) |
+| `registry/REVIEW.md` | The review sheet for the walk-through with Phil / each rep — tick live, correct tags. Readable and annotatable in the Obsidian vault | yes |
+| `registry/<rep>.json` | **Confirmed** registry — created from the draft once the rep has answered; the only file the matcher reads | not yet — none confirmed |
+| `output/gong/flows/<rep>.json` | Raw API pulls | no (gitignored) |
 
-Carried over from the US fork so classification keeps working; every part below is provisional:
+Refresh: re-run `scripts/gong_flows.py` when reps add flows; the diff against the confirmed registry is
+the review list. Drafts are regenerated, confirmed files are edited by hand.
 
-- **Verticals:** Coffee & Cafe · Fast Casual · FSR · QSR *(+ pubs & bars? — open question)*
-- **Personas:** C-Suite · Finance · Founder · Operations
-- **Suite from persona:** C-Suite & Founder → **Full Suite** · Finance & Operations → **IM**
-- **Flow-name pattern:** `<Vertical> × <Persona> (<Suite> · Tier 1)` + a reactivation motion
+## Taxonomy bridge (agent → Gong company layer)
 
-## Classification rules (market-neutral — these ARE in force now)
+| Agent vertical | Gong segment | Note |
+|---|---|---|
+| `coffee_cafe` | Coffee | direct |
+| `fsr` | Resto | direct |
+| `qsr`, `fast_casual` | Resto (or SMB - Restaurant) | Gong has no QSR/Fast Casual split in the company layer — personal layers sometimes do ("QSR Evolution", "QSR: Labour") |
+| **`pubs_bars`** (proposed) | **Bar/Pub** | a real UKI segment with 5 company flows + personal ones — resolves the "pubs & bars" question in favour of its own vertical (decision: Pablo) |
 
-**Vertical** — pick one:
-- **Coffee & Cafe** — coffee groups, speciality coffee, all-day cafés, bakeries, brunch-led.
-- **Fast Casual** — counter-order but elevated / fresh-prep, higher ticket than QSR, limited table service.
-- **FSR** — full-service, sit-down, table service, larger menu + teams. *(UK gastropubs: currently FSR —
-  revisit when the pubs & bars question is decided.)*
-- **QSR** — quick-service, high throughput, often franchised.
+| Agent persona | Gong persona | Note |
+|---|---|---|
+| `csuite`, `founder` | CEO / MD/CEO | Gong does not split founder vs hired exec; keep the agent's split for the angle, map both to CEO for the flow |
+| `finance` | Finance | direct |
+| `operations` | Ops | direct |
+| — | **IT**, **People** | ⚠️ Gong personas the agent does not classify — a gap, not a mapping |
 
-**Persona:**
-- **Founder** — founder-led / owner-operator; the founder is the buyer (usually fewer sites).
-- **C-Suite** — hired executive (CEO / COO / CFO / MD) at a larger multi-site group.
-- **Finance** — FD / Head of Finance / FC / Financial Controller.
-- **Operations** — Ops Director / Head of Ops / Operations Manager.
+**Suite (IM vs Full Suite)** is not encoded in UKI flow names. It keeps deriving from persona for the
+first-touch benefit (Finance/Ops → IM · C-Suite/Founder → Full Suite) unless a registry entry carries
+an explicit `suite` tag (US-matrix clones do).
 
-> The key split is Founder vs C-Suite: founder-led / owner-operator = **Founder**; hired exec at
-> scale = **C-Suite**. When the sheet's Persona is blank, default from HubSpot title + company size,
-> and note the assumption in the brief.
+## Reactivation — better than the US here
 
-Contact→flow mapping (`hubspot-app/scripts/map_contacts.py`) keeps the same persona priority:
-Founder > C-Suite > Finance > Operations; unmatched titles are listed as **unmapped**, never guessed.
+The company layer has **four** reactivation flows, one per reason the deal died. The reactivation
+analysis (`directives/reactivation_deal_analysis.md`) already classifies the reason, so the mapping is
+deterministic: `no_show` · `non_responsive` · `product_gaps` · `timing` → the matching company flow.
+The single "UKI Reactivation" name previously assumed by `score_accounts.py` / `map_contacts.py`
+**does not exist** — retire the assumption when the matcher is rewired.
+
+## Classification rules (market-neutral — in force now)
+
+**Vertical** — Coffee & Cafe (coffee groups, speciality coffee, all-day cafés, bakeries) · Fast Casual
+(counter-order, elevated, limited table service) · FSR (full-service, table service; gastropubs here
+*until* the `pubs_bars` decision) · QSR (quick-service, high throughput, often franchised).
+
+**Persona** — Founder (founder-led / owner-operator is the buyer) · C-Suite (hired exec at a larger
+group) · Finance (FD / Head of Finance / FC) · Operations (Ops Director / Head of Ops / Ops Manager).
+The key split is Founder vs C-Suite. Blank persona on the sheet → default from HubSpot title + company
+size, and note the assumption in the brief. Contact → persona priority in `map_contacts.py`:
+Founder > C-Suite > Finance > Operations; unmatched titles are **unmapped**, never guessed.
 
 ## Where the per-cell `cadences/*.md` files went
 
-Removed 2026-09-01, following the US repo's removal (2026-08-24, cbb37d1): their day-by-day flow tables
-were superseded by the real Gong flows, and their angle/proof content duplicated `knowledge/` — the
-first touch is built straight from `knowledge/proof_library.md`, `knowledge/pains_by_vertical.md`,
-`knowledge/jtbd_by_persona.md` and the conjunctural register, via `.claude/skills/first-touch/`.
-The proof points were always UKI-native (£/€ results), so nothing UKI-specific was lost; the files
-remain in git history (`952abff:cadences/`).
+Removed 2026-09-01 (following the US repo, cbb37d1): the first touch is built from `knowledge/` via
+`.claude/skills/first-touch/`; history at `952abff:cadences/`.

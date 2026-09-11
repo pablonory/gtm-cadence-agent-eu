@@ -1,0 +1,597 @@
+{
+ "rep": "charlie@nory.ai",
+ "name": "Charlie",
+ "role": "AE",
+ "pulled": "2026-09-11",
+ "status": "DRAFT — tags proposed from names; confirm live flows + tags with the rep before this becomes cadences/registry/<rep>.json",
+ "personal": [
+  {
+   "id": "5436350247876715301",
+   "name": "Re-engagement",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-09-08",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "7040856791960353195",
+   "name": "Tech Expo 2026",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-09-04",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4589351742734108548",
+   "name": "Level Up! - Dublin",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-08-18",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2268653031812322799",
+   "name": "Call",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-08-13",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "2479114180509729018",
+   "name": "Vagabond",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-08-11",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6084213731291307328",
+   "name": "LinkedIn Connect + Message",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-07-30",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5438736771725847893",
+   "name": "LinkedIn Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-07-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1863234320755408831",
+   "name": "Re-engage Call Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-07-13",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2357753364731554777",
+   "name": "July Flow 2.0",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-07-13",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6191097797827018576",
+   "name": "July Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-06-29",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1445517575107069968",
+   "name": "Target Flow - June",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-06-22",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8891579939533546938",
+   "name": "June week 2 - Claude",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-06-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1771999657083725283",
+   "name": "Salt Brewery",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-06-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "4543538267646686989",
+   "name": "Brewery",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-06-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "428565712499247688",
+   "name": "Level Up Manchester",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-20",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4958646471167660890",
+   "name": "Salad Project Intro",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-20",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5217631566030604216",
+   "name": "Mowgli CEO",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-05",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "120036691837300026",
+   "name": "Mowgli Street Food General",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-05",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "4992136060711566784",
+   "name": "Coffee - Finance Persona",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-29",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3771750812527788381",
+   "name": "Pizza Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-29",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "4646788848435148383",
+   "name": "The Salad Project (Founder)",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-01",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "795538526499800742",
+   "name": "The Salad Project (Leader)",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-01",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5039664963081819349",
+   "name": "Bakery Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-30",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6842386405418840086",
+   "name": "Gong Cha Expansion",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-11",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "3384464763280180471",
+   "name": "Nory takes london",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6867980803213856742",
+   "name": "San Carlo Restaurant Group - New Openings",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "300095080579574152",
+   "name": "MM Pubs Groups",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null,
+    "segment": "mm_ent"
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "3425582700304356555",
+   "name": "MAKE A COPY. Level Up!: Ops",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-19",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  }
+ ],
+ "shared_with_rep": [
+  {
+   "id": "3692560523867564748",
+   "name": "Tech Expo 2026",
+   "folder": "Tech expo 2026",
+   "layer": "shared",
+   "created": "2026-09-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5286654803247196613",
+   "name": "Closing the book and nurture sequence (May '26)",
+   "folder": "Miles Sayer",
+   "layer": "shared",
+   "created": "2026-05-22",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2720907587533028585",
+   "name": "Miles' Nurture Sequence V2 May 26",
+   "folder": "Miles Sayer",
+   "layer": "shared",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6974666428616920856",
+   "name": "Level Up Manchester",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-05-18",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1150535062881006988",
+   "name": "Outbound - ENT Papa Johns",
+   "folder": "Abbi Simms",
+   "layer": "shared",
+   "created": "2026-04-14",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null,
+    "segment": "mm_ent"
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1072368631578216223",
+   "name": "Costa Franchisee outreach",
+   "folder": "Abbi Simms",
+   "layer": "shared",
+   "created": "2026-03-24",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "355674489981485344",
+   "name": "☕️ Coffee Shops - Finance Persona",
+   "folder": "Abbi Simms",
+   "layer": "shared",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "580084454956856889",
+   "name": "BDR FLOW - Labour Assessment/AgenticAI Schedules (MAKE A COPY)",
+   "folder": "Abbi Simms",
+   "layer": "shared",
+   "created": "2026-02-11",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8520385259588212954",
+   "name": "MAKE A COPY. Level Up!: Ops",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json"
+}

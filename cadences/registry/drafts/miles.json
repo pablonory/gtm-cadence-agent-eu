@@ -1,0 +1,243 @@
+{
+ "rep": "miles@nory.ai",
+ "name": "Miles",
+ "role": "AE",
+ "pulled": "2026-09-11",
+ "status": "DRAFT — tags proposed from names; confirm live flows + tags with the rep before this becomes cadences/registry/<rep>.json",
+ "personal": [
+  {
+   "id": "2273444317308870865",
+   "name": "Nory Referral Programme Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "inbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2789774966821949832",
+   "name": "Nory Referral Programme Flow - auto",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "inbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6003848286609397058",
+   "name": "Miles' Nurture Sequence V3 June 26",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-06-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5286654803247196613",
+   "name": "Closing the book and nurture sequence (May '26)",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-22",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "528733930424678914",
+   "name": "Level-up Manchester Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1354897874199299495",
+   "name": "Miles' Nurture Sequence V1 May 26",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2720907587533028585",
+   "name": "Miles' Nurture Sequence V2 May 26",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "364440755858317611",
+   "name": "Calls and LI only",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-14",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "577667082333134425",
+   "name": "Miles Outbound Campaign (multi-channel - Call, Email, Linkedin)",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-16",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1306867081791163599",
+   "name": "Miles Outbound Campaign (Just email and LI)",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-16",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  }
+ ],
+ "shared_with_rep": [
+  {
+   "id": "2989126729563919091",
+   "name": "Ula Spire, Head of Operations",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-08-05",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "5483203408955262312",
+   "name": "Ed - Case Study: Adam Lewis",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-03-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5811352189544731604",
+   "name": "Ed - Case Study: Paul Tanner",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6462356336740519583",
+   "name": "Mag - Case Study: Jack Lander",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6066514246527978585",
+   "name": "ED - Case Study: Jack Lander",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-03-02",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json"
+}

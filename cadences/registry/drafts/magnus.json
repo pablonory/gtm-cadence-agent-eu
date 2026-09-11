@@ -1,0 +1,758 @@
+{
+ "rep": "magnus@nory.ai",
+ "name": "Magnus",
+ "role": "AE",
+ "pulled": "2026-09-11",
+ "status": "DRAFT — tags proposed from names; confirm live flows + tags with the rep before this becomes cadences/registry/<rep>.json",
+ "personal": [
+  {
+   "id": "3733994132386647052",
+   "name": "Employment Rights Bill",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-09-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8217103794992483388",
+   "name": "MM: Tech Expo 2026",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-09-08",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null,
+    "segment": "mm_ent"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4025459032869798389",
+   "name": "Tech Expo 2026",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-09-08",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5763670160084743159",
+   "name": "Zonal",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-07-24",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6556039428071538481",
+   "name": "Greene King Zonal",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-07-24",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6974666428616920856",
+   "name": "Level Up Manchester",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-05-18",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8910861348917884179",
+   "name": "Call only",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-27",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5934642424877925776",
+   "name": "Domino's Franchise Owners",
+   "folder": "Domino's",
+   "layer": "personal",
+   "created": "2026-04-13",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "7618957139603114748",
+   "name": "Ops Managers",
+   "folder": "Domino's",
+   "layer": "personal",
+   "created": "2026-04-13",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "1100757199574134787",
+   "name": "QSR: Labour",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-19",
+   "tags": {
+    "vertical": [
+     "qsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "6915066866362754157",
+   "name": "Fourth",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-17",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "399836974999362972",
+   "name": "Nory takes london: Nero",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8992615381688872777",
+   "name": "Nory takes london: Itsu",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5033652188842220373",
+   "name": "Light Touch",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8514873030868868092",
+   "name": "Nory takes london: Coffee1",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6241269343168062822",
+   "name": "Nory takes london: Sushi Daily",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8259311633775286721",
+   "name": "Nory takes london",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5982882991285713900",
+   "name": "Case Study: Adam Lewis",
+   "folder": "Case Study Play",
+   "layer": "personal",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8134672103359178970",
+   "name": "Case Study: Paul Tanner",
+   "folder": "Case Study Play",
+   "layer": "personal",
+   "created": "2026-03-02",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "938624962732462299",
+   "name": "Case Study: Jack Lander",
+   "folder": "Case Study Play",
+   "layer": "personal",
+   "created": "2026-03-02",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "2399553002300814862",
+   "name": "Engaged: call,nudge,call",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-27",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "463180851291101630",
+   "name": "Louis > Pubs 25-50 sites",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-24",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "179490161023724273",
+   "name": "Coffee: Labour",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-24",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "8345758579485739531",
+   "name": "Pubs 25-50 sites: Finance",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-20",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4735878055896104247",
+   "name": "Duplicate Pubs 25-50 sites: Ops Persona",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-17",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "148268224521191995",
+   "name": "Pubs 25-50 sites: Ops Persona",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6215278191440004859",
+   "name": "Pubs 25-50 sites: IT Persona",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1702464286767586953",
+   "name": "DM - Personalised",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6254067746067727077",
+   "name": "Waste Men",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "2689495023871098112",
+   "name": "Level Up!: Ops",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8520385259588212954",
+   "name": "MAKE A COPY. Level Up!: Ops",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2245450020869928971",
+   "name": "Level Up!: T2 Contacts",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-02-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6879584826113915313",
+   "name": "MM: Level Up!: T1 Contacts",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-02-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null,
+    "segment": "mm_ent"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2552667384452964687",
+   "name": "Starbucks: Level Up",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-02-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  }
+ ],
+ "shared_with_rep": [
+  {
+   "id": "3692560523867564748",
+   "name": "Tech Expo 2026",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-09-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1181582058590513520",
+   "name": "Q3 Flow Approach ",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-07-13",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "7887299673645909070",
+   "name": "CFO Cadence ",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-20",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "5794847122845895791",
+   "name": "🍔 Casual Dining - IT Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5055943744505016661",
+   "name": "🍔 Casual Dining - Operations Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6561204093265816466",
+   "name": "🍔 Casual Dining - Finance Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4149479632899329419",
+   "name": "🍻 Pubs - IT + Ops ",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations",
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3828920493835972411",
+   "name": "☕️ Coffee Shops - Finance Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8159845813716600140",
+   "name": "☕️ Coffee Shops -Operations Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6528777841885354589",
+   "name": "🍻 Pubs - Finance Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "931569730846173249",
+   "name": "AE FLOW - Labour Assessment/AgenticAI Schedules",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json"
+}

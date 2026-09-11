@@ -1,0 +1,1289 @@
+{
+ "_note": "Company-visibility Gong Engage flows (the shared UKI layer + the US matrix), pulled 2026-09-11 via scripts/gong_flows.py. Tags proposed from names — confirm before relying on them. US Flows / USA Flows folders are the US agent's matrix, present here because the Gong instance is shared; the UKI matcher must never pick them for a UKI account.",
+ "pulled": "2026-09-11",
+ "count": 73,
+ "flows": [
+  {
+   "id": "7534136423970197951",
+   "name": "Andy ENT outreach",
+   "folder": "AE",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null,
+    "segment": "mm_ent"
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1373278522027509506",
+   "name": "Outbound SMB AE ",
+   "folder": "AE",
+   "layer": "company",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null,
+    "segment": "smb"
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "705895946061213982",
+   "name": "Pizza Hut",
+   "folder": "AE",
+   "layer": "company",
+   "created": "2026-08-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1631627383039896416",
+   "name": "Don't use - Level Up",
+   "folder": "Old / Templates",
+   "layer": "company",
+   "created": "2026-02-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1508120535495037953",
+   "name": "Ebook (Template)",
+   "folder": "Old / Templates",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8989714410750159486",
+   "name": "Invite template (Copy this)",
+   "folder": "Old / Templates",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "7444480960518928751",
+   "name": "Nory takes london",
+   "folder": "Old / Templates",
+   "layer": "company",
+   "created": "2026-03-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3175241128639367120",
+   "name": "Post Casual Dining",
+   "folder": "Old / Templates",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "768571711348706677",
+   "name": "Post propel summer party",
+   "folder": "Old / Templates",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "7462110601618022865",
+   "name": "Pre-event template (copy this)",
+   "folder": "Old / Templates",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "7456942105734533776",
+   "name": "STOP  - BDR  - MD/CEO ",
+   "folder": "Old / Templates",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "7354519657363958081",
+   "name": "STOP - BDR - Finance",
+   "folder": "Old / Templates",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "8943003574189144102",
+   "name": "STOP - BDR - IT",
+   "folder": "Old / Templates",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "5986812502365504918",
+   "name": "STOP - BDR - Operations",
+   "folder": "Old / Templates",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "2756532118767116882",
+   "name": "STOP-BDR - People",
+   "folder": "Old / Templates",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "people"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "7892350854289553773",
+   "name": "UKI Bar and Pub",
+   "folder": "Old / Templates",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "7965425067444259233",
+   "name": "Bar/Pub CEO - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5357573802596922186",
+   "name": "Bar/Pub Finance - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5268379393736382890",
+   "name": "Bar/Pub IT  - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4759112423342779552",
+   "name": "Bar/Pub Ops - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1284501266620693884",
+   "name": "Bar/Pub People  - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "people"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8369957459892049359",
+   "name": "Call only",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5278090624538636508",
+   "name": "Coffee CEO  - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4603054821724074718",
+   "name": "Coffee Finance  - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1250640714368749764",
+   "name": "Coffee IT  - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5426859688704419016",
+   "name": "Coffee Ops  - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "503435550641863578",
+   "name": "Coffee People  - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "people"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "7482816532630583362",
+   "name": "Fourth",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "7198145592664160537",
+   "name": "GM Outbound",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-03-11",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "1362344062516380079",
+   "name": "Level Up! - Dublin",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-08-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4896946267884940327",
+   "name": "Level Up! - Manchester",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-08",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8354088353269669262",
+   "name": "MM / ENT AI Assistant",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null,
+    "segment": "mm_ent"
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1989950142696140332",
+   "name": "MQL",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "inbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2046264932498402389",
+   "name": "MQL - no meeting booked",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "inbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8317787455649508011",
+   "name": "Podcast invite season 2",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-07",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4446248385092444853",
+   "name": "Post Manchester Level up",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-06-16",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5156382426177462070",
+   "name": "Reactivation - No show",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "no_show"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "7119620186016586694",
+   "name": "Reactivation - Non-responsive",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "627511418110103964",
+   "name": "Reactivation - Product gaps",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "product_gaps"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3947847038128955433",
+   "name": "Reactivation - Timing",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "timing"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6685838719836626746",
+   "name": "Resto CEO  - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8021653661490736860",
+   "name": "Resto Finance  - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4770047497287068245",
+   "name": "Resto IT  - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1442811313033169231",
+   "name": "Resto Ops  - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6568578908816334149",
+   "name": "Resto People  - Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "people"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "652085162466272444",
+   "name": "SMB -  Bars/Pubs Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null,
+    "segment": "smb"
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "1154650782402024174",
+   "name": "SMB -  Cafe Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-13",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null,
+    "segment": "smb"
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "3783456044327764295",
+   "name": "SMB -  IT Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-13",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null,
+    "segment": "smb"
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "7707845957487407216",
+   "name": "SMB -  People Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-13",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "people"
+    ],
+    "motion": "outbound",
+    "suite": null,
+    "segment": "smb"
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "2422981159215708654",
+   "name": "SMB -  Restaurant Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-13",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null,
+    "segment": "smb"
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "2735399787816107308",
+   "name": "SMB - Finance Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-13",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null,
+    "segment": "smb"
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "3245546165345669511",
+   "name": "SMB - MD/CEO Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-13",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null,
+    "segment": "smb"
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "7166867253298820419",
+   "name": "SMB - Ops Agentic AI",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-05-13",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null,
+    "segment": "smb"
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "7572005932588514174",
+   "name": "Send more info",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-01-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "inbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6970456044937139116",
+   "name": "US Outbound",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-02-06",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8442691014827096546",
+   "name": "Zonal Flow",
+   "folder": "Outbound",
+   "layer": "company",
+   "created": "2026-08-18",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1103424933983824159",
+   "name": "Coffee & Cafe × C-Suite (Full Suite · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "86718885758790351",
+   "name": "Coffee & Cafe × Finance (IM · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8237069349615411873",
+   "name": "Coffee & Cafe × Founder (Full Suite · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4469144162904856106",
+   "name": "Coffee & Cafe × Operations (IM · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "591484916188283569",
+   "name": "FSR × C-Suite (Full Suite · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5653913587111278863",
+   "name": "FSR × Finance (IM · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "744224930967502362",
+   "name": "FSR × Founder (Full Suite · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "977529417889712286",
+   "name": "FSR × Operations (IM · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2943752881028275209",
+   "name": "Fast Casual × C-Suite (Full Suite · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "fast_casual"
+    ],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2746065126102390730",
+   "name": "Fast Casual × Finance (IM · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "fast_casual"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5677500544534811685",
+   "name": "Fast Casual × Founder (Full Suite · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "fast_casual"
+    ],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "7769968532159690717",
+   "name": "Fast Casual × Operations (IM · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "fast_casual"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2247621634933699420",
+   "name": "QSR × C-Suite (Full Suite · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "qsr"
+    ],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5442868977499811254",
+   "name": "QSR × Finance (IM · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "qsr"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5004930274229582844",
+   "name": "QSR × Founder (Full Suite · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "qsr"
+    ],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5815719803940563601",
+   "name": "QSR × Operations (IM · Tier 1)",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [
+     "qsr"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1897654113980685198",
+   "name": "USA Reactivation",
+   "folder": "US Flows",
+   "layer": "company",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  }
+ ]
+}

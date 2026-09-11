@@ -1,0 +1,546 @@
+{
+ "rep": "william.martin@nory.ai",
+ "name": "William",
+ "role": "BDR",
+ "pulled": "2026-09-11",
+ "status": "DRAFT — tags proposed from names; confirm live flows + tags with the rep before this becomes cadences/registry/<rep>.json",
+ "personal": [
+  {
+   "id": "4213572170306803026",
+   "name": "Coffee & Cafe × C-Suite (Scaling)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2459353420858520392",
+   "name": "Coffee & Cafe × Finance (IM · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "308245086820201490",
+   "name": "Coffee & Cafe × Founder (Full Suite · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8782734985833200426",
+   "name": "Coffee & Cafe × Operations (IM · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1232150490283637887",
+   "name": "Fast Casual × C-Suite (Full Suite · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "fast_casual"
+    ],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1328771485344519359",
+   "name": "Fast Casual × Finance (IM · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "fast_casual"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8661043004659212321",
+   "name": "Fast Casual × Founder (Full Suite · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "fast_casual"
+    ],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4650672752560684077",
+   "name": "Fast Casual × Operations (IM · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "fast_casual"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "892344056372430470",
+   "name": "FSR × C-Suite (Full Suite · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3775039776905748633",
+   "name": "FSR × Finance (IM · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8750508042792187595",
+   "name": "FSR × Founder (Full Suite · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2589814582425644599",
+   "name": "FSR × Operations (IM · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "9037089400500839087",
+   "name": "QSR × C-Suite (Full Suite · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "qsr"
+    ],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "758099088121751661",
+   "name": "QSR × Finance (IM · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "qsr"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4116703709300638815",
+   "name": "QSR × Founder (Full Suite · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "qsr"
+    ],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": "Full Suite",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3881503613825971727",
+   "name": "QSR × Operations (IM · Tier 1)",
+   "folder": "Tailored flows",
+   "layer": "personal",
+   "created": "2026-08-25",
+   "tags": {
+    "vertical": [
+     "qsr"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": "IM",
+    "source_pattern": "us_matrix_clone"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6554363413208890869",
+   "name": "Competitor price rises",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-08-19",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5618034689857223458",
+   "name": "Employee Rights Act ",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-08-08",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "9074805508364478506",
+   "name": "Will- Email Only-V3 Cadence ",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-07-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "957414319620962772",
+   "name": "Will- F&L V3",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-07-27",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1446037476517184536",
+   "name": "Will- F&L V1",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-06-03",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "3353141704799655623",
+   "name": "Will-Call only",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-06-02",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8022002354194319296",
+   "name": "Will- F&L V2",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-06-01",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "706412895693229374",
+   "name": "Will Nurture 2026",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5872166165509199450",
+   "name": "Will- F&L V1",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-12",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6547782369835304842",
+   "name": "MQL - Retargeting ",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-23",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "inbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  }
+ ],
+ "shared_with_rep": [
+  {
+   "id": "3692560523867564748",
+   "name": "Tech Expo 2026",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-09-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3207003436019896419",
+   "name": "Product Tour",
+   "folder": "Louis Gilbert",
+   "layer": "shared",
+   "created": "2026-05-05",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1695969294027059741",
+   "name": "Level Up!",
+   "folder": "Abbi Simms",
+   "layer": "shared",
+   "created": "2026-05-01",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6923927900767070369",
+   "name": "Coffee Flow ",
+   "folder": "Louis Gilbert",
+   "layer": "shared",
+   "created": "2026-03-23",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json"
+}

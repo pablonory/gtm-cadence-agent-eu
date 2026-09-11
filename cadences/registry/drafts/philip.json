@@ -1,0 +1,1260 @@
+{
+ "rep": "philip@nory.ai",
+ "name": "Phil",
+ "role": "AE",
+ "pulled": "2026-09-11",
+ "status": "DRAFT — tags proposed from names; confirm live flows + tags with the rep before this becomes cadences/registry/<rep>.json",
+ "personal": [],
+ "shared_with_rep": [
+  {
+   "id": "6904693626481244347",
+   "name": "Tech Expo 2026",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-09-09",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3799348550344233973",
+   "name": "Tech Expo 2026",
+   "folder": "LG Flows",
+   "layer": "shared",
+   "created": "2026-09-08",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5436350247876715301",
+   "name": "Re-engagement",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-09-08",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4615280450227863292",
+   "name": "Quick Call",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-09-07",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "7040856791960353195",
+   "name": "Tech Expo 2026",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-09-04",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "7657751189638490792",
+   "name": "Rich - Restaurant Agentic new flow",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-08-24",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "4589351742734108548",
+   "name": "Level Up! - Dublin",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-08-18",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2268653031812322799",
+   "name": "Call",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-08-13",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "2479114180509729018",
+   "name": "Vagabond",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-08-11",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6941033364957848341",
+   "name": "Claude LG2",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-08-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "2273444317308870865",
+   "name": "Nory Referral Programme Flow",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "inbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2789774966821949832",
+   "name": "Nory Referral Programme Flow - auto",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "inbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2989126729563919091",
+   "name": "Ula Spire, Head of Operations",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-08-05",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "6084213731291307328",
+   "name": "LinkedIn Connect + Message",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-07-30",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "474453968928683768",
+   "name": "Q3 AI Shift",
+   "folder": "AI Heavy Flows",
+   "layer": "shared",
+   "created": "2026-07-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5438736771725847893",
+   "name": "LinkedIn Flow",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-07-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "2870636958444108018",
+   "name": "Low hanging fruits - Old CL\\DQ",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-07-16",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1863234320755408831",
+   "name": "Re-engage Call Flow",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-07-13",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2357753364731554777",
+   "name": "July Flow 2.0",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-07-13",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6191097797827018576",
+   "name": "July Flow",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-06-29",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1946506595853440711",
+   "name": "Soul Food",
+   "folder": "LG Flows",
+   "layer": "shared",
+   "created": "2026-06-23",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1445517575107069968",
+   "name": "Target Flow - June",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-06-22",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "3866579527026713870",
+   "name": "Oakberry Flow",
+   "folder": "LG Flows",
+   "layer": "shared",
+   "created": "2026-06-16",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8891579939533546938",
+   "name": "June week 2 - Claude",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-06-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8321218284734724782",
+   "name": "Claude Flow - LAG",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-06-05",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6003848286609397058",
+   "name": "Miles' Nurture Sequence V3 June 26",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-06-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6358275359651592210",
+   "name": "SMB - Restaurant Agentic AI- Richard 2",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-06-04",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null,
+    "segment": "smb"
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "1771999657083725283",
+   "name": "Salt Brewery",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-06-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "4543538267646686989",
+   "name": "Brewery",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-06-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5286654803247196613",
+   "name": "Closing the book and nurture sequence (May '26)",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-05-22",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "528733930424678914",
+   "name": "Level-up Manchester Flow",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1724083837985531524",
+   "name": "SMB Outbound Flow- Rich",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null,
+    "segment": "smb"
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "4434465674194279844",
+   "name": "Richard -  Personalized email",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1354897874199299495",
+   "name": "Miles' Nurture Sequence V1 May 26",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2720907587533028585",
+   "name": "Miles' Nurture Sequence V2 May 26",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "428565712499247688",
+   "name": "Level Up Manchester",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-05-20",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4958646471167660890",
+   "name": "Salad Project Intro",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-05-20",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "7949732229245857257",
+   "name": "Ops",
+   "folder": "KFC/YUM",
+   "layer": "shared",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "6843280956679701025",
+   "name": "Finance",
+   "folder": "KFC/YUM",
+   "layer": "shared",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "629878811833477390",
+   "name": "People",
+   "folder": "KFC/YUM",
+   "layer": "shared",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "people"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "2004653772142799148",
+   "name": "Tech",
+   "folder": "KFC/YUM",
+   "layer": "shared",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "4780067595877777513",
+   "name": "AI Shift",
+   "folder": "AI Heavy Flows",
+   "layer": "shared",
+   "created": "2026-05-05",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "4977207127230869680",
+   "name": "Nurture Flow",
+   "folder": "Nurture Flow",
+   "layer": "shared",
+   "created": "2026-05-05",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3207003436019896419",
+   "name": "Product Tour",
+   "folder": "Product Tour",
+   "layer": "shared",
+   "created": "2026-05-05",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5217631566030604216",
+   "name": "Mowgli CEO",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-05-05",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "120036691837300026",
+   "name": "Mowgli Street Food General",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-05-05",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "4992136060711566784",
+   "name": "Coffee - Finance Persona",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-04-29",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3771750812527788381",
+   "name": "Pizza Flow",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-04-29",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8126710510973693743",
+   "name": "Ops Flow",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-04-28",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "5758225052237244848",
+   "name": "Founder/Owner Flow",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-04-28",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "2585176996719213262",
+   "name": "Finance Flow",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-04-28",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "2119668925143497566",
+   "name": "Procurement/Food Flow",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-04-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1106884518439390883",
+   "name": "HR Flow",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-04-28",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "people"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "4922388689964995942",
+   "name": "Domino's Franchise Owners",
+   "folder": "Franchise Flows",
+   "layer": "shared",
+   "created": "2026-04-14",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "364440755858317611",
+   "name": "Calls and LI only",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-04-14",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "4646788848435148383",
+   "name": "The Salad Project (Founder)",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-04-01",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "795538526499800742",
+   "name": "The Salad Project (Leader)",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-04-01",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "3166541470778079273",
+   "name": "Redcat Pub",
+   "folder": "Pub Flows",
+   "layer": "shared",
+   "created": "2026-03-30",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "5039664963081819349",
+   "name": "Bakery Flow",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-03-30",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6923927900767070369",
+   "name": "Coffee Flow ",
+   "folder": "Coffee Flow",
+   "layer": "shared",
+   "created": "2026-03-23",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "6823326303206729934",
+   "name": "Costa Flow",
+   "folder": "Franchise Flows",
+   "layer": "shared",
+   "created": "2026-03-20",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "577667082333134425",
+   "name": "Miles Outbound Campaign (multi-channel - Call, Email, Linkedin)",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-03-16",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1306867081791163599",
+   "name": "Miles Outbound Campaign (Just email and LI)",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-03-16",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8563194404303258939",
+   "name": "Nory takes london: YO !",
+   "folder": "Social/Events Flow",
+   "layer": "shared",
+   "created": "2026-03-12",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4464097513043913260",
+   "name": "Nory takes london: BTG",
+   "folder": "Social/Events Flow",
+   "layer": "shared",
+   "created": "2026-03-12",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6842386405418840086",
+   "name": "Gong Cha Expansion",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-03-11",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "95847691270350727",
+   "name": "LG FLOW - Labour Assessment/AgenticAI Schedules",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-03-11",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "3384464763280180471",
+   "name": "Nory takes london",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6867980803213856742",
+   "name": "San Carlo Restaurant Group - New Openings",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "4725898855903652831",
+   "name": "OM<>LG: MM AI Assistant",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-03-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null,
+    "segment": "mm_ent"
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5483203408955262312",
+   "name": "Ed - Case Study: Adam Lewis",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-03-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8334111509584339314",
+   "name": "Ed QSR and CD 25-50 sites",
+   "folder": "QSR & CD Flows",
+   "layer": "shared",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [
+     "qsr",
+     "fsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "300095080579574152",
+   "name": "MM Pubs Groups",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null,
+    "segment": "mm_ent"
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "5811352189544731604",
+   "name": "Ed - Case Study: Paul Tanner",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6462356336740519583",
+   "name": "Mag - Case Study: Jack Lander",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6066514246527978585",
+   "name": "ED - Case Study: Jack Lander",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-03-02",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "4511743025607400034",
+   "name": "Louis > Pubs 25-50 sites",
+   "folder": "Pub Flows",
+   "layer": "shared",
+   "created": "2026-02-25",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "3425582700304356555",
+   "name": "MAKE A COPY. Level Up!: Ops",
+   "folder": "Personal flows",
+   "layer": "shared",
+   "created": "2026-02-19",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3576831111273659010",
+   "name": "Louis - BDR Outreach",
+   "folder": "LG Flows",
+   "layer": "shared",
+   "created": "2026-02-12",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json"
+}

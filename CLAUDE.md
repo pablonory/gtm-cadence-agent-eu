@@ -88,18 +88,23 @@ Three properties are **rep-owned**, never overwritten by a batch: `rep_feedback`
 
 ---
 
-## Verticals × Personas — ⚠️ the UKI flow set is NOT confirmed
+## Verticals × Personas — flows are LOOKED UP per rep, never built
 
-Working assumption inherited from the US 4×4 matrix; **every flow name is pending**
-`cadences/UKI_FLOWS.md` (capture checklist inside). Until confirmed: classify vertical × persona
-normally (it aims the angle), leave `cadence_template` **EMPTY**, note *"flow pending"*.
+UKI has **two flow layers** (captured from the Gong API 2026-09-11, `cadences/UKI_FLOWS.md`): a
+73-flow company layer (Bar/Pub · Coffee · Resto × CEO/Finance/IT/Ops/People, SMB series, four
+reason-based reactivation flows) and **each rep's own flows**. So `cadence_template` is resolved by
+lookup in that rep's confirmed registry (`cadences/registry/<rep>.json`) — own live flow → company
+flow → **EMPTY** + "no matching flow". No registry is confirmed yet (review sheet:
+`cadences/registry/REVIEW.md`); until then classify vertical × persona normally (it aims the angle),
+leave `cadence_template` EMPTY, note *"flow pending — registry unconfirmed"*.
 
 - **Verticals:** Coffee & Cafe · Fast Casual · FSR · QSR *(+ the open **pubs & bars** question — a major
   UK segment with no US cell; gastropubs → FSR meanwhile)*
 - **Personas:** C-Suite · Finance · Founder · Operations (Founder = founder-led/owner-operator;
   C-Suite = hired exec at scale)
 - **Suite from persona:** C-Suite & Founder → **Full Suite** · Finance & Operations → **IM**
-- Reactivation motion name **assumed**: `UKI Reactivation`.
+- Reactivation: **four** company flows by reason (No show · Non-responsive · Product gaps · Timing) — the single
+  "UKI Reactivation" name the scripts still assume does not exist (open question #11).
 
 **Never invent a flow name.** Known knowledge gaps, flagged in place: Fast Casual has no pain set,
 Founder has no JTBD block — borrow and say what you borrowed.

@@ -1,0 +1,75 @@
+{
+ "rep": "oisin@nory.ai",
+ "name": "Oisin",
+ "role": "BDR",
+ "pulled": "2026-09-11",
+ "status": "DRAFT — tags proposed from names; confirm live flows + tags with the rep before this becomes cadences/registry/<rep>.json",
+ "personal": [
+  {
+   "id": "4941240180713240981",
+   "name": "Zonal Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-08-19",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  }
+ ],
+ "shared_with_rep": [
+  {
+   "id": "3692560523867564748",
+   "name": "Tech Expo 2026",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-09-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1695969294027059741",
+   "name": "Level Up!",
+   "folder": "Abbi Simms",
+   "layer": "shared",
+   "created": "2026-05-01",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4725898855903652831",
+   "name": "OM<>LG: MM AI Assistant",
+   "folder": "Louis Grenier",
+   "layer": "shared",
+   "created": "2026-03-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null,
+    "segment": "mm_ent"
+   },
+   "confidence": "low",
+   "live": null
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json"
+}

@@ -1,0 +1,365 @@
+{
+ "rep": "sean.henry@nory.ai",
+ "name": "Sean",
+ "role": "AE",
+ "pulled": "2026-09-11",
+ "status": "DRAFT — tags proposed from names; confirm live flows + tags with the rep before this becomes cadences/registry/<rep>.json",
+ "personal": [
+  {
+   "id": "255398571561895125",
+   "name": "Tech Expo 2026",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-09-03",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3579937776433371366",
+   "name": "Target Persona - Leadership (Deep research Flow) ",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-09",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "9123614733061572974",
+   "name": "☕️ Coffee Shops - Finance Persona",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-16",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6176251867095107289",
+   "name": "☕️ Coffee Shops -Operations Persona",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-16",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "7542830587840367962",
+   "name": "🍔 Casual Dining - Finance Persona",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-16",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1778573461915331257",
+   "name": "🍔 Casual Dining - IT Persona",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-16",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8053773137920232555",
+   "name": "🍔 Casual Dining - Operations Persona",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-16",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5430261813895137272",
+   "name": "🍻 Pubs - Finance Persona",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-16",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4995758336670054480",
+   "name": "🍻 Pubs - IT + Ops ",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-16",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations",
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  }
+ ],
+ "shared_with_rep": [
+  {
+   "id": "3692560523867564748",
+   "name": "Tech Expo 2026",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-09-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5854065164962601443",
+   "name": "Target Persona - Leadership (Deep research Flow) ",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-04-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "5794847122845895791",
+   "name": "🍔 Casual Dining - IT Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5055943744505016661",
+   "name": "🍔 Casual Dining - Operations Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6561204093265816466",
+   "name": "🍔 Casual Dining - Finance Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4149479632899329419",
+   "name": "🍻 Pubs - IT + Ops ",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations",
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3828920493835972411",
+   "name": "☕️ Coffee Shops - Finance Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8159845813716600140",
+   "name": "☕️ Coffee Shops -Operations Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6528777841885354589",
+   "name": "🍻 Pubs - Finance Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8520385259588212954",
+   "name": "MAKE A COPY. Level Up!: Ops",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json"
+}
