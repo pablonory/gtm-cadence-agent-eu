@@ -5,8 +5,11 @@
 > KNOWN: every flow name, folder, visibility and creation date, per rep. What is NOT knowable from
 > Gong: **which flows are live**. Verified 2026-09-11 — the per-flow detail and prospect endpoints
 > 404/405, and `/v2/stats/activity/*` returns call activity per user with nothing flow-level. There
-> is also no manager shortcut: flow choice is each rep's own, so **only the rep can say**
-> (`registry/asks/<rep>.md` is the two-minute question). **Never invent a flow name** — and in UKI,
+> is also no manager shortcut: flow choice is each rep's own, so **only the rep can confirm**
+> (`registry/asks/<rep>.txt` is the two-minute Slack question). What we *can* measure is which flows a
+> rep has **edited** — Engage edits land in `GET /v2/logs?logType=UserActivityLog` as
+> `/ajax/sequences/update-sequence` with the flow id, ~6 months of history. Nobody edits a dead flow,
+> so that ranks the survey; it is not proof of sending, and silence is not proof of death. **Never invent a flow name** — and in UKI,
 > never *build* one either: a name is looked up, or it is empty.
 
 ## How UKI differs from the US — and why the matcher changes shape
@@ -58,7 +61,8 @@ A flow tagged `event`, `inbound` or `unclassified` is never suggested, at any `l
 | `registry/_company.json` | The company layer, tagged from names | yes |
 | `registry/drafts/<rep>.json` | Per-rep draft registry — personal + shared-with-them flows, proposed tags, `live: null` | yes (Pablo 2026-09-11: flow names may live in the repo) |
 | `registry/REVIEW.md` | Master review sheet, all reps — tick live, correct tags. Annotatable in the Obsidian vault | yes |
-| `registry/asks/<rep>.md` | The two-minute, paste-able question for that rep — only their plausible templates, events excluded | yes |
+| `registry/_usage.json` | Flows each rep has **edited** in the last 90 days, from the Gong audit log (`scripts/gong_flow_usage.py`) — the best available proxy for "live" | yes |
+| `registry/asks/<rep>.txt` | The exact Slack message for that rep: four questions, question one pre-filled from `_usage.json`. Slack IDs are in `uki_reps.json`; sending is a Slack-connector call, on Pablo's word only | yes |
 | `registry/<rep>.json` | **Confirmed** registry — created from the draft once the rep has answered; the only file the matcher reads | not yet — none confirmed |
 | `output/gong/flows/<rep>.json` | Raw API pulls | no (gitignored) |
 

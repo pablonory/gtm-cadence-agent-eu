@@ -67,7 +67,10 @@ batches** — no cron, no headless runner. **🚦 A human reads every brief befo
 ### What is NOT built — do not describe these as working
 - **Stage-2b Gong evidence packs** — method spec at `directives/stage2b_gong_evidence.md`; nothing runs
   it, and for UKI the pull must additionally filter to UKI deals/reps on the shared instance.
-- **Sequence analytics** — Gong Engage is off; the data does not exist.
+- **Sequence analytics** — reply/open/meeting rates per step. ⚠️ The inherited claim "Gong Engage is off" is
+  **false** (corrected 2026-09-11): Engage is live — 396 flows, reps editing them weekly. What does not exist
+  is the *analytics API*: per-flow endpoints 404/405 and `/v2/stats/activity/*` is call activity per user.
+  The nearest proxy is flow EDITS from the audit log (`scripts/gong_flow_usage.py`) — curation, not sends.
 - **No PDF, no Drive deliverable, no weekly digest, no sheet write-back** (retired in the US 2026-08-24,
   inherited here — see `.claude/reference/retired-agents.md`).
 - **Contraction detection** — measured as the most frequent gap (4/10 US accounts were closing sites);
@@ -169,7 +172,7 @@ matters). Start broad, then narrow.
 |---|---|---|
 | HubSpot | private-app token in gitignored `.env` | **Wired, shared portal.** The only write path. |
 | HubSpot | claude.ai connector | Read works; custom-object read needs re-auth. |
-| Gong API | local REST (`scripts/gong_pull.py`) | **Wired, shared instance** — filter to UKI. Calls + transcripts, NOT sequence analytics. |
+| Gong API | local REST (`gong_pull.py`, `gong_flows.py`, `gong_flow_usage.py`) | **Wired, shared instance** — filter to UKI. Calls + transcripts + per-call AI content (brief, keyPoints, trackers, topics), Engage flow lists, audit log. NOT sequence analytics. |
 | Firecrawl | `FIRECRAWL_API_KEY` in `.env`, REST | **Wired via REST only** (`firecrawl_fetch.py`). Hosted MCP tools dead. |
 | Apify | `APIFY_TOKEN`, REST | Wired — `jobs_probe.py` T2 behind `--apify`. Known defect: see `mcp_status.md`. |
 | Clay | claude.ai connector | Live, owned by someone else. Read-only. |

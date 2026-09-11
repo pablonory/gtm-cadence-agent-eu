@@ -1,0 +1,1942 @@
+{
+ "_note": "Flows each rep EDITED in Gong Engage, from the UserActivityLog audit log (/ajax/sequences/*). A proxy for 'live', not proof of sending: the log carries no enrolment/send/reply events. No edits does NOT mean dead — confirm with the rep.",
+ "generated": "2026-09-11",
+ "window_days": 90,
+ "since": "2026-06-13",
+ "engage_actions_seen": 769,
+ "unmatched_actions_by_rep": {
+  "lars@nory.ai": 6,
+  "abbi@nory.ai": 10,
+  "alyson@nory.ai": 18,
+  "josh@nory.ai": 5,
+  "lewis@nory.ai": 9,
+  "patrick@nory.ai": 8,
+  "oisin@nory.ai": 1,
+  "william.martin@nory.ai": 2,
+  "rosta@nory.ai": 10
+ },
+ "by_rep": {
+  "william.martin@nory.ai": [
+   {
+    "flow_id": "4213572170306803026",
+    "flow": "Coffee & Cafe × C-Suite (Scaling)",
+    "touches": 4,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "1232150490283637887",
+    "flow": "Fast Casual × C-Suite (Full Suite · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "4116703709300638815",
+    "flow": "QSR × Founder (Full Suite · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "3881503613825971727",
+    "flow": "QSR × Operations (IM · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "2459353420858520392",
+    "flow": "Coffee & Cafe × Finance (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "308245086820201490",
+    "flow": "Coffee & Cafe × Founder (Full Suite · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "8782734985833200426",
+    "flow": "Coffee & Cafe × Operations (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "1328771485344519359",
+    "flow": "Fast Casual × Finance (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "4650672752560684077",
+    "flow": "Fast Casual × Operations (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "3775039776905748633",
+    "flow": "FSR × Finance (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "8750508042792187595",
+    "flow": "FSR × Founder (Full Suite · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "2589814582425644599",
+    "flow": "FSR × Operations (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "9037089400500839087",
+    "flow": "QSR × C-Suite (Full Suite · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "758099088121751661",
+    "flow": "QSR × Finance (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "9074805508364478506",
+    "flow": "Will- Email Only-V3 Cadence ",
+    "touches": 5,
+    "first_seen": "2026-07-28",
+    "last_seen": "2026-08-19",
+    "actions": {
+     "update-sequence": 5
+    }
+   },
+   {
+    "flow_id": "3353141704799655623",
+    "flow": "Will-Call only",
+    "touches": 3,
+    "first_seen": "2026-08-19",
+    "last_seen": "2026-08-19",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "6554363413208890869",
+    "flow": "Competitor price rises",
+    "touches": 2,
+    "first_seen": "2026-08-19",
+    "last_seen": "2026-08-19",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "957414319620962772",
+    "flow": "Will- F&L V3",
+    "touches": 12,
+    "first_seen": "2026-07-27",
+    "last_seen": "2026-08-08",
+    "actions": {
+     "update-sequence": 12
+    }
+   },
+   {
+    "flow_id": "706412895693229374",
+    "flow": "Will Nurture 2026",
+    "touches": 7,
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-08-08",
+    "actions": {
+     "update-sequence": 7
+    }
+   },
+   {
+    "flow_id": "3207003436019896419",
+    "flow": "Product Tour",
+    "touches": 5,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-08",
+    "actions": {
+     "update-sequence": 5
+    }
+   },
+   {
+    "flow_id": "5618034689857223458",
+    "flow": "Employee Rights Act ",
+    "touches": 3,
+    "first_seen": "2026-08-08",
+    "last_seen": "2026-08-08",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "6923927900767070369",
+    "flow": "Coffee Flow ",
+    "touches": 3,
+    "first_seen": "2026-08-03",
+    "last_seen": "2026-08-03",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "8022002354194319296",
+    "flow": "Will- F&L V2",
+    "touches": 3,
+    "first_seen": "2026-07-09",
+    "last_seen": "2026-07-09",
+    "actions": {
+     "update-sequence": 3
+    }
+   }
+  ],
+  "lars@nory.ai": [
+   {
+    "flow_id": "4029777480777142619",
+    "flow": "HosTech Expo 2026 - lars",
+    "touches": 8,
+    "first_seen": "2026-09-09",
+    "last_seen": "2026-09-09",
+    "actions": {
+     "update-sequence": 8
+    }
+   },
+   {
+    "flow_id": "3692560523867564748",
+    "flow": "Tech Expo 2026",
+    "touches": 4,
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-09",
+    "actions": {
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "4025459032869798389",
+    "flow": "Tech Expo 2026",
+    "touches": 4,
+    "first_seen": "2026-09-09",
+    "last_seen": "2026-09-09",
+    "actions": {
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "1362344062516380079",
+    "flow": "Level Up! - Dublin",
+    "touches": 5,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "actions": {
+     "update-sequence": 5
+    }
+   },
+   {
+    "flow_id": "3114884643902806403",
+    "flow": "Level Up! - Dublin lars",
+    "touches": 4,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "actions": {
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "503435550641863578",
+    "flow": "Coffee People  - Agentic AI",
+    "touches": 4,
+    "first_seen": "2026-08-03",
+    "last_seen": "2026-08-03",
+    "actions": {
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "7166867253298820419",
+    "flow": "SMB - Ops Agentic AI",
+    "touches": 3,
+    "first_seen": "2026-07-13",
+    "last_seen": "2026-07-29",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "4759112423342779552",
+    "flow": "Bar/Pub Ops - Agentic AI",
+    "touches": 3,
+    "first_seen": "2026-07-29",
+    "last_seen": "2026-07-29",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "1442811313033169231",
+    "flow": "Resto Ops  - Agentic AI",
+    "touches": 2,
+    "first_seen": "2026-07-29",
+    "last_seen": "2026-07-29",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "7965425067444259233",
+    "flow": "Bar/Pub CEO - Agentic AI",
+    "touches": 3,
+    "first_seen": "2026-07-13",
+    "last_seen": "2026-07-13",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "8021653661490736860",
+    "flow": "Resto Finance  - Agentic AI",
+    "touches": 2,
+    "first_seen": "2026-07-13",
+    "last_seen": "2026-07-13",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "1154650782402024174",
+    "flow": "SMB -  Cafe Agentic AI",
+    "touches": 2,
+    "first_seen": "2026-07-13",
+    "last_seen": "2026-07-13",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "7707845957487407216",
+    "flow": "SMB -  People Agentic AI",
+    "touches": 2,
+    "first_seen": "2026-07-13",
+    "last_seen": "2026-07-13",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "2735399787816107308",
+    "flow": "SMB - Finance Agentic AI",
+    "touches": 2,
+    "first_seen": "2026-07-13",
+    "last_seen": "2026-07-13",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "8240442947900709831",
+    "flow": "Post Manchester Level up",
+    "touches": 6,
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "actions": {
+     "update-sequence": 6
+    }
+   }
+  ],
+  "richard@nory.ai": [
+   {
+    "flow_id": "7657751189638490792",
+    "flow": "Rich - Restaurant Agentic new flow",
+    "touches": 6,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 6
+    }
+   },
+   {
+    "flow_id": "4434465674194279844",
+    "flow": "Richard -  Personalized email",
+    "touches": 4,
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 3,
+     "create-folder": 1
+    }
+   },
+   {
+    "flow_id": "2870636958444108018",
+    "flow": "Low hanging fruits - Old CL\\DQ",
+    "touches": 4,
+    "first_seen": "2026-07-16",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "6358275359651592210",
+    "flow": "SMB - Restaurant Agentic AI- Richard 2",
+    "touches": 3,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "1724083837985531524",
+    "flow": "SMB Outbound Flow- Rich",
+    "touches": 2,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "5286654803247196613",
+    "flow": "Closing the book and nurture sequence (May '26)",
+    "touches": 2,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "2720907587533028585",
+    "flow": "Miles' Nurture Sequence V2 May 26",
+    "touches": 2,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 2
+    }
+   }
+  ],
+  "louis@nory.ai": [
+   {
+    "flow_id": "5982882991285713900",
+    "flow": "Case Study: Adam Lewis",
+    "touches": 1,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "actions": {
+     "update-sequence": 1
+    }
+   },
+   {
+    "flow_id": "4780067595877777513",
+    "flow": "AI Shift",
+    "touches": 3,
+    "first_seen": "2026-08-21",
+    "last_seen": "2026-08-21",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "2989126729563919091",
+    "flow": "Ula Spire, Head of Operations",
+    "touches": 15,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-18",
+    "actions": {
+     "update-sequence": 15
+    }
+   },
+   {
+    "flow_id": "474453968928683768",
+    "flow": "Q3 AI Shift",
+    "touches": 5,
+    "first_seen": "2026-07-28",
+    "last_seen": "2026-08-18",
+    "actions": {
+     "update-sequence": 5
+    }
+   },
+   {
+    "flow_id": "3207003436019896419",
+    "flow": "Product Tour",
+    "touches": 2,
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "1946506595853440711",
+    "flow": "Soul Food",
+    "touches": 1,
+    "first_seen": "2026-07-14",
+    "last_seen": "2026-07-14",
+    "actions": {
+     "update-sequence": 1
+    }
+   },
+   {
+    "flow_id": "3866579527026713870",
+    "flow": "Oakberry Flow",
+    "touches": 5,
+    "first_seen": "2026-06-16",
+    "last_seen": "2026-06-16",
+    "actions": {
+     "update-sequence": 5
+    }
+   }
+  ],
+  "abbi@nory.ai": [
+   {
+    "flow_id": "705895946061213982",
+    "flow": "Pizza Hut",
+    "touches": 2,
+    "first_seen": "2026-08-21",
+    "last_seen": "2026-08-21",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "8442691014827096546",
+    "flow": "Zonal Flow",
+    "touches": 6,
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "actions": {
+     "update-sequence": 6
+    }
+   },
+   {
+    "flow_id": "7166867253298820419",
+    "flow": "SMB - Ops Agentic AI",
+    "touches": 2,
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "1362344062516380079",
+    "flow": "Level Up! - Dublin",
+    "touches": 10,
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-14",
+    "actions": {
+     "update-sequence": 10
+    }
+   },
+   {
+    "flow_id": "5122270924823650785",
+    "flow": "Randy's Donuts",
+    "touches": 8,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-11",
+    "actions": {
+     "update-sequence": 8
+    }
+   },
+   {
+    "flow_id": "7694382509273611963",
+    "flow": "Coffee & Cafe × Founder (Full Suite · Tier 1)",
+    "touches": 6,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-11",
+    "actions": {
+     "update-sequence": 6
+    }
+   },
+   {
+    "flow_id": "2247621634933699420",
+    "flow": "QSR × C-Suite (Full Suite · Tier 1)",
+    "touches": 6,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-11",
+    "actions": {
+     "update-sequence": 6
+    }
+   },
+   {
+    "flow_id": "4945190081890197472",
+    "flow": "Halal Munchies",
+    "touches": 5,
+    "first_seen": "2026-08-11",
+    "last_seen": "2026-08-11",
+    "actions": {
+     "update-sequence": 5
+    }
+   },
+   {
+    "flow_id": "3331592457850619998",
+    "flow": "Salt & Straw",
+    "touches": 4,
+    "first_seen": "2026-08-11",
+    "last_seen": "2026-08-11",
+    "actions": {
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "4956684004769466700",
+    "flow": "The Salty Donut",
+    "touches": 3,
+    "first_seen": "2026-08-11",
+    "last_seen": "2026-08-11",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "744224930967502362",
+    "flow": "FSR × Founder (Full Suite · Tier 1)",
+    "touches": 9,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 9
+    }
+   },
+   {
+    "flow_id": "5677500544534811685",
+    "flow": "Fast Casual × Founder (Full Suite · Tier 1)",
+    "touches": 8,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 8
+    }
+   },
+   {
+    "flow_id": "5004930274229582844",
+    "flow": "QSR × Founder (Full Suite · Tier 1)",
+    "touches": 8,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 8
+    }
+   },
+   {
+    "flow_id": "8508522960236019831",
+    "flow": "Coffee & Cafe × C-Suite (Full Suite · Tier 1)",
+    "touches": 7,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 7
+    }
+   },
+   {
+    "flow_id": "7769968532159690717",
+    "flow": "Fast Casual × Operations (IM · Tier 1)",
+    "touches": 7,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 7
+    }
+   },
+   {
+    "flow_id": "977529417889712286",
+    "flow": "FSR × Operations (IM · Tier 1)",
+    "touches": 7,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 7
+    }
+   },
+   {
+    "flow_id": "1897654113980685198",
+    "flow": "USA Reactivation",
+    "touches": 6,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 6
+    }
+   },
+   {
+    "flow_id": "2943752881028275209",
+    "flow": "Fast Casual × C-Suite (Full Suite · Tier 1)",
+    "touches": 6,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 6
+    }
+   },
+   {
+    "flow_id": "5099969822460448108",
+    "flow": "Coffee & Cafe × Finance (IM · Tier 1)",
+    "touches": 5,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 5
+    }
+   },
+   {
+    "flow_id": "8237069349615411873",
+    "flow": "Coffee & Cafe × Founder (Full Suite · Tier 1)",
+    "touches": 5,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 5
+    }
+   },
+   {
+    "flow_id": "4469144162904856106",
+    "flow": "Coffee & Cafe × Operations (IM · Tier 1)",
+    "touches": 5,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 5
+    }
+   },
+   {
+    "flow_id": "1103424933983824159",
+    "flow": "Coffee & Cafe × C-Suite (Full Suite · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "86718885758790351",
+    "flow": "Coffee & Cafe × Finance (IM · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "2746065126102390730",
+    "flow": "Fast Casual × Finance (IM · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "591484916188283569",
+    "flow": "FSR × C-Suite (Full Suite · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "5653913587111278863",
+    "flow": "FSR × Finance (IM · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "5442868977499811254",
+    "flow": "QSR × Finance (IM · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "5815719803940563601",
+    "flow": "QSR × Operations (IM · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "355674489981485344",
+    "flow": "☕️ Coffee Shops - Finance Persona",
+    "touches": 3,
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "3694537065744076942",
+    "flow": "Luke Lobsters",
+    "touches": 3,
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "1695969294027059741",
+    "flow": "Level Up!",
+    "touches": 2,
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "5145441692900742932",
+    "flow": "USA Outbound Abbi",
+    "touches": 2,
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "3497233880732644267",
+    "flow": "FSR × Finance (IM · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "6206350213849623951",
+    "flow": "FSR × Operations (IM · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "6365819412766054631",
+    "flow": "QSR × Finance (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "8966348625693663558",
+    "flow": "QSR × Operations (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "8583563214760033613",
+    "flow": "QSR × Founder (Full Suite · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "5362930630059611142",
+    "flow": "QSR × C-Suite (Full Suite · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "7911824972118092018",
+    "flow": "FSR × Founder (Full Suite · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "8745650220891827851",
+    "flow": "Fast Casual × Finance (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "7671167498900667835",
+    "flow": "Fast Casual × Operations (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "4529311656385862594",
+    "flow": "Fast Casual × C-Suite (Full Suite · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "6978463357432354879",
+    "flow": "World Cup Event NYC",
+    "touches": 1,
+    "first_seen": "2026-06-16",
+    "last_seen": "2026-06-16",
+    "actions": {
+     "update-sequence": 1
+    }
+   }
+  ],
+  "patrick@nory.ai": [
+   {
+    "flow_id": "2898176376580320607",
+    "flow": "Coffee & Cafe × Operations (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "5377654216009044604",
+    "flow": "Goji Flow",
+    "touches": 3,
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-14",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "5075887336903997588",
+    "flow": "Goji Flow",
+    "touches": 4,
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "actions": {
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "7281694993470226753",
+    "flow": "PM New flow",
+    "touches": 3,
+    "first_seen": "2026-06-19",
+    "last_seen": "2026-08-13",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "2168172385803338721",
+    "flow": "Owner/CEO Flow",
+    "touches": 3,
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "469810853189854711",
+    "flow": "CFO/Finance Flow",
+    "touches": 2,
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "7862683507260492816",
+    "flow": "CFO/Finance Flow",
+    "touches": 2,
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "1726679246227614074",
+    "flow": "Owner/CEO Flow",
+    "touches": 2,
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "5969202496130130749",
+    "flow": "Aly Outbound",
+    "touches": 2,
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "2854938232292999334",
+    "flow": "Post Show Flow",
+    "touches": 2,
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "7697346377796200049",
+    "flow": "PM-  Outbound US Flow ",
+    "touches": 2,
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "591484916188283569",
+    "flow": "FSR × C-Suite (Full Suite · Tier 1)",
+    "touches": 1,
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "create-folder": 1
+    }
+   }
+  ],
+  "charlie@nory.ai": [
+   {
+    "flow_id": "5436350247876715301",
+    "flow": "Re-engagement",
+    "touches": 2,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "2268653031812322799",
+    "flow": "Call",
+    "touches": 1,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "actions": {
+     "update-sequence": 1
+    }
+   },
+   {
+    "flow_id": "2357753364731554777",
+    "flow": "July Flow 2.0",
+    "touches": 6,
+    "first_seen": "2026-07-13",
+    "last_seen": "2026-08-11",
+    "actions": {
+     "update-sequence": 6
+    }
+   },
+   {
+    "flow_id": "2479114180509729018",
+    "flow": "Vagabond",
+    "touches": 3,
+    "first_seen": "2026-08-11",
+    "last_seen": "2026-08-11",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "6191097797827018576",
+    "flow": "July Flow",
+    "touches": 3,
+    "first_seen": "2026-06-29",
+    "last_seen": "2026-07-07",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "1445517575107069968",
+    "flow": "Target Flow - June",
+    "touches": 2,
+    "first_seen": "2026-06-22",
+    "last_seen": "2026-06-22",
+    "actions": {
+     "update-sequence": 2
+    }
+   }
+  ],
+  "alyson@nory.ai": [
+   {
+    "flow_id": "6414437949887056911",
+    "flow": "Coffee Shops - Owner Flow",
+    "touches": 3,
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "3711694214784375944",
+    "flow": "Playa Bowls - Chief Growth Officer",
+    "touches": 8,
+    "first_seen": "2026-06-29",
+    "last_seen": "2026-08-28",
+    "actions": {
+     "update-sequence": 8
+    }
+   },
+   {
+    "flow_id": "2836491913911263847",
+    "flow": "Playa Bowls -  VP Operations",
+    "touches": 8,
+    "first_seen": "2026-06-29",
+    "last_seen": "2026-08-28",
+    "actions": {
+     "update-sequence": 8
+    }
+   },
+   {
+    "flow_id": "9011279617866741885",
+    "flow": "Coffee Shops -  Op's",
+    "touches": 5,
+    "first_seen": "2026-06-29",
+    "last_seen": "2026-08-28",
+    "actions": {
+     "create-folder": 1,
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "280619208967785056",
+    "flow": "Coffee Shop - CFO",
+    "touches": 2,
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-28",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "9072716350343089136",
+    "flow": "QSR Evolution - COO/Head of Op's",
+    "touches": 2,
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "2712385232909096981",
+    "flow": "QSR Evolution - CTO",
+    "touches": 2,
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "6158410545379185725",
+    "flow": "QSR Evolution - CEO/Founder",
+    "touches": 1,
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "actions": {
+     "update-sequence": 1
+    }
+   },
+   {
+    "flow_id": "8508522960236019831",
+    "flow": "Coffee & Cafe × C-Suite (Full Suite · Tier 1)",
+    "touches": 9,
+    "first_seen": "2026-08-09",
+    "last_seen": "2026-08-25",
+    "actions": {
+     "update-sequence": 9
+    }
+   },
+   {
+    "flow_id": "2821066384300444497",
+    "flow": "Noodles & Co - Sr VP of Op's",
+    "touches": 5,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-08-19",
+    "actions": {
+     "update-sequence": 4,
+     "create-folder": 1
+    }
+   },
+   {
+    "flow_id": "8359525298017678980",
+    "flow": "Dir of Op's",
+    "touches": 2,
+    "first_seen": "2026-08-19",
+    "last_seen": "2026-08-19",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "960259437141408290",
+    "flow": "HR",
+    "touches": 2,
+    "first_seen": "2026-08-19",
+    "last_seen": "2026-08-19",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "4529311656385862594",
+    "flow": "Fast Casual × C-Suite (Full Suite · Tier 1)",
+    "touches": 6,
+    "first_seen": "2026-08-09",
+    "last_seen": "2026-08-18",
+    "actions": {
+     "update-sequence": 6
+    }
+   },
+   {
+    "flow_id": "5362930630059611142",
+    "flow": "QSR × C-Suite (Full Suite · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "7010874659666729512",
+    "flow": "Aly Outbound",
+    "touches": 3,
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "actions": {
+     "update-sequence": 2,
+     "create-folder": 1
+    }
+   },
+   {
+    "flow_id": "6372495099524288421",
+    "flow": "Coffee & Cafe × Operations (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "8222211578393302712",
+    "flow": "Noodles & Co -  VP HR",
+    "touches": 4,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "5099969822460448108",
+    "flow": "Coffee & Cafe × Finance (IM · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-09",
+    "last_seen": "2026-08-09",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "5122270924823650785",
+    "flow": "Randy's Donuts",
+    "touches": 3,
+    "first_seen": "2026-08-09",
+    "last_seen": "2026-08-09",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "7694382509273611963",
+    "flow": "Coffee & Cafe × Founder (Full Suite · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-09",
+    "last_seen": "2026-08-09",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "4287244943979741706",
+    "flow": "Playa Bowls - CEO",
+    "touches": 1,
+    "first_seen": "2026-06-29",
+    "last_seen": "2026-06-29",
+    "actions": {
+     "update-sequence": 1
+    }
+   },
+   {
+    "flow_id": "4872112081898409511",
+    "flow": "Noodles & Co - CFO",
+    "touches": 2,
+    "first_seen": "2026-06-26",
+    "last_seen": "2026-06-26",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "1540392315395857687",
+    "flow": "Noodles & Co - CEO",
+    "touches": 1,
+    "first_seen": "2026-06-26",
+    "last_seen": "2026-06-26",
+    "actions": {
+     "create-folder": 1
+    }
+   }
+  ],
+  "jodie@nory.ai": [
+   {
+    "flow_id": "350638312680231525",
+    "flow": "Closing the book and nurture sequence (May '26)",
+    "touches": 2,
+    "first_seen": "2026-07-13",
+    "last_seen": "2026-07-27",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "5541247089946569873",
+    "flow": "JV Nurture Sequence V2 May 26",
+    "touches": 2,
+    "first_seen": "2026-07-27",
+    "last_seen": "2026-07-27",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "2720907587533028585",
+    "flow": "Miles' Nurture Sequence V2 May 26",
+    "touches": 1,
+    "first_seen": "2026-07-13",
+    "last_seen": "2026-07-13",
+    "actions": {
+     "create-folder": 1
+    }
+   },
+   {
+    "flow_id": "4625736015261600227",
+    "flow": "JV Outbound SMB AE  V2",
+    "touches": 2,
+    "first_seen": "2026-07-09",
+    "last_seen": "2026-07-09",
+    "actions": {
+     "update-sequence": 2
+    }
+   }
+  ],
+  "bradley@nory.ai": [
+   {
+    "flow_id": "915668429240680913",
+    "flow": "5 AI Crew Short Version",
+    "touches": 7,
+    "first_seen": "2026-08-12",
+    "last_seen": "2026-08-13",
+    "actions": {
+     "update-sequence": 7
+    }
+   },
+   {
+    "flow_id": "8837847659940980021",
+    "flow": "5 Email Cold Flow - Long Education series ",
+    "touches": 5,
+    "first_seen": "2026-08-12",
+    "last_seen": "2026-08-13",
+    "actions": {
+     "update-sequence": 5
+    }
+   },
+   {
+    "flow_id": "2957438160403264778",
+    "flow": "Agentic AI Flow",
+    "touches": 2,
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "469810853189854711",
+    "flow": "CFO/Finance Flow",
+    "touches": 2,
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "6893304004211237403",
+    "flow": "Goji Flow",
+    "touches": 5,
+    "first_seen": "2026-07-10",
+    "last_seen": "2026-08-07",
+    "actions": {
+     "update-sequence": 5
+    }
+   },
+   {
+    "flow_id": "4529311656385862594",
+    "flow": "Fast Casual × C-Suite (Full Suite · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-07",
+    "last_seen": "2026-08-07",
+    "actions": {
+     "update-sequence": 2
+    }
+   }
+  ],
+  "miles@nory.ai": [
+   {
+    "flow_id": "6003848286609397058",
+    "flow": "Miles' Nurture Sequence V3 June 26",
+    "touches": 3,
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-28",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "2789774966821949832",
+    "flow": "Nory Referral Programme Flow - auto",
+    "touches": 7,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-07",
+    "actions": {
+     "update-sequence": 7
+    }
+   },
+   {
+    "flow_id": "2273444317308870865",
+    "flow": "Nory Referral Programme Flow",
+    "touches": 2,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-06",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "577667082333134425",
+    "flow": "Miles Outbound Campaign (multi-channel - Call, Email, Linkedin)",
+    "touches": 1,
+    "first_seen": "2026-07-13",
+    "last_seen": "2026-07-13",
+    "actions": {
+     "update-sequence": 1
+    }
+   }
+  ],
+  "josh@nory.ai": [
+   {
+    "flow_id": "3692560523867564748",
+    "flow": "Tech Expo 2026",
+    "touches": 29,
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-03",
+    "actions": {
+     "update-sequence": 29
+    }
+   },
+   {
+    "flow_id": "1181582058590513520",
+    "flow": "Q3 Flow Approach ",
+    "touches": 26,
+    "first_seen": "2026-07-14",
+    "last_seen": "2026-07-15",
+    "actions": {
+     "update-sequence": 26
+    }
+   }
+  ],
+  "magnus@nory.ai": [
+   {
+    "flow_id": "3733994132386647052",
+    "flow": "Employment Rights Bill",
+    "touches": 4,
+    "first_seen": "2026-09-09",
+    "last_seen": "2026-09-09",
+    "actions": {
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "8217103794992483388",
+    "flow": "MM: Tech Expo 2026",
+    "touches": 6,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "actions": {
+     "update-sequence": 6
+    }
+   },
+   {
+    "flow_id": "4025459032869798389",
+    "flow": "Tech Expo 2026",
+    "touches": 5,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "actions": {
+     "update-sequence": 5
+    }
+   },
+   {
+    "flow_id": "8134672103359178970",
+    "flow": "Case Study: Paul Tanner",
+    "touches": 3,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "931569730846173249",
+    "flow": "AE FLOW - Labour Assessment/AgenticAI Schedules",
+    "touches": 3,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "5982882991285713900",
+    "flow": "Case Study: Adam Lewis",
+    "touches": 2,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "179490161023724273",
+    "flow": "Coffee: Labour",
+    "touches": 2,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "4735878055896104247",
+    "flow": "Duplicate Pubs 25-50 sites: Ops Persona",
+    "touches": 2,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "2399553002300814862",
+    "flow": "Engaged: call,nudge,call",
+    "touches": 2,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "1100757199574134787",
+    "flow": "QSR: Labour",
+    "touches": 1,
+    "first_seen": "2026-07-28",
+    "last_seen": "2026-07-28",
+    "actions": {
+     "update-sequence": 1
+    }
+   },
+   {
+    "flow_id": "5763670160084743159",
+    "flow": "Zonal",
+    "touches": 4,
+    "first_seen": "2026-07-24",
+    "last_seen": "2026-07-24",
+    "actions": {
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "6556039428071538481",
+    "flow": "Greene King Zonal",
+    "touches": 2,
+    "first_seen": "2026-07-24",
+    "last_seen": "2026-07-24",
+    "actions": {
+     "update-sequence": 2
+    }
+   }
+  ],
+  "eric@nory.ai": [
+   {
+    "flow_id": "8434795799440171306",
+    "flow": "COO/Operations Flow",
+    "touches": 6,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 6
+    }
+   },
+   {
+    "flow_id": "469810853189854711",
+    "flow": "CFO/Finance Flow",
+    "touches": 3,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-06",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "2168172385803338721",
+    "flow": "Owner/CEO Flow",
+    "touches": 1,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-06",
+    "actions": {
+     "update-sequence": 1
+    }
+   },
+   {
+    "flow_id": "5075887336903997588",
+    "flow": "Goji Flow",
+    "touches": 1,
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-06",
+    "actions": {
+     "update-sequence": 1
+    }
+   }
+  ],
+  "lewis@nory.ai": [
+   {
+    "flow_id": "1103424933983824159",
+    "flow": "Coffee & Cafe × C-Suite (Full Suite · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-07",
+    "last_seen": "2026-08-07",
+    "actions": {
+     "update-sequence": 2
+    }
+   }
+  ],
+  "louisgrenier@nory.ai": [
+   {
+    "flow_id": "8321218284734724782",
+    "flow": "Claude Flow - LAG",
+    "touches": 4,
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "6941033364957848341",
+    "flow": "Claude LG2",
+    "touches": 3,
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "actions": {
+     "update-sequence": 3
+    }
+   }
+  ],
+  "rosta@nory.ai": [
+   {
+    "flow_id": "6683177606181918963",
+    "flow": "Coffee Shop - Finance Director, CFO",
+    "touches": 7,
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-09-10",
+    "actions": {
+     "update-sequence": 7
+    }
+   },
+   {
+    "flow_id": "1905979447131218890",
+    "flow": "Coffee Shop - Head of HR, People Director ",
+    "touches": 2,
+    "first_seen": "2026-08-31",
+    "last_seen": "2026-09-10",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "7962365651720944943",
+    "flow": "Coffee Shop - Owner, CEO",
+    "touches": 2,
+    "first_seen": "2026-09-10",
+    "last_seen": "2026-09-10",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "2824394805416431482",
+    "flow": "Coffee Shop - Director of Ops",
+    "touches": 1,
+    "first_seen": "2026-09-10",
+    "last_seen": "2026-09-10",
+    "actions": {
+     "update-sequence": 1
+    }
+   },
+   {
+    "flow_id": "280619208967785056",
+    "flow": "Coffee Shop - CFO",
+    "touches": 8,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-27",
+    "actions": {
+     "update-sequence": 8
+    }
+   },
+   {
+    "flow_id": "8508522960236019831",
+    "flow": "Coffee & Cafe × C-Suite (Full Suite · Tier 1)",
+    "touches": 7,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-27",
+    "actions": {
+     "update-sequence": 7
+    }
+   },
+   {
+    "flow_id": "6372495099524288421",
+    "flow": "Coffee & Cafe × Operations (IM · Tier 1)",
+    "touches": 5,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-27",
+    "actions": {
+     "update-sequence": 5
+    }
+   },
+   {
+    "flow_id": "6414437949887056911",
+    "flow": "Coffee Shops - Owner Flow",
+    "touches": 5,
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "actions": {
+     "update-sequence": 5
+    }
+   },
+   {
+    "flow_id": "4126643878639108178",
+    "flow": "Fast Casual × Founder (Full Suite · Tier 1)",
+    "touches": 4,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 4
+    }
+   },
+   {
+    "flow_id": "3497233880732644267",
+    "flow": "FSR × Finance (IM · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 3
+    }
+   },
+   {
+    "flow_id": "4529311656385862594",
+    "flow": "Fast Casual × C-Suite (Full Suite · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "1467326936817044734",
+    "flow": "FSR × C-Suite (Full Suite · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "7911824972118092018",
+    "flow": "FSR × Founder (Full Suite · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "6206350213849623951",
+    "flow": "FSR × Operations (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 2
+    }
+   },
+   {
+    "flow_id": "7671167498900667835",
+    "flow": "Fast Casual × Operations (IM · Tier 1)",
+    "touches": 2,
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-24",
+    "actions": {
+     "update-sequence": 2
+    }
+   }
+  ],
+  "sean.henry@nory.ai": [
+   {
+    "flow_id": "255398571561895125",
+    "flow": "Tech Expo 2026",
+    "touches": 1,
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "actions": {
+     "update-sequence": 1
+    }
+   }
+  ],
+  "lyse@nory.ai": [
+   {
+    "flow_id": "8508522960236019831",
+    "flow": "Coffee & Cafe × C-Suite (Full Suite · Tier 1)",
+    "touches": 3,
+    "first_seen": "2026-09-04",
+    "last_seen": "2026-09-04",
+    "actions": {
+     "update-sequence": 3
+    }
+   }
+  ]
+ }
+}

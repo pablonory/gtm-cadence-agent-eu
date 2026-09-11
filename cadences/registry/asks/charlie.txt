@@ -1,0 +1,31 @@
+Hi Charlie — two minutes for the outbound agent, if you have them.
+
+*1. These are the flows you've actually touched in Gong in the last 90 days. Which do you still run for new outbound?*
+
+• Re-engagement  _(last edited 8 Sep)_
+• Call  _(last edited 8 Sep)_
+• July Flow 2.0  _(last edited 11 Aug)_
+• Vagabond  _(last edited 11 Aug)_
+• July Flow  _(last edited 7 Jul)_
+• Target Flow - June  _(last edited 22 Jun)_
+
+_Reply with the ones to keep — "all" or "none" are both fine answers._
+
+*2. You also have these older templates. Any of them still in use?*
+
+• Re-engage Call Flow  _(created 13 Jul 2026)_
+• Mowgli CEO  _(created 5 May 2026)_
+• Coffee - Finance Persona  _(created 29 Apr 2026)_
+• The Salad Project (Founder)  _(created 1 Apr 2026)_
+• San Carlo Restaurant Group - New Openings  _(created 10 Mar 2026)_
+• MM Pubs Groups  _(created 3 Mar 2026)_
+
+*3. Anything you run that isn't listed above?* Give me the name exactly as it appears in Gong.
+
+*4. Do you use the shared _Outbound_ flows?* (Bar/Pub, Coffee and Resto × CEO / Finance / IT / Ops / People, plus the SMB set.) If so, which.
+
+*5. When an account lands on your desk, what decides which flow it goes into?* Vertical, persona, number of sites, something else?
+
+*Why I'm asking:* the agent is going to hand you a brief on an account with the Gong flow to drop it into. I want it naming _your_ flows and picking them the way you would, rather than a generic set.
+
+_(Heads up: you can also see 9 flows shared by other people. Gong doesn't record who created a flow, so if one of those is really yours, say so.)_

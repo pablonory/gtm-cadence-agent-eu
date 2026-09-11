@@ -1,71 +1,97 @@
 {
-  "_note": "UKI outbound roster, confirmed by Pablo 2026-09-11. Emails are Gong/HubSpot user emails. Everyone here runs outbound; each has their own Gong Engage flows on top of the company layer. Flow choice is individual — there is no manager who can confirm the set on their behalf (Pablo, 2026-09-11), so each rep is asked directly. Not UKI (US-facing, excluded): rosta, patrick, abbi, alyson, bradley, lyse.",
+  "_note": "UKI outbound roster, confirmed by Pablo 2026-09-11. Emails are Gong/HubSpot user emails. Everyone here runs outbound; each has their own Gong Engage flows on top of the company layer. Flow choice is individual — there is no manager who can confirm the set on their behalf (Pablo, 2026-09-11), so each rep is asked directly. Not UKI (US-facing, excluded): rosta, patrick, abbi, alyson, bradley, lyse. Slack IDs resolved 2026-09-11 via the Slack connector (workspace noryai) for the flow survey.",
   "reps": [
     {
       "email": "philip@nory.ai",
       "name": "Phil",
       "role": "AE",
-      "notes": "SMB Team Lead. NOT a flow authority — does little/no outreach himself and does not know what the reps run (Pablo, 2026-09-11). His own flows show as Shared, not Personal."
+      "notes": "SMB Team Lead. NOT a flow authority — does little/no outreach himself and does not know what the reps run (Pablo, 2026-09-11). His own flows show as Shared, not Personal.",
+      "slack_id": "U02UC216M52",
+      "slack_name": "Phil Green"
     },
     {
       "email": "richard@nory.ai",
       "name": "Richard",
-      "role": "AE"
+      "role": "AE",
+      "slack_id": "U0B1PE64H0D",
+      "slack_name": "Richard Brown"
     },
     {
       "email": "charlie@nory.ai",
       "name": "Charlie",
-      "role": "AE"
+      "role": "AE",
+      "slack_id": "U0ABK304JUT",
+      "slack_name": "Charlie Plimsoll"
     },
     {
       "email": "miles@nory.ai",
       "name": "Miles",
-      "role": "AE"
+      "role": "AE",
+      "slack_id": "U0810UQC2D9",
+      "slack_name": "Miles Sayer"
     },
     {
       "email": "louisgrenier@nory.ai",
       "name": "Louis Grenier",
-      "role": "AE"
+      "role": "AE",
+      "slack_id": "U09K8K0KHNF",
+      "slack_name": "Louis Grenier"
     },
     {
       "email": "louis@nory.ai",
       "name": "Louis Gilbert",
-      "role": "AE"
+      "role": "AE",
+      "slack_id": "U097PPHU88Z",
+      "slack_name": "Louis Gilbert"
     },
     {
       "email": "sean.henry@nory.ai",
       "name": "Sean",
-      "role": "AE"
+      "role": "AE",
+      "slack_id": "U054WSYU4D7",
+      "slack_name": "Seanie Henry"
     },
     {
       "email": "josh@nory.ai",
       "name": "Josh",
-      "role": "AE"
+      "role": "AE",
+      "slack_id": "U0A4UE27FED",
+      "slack_name": "Josh Savill"
     },
     {
       "email": "magnus@nory.ai",
       "name": "Magnus",
-      "role": "AE"
+      "role": "AE",
+      "slack_id": "U0A4ZNRJHG9",
+      "slack_name": "Magnus"
     },
     {
       "email": "edward@nory.ai",
       "name": "Edward",
-      "role": "AE"
+      "role": "AE",
+      "slack_id": "U0A4K48RQ68",
+      "slack_name": "Ed Freemantle"
     },
     {
       "email": "william.martin@nory.ai",
       "name": "William",
-      "role": "BDR"
+      "role": "BDR",
+      "slack_id": "U0AEVDKS7PC",
+      "slack_name": "William Martin"
     },
     {
       "email": "oisin@nory.ai",
       "name": "Oisin",
-      "role": "BDR"
+      "role": "BDR",
+      "slack_id": "U08SQUKD1B5",
+      "slack_name": "Oisín Mulligan"
     },
     {
       "email": "lars@nory.ai",
       "name": "Lars",
-      "role": "BDR"
+      "role": "BDR",
+      "slack_id": "U08FLC1F5V5",
+      "slack_name": "Lars Roschmann"
     }
   ]
 }

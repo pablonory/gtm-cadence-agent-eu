@@ -1,0 +1,23 @@
+Hi Richard — two minutes for the outbound agent, if you have them.
+
+*1. These are the flows you've actually touched in Gong in the last 90 days. Which do you still run for new outbound?*
+
+• Rich - Restaurant Agentic new flow  _(last edited 24 Aug)_
+• Richard -  Personalized email  _(last edited 24 Aug)_
+• Low hanging fruits - Old CL\DQ  _(last edited 24 Aug)_
+• SMB - Restaurant Agentic AI- Richard 2  _(last edited 24 Aug)_
+• SMB Outbound Flow- Rich  _(last edited 24 Aug)_
+• Closing the book and nurture sequence (May '26)  _(last edited 24 Aug)_
+• Miles' Nurture Sequence V2 May 26  _(last edited 24 Aug)_
+
+_Reply with the ones to keep — "all" or "none" are both fine answers._
+
+*2. Anything you run that isn't listed above?* Give me the name exactly as it appears in Gong.
+
+*3. Do you use the shared _Outbound_ flows?* (Bar/Pub, Coffee and Resto × CEO / Finance / IT / Ops / People, plus the SMB set.) If so, which.
+
+*4. When an account lands on your desk, what decides which flow it goes into?* Vertical, persona, number of sites, something else?
+
+*Why I'm asking:* the agent is going to hand you a brief on an account with the Gong flow to drop it into. I want it naming _your_ flows and picking them the way you would, rather than a generic set.
+
+_(Heads up: you can also see 3 flows shared by other people. Gong doesn't record who created a flow, so if one of those is really yours, say so.)_

@@ -1,0 +1,31 @@
+Hi Josh — two minutes for the outbound agent, if you have them.
+
+*1. These are the flows you've actually touched in Gong in the last 90 days. Which do you still run for new outbound?*
+
+• Tech Expo 2026  _(last edited 3 Sep)_
+• Q3 Flow Approach   _(last edited 15 Jul)_
+
+_Reply with the ones to keep — "all" or "none" are both fine answers._
+
+*2. You also have these older templates. Any of them still in use?*
+
+• CEO - Jonathan - Abbi  _(created 2 Jun 2026)_
+• CFO - Mark - Josh  _(created 2 Jun 2026)_
+• (29/04 )Target Persona - Leadership (Deep research Flow)  _(created 29 Apr 2026)_
+• Operations  _(created 23 Apr 2026)_
+• Finance  _(created 23 Apr 2026)_
+• Target Persona - Leadership (Deep research Flow) - ABBI BDR  _(created 8 Apr 2026)_
+• Target Persona - Leadership (Deep research Flow)  _(created 2 Apr 2026)_
+• CFO Cadence  _(created 20 Feb 2026)_
+• Pubs 25-50 sites: IT Persona  _(created 19 Feb 2026)_
+• Pubs 25-50 sites: Ops Persona  _(created 19 Feb 2026)_
+
+*3. Anything you run that isn't listed above?* Give me the name exactly as it appears in Gong.
+
+*4. Do you use the shared _Outbound_ flows?* (Bar/Pub, Coffee and Resto × CEO / Finance / IT / Ops / People, plus the SMB set.) If so, which.
+
+*5. When an account lands on your desk, what decides which flow it goes into?* Vertical, persona, number of sites, something else?
+
+*Why I'm asking:* the agent is going to hand you a brief on an account with the Gong flow to drop it into. I want it naming _your_ flows and picking them the way you would, rather than a generic set.
+
+_(Heads up: you can also see 5 flows shared by other people. Gong doesn't record who created a flow, so if one of those is really yours, say so.)_

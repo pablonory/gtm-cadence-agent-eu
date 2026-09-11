@@ -1,0 +1,36 @@
+Hi William — two minutes for the outbound agent, if you have them.
+
+*1. These are the flows you've actually touched in Gong in the last 90 days. Which do you still run for new outbound?*
+
+• Coffee & Cafe × C-Suite (Scaling)  _(last edited 25 Aug)_
+• Fast Casual × C-Suite (Full Suite · Tier 1)  _(last edited 25 Aug)_
+• QSR × Founder (Full Suite · Tier 1)  _(last edited 25 Aug)_
+• QSR × Operations (IM · Tier 1)  _(last edited 25 Aug)_
+• Coffee & Cafe × Finance (IM · Tier 1)  _(last edited 25 Aug)_
+• Coffee & Cafe × Founder (Full Suite · Tier 1)  _(last edited 25 Aug)_
+• Coffee & Cafe × Operations (IM · Tier 1)  _(last edited 25 Aug)_
+• Fast Casual × Finance (IM · Tier 1)  _(last edited 25 Aug)_
+
+_Reply with the ones to keep — "all" or "none" are both fine answers._
+
+*2. You also have these older templates. Any of them still in use?*
+
+• Fast Casual × Founder (Full Suite · Tier 1)  _(created 25 Aug 2026)_
+• Fast Casual × Operations (IM · Tier 1)  _(created 25 Aug 2026)_
+• FSR × C-Suite (Full Suite · Tier 1)  _(created 25 Aug 2026)_
+• FSR × Finance (IM · Tier 1)  _(created 25 Aug 2026)_
+• FSR × Founder (Full Suite · Tier 1)  _(created 25 Aug 2026)_
+• FSR × Operations (IM · Tier 1)  _(created 25 Aug 2026)_
+• QSR × C-Suite (Full Suite · Tier 1)  _(created 25 Aug 2026)_
+• QSR × Finance (IM · Tier 1)  _(created 25 Aug 2026)_
+• Will Nurture 2026  _(created 28 May 2026)_
+
+*3. Anything you run that isn't listed above?* Give me the name exactly as it appears in Gong.
+
+*4. Do you use the shared _Outbound_ flows?* (Bar/Pub, Coffee and Resto × CEO / Finance / IT / Ops / People, plus the SMB set.) If so, which.
+
+*5. When an account lands on your desk, what decides which flow it goes into?* Vertical, persona, number of sites, something else?
+
+*Why I'm asking:* the agent is going to hand you a brief on an account with the Gong flow to drop it into. I want it naming _your_ flows and picking them the way you would, rather than a generic set.
+
+_(Heads up: you can also see 4 flows shared by other people. Gong doesn't record who created a flow, so if one of those is really yours, say so.)_
