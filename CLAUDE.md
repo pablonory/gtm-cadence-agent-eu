@@ -6,9 +6,11 @@ HubSpot, where the rep reads it and assembles the cadence in Gong. **Nothing sen
 
 **Goal:** same motion as the US agent — standardized multi-channel cadences where **only the first touch
 is bespoke**. The agent informs and drafts; the rep activates.
-**Owner (UKI):** **Pablo, interim** (2026-09-02) until a sales-side owner is named. Flow knowledge:
-**Phil (SMB & MM lead)** — the flow set stays unconfirmed until he answers (`cadences/UKI_FLOWS.md`).
-Real batches may now run under Pablo's supervision; every brief still passes the 🚦 human gate.
+**Owner (UKI):** **Pablo, interim** (2026-09-02) until a sales-side owner is named. **There is no
+flow authority to ask** — cadence choice is each rep's own, so flows are confirmed rep by rep
+(`cadences/registry/asks/<rep>.md`), and unconfirmed flows are *suggested*, not blocked
+(`cadences/UKI_FLOWS.md`). Real batches may run under Pablo's supervision; every brief still passes
+the 🚦 human gate.
 
 > **Fork provenance:** forked 2026-08-20 from `pablonory/gtm-cadence-agent` (US) at `05ae6be`;
 > market-adaptation pass at `952abff`; **fork-sync 2026-09-01** ported the US `harden-m1` pass
@@ -93,10 +95,10 @@ Three properties are **rep-owned**, never overwritten by a batch: `rep_feedback`
 UKI has **two flow layers** (captured from the Gong API 2026-09-11, `cadences/UKI_FLOWS.md`): a
 73-flow company layer (Bar/Pub · Coffee · Resto × CEO/Finance/IT/Ops/People, SMB series, four
 reason-based reactivation flows) and **each rep's own flows**. So `cadence_template` is resolved by
-lookup in that rep's confirmed registry (`cadences/registry/<rep>.json`) — own live flow → company
-flow → **EMPTY** + "no matching flow". No registry is confirmed yet (review sheet:
-`cadences/registry/REVIEW.md`); until then classify vertical × persona normally (it aims the angle),
-leave `cadence_template` EMPTY, note *"flow pending — registry unconfirmed"*.
+lookup in that rep's registry (`cadences/registry/<rep>.json`) — own flow → company flow → **EMPTY**
++ "no matching flow". `live` is tri-state: confirmed flows are named, **unconfirmed ones are named as
+a suggestion** (the string is verbatim from that rep's Gong), rejected ones never again. No registry
+is confirmed yet — the asks are ready to send (`cadences/registry/asks/`).
 
 - **Verticals:** Coffee & Cafe · Fast Casual · FSR · QSR *(+ the open **pubs & bars** question — a major
   UK segment with no US cell; gastropubs → FSR meanwhile)*

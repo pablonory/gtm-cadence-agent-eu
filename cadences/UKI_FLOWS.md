@@ -2,11 +2,12 @@
 
 > **Status 2026-09-11.** The Gong Engage flow set was captured from the Gong API
 > (`scripts/gong_flows.py`, `GET /v2/flows?flowOwnerEmail=<rep>`), not from screenshots. What is
-> KNOWN: every flow name, folder, visibility and creation date, per rep. What is NOT known and must
-> come from the reps: which of their flows are **live** (the API exposes no usage stats) and whether
-> the **tags proposed from names** are right. Until a rep's registry is confirmed, briefs for that
-> rep carry `cadence_template` **EMPTY** + "flow pending — registry unconfirmed". **Never invent a
-> flow name** — and in UKI, never *build* one either: a name is looked up, or it is empty.
+> KNOWN: every flow name, folder, visibility and creation date, per rep. What is NOT knowable from
+> Gong: **which flows are live**. Verified 2026-09-11 — the per-flow detail and prospect endpoints
+> 404/405, and `/v2/stats/activity/*` returns call activity per user with nothing flow-level. There
+> is also no manager shortcut: flow choice is each rep's own, so **only the rep can say**
+> (`registry/asks/<rep>.md` is the two-minute question). **Never invent a flow name** — and in UKI,
+> never *build* one either: a name is looked up, or it is empty.
 
 ## How UKI differs from the US — and why the matcher changes shape
 
@@ -27,10 +28,27 @@ agent *derives* the flow name from vertical × persona. UKI runs **two layers**:
    account-specific ("Tech Expo 2026", "Boparan Outreach") and are **not templates**.
 
 **Consequence:** `cadence_template` is resolved by **lookup in the rep's registry**, in this order:
-the rep's own **live** flow tagged for the account's vertical × persona × motion → the company-layer
-flow for the matching segment × persona → **empty** with the note "no matching flow in <rep>'s
-registry". The code guard changes from "matches the US name pattern" to "**exists verbatim in this
-rep's registry with `live: true`**". (Matcher rewiring is the next build step — `docs/open_questions.md`.)
+the rep's own flow tagged for the account's vertical × persona × motion → the company-layer flow for
+the matching segment × persona → **empty** with the note "no matching flow in <rep>'s registry". The
+code guard changes from "matches the US name pattern" to "**exists verbatim in this rep's registry**".
+(Matcher rewiring is the next build step — `docs/open_questions.md` #11.)
+
+### `live` is tri-state — and an unconfirmed flow may still be SUGGESTED
+
+Waiting for thirteen replies before the first batch would stall the agent on something a rep can
+correct in one click. So:
+
+| `live` | Meaning | What the brief does |
+|---|---|---|
+| `true` | the rep confirmed it | names the flow, `flow_status: confirmed` |
+| `null` | not asked / not answered yet | names the flow as a **suggestion**, `flow_status: suggested`, with "from your Gong flows — tell me if it's the wrong one" |
+| `false` | the rep said they don't run it | never suggested again |
+
+Suggesting is not inventing: the string comes **verbatim from that rep's own Gong**, so the worst case
+is proposing a flow they have abandoned — visible to them in one glance and cheap to correct, against
+the certainty of blocking every brief. Corrections arrive through the existing feedback fields
+(`rep_feedback_detail`) and are written back to the registry, per `directives/self_improvement.md`.
+A flow tagged `event`, `inbound` or `unclassified` is never suggested, at any `live` value.
 
 ## Files
 
@@ -39,7 +57,8 @@ rep's registry with `live: true`**". (Matcher rewiring is the next build step �
 | `uki_reps.json` | The UKI outbound roster (10 AEs + 3 BDRs, confirmed by Pablo 2026-09-11) | yes |
 | `registry/_company.json` | The company layer, tagged from names | yes |
 | `registry/drafts/<rep>.json` | Per-rep draft registry — personal + shared-with-them flows, proposed tags, `live: null` | yes (Pablo 2026-09-11: flow names may live in the repo) |
-| `registry/REVIEW.md` | The review sheet for the walk-through with Phil / each rep — tick live, correct tags. Readable and annotatable in the Obsidian vault | yes |
+| `registry/REVIEW.md` | Master review sheet, all reps — tick live, correct tags. Annotatable in the Obsidian vault | yes |
+| `registry/asks/<rep>.md` | The two-minute, paste-able question for that rep — only their plausible templates, events excluded | yes |
 | `registry/<rep>.json` | **Confirmed** registry — created from the draft once the rep has answered; the only file the matcher reads | not yet — none confirmed |
 | `output/gong/flows/<rep>.json` | Raw API pulls | no (gitignored) |
 

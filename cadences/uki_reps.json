@@ -1,18 +1,71 @@
 {
-  "_note": "UKI outbound roster, confirmed by Pablo 2026-09-11. Emails are Gong/HubSpot user emails. Everyone here runs outbound; each has their own Gong Engage flows on top of the company layer. Not UKI (US-facing, excluded): rosta, patrick, abbi, alyson, bradley, lyse.",
+  "_note": "UKI outbound roster, confirmed by Pablo 2026-09-11. Emails are Gong/HubSpot user emails. Everyone here runs outbound; each has their own Gong Engage flows on top of the company layer. Flow choice is individual — there is no manager who can confirm the set on their behalf (Pablo, 2026-09-11), so each rep is asked directly. Not UKI (US-facing, excluded): rosta, patrick, abbi, alyson, bradley, lyse.",
   "reps": [
-    {"email": "philip@nory.ai",        "name": "Phil",          "role": "AE",  "notes": "SMB Team Lead — owns the Gong flows question (docs/open_questions.md #2)"},
-    {"email": "richard@nory.ai",       "name": "Richard",       "role": "AE"},
-    {"email": "charlie@nory.ai",       "name": "Charlie",       "role": "AE"},
-    {"email": "miles@nory.ai",         "name": "Miles",         "role": "AE"},
-    {"email": "louisgrenier@nory.ai",  "name": "Louis Grenier", "role": "AE"},
-    {"email": "louis@nory.ai",         "name": "Louis Gilbert", "role": "AE"},
-    {"email": "sean.henry@nory.ai",    "name": "Sean",          "role": "AE"},
-    {"email": "josh@nory.ai",          "name": "Josh",          "role": "AE"},
-    {"email": "magnus@nory.ai",        "name": "Magnus",        "role": "AE"},
-    {"email": "edward@nory.ai",        "name": "Edward",        "role": "AE"},
-    {"email": "william.martin@nory.ai","name": "William",       "role": "BDR"},
-    {"email": "oisin@nory.ai",         "name": "Oisin",         "role": "BDR"},
-    {"email": "lars@nory.ai",          "name": "Lars",          "role": "BDR"}
+    {
+      "email": "philip@nory.ai",
+      "name": "Phil",
+      "role": "AE",
+      "notes": "SMB Team Lead. NOT a flow authority — does little/no outreach himself and does not know what the reps run (Pablo, 2026-09-11). His own flows show as Shared, not Personal."
+    },
+    {
+      "email": "richard@nory.ai",
+      "name": "Richard",
+      "role": "AE"
+    },
+    {
+      "email": "charlie@nory.ai",
+      "name": "Charlie",
+      "role": "AE"
+    },
+    {
+      "email": "miles@nory.ai",
+      "name": "Miles",
+      "role": "AE"
+    },
+    {
+      "email": "louisgrenier@nory.ai",
+      "name": "Louis Grenier",
+      "role": "AE"
+    },
+    {
+      "email": "louis@nory.ai",
+      "name": "Louis Gilbert",
+      "role": "AE"
+    },
+    {
+      "email": "sean.henry@nory.ai",
+      "name": "Sean",
+      "role": "AE"
+    },
+    {
+      "email": "josh@nory.ai",
+      "name": "Josh",
+      "role": "AE"
+    },
+    {
+      "email": "magnus@nory.ai",
+      "name": "Magnus",
+      "role": "AE"
+    },
+    {
+      "email": "edward@nory.ai",
+      "name": "Edward",
+      "role": "AE"
+    },
+    {
+      "email": "william.martin@nory.ai",
+      "name": "William",
+      "role": "BDR"
+    },
+    {
+      "email": "oisin@nory.ai",
+      "name": "Oisin",
+      "role": "BDR"
+    },
+    {
+      "email": "lars@nory.ai",
+      "name": "Lars",
+      "role": "BDR"
+    }
   ]
 }
