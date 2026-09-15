@@ -1,14 +1,14 @@
 {
-  "_researched": "2026-09-02",
-  "_method": "extracted from the UKI Market Signals NotebookLM notebook (ad7a916a-ef84-4e79-a55c-d74c5880136a, pablo@nory.ai) — 31 curated market sources imported from a deep research run; every card below was verified against the verbatim cited text before inclusion. Sector-level CONTEXT ONLY: none of these is quantified on an account's footprint, so none may open an email (that is the register's job). Refresh alongside the register, or when the notebook corpus is refreshed. Fortnightly sweep 2026-09-02: all six cards re-verified against their own sources live (the Lords Library, drinks business and PwC pages 403 on plain fetch and were read via scripts/firecrawl_fetch.py). Insolvencies, Ireland, pub closures and the BBPA Budget figure re-confirmed verbatim and unchanged — each is still the latest release from its source, so the older periods are the current data, not stale extracts. Two cards were rebuilt: the staffing-gap card moved off a Sep–Nov 2025 parliamentary briefing onto the primary ONS series JP9O (Apr–Jun 2026), which also corrects a direction the old figure implied wrongly, and the weekly footfall card was replaced by the newest published monthly Oxford Market Watch (Jul 2026) so it does not age out before the next sweep.",
+  "_researched": "2026-09-15",
+  "_method": "extracted from the UKI Market Signals NotebookLM notebook (ad7a916a-ef84-4e79-a55c-d74c5880136a, pablo@nory.ai) — 31 curated market sources imported from a deep research run; every card below was verified against the verbatim cited text before inclusion. Sector-level CONTEXT ONLY: none of these is quantified on an account's footprint, so none may open an email (that is the register's job). Refresh alongside the register, or when the notebook corpus is refreshed. Fortnightly sweep 2026-09-02: all six cards re-verified against their own sources live (the Lords Library, drinks business and PwC pages 403 on plain fetch and were read via scripts/firecrawl_fetch.py). Insolvencies, Ireland, pub closures and the BBPA Budget figure re-confirmed verbatim and unchanged — each is still the latest release from its source, so the older periods are the current data, not stale extracts. Two cards were rebuilt: the staffing-gap card moved off a Sep–Nov 2025 parliamentary briefing onto the primary ONS series JP9O (Apr–Jun 2026), which also corrects a direction the old figure implied wrongly, and the weekly footfall card was replaced by the newest published monthly Oxford Market Watch (Jul 2026) so it does not age out before the next sweep. Fortnightly sweep 2026-09-15: all six cards re-checked against their own sources live (all fetched 200 on a plain fetch; no Firecrawl fallback needed). Two cards rolled onto newer releases — insolvencies moved to the Insolvency Service's own July 2026 commentary (12m to Jul 2026, 3,221), which both refreshes the period and replaces the secondary Drinks Business citation with the primary source, and corrects the scope: the industry breakdown is England and Wales, not the UK, so the card was relabelled; and the staffing gap moved to the ONS release of 14 Sep 2026 (May–Jul 2026, 70,000 vs 78,000 a year earlier). Ireland, pub closures and the BBPA Budget figure are unchanged and still the latest release from each source — BBPA has published no Q2 2026 closure data, and no full-month August Oxford Market Watch exists yet, so the Jul 2026 trading card stands. Next Insolvency Service release 18 Sep 2026, three days after this sweep.",
   "cards": [
     {
-      "label": "UK insolvencies",
-      "figure": "3,353",
-      "text": "Accommodation & food service insolvencies in the 12 months to December 2025 — 14% of all UK cases and the third-highest sector, behind construction and retail/wholesale (UK Government figures).",
-      "source": "UK Gov figures via The Drinks Business",
-      "url": "https://www.thedrinksbusiness.com/2026/02/hospitality-insolvencies-hit-3353-in-2025/",
-      "period": "12m to Dec 2025"
+      "label": "E&W insolvencies",
+      "figure": "3,221",
+      "text": "Accommodation & food service insolvencies in England and Wales in the 12 months to July 2026 — 14% of cases with industry captured, and the third-highest sector behind construction (3,841) and wholesale/retail (3,422).",
+      "source": "Insolvency Service (GOV.UK)",
+      "url": "https://www.gov.uk/government/statistics/company-insolvencies-july-2026/commentary-company-insolvency-statistics-july-2026",
+      "period": "12m to Jul 2026"
     },
     {
       "label": "Ireland stabilising",
@@ -36,11 +36,11 @@
     },
     {
       "label": "Staffing gap",
-      "figure": "71,000 vacancies",
-      "text": "Open roles in UK accommodation & food services in Apr–Jun 2026, down from 79,000 a year earlier and falling every quarter since Q1 2025. Hiring pressure is easing off its peak, but 71,000 unfilled shifts is still the backdrop to most ops conversations.",
+      "figure": "70,000 vacancies",
+      "text": "Open roles in UK accommodation & food services in May–Jul 2026, down from 78,000 a year earlier; the quarterly series has fallen every quarter since Q1 2025 (81,000). Hiring pressure is easing off its peak, but 70,000 unfilled shifts is still the backdrop to most ops conversations.",
       "source": "ONS series JP9O",
       "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/jp9o/unem",
-      "period": "Apr–Jun 2026"
+      "period": "May–Jul 2026"
     },
     {
       "label": "Summer trading",
