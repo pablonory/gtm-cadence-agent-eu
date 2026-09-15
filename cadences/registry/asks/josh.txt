@@ -26,6 +26,8 @@ _Reply with the ones to keep — "all" or "none" are both fine answers._
 
 *5. When an account lands on your desk, what decides which flow it goes into?* Vertical, persona, number of sites, something else?
 
+*6. Want a hand building better flows?* If the honest answer to the above is "my flows are a bit of a mess" or "I don't really have a set", just say so — that's a fine answer, and the agent will help you build a proper set.
+
 *Why I'm asking:* the agent is going to hand you a brief on an account with the Gong flow to drop it into. I want it naming _your_ flows and picking them the way you would, rather than a generic set.
 
 _(Heads up: you can also see 5 flows shared by other people. Gong doesn't record who created a flow, so if one of those is really yours, say so.)_
