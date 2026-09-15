@@ -28,7 +28,7 @@ directive's section 6b, don't skip it). Set `reactivation_analysis_date` = 2026-
   ```bash
   python3 scripts/conjunctural_match.py --nation <england|scotland|wales|ni|ireland> --vertical <vertical> --persona <persona> --locations <locations> [--council <council>] --json
   ```
-  (Omit `--state` if none was given — the script will return no state-scoped matches, which is a
+  (Omit `--nation` if the account's nation is unknown — the matcher then returns no match by design, which is a
   valid outcome, not an error.)
   - **Match found, `usable_as_opener: true`**: rewrite `first_touch_subject`/`first_touch_body` (and
     the alt variant) to open on that conjunctural fact instead of the generic vertical-pain fallback.
