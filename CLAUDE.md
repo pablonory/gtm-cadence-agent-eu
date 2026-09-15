@@ -8,7 +8,7 @@ HubSpot, where the rep reads it and assembles the cadence in Gong. **Nothing sen
 is bespoke**. The agent informs and drafts; the rep activates.
 **Owner (UKI):** **Pablo, interim** (2026-09-02) until a sales-side owner is named. **There is no
 flow authority to ask** — cadence choice is each rep's own, so flows are confirmed rep by rep
-(`cadences/registry/asks/<rep>.md`), and unconfirmed flows are *suggested*, not blocked
+(`cadences/registry/asks/<rep>.txt`), and unconfirmed flows are *suggested*, not blocked
 (`cadences/UKI_FLOWS.md`). Real batches may run under Pablo's supervision; every brief still passes
 the 🚦 human gate.
 
