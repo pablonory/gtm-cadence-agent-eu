@@ -16,4 +16,4 @@ Hi Josh — next steps on the flows. The agent read your book in HubSpot first:
 
 On "data to back it up", the honest scope: per account you get real evidence — verified signals with source links, named proof points with numbers, and the quantified market register (wage step, VAT, rates). What nobody has is reply/open rates per flow — Gong doesn't expose them, so I won't quote any.
 
-*What happens next:* proposal with every step written out → you edit → you create them in Gong → the agent points your briefs at them. Send your 15-20 accounts whenever — runs in parallel.
+*What happens next:* proposal with every step written out and the data + reasons behind each flow → you edit → you create them in Gong → the agent points your briefs at them. Send your 15-20 accounts whenever — runs in parallel.

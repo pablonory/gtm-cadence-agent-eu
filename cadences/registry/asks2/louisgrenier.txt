@@ -14,4 +14,4 @@ Hi Louis — next steps as promised. The agent read your book in HubSpot first, 
 
 *6. Anything from Claude Flow - LAG or Claude LG2 that must survive* into the new set?
 
-*What happens next:* I come back with a proposal — the flows, every step written out. You edit, you create them in Gong, and the agent starts pointing your briefs at them, with the first touch written per account. Send me your 15-20 accounts sheet whenever — that runs in parallel.
+*What happens next:* I come back with a proposal — the flows, every step written out, and the data behind each one. You edit, you create them in Gong, and the agent starts pointing your briefs at them, with the first touch written per account. Send me your 15-20 accounts sheet whenever — that runs in parallel.
