@@ -1,0 +1,19 @@
+Hi Josh — next steps on the flows. The agent read your book in HubSpot first:
+
+*Your book:* 82 ICP accounts and 70 of them are enterprise (30+ sites) — so we design for ENT and ignore the SMB playbook entirely. People on those accounts: Ops (541), C-Suite (231), Finance (152).
+
+*1. Does that match where you actually spend your time?*
+
+*2. At ENT, which titles actually book meetings?* Group-level ops directors? CFO? The hired CEO/MD?
+
+*3. Vertical split, roughly?* HubSpot has no vertical on most of your book — from your head: pubs, casual dining, QSR, coffee?
+
+*4. You said ENT needs super targeted — what does that look like per step?* The plan: the flow carries the standard steps 2 onwards, and the agent writes touch 1 bespoke per account (real signals, sources linked). How much manual do you want on the LATER steps?
+
+*5. How many flows can you keep sharp?* Given the book, I'm thinking 3 persona-led ones [Ops, C-Suite, Finance] rather than anything by vertical.
+
+*6. Anything from Tech Expo 2026 or Q3 Flow Approach that must survive* into the new set?
+
+On "data to back it up", the honest scope: per account you get real evidence — verified signals with source links, named proof points with numbers, and the quantified market register (wage step, VAT, rates). What nobody has is reply/open rates per flow — Gong doesn't expose them, so I won't quote any.
+
+*What happens next:* proposal with every step written out → you edit → you create them in Gong → the agent points your briefs at them. Send your 15-20 accounts whenever — runs in parallel.

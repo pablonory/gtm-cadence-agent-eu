@@ -1,0 +1,17 @@
+Hi Louis — next steps as promised. The agent read your book in HubSpot first, so you're reacting to facts, not guessing:
+
+*Your book:* 221 ICP accounts — 139 SMB (2-9 sites), 69 mid-market (10-29), no real enterprise. People on those accounts: Ops (227), Founders (176), C-Suite (111), Finance (93).
+
+*1. Does that match where you actually spend your time?* Anything you'd cut or add?
+
+*2. Which job titles do you target — and which ones actually book meetings?* The data says who exists in your accounts; you know who answers.
+
+*3. Vertical split, roughly?* HubSpot has no vertical on 90% of your book, so from your head: how much is pubs/bars vs coffee vs QSR/fast casual vs full-service?
+
+*4. How many flows can you realistically keep sharp?* I'm thinking 3-4 — fewer flows, better copy in each.
+
+*5. Structure:* what mix of calls / emails / LinkedIn works for you? And does a shorter, punchier cadence for SMB owner-operators sound right, vs the full multi-touch for mid-market?
+
+*6. Anything from Claude Flow - LAG or Claude LG2 that must survive* into the new set?
+
+*What happens next:* I come back with a proposal — the flows, every step written out. You edit, you create them in Gong, and the agent starts pointing your briefs at them, with the first touch written per account. Send me your 15-20 accounts sheet whenever — that runs in parallel.
