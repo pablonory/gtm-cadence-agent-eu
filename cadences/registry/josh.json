@@ -1,0 +1,614 @@
+{
+ "rep": "josh@nory.ai",
+ "name": "Josh",
+ "role": "AE",
+ "pulled": "2026-09-11",
+ "status": "CONFIRMED 2026-09-16 — from the rep's survey reply in Pablo's Slack DM",
+ "personal": [
+  {
+   "id": "3692560523867564748",
+   "name": "Tech Expo 2026",
+   "folder": "Tech expo 2026",
+   "layer": "personal",
+   "created": "2026-09-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": true
+  },
+  {
+   "id": "1181582058590513520",
+   "name": "Q3 Flow Approach ",
+   "folder": "H2 Outreach (Abbi + Josh)",
+   "layer": "personal",
+   "created": "2026-07-13",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true
+  },
+  {
+   "id": "1743948834026065564",
+   "name": "Zambrero - Flow",
+   "folder": "Franchise Accounts",
+   "layer": "personal",
+   "created": "2026-06-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5446238307171359268",
+   "name": "Chaiiwala - Flow",
+   "folder": "Franchise Accounts",
+   "layer": "personal",
+   "created": "2026-06-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "2674051211301705691",
+   "name": "CEO - Jonathan - Abbi ",
+   "folder": "June - Shepherd Neame - Flows",
+   "layer": "personal",
+   "created": "2026-06-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": false
+  },
+  {
+   "id": "7707027643179702285",
+   "name": "CFO - Mark - Josh",
+   "folder": "June - Shepherd Neame - Flows",
+   "layer": "personal",
+   "created": "2026-06-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": false
+  },
+  {
+   "id": "7020317533660922645",
+   "name": "(05/05) On the floor teams (CALL FLOW)",
+   "folder": "(Q2) Fresh Q2 - Flows/Personal",
+   "layer": "personal",
+   "created": "2026-05-05",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6950010961302896987",
+   "name": "Level Up - Invites",
+   "folder": "Level Up Manchester 🚀",
+   "layer": "personal",
+   "created": "2026-05-01",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6230339577491598317",
+   "name": "(29/04 )Target Persona - Leadership (Deep research Flow) ",
+   "folder": "(Q2) Fresh Q2 - Flows/Personal",
+   "layer": "personal",
+   "created": "2026-04-29",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": false
+  },
+  {
+   "id": "5525604825244697181",
+   "name": "Operations ",
+   "folder": "(APRIL) Re-Activation Flow (s) - New Messaging -  Below Head Of Personas",
+   "layer": "personal",
+   "created": "2026-04-23",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": false
+  },
+  {
+   "id": "1443393652634535258",
+   "name": "Finance",
+   "folder": "(APRIL) Re-Activation Flow (s) - New Messaging -  Below Head Of Personas",
+   "layer": "personal",
+   "created": "2026-04-23",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": false
+  },
+  {
+   "id": "4777721954033019844",
+   "name": "(Abbi) Slims Chicken's 🐓",
+   "folder": "Boparan Outreach",
+   "layer": "personal",
+   "created": "2026-04-14",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8488700917912633555",
+   "name": "(Josh) Slims Chicken's 🐓",
+   "folder": "Boparan Outreach",
+   "layer": "personal",
+   "created": "2026-04-14",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5882941510743674902",
+   "name": "(Abbi) GBK 🍔",
+   "folder": "Boparan Outreach",
+   "layer": "personal",
+   "created": "2026-04-14",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "4796722531260418853",
+   "name": "(Josh) GBK 🍔",
+   "folder": "Boparan Outreach",
+   "layer": "personal",
+   "created": "2026-04-14",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "3324105669527952126",
+   "name": "Boparan HQ Outreach (Josh)",
+   "folder": "Boparan Outreach",
+   "layer": "personal",
+   "created": "2026-04-14",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "3874346695888627433",
+   "name": "Target Persona - Leadership (Deep research Flow) - ABBI BDR",
+   "folder": "(Q2) Fresh Q2 - Flows/Personal",
+   "layer": "personal",
+   "created": "2026-04-08",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": false
+  },
+  {
+   "id": "5854065164962601443",
+   "name": "Target Persona - Leadership (Deep research Flow) ",
+   "folder": "(Q2) Fresh Q2 - Flows/Personal",
+   "layer": "personal",
+   "created": "2026-04-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "csuite"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": false
+  },
+  {
+   "id": "7887299673645909070",
+   "name": "CFO Cadence ",
+   "folder": "C-Suite Cadences",
+   "layer": "personal",
+   "created": "2026-02-20",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": false
+  },
+  {
+   "id": "2183157585523762531",
+   "name": "Pubs 25-50 sites: IT Persona",
+   "folder": "JS - Agentic Scheduling (Non-exec) AE+BDR",
+   "layer": "personal",
+   "created": "2026-02-19",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": false
+  },
+  {
+   "id": "2106973490509061142",
+   "name": "Pubs 25-50 sites: Ops Persona",
+   "folder": "JS - Agentic Scheduling (Non-exec) AE+BDR",
+   "layer": "personal",
+   "created": "2026-02-19",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": false
+  },
+  {
+   "id": "5794847122845895791",
+   "name": "🍔 Casual Dining - IT Persona",
+   "folder": "JS - Agentic Scheduling (Non-exec) AE+BDR",
+   "layer": "personal",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5055943744505016661",
+   "name": "🍔 Casual Dining - Operations Persona",
+   "folder": "JS - Agentic Scheduling (Non-exec) AE+BDR",
+   "layer": "personal",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6561204093265816466",
+   "name": "🍔 Casual Dining - Finance Persona",
+   "folder": "JS - Agentic Scheduling (Non-exec) AE+BDR",
+   "layer": "personal",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4149479632899329419",
+   "name": "🍻 Pubs - IT + Ops ",
+   "folder": "JS - Agentic Scheduling (Non-exec) AE+BDR",
+   "layer": "personal",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations",
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3828920493835972411",
+   "name": "☕️ Coffee Shops - Finance Persona",
+   "folder": "JS - Agentic Scheduling (Non-exec) AE+BDR",
+   "layer": "personal",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8159845813716600140",
+   "name": "☕️ Coffee Shops -Operations Persona",
+   "folder": "JS - Agentic Scheduling (Non-exec) AE+BDR",
+   "layer": "personal",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6528777841885354589",
+   "name": "🍻 Pubs - Finance Persona",
+   "folder": "JS - Agentic Scheduling (Non-exec) AE+BDR",
+   "layer": "personal",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "576685107885500100",
+   "name": "BDR FLOW - Labour Assessment/AgenticAI Schedules (MAKE A COPY)",
+   "folder": "JS - Agentic Scheduling (Non-exec) AE+BDR",
+   "layer": "personal",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "931569730846173249",
+   "name": "AE FLOW - Labour Assessment/AgenticAI Schedules",
+   "folder": "JS - Agentic Scheduling (Non-exec) AE+BDR",
+   "layer": "personal",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  }
+ ],
+ "shared_with_rep": [
+  {
+   "id": "5298397048900486901",
+   "name": "Esquires Coffee - Franchise Outreach ",
+   "folder": "Abbi Simms",
+   "layer": "shared",
+   "created": "2026-04-07",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "1072368631578216223",
+   "name": "Costa Franchisee outreach",
+   "folder": "Abbi Simms",
+   "layer": "shared",
+   "created": "2026-03-24",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "148268224521191995",
+   "name": "Pubs 25-50 sites: Ops Persona",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6215278191440004859",
+   "name": "Pubs 25-50 sites: IT Persona",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8520385259588212954",
+   "name": "MAKE A COPY. Level Up!: Ops",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json",
+ "survey": {
+  "answered": "2026-09-16",
+  "q1_note": "Tech Expo + Q3 have been the main focus for months; will likely create more soon",
+  "q3_other_flows": "none — \"I don't use the other flows\"",
+  "q4_shared_outbound": "no",
+  "chooser": "persona + segment; ENT needs super targeted approaches",
+  "wants_new_flows": true,
+  "wants_new_flows_condition": "if we have data to back it up",
+  "notes": "Blanket \"none\" plausibly covers the unlisted personal flows too (Boparan set, Zambrero, Chaiiwala, emoji vertical-persona set) but they were not asked by name — left null."
+ }
+}

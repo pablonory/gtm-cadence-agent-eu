@@ -1,0 +1,441 @@
+{
+ "rep": "louisgrenier@nory.ai",
+ "name": "Louis Grenier",
+ "role": "AE",
+ "pulled": "2026-09-11",
+ "status": "CONFIRMED 2026-09-16 — from the rep's survey reply in Pablo's Slack DM",
+ "personal": [
+  {
+   "id": "6904693626481244347",
+   "name": "Tech Expo 2026",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-09-09",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4615280450227863292",
+   "name": "Quick Call",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-09-07",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6941033364957848341",
+   "name": "Claude LG2",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-08-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true
+  },
+  {
+   "id": "8321218284734724782",
+   "name": "Claude Flow - LAG",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-06-05",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true
+  },
+  {
+   "id": "8126710510973693743",
+   "name": "Ops Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-28",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": false
+  },
+  {
+   "id": "5758225052237244848",
+   "name": "Founder/Owner Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-28",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": false
+  },
+  {
+   "id": "2585176996719213262",
+   "name": "Finance Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-28",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": false
+  },
+  {
+   "id": "2119668925143497566",
+   "name": "Procurement/Food Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1106884518439390883",
+   "name": "HR Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-28",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "people"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": false
+  },
+  {
+   "id": "95847691270350727",
+   "name": "LG FLOW - Labour Assessment/AgenticAI Schedules",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-11",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "4725898855903652831",
+   "name": "OM<>LG: MM AI Assistant",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null,
+    "segment": "mm_ent"
+   },
+   "confidence": "low",
+   "live": null
+  }
+ ],
+ "shared_with_rep": [
+  {
+   "id": "3692560523867564748",
+   "name": "Tech Expo 2026",
+   "folder": "Tech expo 2026",
+   "layer": "shared",
+   "created": "2026-09-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2789774966821949832",
+   "name": "Nory Referral Programme Flow - auto",
+   "folder": "Miles Sayer",
+   "layer": "shared",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "inbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5286654803247196613",
+   "name": "Closing the book and nurture sequence (May '26)",
+   "folder": "Miles Sayer",
+   "layer": "shared",
+   "created": "2026-05-22",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2720907587533028585",
+   "name": "Miles' Nurture Sequence V2 May 26",
+   "folder": "Miles Sayer",
+   "layer": "shared",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5794847122845895791",
+   "name": "🍔 Casual Dining - IT Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5055943744505016661",
+   "name": "🍔 Casual Dining - Operations Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6561204093265816466",
+   "name": "🍔 Casual Dining - Finance Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4149479632899329419",
+   "name": "🍻 Pubs - IT + Ops ",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations",
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3828920493835972411",
+   "name": "☕️ Coffee Shops - Finance Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8159845813716600140",
+   "name": "☕️ Coffee Shops -Operations Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6528777841885354589",
+   "name": "🍻 Pubs - Finance Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "576685107885500100",
+   "name": "BDR FLOW - Labour Assessment/AgenticAI Schedules (MAKE A COPY)",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "931569730846173249",
+   "name": "AE FLOW - Labour Assessment/AgenticAI Schedules",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8520385259588212954",
+   "name": "MAKE A COPY. Level Up!: Ops",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json",
+ "survey": {
+  "answered": "2026-09-16",
+  "q3_other_flows": "no",
+  "q4_shared_outbound": "no — did not know they existed",
+  "chooser": "vertical or persona",
+  "wants_new_flows": true,
+  "notes": "Unlisted personal flows (Tech Expo 2026, Quick Call, Procurement/Food, LG FLOW Labour, OM<>LG) left null — not asked by name; Q3 'no' suggests not in use. Also asked how to load his account list into cadence briefs — Pablo will load his sheet and hand back a HubSpot list."
+ }
+}
