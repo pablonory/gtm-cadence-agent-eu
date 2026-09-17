@@ -133,7 +133,16 @@ verifiable, multi-concept; (2) **Grand Traverse Pie Co.** — clean XtraChef dis
 - If the vertical has no hard number (**Coffee**), fall back to a general Nory outcome (`knowledge/product.md`)
   and mark the copy "proof pending", rather than fabricating.
 
-## Addendum 2026-09-17 — published success stories surfaced via William's hit-list prompt ⚠️ verify before first use
+## Addendum 2026-09-17 — published success stories surfaced via William's hit-list prompt ✅ VERIFIED
+**Verified 2026-09-17 against the live pages** — full table, exact page wording and qualifiers in
+`knowledge/rep_assets/proof_verification_2026-09-17.md`. All 12 brands CONFIRMED (quote Barge East
+as "up to 10%", Pieminister as "around 50% / up to 60%", Black Sheep's <1% variance as Q1 2026;
+Papa's is qualitative only; on Griolladh say "trailer" and avoid the site count — the page
+contradicts itself). Two rep-copy figures are UNSOURCED and must not enter agent copy: "6–11%
+labour" (published range is **5–11%**, Scheduling Assistant/Workforce pages) and "6% GP uplift"
+(nearest published: Hook & Ladder GP +4%). Bonus proof surfaced in the sweep: Passyunk Avenue COL
+−26% (published), Hook & Ladder GP +4%, CUPP waste −60% / 99% forecast, Badiani 96% forecast /
+−3% operating costs, and the platform-level "10–25% COL reduction" on /product.
 William Martin's outbound prompt (`knowledge/rep_assets/william_hit_list_prompt.md`) carries a
 case-study table of **published nory.ai success-story pages with numbers this library lacked** —
 including the two documented gaps:

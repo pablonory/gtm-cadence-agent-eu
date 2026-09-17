@@ -1,7 +1,7 @@
 # Flow proposal — William Martin · "Will- F&L V4" (refresh of F&L V3)
 
-**Status: DRAFT — proof figures pending `knowledge/rep_assets/proof_verification_2026-09-17.md`.
-Do not send to William until every [VERIFY] marker is resolved.**
+**Status: DRAFT for Pablo's review, then William's. Proof verified 2026-09-17
+(`knowledge/rep_assets/proof_verification_2026-09-17.md`) — all figures below are page-backed.**
 Built 2026-09-17 from his survey #1 + #2 (`registry/william.martin.json`), his book profile, and his
 hit-list prompt (`knowledge/rep_assets/william_hit_list_prompt.md`). This is a REFRESH, not a
 replacement: the structure is his, it runs at 700-account volume, and he's mid-way through his own
@@ -24,13 +24,14 @@ heavy tailoring is the only maintainable design (his own revealed preference).
    signal stack and writes both into the brief, so his tailoring time comes back at 700-account
    scale. His SMYKM/WYWN rules and the agent's first-touch skill are the same doctrine; his
    case-study lookup table is now in our knowledge layer.
-2. **Every number in the templated steps gets verified.** His current copy claims 6 to 11% labour
-   reduction and a 6% GP uplift; neither is in the approved proof set. [VERIFY: keep if the pages
-   back them, replace with confirmed figures if not.]
-3. **The "RE:" email is proposed OUT.** "Operators quietly deploying AI... ahead of the curve" is
-   the weakest step: hype register, unsourced number, and it pitches AI first (his own prompt's
-   rule: never lead with AI). If the 6% GP figure verifies, it survives as an alternate. His
-   strongest asset, the "worst site vs best" hook, stays front and centre.
+2. **Every number in the templated steps is now verified.** His copy claimed 6 to 11% labour
+   reduction and a 6% GP uplift: **both unsourced**. The published labour range is **5 to 11%**
+   (Scheduling Assistant / Workforce pages) — almost certainly what he meant — and no page states
+   a 6% GP uplift (nearest published: Hook & Ladder, GP +4%). The copy below uses 5 to 11%.
+3. **The "RE:" email is OUT, confirmed.** "Operators quietly deploying AI... ahead of the curve"
+   was the weakest step: hype register, and its 6% GP number verified as unsourced. It also
+   pitches AI first, against his own prompt's rule. His strongest asset, the "worst site vs best"
+   hook, stays front and centre.
 4. **Explicit day spacing.** He said "calls and LI DMs mixed in" without days; v0 proposes a
    12-day skeleton to react to. He corrects it to how he actually works.
 
@@ -64,10 +65,9 @@ frames it: estimates, not actuals, "the shape tends to hold at your scale". One 
 > **Subject:** your best site, everywhere
 >
 > {first}, what if your worst site ran like your best? Usually the gap comes down to systems, not
-> people. Nory takes what works at your best site and runs it everywhere, automatically:
-> [VERIFY: "operators see 6 to 11% reductions in labour" if sourced; else the confirmed
-> labour figure from the verification file], and the gap between best and worst site closes.
-> Anything in that for {company}?
+> people. Nory takes what works at your best site and runs it everywhere, automatically. Operators
+> see 5 to 11% reductions in labour, and the gap between best and worst site closes. Anything in
+> that for {company}?
 
 **Day 8 · Call 3.**
 
@@ -95,9 +95,13 @@ frames it: estimates, not actuals, "the shape tends to hold at your scale". One 
 
 - Nothing here replaces your matrix work: when your Vertical × Persona set is ready next week, the
   agent points briefs at those cells and this flow becomes the default for accounts outside them.
-- Your case-study table is now in the agent's knowledge layer, credited. Where the published pages
-  confirm your numbers, they stay; where they don't, the copy carries a figure a page backs.
-  [VERIFY: attach outcome per claim.]
+- Your case-study table is now in the agent's knowledge layer, credited — and verified: all 12
+  brands check out against the published pages (Roasting Plant, Josie's, Rocksalt and Griolladh
+  have live pages too, hidden behind the index's "load more"). Two copy tweaks from the check:
+  your 6 to 11% labour figure is published as **5 to 11%**, and no page backs a 6% GP uplift
+  (nearest is Hook & Ladder at +4%), so the RE: email either gets re-sourced or retired. Small
+  print that matters: Barge East is "up to 10%", Pieminister is "around 50% / up to 60%", and
+  Black Sheep's variance figure is Q1 2026 specific — quote them with the qualifiers.
 - Emails 1 and 2 stop costing you time: the agent writes both per account into the brief, your
   rules (SMYKM, signal priority, no em dashes) are already its rules.
 
