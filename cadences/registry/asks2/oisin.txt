@@ -1,0 +1,17 @@
+Hi Oisín — no apology needed, that was worth the wait. Two things in your answer changed how I'm thinking about this, so a few follow-ups. The agent read your book in HubSpot first:
+
+*Your book:* 905 accounts, 607 ICP-fit — the second biggest on the team after William. 582 SMB. 62 of them reactivation (those are the ones you asked me about a couple of weeks ago). Where HubSpot knows the vertical: QSR/fast casual (27), coffee (18), pubs (13) — but it's empty on 546 of them, which is why I'm asking rather than guessing. People on your accounts: Ops (148), Founders (109), C-Suite (67), Finance (50). So you're Ops-led, with a big founder tail.
+
+*1. Does that match where you actually prospect?*
+
+*2. Which US flow is it?* You said you run "the US flow that abbi created". There are 17 in that folder and I don't want to guess which. Name it exactly as it appears in Gong — and if you can, paste me the first two or three steps. Reason I'm asking: that folder is the US matrix, built for US accounts. If it's putting dollar figures or US customer names in front of UK operators, that's worth fixing this week regardless of everything else.
+
+*3. Which shared Outbound ones do you actually switch between?* You said persona, and cafe/QSR vs SMB. Just the names you reach for most — 3 or 4 is fine.
+
+*4. Is "Zonal Flow" yours and still live?* It's sitting under your name in Gong from 19 August. I told you there was nothing under your name, which was wrong — sorry. If it's a Zonal-displacement play I'd like to know, that's a good angle nobody else is running.
+
+*5. You edit the first two emails by hand on 607 accounts.* So does William — you're the second BDR to tell me that, and it's the single strongest case for this whole thing. That's the step the agent takes off you: it researches the account, writes both emails with the signal and the numbers, and drops them in your brief ready to paste. What would make that genuinely useful to you rather than something you rewrite anyway?
+
+*6. Reactivation:* you've got 62 sitting there and you asked me for that list before I'd even started this. Prior contact is already one of your routing rules. Do you want a proper reactivation motion as part of your set, split by why they went cold (no-show / went quiet / product gap / timing)?
+
+*What happens next:* you're getting a proper set built, not a refresh — you said there isn't much structure to protect, so we start from your book and your motion rather than from someone else's flows. Proposal with the data and the reason behind each flow → you tear it apart → you create them in Gong → the agent points briefs at them with the first touch written per account. Send me 15-20 accounts whenever and they can run in parallel, same as William's.

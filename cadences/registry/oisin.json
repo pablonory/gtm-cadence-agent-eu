@@ -1,0 +1,100 @@
+{
+ "rep": "oisin@nory.ai",
+ "name": "Oisin",
+ "role": "BDR",
+ "pulled": "2026-09-11",
+ "status": "CONFIRMED 2026-09-17 — from the rep's survey reply in Pablo's Slack DM. NOTE: he confirmed WHICH LAYERS he runs (US Flows + company Outbound) but named no individual flow, so every entry stays live:null and resolves as 'suggested'. Survey #2 asks for the exact names.",
+ "personal": [
+  {
+   "id": "4941240180713240981",
+   "name": "Zonal Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-08-19",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  }
+ ],
+ "shared_with_rep": [
+  {
+   "id": "3692560523867564748",
+   "name": "Tech Expo 2026",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-09-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1695969294027059741",
+   "name": "Level Up!",
+   "folder": "Abbi Simms",
+   "layer": "shared",
+   "created": "2026-05-01",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4725898855903652831",
+   "name": "OM<>LG: MM AI Assistant",
+   "folder": "Louis Grenier",
+   "layer": "shared",
+   "created": "2026-03-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null,
+    "segment": "mm_ent"
+   },
+   "confidence": "low",
+   "live": null
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json",
+ "survey": {
+  "answered": "2026-09-17",
+  "q1_answer": "No personal set in use: 'I am currently using shared flows and editing the first two manual emails'. The 'Zonal Flow' in his 2026-09-11 pull was never mentioned either way — the ask told him there were no reusable templates under his name, so it was never put to him. Stays live:null.",
+  "q2_other_flows": "no",
+  "q3_shared_outbound": "THIRD COMPANY-LAYER USER (after Lars and Louis Gilbert), and the first to name the US matrix: 'I use the US flow that abbi created and I will change around the flows depending on: persona and if its a cafe/QSR or a SMB (the ones that are currently in outbounding)'. Which of the 17 US Flows he means is NOT identified — ask before acting.",
+  "chooser": "vertical + persona + number of sites, 'also if it has been spoken with before' — i.e. prior contact routes to a reactivation motion",
+  "wants_new_flows": true,
+  "wants_new_flows_note": "'My flows are not really structured as much recently so yes I am always open to better workflows and a hand with improving' — open ask, no existing structure to preserve.",
+  "book_note": "SECOND BIGGEST BOOK ON THE TEAM: 905 accounts, 607 ICP-fit, 582 SMB, 62 reactivation. Ops-led (148), then Founder (109), C-Suite (67), Finance (50). Clay vertical empty on 546 of 607.",
+  "bdr_pattern": "Second BDR in a row to hand-tailor the first two emails on a very large book (William: 717 ICP, Oisin: 607). That is exactly the step the agent automates — the clearest value case in the team so far.",
+  "prior_interest": "Asked Pablo unprompted on 2026-09-08 for a list of his reactivation accounts ('those 61 accounts in my name that are reactivation'). Now 62. Live interest in a reactivation motion."
+ },
+ "company_confirmed": [],
+ "company_confirmed_note": "He confirmed the LAYER, not the flows: he switches among the company Outbound set by persona and by cafe/QSR vs SMB, but named none of them. Unlike Lars (who said 'all shared flows apart from hostech', which is namable), nothing here can be promoted to live:true without guessing. Left empty on purpose; survey #2 asks for the names.",
+ "us_flow_conflict": {
+  "found": "2026-09-17",
+  "issue": "He says his main flow is one of the 17 in the company layer's 'US Flows' folder. lib/flow_registry.py:87-88 structurally skips that folder for UKI accounts, so the matcher will NEVER name his actual working flow — his briefs will fall through to a company Outbound flow or to EMPTY.",
+  "why_the_exclusion_exists": "The US matrix is built for US accounts (US proof points, $ figures, US-market framing); naming it on a UKI brief was judged wrong at the rewiring (commit f931429).",
+  "decision_needed_from": "Pablo",
+  "options": [
+   "A — keep the exclusion: treat his US-flow use as the gap to fix, and give him a proper UKI flow (he is asking for help anyway).",
+   "B — allow a per-rep opt-in exception so a US flow he genuinely runs can be named as his."
+  ],
+  "recommendation": "A. He has the second-biggest book, no structure of his own, and is explicitly asking for help — building him a UKI flow serves him better than teaching the matcher to hand a UKI prospect US-market copy. But confirm WHICH US flow he runs first: if it is carrying $ figures or US proof to UK operators, that is a copy-quality problem to fix now, not after the flow work."
+ }
+}
