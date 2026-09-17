@@ -1,0 +1,17 @@
+Hi Miles — thanks for the annotations, best answer format so far. The agent read your book in HubSpot too:
+
+*Your book:* 131 ICP accounts, 111 of them SMB — and *90 reactivation accounts, the deepest pool on the team*. Nearly half your book is win-back, which matches your set: nurtures, Closing the book, CL and DQ reup.
+
+You have the most alive flow system on the team, so this is about sharpening it, not replacing it:
+
+*1. Does that profile match where you spend your time?* SMB net-new vs working the reactivation pool?
+
+*2. Map your 7 live flows to motions for me:* which one gets a NET-NEW account vs a closed-lost/DQ vs a referral? One line each is enough — the agent needs to pick the right one per brief.
+
+*3. Your split is contact-info-driven [calls vs no calls].* The agent maps every contact on an account with job titles when it writes a brief — if contact data were solved, would you still split by contactability, or by who you're targeting [owner vs ops vs finance]?
+
+*4. Your first touches are hand-tailored to the individual — that's exactly what the agent writes* [from verified signals, sources linked]. What do your best-performing first touches lean on: something about the person, the company, timing, a referral?
+
+*5. What would you improve first* in the current set, if we improved one thing?
+
+*What happens next:* with your answers the agent starts pointing briefs at your real flows, and we sharpen whichever one you pick in Q5 — data + reasons included. Send your 15-20 accounts whenever; with your pool, worth making half of them reactivation.

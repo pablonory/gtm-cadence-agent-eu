@@ -1,0 +1,268 @@
+{
+ "rep": "miles@nory.ai",
+ "name": "Miles",
+ "role": "AE",
+ "pulled": "2026-09-11",
+ "status": "CONFIRMED 2026-09-17 — from the rep's survey reply in Pablo's Slack DM",
+ "personal": [
+  {
+   "id": "2273444317308870865",
+   "name": "Nory Referral Programme Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "inbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": false
+  },
+  {
+   "id": "2789774966821949832",
+   "name": "Nory Referral Programme Flow - auto",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-08-06",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "inbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": true
+  },
+  {
+   "id": "6003848286609397058",
+   "name": "Miles' Nurture Sequence V3 June 26",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-06-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": true
+  },
+  {
+   "id": "5286654803247196613",
+   "name": "Closing the book and nurture sequence (May '26)",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-22",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": true
+  },
+  {
+   "id": "528733930424678914",
+   "name": "Level-up Manchester Flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1354897874199299495",
+   "name": "Miles' Nurture Sequence V1 May 26",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": false
+  },
+  {
+   "id": "2720907587533028585",
+   "name": "Miles' Nurture Sequence V2 May 26",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": true
+  },
+  {
+   "id": "364440755858317611",
+   "name": "Calls and LI only",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-14",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "577667082333134425",
+   "name": "Miles Outbound Campaign (multi-channel - Call, Email, Linkedin)",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-16",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true
+  },
+  {
+   "id": "1306867081791163599",
+   "name": "Miles Outbound Campaign (Just email and LI)",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-16",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true
+  },
+  {
+   "id": null,
+   "name": "CL and DQ reup",
+   "folder": null,
+   "layer": "personal",
+   "created": null,
+   "source": "rep survey reply 2026-09-17 — not in the 2026-09-11 Gong pull; capture id on next gong_flows.py run",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": true
+  }
+ ],
+ "shared_with_rep": [
+  {
+   "id": "2989126729563919091",
+   "name": "Ula Spire, Head of Operations",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-08-05",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "5483203408955262312",
+   "name": "Ed - Case Study: Adam Lewis",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-03-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5811352189544731604",
+   "name": "Ed - Case Study: Paul Tanner",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6462356336740519583",
+   "name": "Mag - Case Study: Jack Lander",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6066514246527978585",
+   "name": "ED - Case Study: Jack Lander",
+   "folder": "Case Studies",
+   "layer": "shared",
+   "created": "2026-03-02",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json",
+ "survey": {
+  "answered": "2026-09-17",
+  "q3_other_flows": "CL and DQ reup · Miles Outbound Campaign (Just email and LI)",
+  "q4_shared_outbound": "no",
+  "chooser": "contactability, not vertical/persona: first touch always tailored to the individual, then a sequence WITH call steps or WITHOUT depending on the contact info he has",
+  "wants_new_flows": "open",
+  "wants_new_flows_note": "\"Would always be open to improving\" — has the most alive set on the team, improvement not replacement",
+  "notes": "He answered by annotating the quoted DM: flows marked \"not used\" are false; unmarked listed ones inferred in use (he annotated deliberately). CL and DQ reup was missing from the 2026-09-11 Gong pull — added below from his reply, id unknown."
+ }
+}
