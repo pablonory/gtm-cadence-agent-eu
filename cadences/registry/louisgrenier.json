@@ -437,5 +437,14 @@
   "chooser": "vertical or persona",
   "wants_new_flows": true,
   "notes": "Unlisted personal flows (Tech Expo 2026, Quick Call, Procurement/Food, LG FLOW Labour, OM<>LG) left null — not asked by name; Q3 'no' suggests not in use. Also asked how to load his account list into cadence briefs — Pablo will load his sheet and hand back a HubSpot list."
+ },
+ "survey2": {
+  "answered": "2026-09-16",
+  "profile_match": "yes",
+  "coverage": "wants flows for ALL contacts if possible",
+  "vertical": "never mind the vertical split — persona-led, no vertical axis",
+  "flow_count": 3,
+  "structure": "call-heavy with some email and a bit of LinkedIn; short and direct, 6-10 days max",
+  "keep_from_current": "nothing — \"you can change everything\""
  }
 }
