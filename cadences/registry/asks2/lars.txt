@@ -1,0 +1,15 @@
+Hi Lars — you're the first one actually running the shared system, so your answers count double. The agent read your book in HubSpot too:
+
+*Your book:* 217 ICP accounts — 144 SMB, 36 mid-market. Where HubSpot knows the vertical: QSR/fast casual (27), pubs (25), coffee (11). People on your accounts: Ops (119), then Founders (66), Finance (64), C-Suite (51) — matches your usage, you're Ops-led.
+
+*1. Does that match where you actually prospect?*
+
+*2. "The main ones could use an update" — name them.* Which 2-3 shared flows do you run most, and what's stale in them: the copy, the steps, the proof points, all of it?
+
+*3. What's inside the ones you run most?* Steps, days, channels — Gong's API won't show me flow content, so a screenshot or a quick list of one of them is perfect.
+
+*4. Which titles actually reply and book for you — ops directors, owners, finance?*
+
+*5. Who's the new guy you mentioned?* And do you rate the Giulia/Luc idea of 20 sequences per ICP × vertical, or is that exactly the kind of matrix nobody maintains?
+
+*What happens next:* your update lands on the shared flows, so everyone running them benefits. Proposal with the data + reasons per flow → you sanity-check it → updated in Gong → the agent points briefs at them, first touch written per account. Send your 15-20 accounts whenever — runs in parallel.
