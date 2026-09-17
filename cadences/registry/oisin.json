@@ -96,5 +96,18 @@
    "B — allow a per-rep opt-in exception so a US flow he genuinely runs can be named as his."
   ],
   "recommendation": "A. He has the second-biggest book, no structure of his own, and is explicitly asking for help — building him a UKI flow serves him better than teaching the matcher to hand a UKI prospect US-market copy. But confirm WHICH US flow he runs first: if it is carrying $ figures or US proof to UK operators, that is a copy-quality problem to fix now, not after the flow work."
+ },
+ "survey2": {
+  "sent": "2026-09-17",
+  "channel": "Pablo's Slack DM (D090R4ZV86P), message ts 1789659164.176389",
+  "asks": [
+   "book profile match",
+   "WHICH of the 17 US Flows he runs, exact Gong name + first 2-3 steps (copy-quality check: $ figures / US customer names in front of UK operators)",
+   "which shared Outbound flows he switches between, by name",
+   "is 'Zonal Flow' his and live (possible Zonal-displacement angle; the survey #1 ask wrongly told him he had no flows under his name)",
+   "what would make agent-written emails 1-2 genuinely useful rather than something he rewrites",
+   "does he want a reason-split reactivation motion for his 62 reactivation accounts"
+  ],
+  "answered": null
  }
 }
