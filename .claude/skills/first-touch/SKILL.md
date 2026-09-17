@@ -86,3 +86,12 @@ the per-account PDF / Cadence Brief.
 
 ## Applied feedback
 <!-- durable learned rules -->
+- **Name the comparable operator as its own element, not only inside the rationale** (rep feedback
+  2026-09-17, William Martin, BDR). Reps reuse the matched proof brand in other channels — his
+  favourite flow step is a LinkedIn DM ending "happy to share how {similar operator} handled it", and
+  he was about to build his own matcher for it before being told the brief already picks one. Surface
+  the brand and its published qualifier where it can be lifted, matched on vertical and site count.
+- **A dated claim must carry its own status.** Same rep's live copy asserted the April 2027 NLW rise
+  was "already confirmed"; it is an LPC *projection* (£13.02–£13.34) until the Budget sets it. When a
+  register entry's `status` is `proposed`, the copy says projection/timeline, never "confirmed" —
+  a finance-literate operator is exactly who catches this.

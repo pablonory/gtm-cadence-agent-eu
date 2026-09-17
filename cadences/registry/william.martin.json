@@ -579,5 +579,15 @@
   "direction": "wants to move to MORE TAILORED flows",
   "matrix_correction": "The 17-flow Vertical × Persona matrix is NOT abandoned — it is work in progress: \"still needs more time and attention, hoping to be ready by next week\". Earlier \"dead/abandoned\" framing corrected 2026-09-17. live=false stays correct (not run yet).",
   "copy_audit_note": "His email claims (6-11% labour, 6% GP uplift) are NOT in proof_library.md / the approved proof set (10-20% labour, 1-3pp GP). Verify sources before the proposal reuses them."
+ },
+ "v0_feedback": {
+  "received": "2026-09-17",
+  "source": "Slack DM thread 1789651176.615719, reply 15:51 CEST",
+  "call_opener": "REJECTED — 'leaves zero room for rapport and goes straight into features'. v1 opens on the account's own why-now (agent-supplied), holds any product description until asked, and then keeps it to one sentence with no feature names.",
+  "email_location_performance": "APPROVED verbatim ('good'), incl. the 5-11% correction he did not contest.",
+  "email_april_2027": "WANTS THE LABOUR-LAW ANGLE — 'does mention the change in labour laws and cutting shifts, way punchier with that'. v1 rebuilt on the Employment Rights Act 2027 timeline (guaranteed hours, shift notice) and DOWNGRADES his 'increase is already confirmed' claim to the LPC projection range it actually is.",
+  "linkedin_dm": "APPROVED, his favourite step — 'really like it'. Asked for auto-matched similar customers; already solved, the brief picks a comparable operator per account from the 12 verified brands.",
+  "day_spacing": "STILL UNANSWERED — the 12-day skeleton remains our guess, asked again in v1.",
+  "copy_error_found": "His live F&L V3 'April 2027' email states the next NLW increase is 'already confirmed'. It is not: LPC projection GBP 13.02-13.34 (central 13.18), rate set at the Budget. Correct before V4 goes live."
  }
 }
