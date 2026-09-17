@@ -1,0 +1,19 @@
+Hi William — yes please, send the prompt! That's exactly the kind of thing I want to compare against what the agent writes.
+
+The agent read your book in HubSpot too:
+
+*Your book:* 717 ICP accounts, 687 of them SMB — by far the biggest book on the team. Where HubSpot knows the vertical: QSR/fast casual (68), pubs (41), coffee (30). People on your accounts: Ops (138), Founders (102), C-Suite (85).
+
+At that volume, one flow + tailored openers is the only maintainable system — so this is about making that system stronger, not giving you 17 flows back:
+
+*1. Does the profile match where you actually prospect?*
+
+*2. What's inside Will- F&L V3?* Steps, days, channels — Gong's API won't show me flow content, so a screenshot or a quick list is perfect.
+
+*3. You built the full Vertical × Persona matrix on 25 Aug and don't run it — what made you drop it?* Genuinely useful answer for the whole team's design.
+
+*4. Which titles actually reply and book for you — the owner, ops, someone else?*
+
+*5. The agent writes the first touch per account [verified signals, sources linked] — that's your tailoring step, automated.* If that time came back, would you still run ONE flow, or would 2-3 make sense [e.g. net-new vs nurture, or split by who you're targeting]?
+
+*What happens next:* proposal with the data + reasons behind it → you edit → you create it in Gong → the agent points your briefs at it. Send your 15-20 accounts whenever — runs in parallel.
