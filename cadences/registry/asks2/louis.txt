@@ -1,0 +1,19 @@
+Hi Louis — good stuff. The agent read your book in HubSpot too, so here's the picture and a few last questions:
+
+*Your book:* 191 ICP accounts, 175 of them SMB. And you're the first rep on the team where *founders outnumber everyone else* on the accounts: Founders (130), Ops (98), C-Suite (33), Finance (25). You hunt owner-operators.
+
+You've got a lot running: 7 live flows, some older templates, Gmail templates on top, plus the shared flows. So this is a consolidation job — fewer, sharper flows that cover the same ground:
+
+*1. Does the owner-operator picture match how you actually prospect?*
+
+*2. Which titles actually reply and book — the founder themselves, or their ops person?*
+
+*3. Send me the Gmail templates.* That's the part of your outbound the agent can't see in Gong, and if they're working they should shape the new set.
+
+*4. Of your 7 live flows, which 1-2 actually get results?* The rest we learn from and retire.
+
+*5. From question 2 you said some older templates are still in use — which ones, by name?*
+
+*6. How many flows could you keep sharp — 3?* Short ones for owner-operators, they decide fast.
+
+*What happens next:* proposal with every step written out and the data + reasons per flow → you edit → you create them in Gong → the agent points your briefs at them, first touch written per account. Send your 15-20 accounts whenever — runs in parallel.

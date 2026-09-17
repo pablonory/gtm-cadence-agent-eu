@@ -569,5 +569,15 @@
   "wants_new_flows": true,
   "offered": "the prompt that drafts his first two tailored emails — SAY YES, it is his revealed first-touch method and direct input for the first-touch skill comparison",
   "notes": "The full Vertical × Persona (Suite · Tier 1) matrix under his name (17 flows, all created/edited 25 Aug) is NOT what he runs — Q1 listed 8 of them and he answered with a different flow. All 16 matrix entries set live=false; his real system is one flow + tailored openers."
+ },
+ "survey2": {
+  "answered": "2026-09-17",
+  "profile_match": "unclear (\"not sure what is meant\")",
+  "fl_v3_contents": "Email steps shared verbatim in the DM: Custom 1 (Signal + Social Proof) · Custom 2 (ROI) · \"Location performance\" (worst site vs best; Scheduling + Ordering assistant videos; claims 6-11% labour reduction) · \"April 2027\" (NLW increase, labour exposure) · \"RE:\" (AI adoption; claims 6% GP uplift) · Breakup (priorities in 6-9 months?). Calls and LinkedIn DMs mixed in between.",
+  "first_touch_prompt_doc": "https://docs.google.com/document/d/1HpAn78FGCZ4iM9jxZQzSc73g2NE7z6fWgP2i9Phxe_w",
+  "titles_that_book": "Owner / MD / Ops",
+  "direction": "wants to move to MORE TAILORED flows",
+  "matrix_correction": "The 17-flow Vertical × Persona matrix is NOT abandoned — it is work in progress: \"still needs more time and attention, hoping to be ready by next week\". Earlier \"dead/abandoned\" framing corrected 2026-09-17. live=false stays correct (not run yet).",
+  "copy_audit_note": "His email claims (6-11% labour, 6% GP uplift) are NOT in proof_library.md / the approved proof set (10-20% labour, 1-3pp GP). Verify sources before the proposal reuses them."
  }
 }

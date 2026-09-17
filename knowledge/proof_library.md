@@ -133,8 +133,21 @@ verifiable, multi-concept; (2) **Grand Traverse Pie Co.** — clean XtraChef dis
 - If the vertical has no hard number (**Coffee**), fall back to a general Nory outcome (`knowledge/product.md`)
   and mark the copy "proof pending", rather than fabricating.
 
+## Addendum 2026-09-17 — published success stories surfaced via William's hit-list prompt ⚠️ verify before first use
+William Martin's outbound prompt (`knowledge/rep_assets/william_hit_list_prompt.md`) carries a
+case-study table of **published nory.ai success-story pages with numbers this library lacked** —
+including the two documented gaps:
+- **Coffee (gap closed pending verification):** Black Sheep 73→130+ sites, 98% forecast, <1% labour
+  variance (published page) · Roasting Plant −18% labour in 2 months · Josie's −23% in 4 months.
+- **Pub (no pub proof existed):** Hampshire Pub Co payroll 2 days → under 1 hour · Barge East −10% labour.
+- Plus Pieminister, Digbeth Dining Club, Papa's Fish & Chips, Tasty African Food, Pizzarova, Griolladh.
+Full table with URLs in the rep_assets file. **Rule:** before an agent quotes any of these in copy,
+open the success-story page and confirm the number — then promote the row into the vertical sections
+above with the URL as source. Until promoted, they are leads, not library.
+
 ## Still needed
-- **Coffee case study with published numbers** (Black Sheep) — highest-priority library gap.
+- **Coffee case study with published numbers** (Black Sheep) — ⚠️ likely resolved by the 2026-09-17
+  addendum above (published page exists); promote after verification.
 - **Quantified US outcome numbers** — US has logos but no COL%/GP results yet. Convert Ark + Grand
   Traverse first.
 - Dave's Hot Chicken + the FSR sub-page brands populated with numbers.

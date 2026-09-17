@@ -1,0 +1,843 @@
+{
+ "rep": "louis@nory.ai",
+ "name": "Louis Gilbert",
+ "role": "AE",
+ "pulled": "2026-09-11",
+ "status": "CONFIRMED 2026-09-17 — from the rep's survey reply in Pablo's Slack DM",
+ "personal": [
+  {
+   "id": "3799348550344233973",
+   "name": "Tech Expo 2026",
+   "folder": "LG Flows",
+   "layer": "personal",
+   "created": "2026-09-08",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2989126729563919091",
+   "name": "Ula Spire, Head of Operations",
+   "folder": "Case Studies",
+   "layer": "personal",
+   "created": "2026-08-05",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": true
+  },
+  {
+   "id": "474453968928683768",
+   "name": "Q3 AI Shift",
+   "folder": "AI Heavy Flows",
+   "layer": "personal",
+   "created": "2026-07-28",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true
+  },
+  {
+   "id": "1946506595853440711",
+   "name": "Soul Food",
+   "folder": "LG Flows",
+   "layer": "personal",
+   "created": "2026-06-23",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true
+  },
+  {
+   "id": "3866579527026713870",
+   "name": "Oakberry Flow",
+   "folder": "LG Flows",
+   "layer": "personal",
+   "created": "2026-06-16",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true
+  },
+  {
+   "id": "7949732229245857257",
+   "name": "Ops",
+   "folder": "KFC/YUM",
+   "layer": "personal",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "6843280956679701025",
+   "name": "Finance",
+   "folder": "KFC/YUM",
+   "layer": "personal",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "629878811833477390",
+   "name": "People",
+   "folder": "KFC/YUM",
+   "layer": "personal",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "people"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "2004653772142799148",
+   "name": "Tech",
+   "folder": "KFC/YUM",
+   "layer": "personal",
+   "created": "2026-05-14",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "4780067595877777513",
+   "name": "AI Shift",
+   "folder": "AI Heavy Flows",
+   "layer": "personal",
+   "created": "2026-05-05",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true
+  },
+  {
+   "id": "4977207127230869680",
+   "name": "Nurture Flow",
+   "folder": "Nurture Flow",
+   "layer": "personal",
+   "created": "2026-05-05",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3207003436019896419",
+   "name": "Product Tour",
+   "folder": "Product Tour",
+   "layer": "personal",
+   "created": "2026-05-05",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true
+  },
+  {
+   "id": "4922388689964995942",
+   "name": "Domino's Franchise Owners",
+   "folder": "Franchise Flows",
+   "layer": "personal",
+   "created": "2026-04-14",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "3166541470778079273",
+   "name": "Redcat Pub",
+   "folder": "Pub Flows",
+   "layer": "personal",
+   "created": "2026-03-30",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "6923927900767070369",
+   "name": "Coffee Flow ",
+   "folder": "Coffee Flow",
+   "layer": "personal",
+   "created": "2026-03-23",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "6823326303206729934",
+   "name": "Costa Flow",
+   "folder": "Franchise Flows",
+   "layer": "personal",
+   "created": "2026-03-20",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8563194404303258939",
+   "name": "Nory takes london: YO !",
+   "folder": "Social/Events Flow",
+   "layer": "personal",
+   "created": "2026-03-12",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4464097513043913260",
+   "name": "Nory takes london: BTG",
+   "folder": "Social/Events Flow",
+   "layer": "personal",
+   "created": "2026-03-12",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5483203408955262312",
+   "name": "Ed - Case Study: Adam Lewis",
+   "folder": "Case Studies",
+   "layer": "personal",
+   "created": "2026-03-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8334111509584339314",
+   "name": "Ed QSR and CD 25-50 sites",
+   "folder": "QSR & CD Flows",
+   "layer": "personal",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [
+     "qsr",
+     "fsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "5811352189544731604",
+   "name": "Ed - Case Study: Paul Tanner",
+   "folder": "Case Studies",
+   "layer": "personal",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6462356336740519583",
+   "name": "Mag - Case Study: Jack Lander",
+   "folder": "Case Studies",
+   "layer": "personal",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6066514246527978585",
+   "name": "ED - Case Study: Jack Lander",
+   "folder": "Case Studies",
+   "layer": "personal",
+   "created": "2026-03-02",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "4511743025607400034",
+   "name": "Louis > Pubs 25-50 sites",
+   "folder": "Pub Flows",
+   "layer": "personal",
+   "created": "2026-02-25",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "3576831111273659010",
+   "name": "Louis - BDR Outreach",
+   "folder": "LG Flows",
+   "layer": "personal",
+   "created": "2026-02-12",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  }
+ ],
+ "shared_with_rep": [
+  {
+   "id": "3692560523867564748",
+   "name": "Tech Expo 2026",
+   "folder": "Tech expo 2026",
+   "layer": "shared",
+   "created": "2026-09-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1181582058590513520",
+   "name": "Q3 Flow Approach ",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-07-13",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6003848286609397058",
+   "name": "Miles' Nurture Sequence V3 June 26",
+   "folder": "Miles Sayer",
+   "layer": "shared",
+   "created": "2026-06-04",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5286654803247196613",
+   "name": "Closing the book and nurture sequence (May '26)",
+   "folder": "Miles Sayer",
+   "layer": "shared",
+   "created": "2026-05-22",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2720907587533028585",
+   "name": "Miles' Nurture Sequence V2 May 26",
+   "folder": "Miles Sayer",
+   "layer": "shared",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6974666428616920856",
+   "name": "Level Up Manchester",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-05-18",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5934642424877925776",
+   "name": "Domino's Franchise Owners",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-04-13",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "1072368631578216223",
+   "name": "Costa Franchisee outreach",
+   "folder": "Abbi Simms",
+   "layer": "shared",
+   "created": "2026-03-24",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "1100757199574134787",
+   "name": "QSR: Labour",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-03-19",
+   "tags": {
+    "vertical": [
+     "qsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "6915066866362754157",
+   "name": "Fourth",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-03-17",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "399836974999362972",
+   "name": "Nory takes london: Nero",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8992615381688872777",
+   "name": "Nory takes london: Itsu",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5033652188842220373",
+   "name": "Light Touch",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8514873030868868092",
+   "name": "Nory takes london: Coffee1",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6241269343168062822",
+   "name": "Nory takes london: Sushi Daily",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5982882991285713900",
+   "name": "Case Study: Adam Lewis",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true
+  },
+  {
+   "id": "5223917102691797862",
+   "name": "Ed QSR and CD 25-50 sites",
+   "folder": "Ed Freemantle",
+   "layer": "shared",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [
+     "qsr",
+     "fsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "8134672103359178970",
+   "name": "Case Study: Paul Tanner",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-03-02",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "938624962732462299",
+   "name": "Case Study: Jack Lander",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-03-02",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "2399553002300814862",
+   "name": "Engaged: call,nudge,call",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-02-27",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "463180851291101630",
+   "name": "Louis > Pubs 25-50 sites",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-02-24",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "8345758579485739531",
+   "name": "Pubs 25-50 sites: Finance",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-02-20",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4735878055896104247",
+   "name": "Duplicate Pubs 25-50 sites: Ops Persona",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-02-17",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "148268224521191995",
+   "name": "Pubs 25-50 sites: Ops Persona",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6215278191440004859",
+   "name": "Pubs 25-50 sites: IT Persona",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "1702464286767586953",
+   "name": "DM - Personalised",
+   "folder": "Magnus McGrigor",
+   "layer": "shared",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json",
+ "survey": {
+  "answered": "2026-09-17",
+  "q1_answer": "all — the 7 usage-log flows",
+  "q2_answer": "yes — older templates in use, WITHOUT naming which of the 10; left null, pin down at proposal stage",
+  "q3_other_flows": "TEMPLATES ON GOOGLE MAIL — part of his outbound lives OUTSIDE Gong entirely; the agent flow lookup cannot see it",
+  "q4_shared_outbound": "yes — second company-layer user (did not name which flows)",
+  "chooser": "no routing logic: \"email them directly and introduce myself from template\"",
+  "wants_new_flows": true,
+  "notes": "Sprawl profile: 7 live flows + an unspecified set of older templates + Gmail templates + shared flows. His co-build is consolidation, not creation."
+ }
+}
