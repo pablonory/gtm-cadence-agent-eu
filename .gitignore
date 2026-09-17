@@ -50,6 +50,9 @@ output/reactivation/*
 output/briefs/*
 # Generated local copies of shareable reports (the canonical version is the published artifact)
 output/reports/*
+# Per-rep book profiles — CRM-derived (owner ids, book composition, ICP fit). Never commit.
+# Added 2026-09-17 when the directory appeared untracked — the exact gap output/briefs/ had in the US repo.
+output/book_profiles/*
 # keep the folder skeleton
 !output/**/.gitkeep
 !output/**/README.md
