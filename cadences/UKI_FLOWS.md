@@ -30,11 +30,13 @@ agent *derives* the flow name from vertical × persona. UKI runs **two layers**:
    matrix names into their folder (William, 2026-08-25), many are campaign-, event- or
    account-specific ("Tech Expo 2026", "Boparan Outreach") and are **not templates**.
 
-**Consequence:** `cadence_template` is resolved by **lookup in the rep's registry**, in this order:
-the rep's own flow tagged for the account's vertical × persona × motion → the company-layer flow for
-the matching segment × persona → **empty** with the note "no matching flow in <rep>'s registry". The
-code guard changes from "matches the US name pattern" to "**exists verbatim in this rep's registry**".
-(Matcher rewiring is the next build step — `docs/open_questions.md` #11.)
+**Consequence:** `cadence_template` is resolved by **lookup in the rep's registry** —
+**built 2026-09-17 as `lib/flow_registry.py`** (open question #11 closed). Order: the rep's own flow
+tagged for the account's vertical × persona × motion → the company-layer flow → **empty** with the
+note "no matching flow in <rep>'s registry". The guard is now structural: every name the resolver
+returns exists verbatim in that rep's Gong, `upsert_brief.py` warns on any template outside the
+registry, US-folder flows are excluded at source, and reactivation resolves by reason (no reason
+classified → empty). Behaviour pinned in `tests/test_flow_registry.py`.
 
 ### `live` is tri-state — and an unconfirmed flow may still be SUGGESTED
 

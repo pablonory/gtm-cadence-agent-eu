@@ -100,16 +100,18 @@ UKI has **two flow layers** (captured from the Gong API 2026-09-11, `cadences/UK
 reason-based reactivation flows) and **each rep's own flows**. So `cadence_template` is resolved by
 lookup in that rep's registry (`cadences/registry/<rep>.json`) — own flow → company flow → **EMPTY**
 + "no matching flow". `live` is tri-state: confirmed flows are named, **unconfirmed ones are named as
-a suggestion** (the string is verbatim from that rep's Gong), rejected ones never again. No registry
-is confirmed yet — the asks are ready to send (`cadences/registry/asks/`).
+a suggestion** (the string is verbatim from that rep's Gong), rejected ones never again. The lookup
+is **built**: `lib/flow_registry.py` (2026-09-17), wired into `score_accounts.py` / `map_contacts.py` /
+`upsert_brief.py`. Seven registries are confirmed from survey replies (William, Richard, Miles, Josh,
+Lars, Louis Gilbert, Louis Grenier); the rest resolve as suggestions from their drafts.
 
 - **Verticals:** Coffee & Cafe · Fast Casual · FSR · QSR *(+ the open **pubs & bars** question — a major
   UK segment with no US cell; gastropubs → FSR meanwhile)*
 - **Personas:** C-Suite · Finance · Founder · Operations (Founder = founder-led/owner-operator;
   C-Suite = hired exec at scale)
 - **Suite from persona:** C-Suite & Founder → **Full Suite** · Finance & Operations → **IM**
-- Reactivation: **four** company flows by reason (No show · Non-responsive · Product gaps · Timing) — the single
-  "UKI Reactivation" name the scripts still assume does not exist (open question #11).
+- Reactivation: **four** company flows by reason (No show · Non-responsive · Product gaps · Timing),
+  resolved by `reactivation_reason`; no classified reason → empty template, by design.
 
 **Never invent a flow name.** Known knowledge gaps, flagged in place: Fast Casual has no pain set,
 Founder has no JTBD block — borrow and say what you borrowed.

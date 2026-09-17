@@ -49,6 +49,9 @@ import json
 import os
 import re
 import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "lib"))
+from flow_registry import registry_flow_names  # noqa: E402
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -76,11 +79,6 @@ _load_dotenv()
 TOKEN = os.environ.get("HUBSPOT_PRIVATE_APP_TOKEN")
 OBJECT = None  # resolved at runtime to the portal's objectTypeId (e.g. 2-251700583) — see resolve_object_type()
 
-US_FLOW_RE = re.compile(
-    r"^(Coffee & Cafe|Fast Casual|FSR|QSR) × (C-Suite|Finance|Founder|Operations) "
-    r"\((Full Suite|IM) · Tier 1\)$"
-    r"|^UKI Reactivation$"  # assumed name — confirm in cadences/UKI_FLOWS.md before first reactivation run
-)
 
 
 def call(method: str, path: str, body=None, ok404=False):
@@ -154,10 +152,11 @@ def main():
               "Pass the sheet's Batch column (e.g. 'Reactivation US batch 1/6').")
 
     flow = props.get("cadence_template", "")
-    if flow and not US_FLOW_RE.match(flow):
-        print(f"WARNING: cadence_template '{flow}' does not match the flow naming pattern "
-              "(<Vertical> × <Persona> (<Suite> · Tier 1)) — check cadences/UKI_FLOWS.md. "
-              "NOTE: while UKI flows are unconfirmed, an EMPTY cadence_template is the correct value.")
+    if flow and flow not in registry_flow_names(brief.get("rep_email")):
+        print(f"WARNING: cadence_template '{flow}' does not exist in {brief.get('rep_email','?')}'s "
+              "flow registry (cadences/registry/) — a rep cannot run a flow they do not have. "
+              "NOTE: an EMPTY cadence_template is the correct value when nothing matches.",
+              file=sys.stderr)
 
     # 1. Owner (the linchpin — record scoping keys on this)
     props["hubspot_owner_id"] = resolve_owner(brief["rep_email"])

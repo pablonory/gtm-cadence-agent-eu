@@ -27,12 +27,16 @@ Requires only stdlib.
 """
 import json
 import os
+import os
 import re
 import sys
 import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import date
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "lib"))
+from flow_registry import resolve_flow, find_entry  # noqa: E402
 
 BASE = "https://api.hubapi.com"
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -72,12 +76,9 @@ PERSONA_PATTERNS = [
     ("operations", re.compile(r"operat|\bops\b|district manager|area manager|regional (manager|director)", re.I)),
 ]
 
-US_FLOW_RE = re.compile(
-    r"^(Coffee & Cafe|Fast Casual|FSR|QSR) × (C-Suite|Finance|Founder|Operations) "
-    r"\((Full Suite|IM) · Tier 1\)$"
-    r"|^UKI Reactivation$"  # assumed name — confirm in cadences/UKI_FLOWS.md before first reactivation run
-)
-REACTIVATION_FLOW = "UKI Reactivation"  # assumed — confirm in cadences/UKI_FLOWS.md
+# Flow names are LOOKED UP in the rep's registry (lib/flow_registry.py), never built from a pattern —
+# rewired 2026-09-17 (open question #11). The old US_FLOW_RE guard is replaced by the structural
+# guarantee that every name the resolver returns exists verbatim in that rep's Gong.
 
 MAX_CONTACTS_PER_GROUP = 25  # keep contacts_json within HubSpot's textarea limit
 
@@ -145,13 +146,15 @@ def classify(title):
     return None
 
 
-def build_map(vertical, contacts, reactivation=False):
-    """Group contacts by persona. Normally each group names its vertical × persona flow; on a
-    reactivation brief every group names UKI Reactivation instead (one motion, outside the matrix)
-    while KEEPING the persona split — the rep still needs to know who is finance vs ops."""
+def build_map(vertical, contacts, rep_email, reactivation_entry=None):
+    """Group contacts by persona; each group carries the flow LOOKED UP in the rep's registry for
+    that persona (own flow -> company layer -> empty + note). On a reactivation brief every group
+    reuses the brief's own reason-resolved flow (score_accounts.py picked it with the reason in
+    hand; this script only reads the brief) while KEEPING the persona split — the rep still needs
+    to know who is finance vs ops."""
     vlabel = VERTICAL_LABELS.get(vertical)
-    if not vlabel and not reactivation:
-        sys.exit(f"FATAL: brief has unknown vertical '{vertical}' — cannot name flows.")
+    if not vlabel and reactivation_entry is None:
+        sys.exit(f"FATAL: brief has unknown vertical '{vertical}' — cannot resolve flows.")
     groups = {}  # persona -> [contact]
     unmapped = []
     for c in contacts:
@@ -174,13 +177,18 @@ def build_map(vertical, contacts, reactivation=False):
     for persona in ["founder", "csuite", "finance", "operations"]:  # stable display order
         if persona not in groups:
             continue
-        flow = (REACTIVATION_FLOW if reactivation
-                else f"{vlabel} × {PERSONA_LABELS[persona]} ({SUITE[persona]} · Tier 1)")
-        if not US_FLOW_RE.match(flow):
-            sys.exit(f"FATAL: built flow name '{flow}' fails the US Flow pattern — check UKI_FLOWS.md.")
+        if reactivation_entry is not None:
+            resolved = {"flow": reactivation_entry["name"],
+                        "flow_status": "confirmed" if reactivation_entry.get("live") is True else "suggested",
+                        "suite": SUITE[persona], "note": None}
+        else:
+            resolved = resolve_flow(rep_email, vertical, persona)
         members = groups[persona]
-        g = {"flow": flow, "persona": persona, "suite": SUITE[persona],
+        g = {"flow": resolved["flow"] or None, "flow_status": resolved["flow_status"] or None,
+             "persona": persona, "suite": resolved["suite"],
              "contacts": members[:MAX_CONTACTS_PER_GROUP]}
+        if resolved.get("note"):
+            g["flow_note"] = resolved["note"]
         if len(members) > MAX_CONTACTS_PER_GROUP:
             g["truncated"] = len(members) - MAX_CONTACTS_PER_GROUP
         out_groups.append(g)
@@ -206,10 +214,19 @@ def main():
 
     object_type = resolve_object_type()
     brief = search_one(object_type, "domain", domain,
-                       ["domain", "vertical", "company_name", "cadence_template"])
+                       ["domain", "vertical", "company_name", "cadence_template", "hubspot_owner_id"])
     if not brief:
         sys.exit(f"FATAL: no cadence_brief with domain '{domain}' — run upsert_brief.py first.")
-    reactivation = brief["properties"].get("cadence_template") == REACTIVATION_FLOW
+    owner_id = brief["properties"].get("hubspot_owner_id")
+    if not owner_id:
+        sys.exit("FATAL: brief has no hubspot_owner_id — cannot resolve the rep's flow registry.")
+    owner = call("GET", f"/crm/v3/owners/{owner_id}")
+    rep_email = (owner.get("email") or "").lower()
+    if not rep_email:
+        sys.exit(f"FATAL: owner {owner_id} has no email — cannot resolve the rep's flow registry.")
+    template = brief["properties"].get("cadence_template") or ""
+    entry = find_entry(rep_email, template) if template else None
+    reactivation_entry = entry if entry and (entry.get("tags") or {}).get("motion") == "reactivation" else None
 
     company = search_one("companies", "domain", domain)
     if not company:
@@ -217,7 +234,7 @@ def main():
 
     contact_ids = company_contact_ids(company["id"])
     contacts = read_contacts(contact_ids) if contact_ids else []
-    contact_map = build_map(brief["properties"].get("vertical"), contacts, reactivation)
+    contact_map = build_map(brief["properties"].get("vertical"), contacts, rep_email, reactivation_entry)
 
     if dry:
         print(json.dumps(contact_map, indent=2))
@@ -232,7 +249,7 @@ def main():
     print(json.dumps({
         "brief_id": brief["id"], "domain": domain,
         "total_contacts": contact_map["total_contacts"], "mapped": contact_map["mapped"],
-        "groups": {g["flow"]: len(g["contacts"]) for g in contact_map["groups"]},
+        "groups": {(g["flow"] or f"(no flow — {g['persona']})"): len(g["contacts"]) for g in contact_map["groups"]},
         "unmapped": len(contact_map["unmapped"]),
     }, indent=2))
 

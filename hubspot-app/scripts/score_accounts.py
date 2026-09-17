@@ -8,12 +8,17 @@ metric that justified it. The formula stays stable; only weights move.
 
 Input:  a JSON file: [{"company","domain","rep_email","vertical","persona","locations",
                        "signals":{new_location:{...},leadership_hire:{...},open_jobs:{...},funding:{...}},
-                       "motion":"reactivation"}]      <- optional; omit for normal Tier-1 accounts
-Output: the same list + score, score_band, status, hot_account, cadence_template, suite — printed as JSON.
+                       "motion":"reactivation",              <- optional; omit for normal Tier-1 accounts
+                       "reactivation_reason":"non_responsive"}]  <- required when motion=reactivation
+Output: the same list + score, score_band, status, hot_account, cadence_template, flow_status,
+        flow_note, suite — printed as JSON.
 
-`motion: "reactivation"` maps the account to the **UKI Reactivation** flow (assumed name) instead of a vertical × persona
-cell (see cadences/UKI_FLOWS.md — reactivation sits outside the 4×4 matrix). vertical/persona are still
-required and still classified: they aim the first-touch angle, they just don't pick the flow.
+FLOW RESOLUTION (rewired 2026-09-17, open question #11): `cadence_template` is LOOKED UP in the rep's
+registry via lib/flow_registry.py — the rep's own flow, else the company layer, else EMPTY with
+flow_note. Names are never built from a pattern (that was the US-matrix assumption; UKI reps each run
+their own flows). flow_status is "confirmed" (rep said live), "suggested" (verbatim from their Gong,
+unasked — the brief must present it as a suggestion), or "" (empty template). Reactivation resolves by
+reason — the single "UKI Reactivation" name this file assumed before 2026-09-17 never existed in Gong.
 
 Formula (defined 2026-08-10, recency term added 2026-08-12):
     contribution = (strength/5) × weight × confidence_mult × recency_mult   (0 if present:false)
@@ -63,7 +68,11 @@ Also unbuilt: contraction is not scored at all. Closures/downsizing should activ
 an account, and today they are invisible.
 """
 import json
+import os
 import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "lib"))
+from flow_registry import resolve_flow  # noqa: E402
 
 WEIGHTS = {"new_location": 3.0, "leadership_hire": 2.0, "open_jobs": 1.5, "funding": 1.0}
 CONF_MULT = {"high": 1.0, "med": 0.8, "medium": 0.8, "low": 0.5}
@@ -85,8 +94,6 @@ CONJUNCTURAL_THRESHOLD = 30
 
 VERTICAL_LABEL = {"coffee_cafe": "Coffee & Cafe", "fast_casual": "Fast Casual", "fsr": "FSR", "qsr": "QSR"}
 PERSONA_LABEL = {"csuite": "C-Suite", "finance": "Finance", "founder": "Founder", "operations": "Operations"}
-SUITE = {"csuite": "Full Suite", "founder": "Full Suite", "finance": "IM", "operations": "IM"}
-REACTIVATION_FLOW = "UKI Reactivation"  # assumed name — confirm in cadences/UKI_FLOWS.md
 
 
 def segment_mult(locations):
@@ -165,11 +172,16 @@ def score_account(acct):
         s and s.get("present") for s in signals.values()
     )
     v, p = acct["vertical"], acct["persona"]
-    acct["suite"] = SUITE[p]
-    if acct.get("motion") == "reactivation":
-        acct["cadence_template"] = REACTIVATION_FLOW
-    else:
-        acct["cadence_template"] = f"{VERTICAL_LABEL[v]} × {PERSONA_LABEL[p]} ({SUITE[p]} · Tier 1)"
+    if v not in VERTICAL_LABEL or p not in PERSONA_LABEL:
+        sys.exit(f"FATAL: unknown vertical/persona '{v}'/'{p}' on {acct.get('domain')}")
+    resolved = resolve_flow(acct.get("rep_email"), v, p,
+                            motion=acct.get("motion") or "outbound",
+                            reactivation_reason=acct.get("reactivation_reason"))
+    acct["cadence_template"] = resolved["flow"]
+    acct["flow_status"] = resolved["flow_status"]
+    acct["suite"] = resolved["suite"]
+    if resolved.get("note"):
+        acct["flow_note"] = resolved["note"]
     return acct
 
 
