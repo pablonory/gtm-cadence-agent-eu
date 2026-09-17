@@ -1,0 +1,150 @@
+{
+ "rep": "richard@nory.ai",
+ "name": "Richard",
+ "role": "AE",
+ "pulled": "2026-09-11",
+ "status": "CONFIRMED 2026-09-16 — from the rep's survey reply in Pablo's Slack DM",
+ "personal": [
+  {
+   "id": "7657751189638490792",
+   "name": "Rich - Restaurant Agentic new flow",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-08-24",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": true
+  },
+  {
+   "id": "2870636958444108018",
+   "name": "Low hanging fruits - Old CL\\DQ",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-07-16",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true
+  },
+  {
+   "id": "6358275359651592210",
+   "name": "SMB - Restaurant Agentic AI- Richard 2",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-06-04",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null,
+    "segment": "smb"
+   },
+   "confidence": "med",
+   "live": false
+  },
+  {
+   "id": "1724083837985531524",
+   "name": "SMB Outbound Flow- Rich",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null,
+    "segment": "smb"
+   },
+   "confidence": "low",
+   "live": false
+  },
+  {
+   "id": "4434465674194279844",
+   "name": "Richard -  Personalized email",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": false
+  }
+ ],
+ "shared_with_rep": [
+  {
+   "id": "3692560523867564748",
+   "name": "Tech Expo 2026",
+   "folder": "Tech expo 2026",
+   "layer": "shared",
+   "created": "2026-09-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5286654803247196613",
+   "name": "Closing the book and nurture sequence (May '26)",
+   "folder": "Miles Sayer",
+   "layer": "shared",
+   "created": "2026-05-22",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2720907587533028585",
+   "name": "Miles' Nurture Sequence V2 May 26",
+   "folder": "Miles Sayer",
+   "layer": "shared",
+   "created": "2026-05-21",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "reactivation",
+    "suite": null,
+    "reactivation_reason": "non_responsive"
+   },
+   "confidence": "high",
+   "live": null
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json",
+ "survey": {
+  "answered": "2026-09-16",
+  "q1_note": "\"This is the one I usually run\" — named exactly two",
+  "q3_shared_outbound": "no",
+  "chooser": "vertical, persona, number of sites",
+  "wants_new_flows": true,
+  "notes": "Q2 unanswered (nothing volunteered). The five other recent flows he did not name are set live=false — Q1 asked which he still runs and he named two. Shared-with-him flows left null."
+ }
+}
