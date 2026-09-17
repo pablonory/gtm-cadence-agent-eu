@@ -198,6 +198,64 @@ the 0/80 meant by "partly a quality result", reproduced.
 while the stack only detects growth. The "not built" item above is now the most frequently-encountered
 gap in the stack.
 
+## MEASURED — UKI batch 1, William, 15 accounts (2026-09-17, first UKI batch ever run)
+
+> Closes open question #6. All 15 are first runs, 60 hunter dispatches (`open_jobs` probed
+> deterministically, not dispatched — see below). Every account scored cold (0–33, band `thin`); the
+> conjunctural layer carried the whole batch, the exact case it was built for.
+
+| Signal | Observed a real event | Fired as a signal | Note |
+|---|---|---|---|
+| `new_location` | **6/15** | **2/15** | 3 real openings landed 204–346d old, outside `FIRST_RUN_DAYS` (180) — the exact US batch-3/6 shape, reproduced on a different market |
+| `leadership_hire` | 1/15 | 0/15 | IKO's Feb 2026 board appointments (220d) are the same dead-zone pattern as `new_location`, one signal late |
+| `open_jobs` | 0/15 | 0/15 | **no ATS board on any of the 15** — `jobs_probe.py` run first on all 15, zero dispatches wasted |
+| `funding` | 0/15 | 0/15 | 15 evidenced negatives; every trap correctly rejected (below) |
+
+**The first-run dead zone ports structurally, on a different market.** Stone Fired's Hartlepool site
+(209d), Lancaster Brewery's 14th site Scott & Brassey (204d), and Deanes' Flink (346d) are all real,
+recent expansion that the tighter first-run window correctly defers. Same shape as the US's 3/10 at
+243–376d. Confirms `FIRST_RUN_DAYS` is a sound design choice, not a US-specific tuning — **do not widen
+it** on the strength of a second data point either.
+
+**Companies House is a materially better primary source than anything the US signal has.** All 15
+`leadership_hire` negatives were high-confidence, dated, and traceable to a specific officer filing —
+not "could not find," but "checked and there is nothing there." The one real near-miss (IKO's two board
+appointments, 9 Feb 2026) was dated to the day. No equivalent primary source exists for the US signal;
+this is the fork's one clear net win over the parent method.
+
+**`open_jobs` confirms the US finding at a different account size.** Nine of ten US accounts were
+1–5-site owner-operators with no corporate hiring function; here 13 of 15 are, and the probe found no
+ATS board on any of the 15 regardless of size (Lancaster Brewery's 14 sites included). The
+Harri/Fourth/S4labour/Flow API gap flagged at fork (`open_jobs.md`) did not need to be tested — there
+was no board to probe on any platform. **Run the probe before dispatching this hunter** stands, now
+measured on both markets.
+
+**Quality: four namesake traps and one lorem-ipsum block rejected, all UK-specific.** A Crunchbase page
+for Cityglen showed the same unrendered "Raised Funding Round" template block as the US batch; "Brack
+Capital"/BRACK.CH (Swiss retailer) were both rejected as namesakes for Brack Burger; IKO PLC (a global
+roofing manufacturer) was rejected as a namesake for IKO Projects; and Southern Wind Group's own
+acquisition by Fogo de Chão was found, dated precisely via Companies House PSC filings (closed 17 Jul
+2024), and correctly scored `present: false` at 792 days old rather than reported as current. One
+CRM-caused error corrected at source: the batch CSV listed Southern Wind Group's domain as
+thebusinessdesk.com (a news site); resolved via WebSearch to southernwindgroup.com, which has no
+HubSpot company record at all — the brief was written and left unassociated, flagged for manual
+company/contact creation.
+
+**Persona corrections outnumbered signal fires.** Four CRM "CEO"/"MD"/"Managing Director" contacts
+(Tabure, Brack Burger, Deanes, Prospect Pubs) turned out to be long-tenured founders, not hired execs —
+corrected before scoring, not after. This SMB, founder-led shape is structurally different from the
+US book and is worth carrying into how future UKI CRM hygiene is read: a title alone is not persona.
+
+**The conjunctural matcher needs a wet-led/food-led attribute, not just vertical.** Three accounts
+(Crafty Pub Group, IKO Projects, Cityglen — all wet-led pub or bar-led groups filed as `fsr` for lack of
+a `pubs_bars` vertical) were hand-overridden from the matcher's default `uk_butter_2026` to
+`uk_nlw_2026_step`, because a wet-led estate's controllable cost is labour, not dairy. One further
+hand-match (Coffi Co, a pure coffee-shop chain) moved from the same butter default to the
+coffee-specific `uk_coffee_2026` entry. All four overrides are recorded in each account's `_scored.json`
+under `conjunctural_override`. This is direct, load-bearing evidence for open question #4
+(`pubs_bars` as a 5th vertical) — the matcher's vertical proxy is coarse enough to need caveat-sanctioned
+hand-matching on a quarter of this batch.
+
 ## Decisions (2026-07-17)
 - **Agent-first is still the default detector.** Instrument recall, add L2 surgically.
 - **Apify token added** (`APIFY_TOKEN`, gitignored env) — the **jobs** augment is ready to wire when
