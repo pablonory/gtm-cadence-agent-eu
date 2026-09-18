@@ -95,3 +95,15 @@ the per-account PDF / Cadence Brief.
   was "already confirmed"; it is an LPC *projection* (£13.02–£13.34) until the Budget sets it. When a
   register entry's `status` is `proposed`, the copy says projection/timeline, never "confirmed" —
   a finance-literate operator is exactly who catches this.
+- **One exemplar makes parallel drafters converge — assign the opener shape per account.** Measured
+  2026-09-18 while redrafting all 15 of UKI batch 1 against the tightened §4 rule. Each account got its
+  own agent, each read the same reference email (`knowledge/rep_assets/magnus_best_cold_email.md`), and
+  **four independently opened "Getting in touch as/because we work with…"** — the reference's own
+  connective. The tell did not disappear, it *migrated*: from "Genuine question, not a pitch" to a new
+  shared phrase. Two agents spotted the risk in their own output and flagged it unprompted.
+  **So: an exemplar teaches structure, and structure is what converges.** When redrafting a batch, give
+  each account an explicitly different opener *shape* (account-observation · menu-input · tenure ·
+  second-time-operator · role-decision · estate-composition) and a ban list of the phrasings already
+  used, then verify with a shingle check across every variant before shipping. Also check the two
+  variants of the *same* account do not open alike — the rep sees those side by side, so that
+  duplication is more visible than any cross-account one.
