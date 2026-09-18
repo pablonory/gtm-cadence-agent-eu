@@ -1,0 +1,19 @@
+Cheers Magnus — that was the most useful reply I've had, and one line in it is going to change what I build. Your book first, because yours looks nothing like anyone else's:
+
+*Your book:* 212 accounts, 97 ICP-fit — but 80 enterprise, 15 mid-market, 2 SMB. Everyone else on the team is 80-90% SMB. You're also carrying 2,575 contacts across those 97 accounts, about 26 per account, where the BDR books run about 5. Personas: Ops (473), Finance (199), C-Suite (167), Founders (166) — Ops-led with Finance second, where the SMB books have Founder second.
+
+That's a different job to everyone else's, and it explains your 34 flows. Which is the point: you and William are the two ends of this team. He runs 717 SMB accounts on one flow with the first two emails written by hand. You run 97 enterprise accounts on a proper matrix. No single shared set was ever going to serve both of you, which is exactly why the agent looks flows up per rep instead of building them from one pattern.
+
+*1. "They read like AI slop."* This is the bit I want to dig into, because it's the bar the agent has to clear and you're the person most likely to catch it. What gives it away for you — the structure, the vocabulary, the fake enthusiasm, the em dashes, the three-things-in-a-list rhythm? Be as brutal as you like. The agent has a hard anti-AI gate on everything it writes and I'd rather tune it against your instinct than my own.
+
+*2. You route on module, and I don't model that.* "Vertical then persona, leading with a module if we have an idea of their pain" — vertical and persona I have, module I don't. Right now the agent only picks Full Suite vs Inventory Management off the persona. How do you actually decide the module: from the pain you've heard, the vertical, the size, something on the account?
+
+*3. Which 3 or 4 of the 34 actually carry your volume?* You said keep all and I've kept all, but I'd bet a handful do most of the work. Knowing which ones tells the agent what to reach for first.
+
+*4. Six of your eight target accounts are franchise groups* — Yum!, GDK, three Costa franchisees, BWG. Plus the Domino's flow from April. Is franchise a motion of its own for you, i.e. does a Costa franchisee get a different pitch to an equivalent independent? None of my four verticals describe a franchisee and I'd rather add it properly than fudge it.
+
+*5. You run a Pubs IT Persona flow.* You're the only one who does. The agent currently classifies C-Suite, Finance, Founder and Operations, so IT contacts land unmapped — and on your book I can see a fair few, plus a "head of people". Worth me adding IT and People as proper personas, or is that yours to handle on the enterprise motion?
+
+*6. Your Employment Rights Bill flow.* You edited it on 9 Sep, and the Employment Rights Act 2027 timeline is the same angle I just put into William's refresh. Two of you reaching for it independently says it's working. Is it landing for you, and on which persona?
+
+*What happens next:* your eight accounts can run now — the agent researches each one, finds the real trigger, and writes the first touch into a brief in HubSpot for you to read. Given point 1, you're the right person to tell me whether the output clears the bar or reads like everything you just rejected. If it doesn't, I want to know exactly why.

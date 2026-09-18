@@ -1,0 +1,807 @@
+{
+ "rep": "magnus@nory.ai",
+ "name": "Magnus",
+ "role": "AE",
+ "pulled": "2026-09-11",
+ "status": "CONFIRMED 2026-09-18 — from the rep's survey reply in Pablo's Slack DM. 'Keep all' on both lists put to him, so the 15 flows the survey named are live:true. His other 19 personal flows were never put to him and stay live:null (suggested).",
+ "personal": [
+  {
+   "id": "3733994132386647052",
+   "name": "Employment Rights Bill",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-09-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "8217103794992483388",
+   "name": "MM: Tech Expo 2026",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-09-08",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null,
+    "segment": "mm_ent"
+   },
+   "confidence": "high",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "4025459032869798389",
+   "name": "Tech Expo 2026",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-09-08",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "5763670160084743159",
+   "name": "Zonal",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-07-24",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6556039428071538481",
+   "name": "Greene King Zonal",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-07-24",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6974666428616920856",
+   "name": "Level Up Manchester",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-05-18",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8910861348917884179",
+   "name": "Call only",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-04-27",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "5934642424877925776",
+   "name": "Domino's Franchise Owners",
+   "folder": "Domino's",
+   "layer": "personal",
+   "created": "2026-04-13",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "founder"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "7618957139603114748",
+   "name": "Ops Managers",
+   "folder": "Domino's",
+   "layer": "personal",
+   "created": "2026-04-13",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "1100757199574134787",
+   "name": "QSR: Labour",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-19",
+   "tags": {
+    "vertical": [
+     "qsr"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "6915066866362754157",
+   "name": "Fourth",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-17",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "399836974999362972",
+   "name": "Nory takes london: Nero",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8992615381688872777",
+   "name": "Nory takes london: Itsu",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5033652188842220373",
+   "name": "Light Touch",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "8514873030868868092",
+   "name": "Nory takes london: Coffee1",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6241269343168062822",
+   "name": "Nory takes london: Sushi Daily",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8259311633775286721",
+   "name": "Nory takes london",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-03-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5982882991285713900",
+   "name": "Case Study: Adam Lewis",
+   "folder": "Case Study Play",
+   "layer": "personal",
+   "created": "2026-03-03",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "8134672103359178970",
+   "name": "Case Study: Paul Tanner",
+   "folder": "Case Study Play",
+   "layer": "personal",
+   "created": "2026-03-02",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "938624962732462299",
+   "name": "Case Study: Jack Lander",
+   "folder": "Case Study Play",
+   "layer": "personal",
+   "created": "2026-03-02",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "2399553002300814862",
+   "name": "Engaged: call,nudge,call",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-27",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "463180851291101630",
+   "name": "Louis > Pubs 25-50 sites",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-24",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "179490161023724273",
+   "name": "Coffee: Labour",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-24",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "8345758579485739531",
+   "name": "Pubs 25-50 sites: Finance",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-20",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "4735878055896104247",
+   "name": "Duplicate Pubs 25-50 sites: Ops Persona",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-17",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "148268224521191995",
+   "name": "Pubs 25-50 sites: Ops Persona",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "6215278191440004859",
+   "name": "Pubs 25-50 sites: IT Persona",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "1702464286767586953",
+   "name": "DM - Personalised",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "6254067746067727077",
+   "name": "Waste Men",
+   "folder": "Personal flows",
+   "layer": "personal",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "2689495023871098112",
+   "name": "Level Up!: Ops",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8520385259588212954",
+   "name": "MAKE A COPY. Level Up!: Ops",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "operations"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2245450020869928971",
+   "name": "Level Up!: T2 Contacts",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-02-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6879584826113915313",
+   "name": "MM: Level Up!: T1 Contacts",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-02-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null,
+    "segment": "mm_ent"
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "2552667384452964687",
+   "name": "Starbucks: Level Up",
+   "folder": "Events",
+   "layer": "personal",
+   "created": "2026-02-09",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  }
+ ],
+ "shared_with_rep": [
+  {
+   "id": "3692560523867564748",
+   "name": "Tech Expo 2026",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-09-02",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "it"
+    ],
+    "motion": "event",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  },
+  {
+   "id": "1181582058590513520",
+   "name": "Q3 Flow Approach ",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-07-13",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": null
+  },
+  {
+   "id": "7887299673645909070",
+   "name": "CFO Cadence ",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-20",
+   "tags": {
+    "vertical": [],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "med",
+   "live": null
+  },
+  {
+   "id": "5794847122845895791",
+   "name": "🍔 Casual Dining - IT Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "5055943744505016661",
+   "name": "🍔 Casual Dining - Operations Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6561204093265816466",
+   "name": "🍔 Casual Dining - Finance Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "fsr"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "4149479632899329419",
+   "name": "🍻 Pubs - IT + Ops ",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "operations",
+     "it"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "3828920493835972411",
+   "name": "☕️ Coffee Shops - Finance Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-15",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "8159845813716600140",
+   "name": "☕️ Coffee Shops -Operations Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "coffee_cafe"
+    ],
+    "persona": [
+     "operations"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "6528777841885354589",
+   "name": "🍻 Pubs - Finance Persona",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-13",
+   "tags": {
+    "vertical": [
+     "pubs_bars"
+    ],
+    "persona": [
+     "finance"
+    ],
+    "motion": "outbound",
+    "suite": null
+   },
+   "confidence": "high",
+   "live": null
+  },
+  {
+   "id": "931569730846173249",
+   "name": "AE FLOW - Labour Assessment/AgenticAI Schedules",
+   "folder": "Josh Savill",
+   "layer": "shared",
+   "created": "2026-02-10",
+   "tags": {
+    "vertical": [],
+    "persona": [],
+    "motion": "unclassified",
+    "suite": null
+   },
+   "confidence": "low",
+   "live": true,
+   "source": "rep survey 2026-09-18 — 'keep all' on the list this flow appeared in"
+  }
+ ],
+ "company_layer": "cadences/registry/_company.json",
+ "survey": {
+  "answered": "2026-09-18",
+  "q1_answer": "keep all (the 8 usage-log flows), leading with Employment Rights Bill, MM: Tech Expo 2026, Tech Expo 2026, Case Study: Paul Tanner",
+  "q2_answer": "keep all (the 7 older templates)",
+  "q3_other_flows": "no",
+  "q4_shared_outbound": "NO — and the reason is the finding: \"No - they read like AI slop tbh\". First outright rejection of the company layer, on copy quality, from the team's most prolific flow builder.",
+  "chooser": "\"Vertical then persona and leading with a module if we have an idea of their pain\" — a THIRD routing dimension (Nory module) that the agent's model does not carry; also \"or target certain events\".",
+  "wants_new_flows": true,
+  "wants_new_flows_note": "\"It would be handy to automate the addition of real world triggers or specifics about the individual I'm targeting. But I hate the idea of sending emails that are clearly using AI syntax.\" That is the agent's signal layer described precisely, with a hard quality bar attached. For this rep the anti-AI gate is not a nicety, it is the whole deal.",
+  "book_note": "THE ENTERPRISE REP, and the inverse of every other book: 212 accounts, 97 ICP-fit, but 80 ENT / 15 MM / 2 SMB. 2,575 contacts across 97 accounts (~26 each — deep buying committees, vs ~5 on the BDR books). Personas Ops 473, Finance 199, C-Suite 167, Founder 166: Ops-led with Finance second, where the SMB books run Founder second. 17 reactivation.",
+  "accounts_offered": [
+   "Wasabi",
+   "All Yum! brands Franchisees",
+   "GDK Franchises",
+   "SBR Trading Group (Costa franchise)",
+   "Optimum Coffee Group (Costa franchise)",
+   "Fieldrose Ltd (Costa franchise)",
+   "Hickory's Smokehouse (inventory focused)",
+   "BWG Group (Bagel Factory franchise)"
+  ],
+  "accounts_note": "Offered unprompted, like William's 15. SIX of the eight are franchise groups — a segment the vertical model does not carry at all."
+ },
+ "findings": {
+  "per_rep_model_vindicated": "Magnus and William are the two poles and no single matrix could serve both. William: SMB BDR, 717 ICP, ONE flow plus hand-tailored openers. Magnus: ENT AE, 97 ICP, 34 flows routed by vertical x persona x module. The UKI decision to look flows up per rep rather than build them from a shared pattern is now evidenced from both ends.",
+  "company_layer_quality": "First rep to reject the shared Outbound layer outright, and it was on copy quality: \"they read like AI slop\". Lars runs it happily and Louis Gilbert partly; Magnus, who builds the most flows himself, will not touch it. Worth a look at that copy before more reps are pointed at it.",
+  "third_routing_dimension_module": "He routes on Nory MODULE as well as vertical and persona — his flows carry it in their names (Coffee: Labour, QSR: Labour, AE FLOW - Labour Assessment/AgenticAI Schedules), and his own account list annotates one as 'inventory focused'. The agent models suite (IM vs Full Suite) but not module. Gap.",
+  "open_question_4_pubs_bars": "More evidence: four of his flows are pub-specific and already tagged pubs_bars (Pubs 25-50 sites x Finance/Ops/IT, Louis > Pubs 25-50 sites).",
+  "open_question_10_it_persona": "Direct evidence: he runs 'Pubs 25-50 sites: IT Persona' and two IT-tagged Tech Expo flows. IT is a real persona for the ENT motion, not a theoretical gap. His unmapped contact titles also surface 'head of people' — the People persona.",
+  "franchise_segment": "Six of his eight target accounts are franchise operators (Yum! brands, GDK, three Costa franchises, BWG/Bagel Factory), and he has a 'Domino's Franchise Owners' flow from April. Franchisee groups are a distinct ENT motion with none of the four verticals describing them.",
+  "era_angle_cross_validated": "His most recently edited flow is 'Employment Rights Bill' (9 Sep) — the same Employment Rights Act angle just built into William's V4 Email 4 off the conjunctural register. Two reps reaching for it independently."
+ },
+ "name_collision": "'Tech Expo 2026' exists twice — his own (Events folder) and Josh Savill's shared one. Both are marked live:true by the 'keep all'; if the matcher ever has to choose, ask him which.",
+ "matcher_observation": "Verified 2026-09-18: his own confirmed flows win for every cell tried, correctly — pubs_bars x ops/finance/IT all resolve to his 'Pubs 25-50 sites' set as 'confirmed'. One tie-break to watch: coffee_cafe + operations resolves to 'Ops Managers' (persona-tagged, no vertical, and it lives in his Domino's folder) rather than 'Coffee: Labour' (vertical-tagged, no persona) — the specificity score treats a persona hit as tighter than a vertical hit. Not wrong, both are his, but if he says Coffee: Labour is a workhorse then the tie-break needs revisiting. Survey #2 Q3 asks which flows carry his volume, which will settle it."
+}
