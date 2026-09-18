@@ -815,6 +815,19 @@
    "should IT and People become proper personas, or stay his to handle (open question #10)",
    "is the Employment Rights Bill angle landing, and on which persona"
   ],
-  "answered": null
+  "answered": "2026-09-18",
+  "answers": {
+   "q1_ai_tells": {
+    "1_em_dashes": "'m dashes are most obvious' — already a zero-tolerance rule; confirmed by a second rep.",
+    "2_antithesis": "\"'this. not that' syntax is a pet peeve\" — NEW. Measured same day on UKI batch 1: 7 instances across 5 of 15 drafts. Rule tightened in anti_ai_writing_style.md §3, distinguishing rhetorical antithesis (cut) from factual clarification (keep).",
+    "3_mid_sentence_open": "'starting emails in what sounds like mid-sentence' — NEW, and OUR OWN RULE CAUSED IT. §4's 'no warm-up, get to the point' produced openers like 'Hi Michael, AHDB's August report puts UK wholesale butter 43% below...'. Clarified in §4: a reason for writing is not filler.",
+    "example_given": "Shared his best cold email (to a CTO) verbatim — captured at knowledge/rep_assets/magnus_best_cold_email.md with what the agent can and cannot copy."
+   },
+   "q2_module_routing": "'We should route WF, IM, Full Suite, Payroll and even Reviews... if we have the signals that a particular module might solve their problem. Then we can widen the scope in process. OR we route via the Assistants - Forecasting Assistant, Scheduling assistant etc.' So FIVE modules, or an assistant-level axis, signal-driven. The agent currently derives only IM vs Full Suite from persona.",
+   "q3_volume_flows": "NOT ANSWERED — still open, and it still settles the coffee_cafe/operations tie-break.",
+   "q4_franchise": "'Our approach to franchises should be different. Franchise owners care about scaling their site numbers because they get royalty fees for revenue. We don't directly increase revenue, we do so indirectly by increasing profit and making it viable to take on new sites.' A distinct ANGLE, not just a segment: growth-enablement (profit makes the next site viable), not cost-saving.",
+   "q5_personas": "'We should target People/HR and IT as well as the normal ICP. e.g payroll and compliance assistants match well with HR persona.' First rep-backed answer to open question #10, and it arrives with the mechanism: the module maps to the persona (payroll/compliance -> HR).",
+   "q6_employment_rights": "NOT ANSWERED — whether the ERA angle is landing, and on which persona, still open."
+  }
  }
 }

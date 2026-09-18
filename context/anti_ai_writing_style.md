@@ -28,7 +28,18 @@ next-level, best-in-class, unleash, delve, navigate (metaphorical), tapestry, re
 - **Metronome rhythm:** AI writes sentences all of medium length. Vary: short, sharp lines with the
   occasional longer one.
 - **Mechanical rule-of-three:** not everything in threes. Break the pattern.
-- **Negative parallelism:** "not X, but Y" repeated → vary it.
+- **Antithesis for rhythm — "X, not Y": cut it.** Tightened 2026-09-18 from "vary it", on rep feedback
+  (Magnus, AE): after em dashes this is the **second thing he names as the AI tell** — "'this. not that'
+  syntax is a pet peeve". Measured on UKI batch 1 the same day: 7 instances across 5 of the 15 drafts.
+  The distinction that matters:
+  - **Rhetorical antithesis → cut.** "a systems problem, not a talent one" · "in the week, not the month
+    after" · "the week it happens, not at month end". The second half adds no information; it exists for
+    cadence. Say the first half and stop.
+  - **Factual clarification → keep.** "the exchange price, not what your roaster charges you" · "wholesale
+    isn't what a supplier charges". Here the contrast *is* the content, and it's doing honest hedging work.
+- **No formula line reused across accounts.** UKI batch 1 shipped "Genuine question, not a pitch" as the
+  alternate's opener on two different accounts. Each reads fine; as a set it's a template, and a rep
+  reading their own briefs in a row sees the seam immediately. Every opener is written for its account.
 - **Em dashes and en dashes (— –): ZERO in outbound copy. Not "fewer" — none.** Tightened from
   "overuse" on 2026-08-24, on rep feedback: across batch 3/6 every one of the nine drafted first touches
   opened `Name — ...` and the set carried **24 dashes in 18 pieces of copy**. Each one read fine alone;
@@ -46,6 +57,15 @@ next-level, best-in-class, unleash, delve, navigate (metaphorical), tapestry, re
 - Direct "you" and direct address. Active voice — AI defaults to passive and third person.
 - Short. Get to the point in the first two lines. No warm-up ("I hope you're well", "I wanted to reach
   out").
+- **But "no warm-up" is not "open on a statistic".** Clarified 2026-09-18 on rep feedback (Magnus, AE),
+  who named as his third AI tell "starting emails in what sounds like mid-sentence". This rule was the
+  cause: UKI batch 1 read `Hi Michael, AHDB's August report puts UK wholesale butter 43% below...` —
+  greeting, comma, straight into a number, with no human reason for the email existing. A person tells
+  you **why they are writing to you** before they tell you a fact. The same rep's own best cold email
+  does it in two lines and wastes nothing: *"Tom Hatcher, who we know from his time at Mowgli, pointed me
+  in your direction. Getting in touch as we work with Sticks n Sushi and are in conversations with the
+  other McWin brands to help improve Labour & COGs control."* Reason first, then the fact it sets up.
+  Filler is still banned; a reason for writing is not filler.
 - If you've made the point, stop. Don't sign off with a summary.
 - High signal, zero filler. Specific beats clever.
 
