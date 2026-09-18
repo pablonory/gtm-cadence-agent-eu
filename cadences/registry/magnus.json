@@ -803,5 +803,18 @@
   "era_angle_cross_validated": "His most recently edited flow is 'Employment Rights Bill' (9 Sep) — the same Employment Rights Act angle just built into William's V4 Email 4 off the conjunctural register. Two reps reaching for it independently."
  },
  "name_collision": "'Tech Expo 2026' exists twice — his own (Events folder) and Josh Savill's shared one. Both are marked live:true by the 'keep all'; if the matcher ever has to choose, ask him which.",
- "matcher_observation": "Verified 2026-09-18: his own confirmed flows win for every cell tried, correctly — pubs_bars x ops/finance/IT all resolve to his 'Pubs 25-50 sites' set as 'confirmed'. One tie-break to watch: coffee_cafe + operations resolves to 'Ops Managers' (persona-tagged, no vertical, and it lives in his Domino's folder) rather than 'Coffee: Labour' (vertical-tagged, no persona) — the specificity score treats a persona hit as tighter than a vertical hit. Not wrong, both are his, but if he says Coffee: Labour is a workhorse then the tie-break needs revisiting. Survey #2 Q3 asks which flows carry his volume, which will settle it."
+ "matcher_observation": "Verified 2026-09-18: his own confirmed flows win for every cell tried, correctly — pubs_bars x ops/finance/IT all resolve to his 'Pubs 25-50 sites' set as 'confirmed'. One tie-break to watch: coffee_cafe + operations resolves to 'Ops Managers' (persona-tagged, no vertical, and it lives in his Domino's folder) rather than 'Coffee: Labour' (vertical-tagged, no persona) — the specificity score treats a persona hit as tighter than a vertical hit. Not wrong, both are his, but if he says Coffee: Labour is a workhorse then the tie-break needs revisiting. Survey #2 Q3 asks which flows carry his volume, which will settle it.",
+ "survey2": {
+  "sent": "2026-09-18",
+  "channel": "Pablo's Slack DM (D0AL1BN32E9), message ts 1789722782.130219",
+  "asks": [
+   "WHAT gives AI copy away for him — tunes the anti-AI gate against the ear of the rep most likely to catch it",
+   "how he picks the Nory module (the third routing dimension the agent does not model)",
+   "which 3-4 of his 34 flows carry the volume (also settles the coffee_cafe/operations tie-break)",
+   "is franchise a motion of its own (6 of his 8 accounts are franchise groups)",
+   "should IT and People become proper personas, or stay his to handle (open question #10)",
+   "is the Employment Rights Bill angle landing, and on which persona"
+  ],
+  "answered": null
+ }
 }
