@@ -829,5 +829,17 @@
    "q5_personas": "'We should target People/HR and IT as well as the normal ICP. e.g payroll and compliance assistants match well with HR persona.' First rep-backed answer to open question #10, and it arrives with the mechanism: the module maps to the persona (payroll/compliance -> HR).",
    "q6_employment_rights": "NOT ANSWERED — whether the ERA angle is landing, and on which persona, still open."
   }
+ },
+ "copy_review": {
+  "sent": "2026-09-18",
+  "channel": "Pablo's Slack DM (D0AL1BN32E9), message ts 1789731955.931159",
+  "what_was_sent": "Two redrafted briefs from William's batch 1 for him to judge: Medicine Bakery (the only signal-led account, score 33) and Prospect Pubs (conjunctural, presented explicitly as the median of the batch since 14 of 15 were cold — no cherry-picking).",
+  "asks": [
+   "does the copy clear his bar, or still read like what he rejected",
+   "the unsettled one: 6 of 15 primaries open by naming who we work with, no two sharing wording, and his own best email opens that way — rep's voice or a seam William would notice?",
+   "whether factual 'X, not Y' clarifications should also be cut, or only the rhetorical ones"
+  ],
+  "told_him": "His three tells were applied to all 15 the same day: em dashes already banned; 'this, not that' found in 7 places across 5 drafts and cut except where the contrast is content; mid-sentence openers traced to OUR OWN rule ('no warm-up, get to the point') and the rule rewritten. Also told him about the exemplar-convergence finding, since it validates his instinct that AI copy carries a signature.",
+  "answered": null
  }
 }
